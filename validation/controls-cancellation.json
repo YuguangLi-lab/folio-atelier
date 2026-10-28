@@ -1,0 +1,52 @@
+{
+  "cause": "Changing transition-duration to 0s does not cancel an already-running CSSTransition whose target color is unchanged.",
+  "fix": "Use the existing transition-property variable to resolve to none at drag/reduction/solid/plugin-off boundaries; duration also resolves to 0s. Scope remains the explicitly audited plugin controls.",
+  "before": {
+    "pass": false,
+    "before": {
+      "property": "background-color, color, border-color",
+      "duration": "0.12s",
+      "running": [
+        "background-color",
+        "border-bottom-color",
+        "border-left-color",
+        "border-right-color",
+        "border-top-color"
+      ]
+    },
+    "after": {
+      "property": "background-color, color, border-color",
+      "duration": "0s",
+      "running": [
+        "background-color",
+        "border-bottom-color",
+        "border-left-color",
+        "border-right-color",
+        "border-top-color"
+      ]
+    }
+  },
+  "after": {
+    "pass": true,
+    "before": {
+      "property": "background-color, color, border-color",
+      "duration": "0.12s",
+      "running": [
+        "background-color",
+        "border-bottom-color",
+        "border-left-color",
+        "border-right-color",
+        "border-top-color"
+      ]
+    },
+    "after": {
+      "property": "none",
+      "duration": "0s",
+      "running": []
+    }
+  },
+  "beforeModuleSHA256": "d1dc550834eb0c5b7b20a047859552cf1170e696ccab701548b93d034bcf79e8",
+  "afterModuleSHA256": "fecdd970fc5d8130d4f2ec5be8ef845e6ab8501e38132c95ce6b1408f6a9338e",
+  "finalThemeSHA256": "35f4de409ebecd2b0fbc04f55c9f945e329e2cf2266fc9caa9d61dee0d448c85",
+  "scope": "Actual browser hover with running CSS color transitions; marker lifecycle separately covered by companion runtime tests."
+}

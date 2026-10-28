@@ -1,0 +1,3795 @@
+{
+  "pass": true,
+  "scope": "Complete final theme versus the same theme with depth tokens and paint mappings reverted to 3.38; isolates depth from simultaneous controls/background changes. Real plugin CSS + InterfaceStyleDocuments/SVG runtime; source-derived owned DOM, not native Obsidian or FPS.",
+  "sourceChecks": {
+    "tokenOnly": true,
+    "onlyPaintMappings": true,
+    "noNewRuntime": true
+  },
+  "frozen338SHA256": "46ff64db9641b500eb9ef86845fd6019b577d0062afd21c00bb411db139baa5d",
+  "baselineSHA256": "9365571770871dab01f9abfef77019584eff59454c5f876224ee54754b965fe8",
+  "themeSHA256": "35f4de409ebecd2b0fbc04f55c9f945e329e2cf2266fc9caa9d61dee0d448c85",
+  "moduleSHA256": "6d621a5439dbe02aa69322256eaa0e4c41e9ab12ab1a4fd19aff3025e38d5973",
+  "cases": [
+    {
+      "mode": "light",
+      "width": 390,
+      "order": "theme-last",
+      "checks": {
+        "geometry": true,
+        "fillsAndFilters": true,
+        "roleDepth": true,
+        "noExtraBlur": true,
+        "calendar": true,
+        "text": true,
+        "contrast": true,
+        "darkEdges": true,
+        "materialControls": true,
+        "solidFallback": true,
+        "pluginOffFallback": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrast": true,
+        "forced-colors": true,
+        "classic": true,
+        "apple": true,
+        "print": true,
+        "selection": true,
+        "authoredExceptions": true,
+        "cleanup": true
+      },
+      "pass": true,
+      "states": {
+        "old": {
+          "toolbar": {
+            "bg": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "filter": "blur(16px) saturate(1.55)",
+            "shadow": "rgba(255, 255, 255, 0.85) 0px 1px 0px 0px inset, rgba(255, 255, 255, 0.4) 1px 0px 0px 0px inset, rgba(255, 255, 255, 0.19) 0px -1px 0px 0px inset, rgba(16, 16, 32, 0.04) 0px 1px 3px 0px",
+            "border": "rgba(255, 255, 255, 0.9)",
+            "ink": "rgb(29, 29, 31)",
+            "font": "",
+            "outline": "rgb(29, 29, 31) none 3px",
+            "geom": [
+              58,
+              8,
+              324,
+              121,
+              "absolute",
+              "0px",
+              "0px",
+              "1px",
+              "matrix(1, 0, 0, 1, -162, 0)",
+              "54",
+              "visible",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "popup": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "filter": "blur(12px) saturate(1.35)",
+            "shadow": "rgba(255, 255, 255, 0.85) 0px 1px 0px 0px inset, rgba(255, 255, 255, 0.4) 1px 0px 0px 0px inset, rgba(255, 255, 255, 0.19) 0px -1px 0px 0px inset, rgba(16, 16, 32, 0.19) 0px 8px 36px -10px",
+            "border": "rgba(255, 255, 255, 0.9)",
+            "ink": "rgb(29, 29, 31)",
+            "font": "12px / 18px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+            "outline": "rgb(29, 29, 31) none 3px",
+            "geom": [
+              110,
+              450,
+              250,
+              156.078125,
+              "fixed",
+              "0px",
+              "20px",
+              "1px",
+              "none",
+              "100",
+              "auto",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "native": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "filter": "blur(12px) saturate(1.35)",
+            "shadow": "rgba(255, 255, 255, 0.85) 0px 1px 0px 0px inset, rgba(255, 255, 255, 0.4) 1px 0px 0px 0px inset, rgba(255, 255, 255, 0.19) 0px -1px 0px 0px inset, rgba(16, 16, 32, 0.03) 0px 3px 8px 0px, rgba(16, 16, 32, 0.15) 0px 12px 30px -12px",
+            "border": "rgba(255, 255, 255, 0.9)",
+            "ink": "rgb(29, 29, 31)",
+            "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+            "outline": "rgb(29, 29, 31) none 3px",
+            "geom": [
+              100,
+              550,
+              250,
+              89.75,
+              "fixed",
+              "0px",
+              "16px",
+              "1px",
+              "none",
+              "100",
+              "hidden",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "card": {
+            "bg": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.333), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.08)), none",
+            "filter": "none",
+            "shadow": "rgba(255, 255, 255, 0.8) 0px 1px 0px 0px inset, rgba(23, 35, 52, 0.03) 0px 2px 4px 0px, rgba(23, 35, 52, 0.047) 0px 10px 26px 0px",
+            "border": "rgb(216, 225, 221)",
+            "ink": "rgb(41, 54, 49)",
+            "font": "",
+            "outline": "rgb(41, 54, 49) none 3px",
+            "geom": [
+              160,
+              165,
+              260,
+              190,
+              "absolute",
+              "0px",
+              "0px",
+              "1px",
+              "none",
+              "auto",
+              "visible",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "calendar": [
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "image": "none",
+              "filter": "none",
+              "shadow": "none",
+              "border": "rgb(41, 54, 49)",
+              "ink": "rgb(41, 54, 49)",
+              "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "outline": "rgb(41, 54, 49) none 3px",
+              "geom": [
+                0,
+                -500,
+                220,
+                21.75,
+                "static",
+                "0px",
+                "0px",
+                "0px",
+                "none",
+                "auto",
+                "visible",
+                "auto"
+              ],
+              "animation": "none",
+              "transition": "all"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "image": "none",
+              "filter": "none",
+              "shadow": "none",
+              "border": "rgb(41, 54, 49)",
+              "ink": "rgb(41, 54, 49)",
+              "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "outline": "rgb(41, 54, 49) none 3px",
+              "geom": [
+                0,
+                -478.25,
+                220,
+                21.75,
+                "static",
+                "0px",
+                "0px",
+                "0px",
+                "none",
+                "auto",
+                "visible",
+                "auto"
+              ],
+              "animation": "none",
+              "transition": "all"
+            }
+          ],
+          "text": [
+            {
+              "ink": "rgb(41, 54, 49)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(41, 54, 49)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(88, 106, 98)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(41, 54, 49)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(41, 54, 49)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(88, 106, 98)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(29, 29, 31)",
+              "font": "550 16px / 20.8px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+            },
+            {
+              "ink": "rgb(29, 29, 31)",
+              "font": "13px / 19.5px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+            }
+          ],
+          "blurCount": 7
+        },
+        "next": {
+          "toolbar": {
+            "bg": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "filter": "blur(16px) saturate(1.55)",
+            "shadow": "rgba(255, 255, 255, 0.78) 0px 1px 0px 0px inset, rgba(36, 53, 72, 0.035) 0px -1px 0px 0px inset, rgba(16, 16, 32, 0.04) 0px 1px 3px 0px",
+            "border": "rgba(255, 255, 255, 0.62)",
+            "ink": "rgb(29, 29, 31)",
+            "font": "",
+            "outline": "rgb(29, 29, 31) none 3px",
+            "geom": [
+              58,
+              8,
+              324,
+              121,
+              "absolute",
+              "0px",
+              "0px",
+              "1px",
+              "matrix(1, 0, 0, 1, -162, 0)",
+              "54",
+              "visible",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "popup": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "filter": "blur(12px) saturate(1.35)",
+            "shadow": "rgba(255, 255, 255, 0.96) 0px 1px 0px 0px inset, rgba(36, 53, 72, 0.055) 0px -1px 0px 0px inset, rgba(16, 16, 32, 0.03) 0px 3px 8px 0px, rgba(16, 16, 32, 0.15) 0px 12px 30px -12px",
+            "border": "rgba(255, 255, 255, 0.88)",
+            "ink": "rgb(29, 29, 31)",
+            "font": "12px / 18px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+            "outline": "rgb(29, 29, 31) none 3px",
+            "geom": [
+              110,
+              450,
+              250,
+              156.078125,
+              "fixed",
+              "0px",
+              "20px",
+              "1px",
+              "none",
+              "100",
+              "auto",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "native": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "filter": "blur(12px) saturate(1.35)",
+            "shadow": "rgba(255, 255, 255, 0.96) 0px 1px 0px 0px inset, rgba(36, 53, 72, 0.055) 0px -1px 0px 0px inset, rgba(16, 16, 32, 0.03) 0px 3px 8px 0px, rgba(16, 16, 32, 0.15) 0px 12px 30px -12px",
+            "border": "rgba(255, 255, 255, 0.88)",
+            "ink": "rgb(29, 29, 31)",
+            "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+            "outline": "rgb(29, 29, 31) none 3px",
+            "geom": [
+              100,
+              550,
+              250,
+              89.75,
+              "fixed",
+              "0px",
+              "16px",
+              "1px",
+              "none",
+              "100",
+              "hidden",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "card": {
+            "bg": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.333), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.08)), none",
+            "filter": "none",
+            "shadow": "rgba(255, 255, 255, 0.68) 0px 1px 0px 0px inset, rgba(23, 35, 52, 0.035) 0px 1px 2px 0px, rgba(23, 35, 52, 0.16) 0px 8px 20px -10px",
+            "border": "rgb(216, 225, 221)",
+            "ink": "rgb(41, 54, 49)",
+            "font": "",
+            "outline": "rgb(41, 54, 49) none 3px",
+            "geom": [
+              160,
+              165,
+              260,
+              190,
+              "absolute",
+              "0px",
+              "0px",
+              "1px",
+              "none",
+              "auto",
+              "visible",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "calendar": [
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "image": "none",
+              "filter": "none",
+              "shadow": "none",
+              "border": "rgb(41, 54, 49)",
+              "ink": "rgb(41, 54, 49)",
+              "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "outline": "rgb(41, 54, 49) none 3px",
+              "geom": [
+                0,
+                -500,
+                220,
+                21.75,
+                "static",
+                "0px",
+                "0px",
+                "0px",
+                "none",
+                "auto",
+                "visible",
+                "auto"
+              ],
+              "animation": "none",
+              "transition": "all"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "image": "none",
+              "filter": "none",
+              "shadow": "none",
+              "border": "rgb(41, 54, 49)",
+              "ink": "rgb(41, 54, 49)",
+              "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "outline": "rgb(41, 54, 49) none 3px",
+              "geom": [
+                0,
+                -478.25,
+                220,
+                21.75,
+                "static",
+                "0px",
+                "0px",
+                "0px",
+                "none",
+                "auto",
+                "visible",
+                "auto"
+              ],
+              "animation": "none",
+              "transition": "all"
+            }
+          ],
+          "text": [
+            {
+              "ink": "rgb(41, 54, 49)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(41, 54, 49)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(88, 106, 98)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(41, 54, 49)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(41, 54, 49)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(88, 106, 98)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(29, 29, 31)",
+              "font": "550 16px / 20.8px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+            },
+            {
+              "ink": "rgb(29, 29, 31)",
+              "font": "13px / 19.5px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+            }
+          ],
+          "blurCount": 7
+        }
+      },
+      "contrast": [
+        {
+          "role": "toolbar",
+          "min": 10.605974322475657,
+          "pass": true
+        },
+        {
+          "role": "popup",
+          "min": 11.9965590456589,
+          "pass": true
+        },
+        {
+          "role": "native",
+          "min": 11.9965590456589,
+          "pass": true
+        },
+        {
+          "role": "card",
+          "min": 10.523088511590771,
+          "pass": true
+        }
+      ],
+      "exceptions": [
+        {
+          "cls": "has-card-fill",
+          "pass": true
+        },
+        {
+          "cls": "has-custom-border",
+          "pass": true
+        },
+        {
+          "cls": "is-transparent",
+          "pass": true
+        },
+        {
+          "cls": "is-compact-fold",
+          "pass": true
+        },
+        {
+          "cls": "is-folded",
+          "pass": true
+        },
+        {
+          "cls": "is-inline-editing",
+          "pass": true
+        },
+        {
+          "cls": "ts-media-card",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "mode": "light",
+      "width": 390,
+      "order": "runtime-last",
+      "checks": {
+        "geometry": true,
+        "fillsAndFilters": true,
+        "roleDepth": true,
+        "noExtraBlur": true,
+        "calendar": true,
+        "text": true,
+        "contrast": true,
+        "darkEdges": true,
+        "materialControls": true,
+        "solidFallback": true,
+        "pluginOffFallback": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrast": true,
+        "forced-colors": true,
+        "classic": true,
+        "apple": true,
+        "print": true,
+        "selection": true,
+        "authoredExceptions": true,
+        "cleanup": true
+      },
+      "pass": true,
+      "states": {
+        "old": {
+          "toolbar": {
+            "bg": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "filter": "blur(16px) saturate(1.55)",
+            "shadow": "rgba(255, 255, 255, 0.85) 0px 1px 0px 0px inset, rgba(255, 255, 255, 0.4) 1px 0px 0px 0px inset, rgba(255, 255, 255, 0.19) 0px -1px 0px 0px inset, rgba(16, 16, 32, 0.04) 0px 1px 3px 0px",
+            "border": "rgba(255, 255, 255, 0.9)",
+            "ink": "rgb(29, 29, 31)",
+            "font": "",
+            "outline": "rgb(29, 29, 31) none 3px",
+            "geom": [
+              58,
+              8,
+              324,
+              121,
+              "absolute",
+              "0px",
+              "0px",
+              "1px",
+              "matrix(1, 0, 0, 1, -162, 0)",
+              "54",
+              "visible",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "popup": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "filter": "blur(12px) saturate(1.35)",
+            "shadow": "rgba(255, 255, 255, 0.85) 0px 1px 0px 0px inset, rgba(255, 255, 255, 0.4) 1px 0px 0px 0px inset, rgba(255, 255, 255, 0.19) 0px -1px 0px 0px inset, rgba(16, 16, 32, 0.19) 0px 8px 36px -10px",
+            "border": "rgba(255, 255, 255, 0.9)",
+            "ink": "rgb(29, 29, 31)",
+            "font": "12px / 18px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+            "outline": "rgb(29, 29, 31) none 3px",
+            "geom": [
+              110,
+              450,
+              250,
+              156.078125,
+              "fixed",
+              "0px",
+              "20px",
+              "1px",
+              "none",
+              "100",
+              "auto",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "native": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "filter": "blur(12px) saturate(1.35)",
+            "shadow": "rgba(255, 255, 255, 0.85) 0px 1px 0px 0px inset, rgba(255, 255, 255, 0.4) 1px 0px 0px 0px inset, rgba(255, 255, 255, 0.19) 0px -1px 0px 0px inset, rgba(16, 16, 32, 0.03) 0px 3px 8px 0px, rgba(16, 16, 32, 0.15) 0px 12px 30px -12px",
+            "border": "rgba(255, 255, 255, 0.9)",
+            "ink": "rgb(29, 29, 31)",
+            "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+            "outline": "rgb(29, 29, 31) none 3px",
+            "geom": [
+              100,
+              550,
+              250,
+              89.75,
+              "fixed",
+              "0px",
+              "16px",
+              "1px",
+              "none",
+              "100",
+              "hidden",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "card": {
+            "bg": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.333), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.08)), none",
+            "filter": "none",
+            "shadow": "rgba(255, 255, 255, 0.8) 0px 1px 0px 0px inset, rgba(23, 35, 52, 0.03) 0px 2px 4px 0px, rgba(23, 35, 52, 0.047) 0px 10px 26px 0px",
+            "border": "rgb(216, 225, 221)",
+            "ink": "rgb(41, 54, 49)",
+            "font": "",
+            "outline": "rgb(41, 54, 49) none 3px",
+            "geom": [
+              160,
+              165,
+              260,
+              190,
+              "absolute",
+              "0px",
+              "0px",
+              "1px",
+              "none",
+              "auto",
+              "visible",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "calendar": [
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "image": "none",
+              "filter": "none",
+              "shadow": "none",
+              "border": "rgb(41, 54, 49)",
+              "ink": "rgb(41, 54, 49)",
+              "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "outline": "rgb(41, 54, 49) none 3px",
+              "geom": [
+                0,
+                -500,
+                220,
+                21.75,
+                "static",
+                "0px",
+                "0px",
+                "0px",
+                "none",
+                "auto",
+                "visible",
+                "auto"
+              ],
+              "animation": "none",
+              "transition": "all"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "image": "none",
+              "filter": "none",
+              "shadow": "none",
+              "border": "rgb(41, 54, 49)",
+              "ink": "rgb(41, 54, 49)",
+              "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "outline": "rgb(41, 54, 49) none 3px",
+              "geom": [
+                0,
+                -478.25,
+                220,
+                21.75,
+                "static",
+                "0px",
+                "0px",
+                "0px",
+                "none",
+                "auto",
+                "visible",
+                "auto"
+              ],
+              "animation": "none",
+              "transition": "all"
+            }
+          ],
+          "text": [
+            {
+              "ink": "rgb(41, 54, 49)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(41, 54, 49)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(88, 106, 98)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(41, 54, 49)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(41, 54, 49)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(88, 106, 98)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(29, 29, 31)",
+              "font": "550 16px / 20.8px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+            },
+            {
+              "ink": "rgb(29, 29, 31)",
+              "font": "13px / 19.5px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+            }
+          ],
+          "blurCount": 7
+        },
+        "next": {
+          "toolbar": {
+            "bg": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "filter": "blur(16px) saturate(1.55)",
+            "shadow": "rgba(255, 255, 255, 0.78) 0px 1px 0px 0px inset, rgba(36, 53, 72, 0.035) 0px -1px 0px 0px inset, rgba(16, 16, 32, 0.04) 0px 1px 3px 0px",
+            "border": "rgba(255, 255, 255, 0.62)",
+            "ink": "rgb(29, 29, 31)",
+            "font": "",
+            "outline": "rgb(29, 29, 31) none 3px",
+            "geom": [
+              58,
+              8,
+              324,
+              121,
+              "absolute",
+              "0px",
+              "0px",
+              "1px",
+              "matrix(1, 0, 0, 1, -162, 0)",
+              "54",
+              "visible",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "popup": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "filter": "blur(12px) saturate(1.35)",
+            "shadow": "rgba(255, 255, 255, 0.96) 0px 1px 0px 0px inset, rgba(36, 53, 72, 0.055) 0px -1px 0px 0px inset, rgba(16, 16, 32, 0.03) 0px 3px 8px 0px, rgba(16, 16, 32, 0.15) 0px 12px 30px -12px",
+            "border": "rgba(255, 255, 255, 0.88)",
+            "ink": "rgb(29, 29, 31)",
+            "font": "12px / 18px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+            "outline": "rgb(29, 29, 31) none 3px",
+            "geom": [
+              110,
+              450,
+              250,
+              156.078125,
+              "fixed",
+              "0px",
+              "20px",
+              "1px",
+              "none",
+              "100",
+              "auto",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "native": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "filter": "blur(12px) saturate(1.35)",
+            "shadow": "rgba(255, 255, 255, 0.96) 0px 1px 0px 0px inset, rgba(36, 53, 72, 0.055) 0px -1px 0px 0px inset, rgba(16, 16, 32, 0.03) 0px 3px 8px 0px, rgba(16, 16, 32, 0.15) 0px 12px 30px -12px",
+            "border": "rgba(255, 255, 255, 0.88)",
+            "ink": "rgb(29, 29, 31)",
+            "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+            "outline": "rgb(29, 29, 31) none 3px",
+            "geom": [
+              100,
+              550,
+              250,
+              89.75,
+              "fixed",
+              "0px",
+              "16px",
+              "1px",
+              "none",
+              "100",
+              "hidden",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "card": {
+            "bg": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.333), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.08)), none",
+            "filter": "none",
+            "shadow": "rgba(255, 255, 255, 0.68) 0px 1px 0px 0px inset, rgba(23, 35, 52, 0.035) 0px 1px 2px 0px, rgba(23, 35, 52, 0.16) 0px 8px 20px -10px",
+            "border": "rgb(216, 225, 221)",
+            "ink": "rgb(41, 54, 49)",
+            "font": "",
+            "outline": "rgb(41, 54, 49) none 3px",
+            "geom": [
+              160,
+              165,
+              260,
+              190,
+              "absolute",
+              "0px",
+              "0px",
+              "1px",
+              "none",
+              "auto",
+              "visible",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "calendar": [
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "image": "none",
+              "filter": "none",
+              "shadow": "none",
+              "border": "rgb(41, 54, 49)",
+              "ink": "rgb(41, 54, 49)",
+              "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "outline": "rgb(41, 54, 49) none 3px",
+              "geom": [
+                0,
+                -500,
+                220,
+                21.75,
+                "static",
+                "0px",
+                "0px",
+                "0px",
+                "none",
+                "auto",
+                "visible",
+                "auto"
+              ],
+              "animation": "none",
+              "transition": "all"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "image": "none",
+              "filter": "none",
+              "shadow": "none",
+              "border": "rgb(41, 54, 49)",
+              "ink": "rgb(41, 54, 49)",
+              "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "outline": "rgb(41, 54, 49) none 3px",
+              "geom": [
+                0,
+                -478.25,
+                220,
+                21.75,
+                "static",
+                "0px",
+                "0px",
+                "0px",
+                "none",
+                "auto",
+                "visible",
+                "auto"
+              ],
+              "animation": "none",
+              "transition": "all"
+            }
+          ],
+          "text": [
+            {
+              "ink": "rgb(41, 54, 49)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(41, 54, 49)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(88, 106, 98)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(41, 54, 49)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(41, 54, 49)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(88, 106, 98)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(29, 29, 31)",
+              "font": "550 16px / 20.8px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+            },
+            {
+              "ink": "rgb(29, 29, 31)",
+              "font": "13px / 19.5px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+            }
+          ],
+          "blurCount": 7
+        }
+      },
+      "contrast": [
+        {
+          "role": "toolbar",
+          "min": 10.605974322475657,
+          "pass": true
+        },
+        {
+          "role": "popup",
+          "min": 11.9965590456589,
+          "pass": true
+        },
+        {
+          "role": "native",
+          "min": 11.9965590456589,
+          "pass": true
+        },
+        {
+          "role": "card",
+          "min": 10.523088511590771,
+          "pass": true
+        }
+      ],
+      "exceptions": [
+        {
+          "cls": "has-card-fill",
+          "pass": true
+        },
+        {
+          "cls": "has-custom-border",
+          "pass": true
+        },
+        {
+          "cls": "is-transparent",
+          "pass": true
+        },
+        {
+          "cls": "is-compact-fold",
+          "pass": true
+        },
+        {
+          "cls": "is-folded",
+          "pass": true
+        },
+        {
+          "cls": "is-inline-editing",
+          "pass": true
+        },
+        {
+          "cls": "ts-media-card",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "mode": "light",
+      "width": 1180,
+      "order": "theme-last",
+      "checks": {
+        "geometry": true,
+        "fillsAndFilters": true,
+        "roleDepth": true,
+        "noExtraBlur": true,
+        "calendar": true,
+        "text": true,
+        "contrast": true,
+        "darkEdges": true,
+        "materialControls": true,
+        "solidFallback": true,
+        "pluginOffFallback": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrast": true,
+        "forced-colors": true,
+        "classic": true,
+        "apple": true,
+        "print": true,
+        "selection": true,
+        "authoredExceptions": true,
+        "opticalOwnership": true,
+        "cleanup": true
+      },
+      "pass": true,
+      "states": {
+        "old": {
+          "toolbar": {
+            "bg": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "filter": "blur(16px) saturate(1.55)",
+            "shadow": "rgba(255, 255, 255, 0.85) 0px 1px 0px 0px inset, rgba(255, 255, 255, 0.4) 1px 0px 0px 0px inset, rgba(255, 255, 255, 0.19) 0px -1px 0px 0px inset, rgba(16, 16, 32, 0.04) 0px 1px 3px 0px",
+            "border": "rgba(255, 255, 255, 0.9)",
+            "ink": "rgb(29, 29, 31)",
+            "font": "",
+            "outline": "rgb(29, 29, 31) none 3px",
+            "geom": [
+              212.5,
+              12,
+              805,
+              89,
+              "absolute",
+              "0px",
+              "0px",
+              "1px",
+              "matrix(1, 0, 0, 1, -402.5, 0)",
+              "54",
+              "visible",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "popup": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "filter": "blur(12px) saturate(1.35)",
+            "shadow": "rgba(255, 255, 255, 0.85) 0px 1px 0px 0px inset, rgba(255, 255, 255, 0.4) 1px 0px 0px 0px inset, rgba(255, 255, 255, 0.19) 0px -1px 0px 0px inset, rgba(16, 16, 32, 0.19) 0px 8px 36px -10px",
+            "border": "rgba(255, 255, 255, 0.9)",
+            "ink": "rgb(29, 29, 31)",
+            "font": "12px / 18px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+            "outline": "rgb(29, 29, 31) none 3px",
+            "geom": [
+              900,
+              450,
+              250,
+              156.078125,
+              "fixed",
+              "0px",
+              "20px",
+              "1px",
+              "none",
+              "100",
+              "auto",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "native": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "filter": "blur(12px) saturate(1.35)",
+            "shadow": "rgba(255, 255, 255, 0.85) 0px 1px 0px 0px inset, rgba(255, 255, 255, 0.4) 1px 0px 0px 0px inset, rgba(255, 255, 255, 0.19) 0px -1px 0px 0px inset, rgba(16, 16, 32, 0.03) 0px 3px 8px 0px, rgba(16, 16, 32, 0.15) 0px 12px 30px -12px",
+            "border": "rgba(255, 255, 255, 0.9)",
+            "ink": "rgb(29, 29, 31)",
+            "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+            "outline": "rgb(29, 29, 31) none 3px",
+            "geom": [
+              100,
+              550,
+              250,
+              89.75,
+              "fixed",
+              "0px",
+              "16px",
+              "1px",
+              "none",
+              "100",
+              "hidden",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "card": {
+            "bg": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.333), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.08)), none",
+            "filter": "none",
+            "shadow": "rgba(255, 255, 255, 0.8) 0px 1px 0px 0px inset, rgba(23, 35, 52, 0.03) 0px 2px 4px 0px, rgba(23, 35, 52, 0.047) 0px 10px 26px 0px",
+            "border": "rgb(216, 225, 221)",
+            "ink": "rgb(41, 54, 49)",
+            "font": "",
+            "outline": "rgb(41, 54, 49) none 3px",
+            "geom": [
+              160,
+              165,
+              260,
+              190,
+              "absolute",
+              "0px",
+              "0px",
+              "1px",
+              "none",
+              "auto",
+              "visible",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "calendar": [
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "image": "none",
+              "filter": "none",
+              "shadow": "none",
+              "border": "rgb(41, 54, 49)",
+              "ink": "rgb(41, 54, 49)",
+              "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "outline": "rgb(41, 54, 49) none 3px",
+              "geom": [
+                0,
+                -500,
+                220,
+                21.75,
+                "static",
+                "0px",
+                "0px",
+                "0px",
+                "none",
+                "auto",
+                "visible",
+                "auto"
+              ],
+              "animation": "none",
+              "transition": "all"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "image": "none",
+              "filter": "none",
+              "shadow": "none",
+              "border": "rgb(41, 54, 49)",
+              "ink": "rgb(41, 54, 49)",
+              "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "outline": "rgb(41, 54, 49) none 3px",
+              "geom": [
+                0,
+                -478.25,
+                220,
+                21.75,
+                "static",
+                "0px",
+                "0px",
+                "0px",
+                "none",
+                "auto",
+                "visible",
+                "auto"
+              ],
+              "animation": "none",
+              "transition": "all"
+            }
+          ],
+          "text": [
+            {
+              "ink": "rgb(41, 54, 49)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(41, 54, 49)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(88, 106, 98)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(41, 54, 49)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(41, 54, 49)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(88, 106, 98)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(29, 29, 31)",
+              "font": "550 16px / 20.8px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+            },
+            {
+              "ink": "rgb(29, 29, 31)",
+              "font": "13px / 19.5px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+            }
+          ],
+          "blurCount": 7
+        },
+        "next": {
+          "toolbar": {
+            "bg": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "filter": "blur(16px) saturate(1.55)",
+            "shadow": "rgba(255, 255, 255, 0.78) 0px 1px 0px 0px inset, rgba(36, 53, 72, 0.035) 0px -1px 0px 0px inset, rgba(16, 16, 32, 0.04) 0px 1px 3px 0px",
+            "border": "rgba(255, 255, 255, 0.62)",
+            "ink": "rgb(29, 29, 31)",
+            "font": "",
+            "outline": "rgb(29, 29, 31) none 3px",
+            "geom": [
+              212.5,
+              12,
+              805,
+              89,
+              "absolute",
+              "0px",
+              "0px",
+              "1px",
+              "matrix(1, 0, 0, 1, -402.5, 0)",
+              "54",
+              "visible",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "popup": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "filter": "blur(12px) saturate(1.35)",
+            "shadow": "rgba(255, 255, 255, 0.96) 0px 1px 0px 0px inset, rgba(36, 53, 72, 0.055) 0px -1px 0px 0px inset, rgba(16, 16, 32, 0.03) 0px 3px 8px 0px, rgba(16, 16, 32, 0.15) 0px 12px 30px -12px",
+            "border": "rgba(255, 255, 255, 0.88)",
+            "ink": "rgb(29, 29, 31)",
+            "font": "12px / 18px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+            "outline": "rgb(29, 29, 31) none 3px",
+            "geom": [
+              900,
+              450,
+              250,
+              156.078125,
+              "fixed",
+              "0px",
+              "20px",
+              "1px",
+              "none",
+              "100",
+              "auto",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "native": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "filter": "blur(12px) saturate(1.35)",
+            "shadow": "rgba(255, 255, 255, 0.96) 0px 1px 0px 0px inset, rgba(36, 53, 72, 0.055) 0px -1px 0px 0px inset, rgba(16, 16, 32, 0.03) 0px 3px 8px 0px, rgba(16, 16, 32, 0.15) 0px 12px 30px -12px",
+            "border": "rgba(255, 255, 255, 0.88)",
+            "ink": "rgb(29, 29, 31)",
+            "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+            "outline": "rgb(29, 29, 31) none 3px",
+            "geom": [
+              100,
+              550,
+              250,
+              89.75,
+              "fixed",
+              "0px",
+              "16px",
+              "1px",
+              "none",
+              "100",
+              "hidden",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "card": {
+            "bg": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.333), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.08)), none",
+            "filter": "none",
+            "shadow": "rgba(255, 255, 255, 0.68) 0px 1px 0px 0px inset, rgba(23, 35, 52, 0.035) 0px 1px 2px 0px, rgba(23, 35, 52, 0.16) 0px 8px 20px -10px",
+            "border": "rgb(216, 225, 221)",
+            "ink": "rgb(41, 54, 49)",
+            "font": "",
+            "outline": "rgb(41, 54, 49) none 3px",
+            "geom": [
+              160,
+              165,
+              260,
+              190,
+              "absolute",
+              "0px",
+              "0px",
+              "1px",
+              "none",
+              "auto",
+              "visible",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "calendar": [
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "image": "none",
+              "filter": "none",
+              "shadow": "none",
+              "border": "rgb(41, 54, 49)",
+              "ink": "rgb(41, 54, 49)",
+              "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "outline": "rgb(41, 54, 49) none 3px",
+              "geom": [
+                0,
+                -500,
+                220,
+                21.75,
+                "static",
+                "0px",
+                "0px",
+                "0px",
+                "none",
+                "auto",
+                "visible",
+                "auto"
+              ],
+              "animation": "none",
+              "transition": "all"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "image": "none",
+              "filter": "none",
+              "shadow": "none",
+              "border": "rgb(41, 54, 49)",
+              "ink": "rgb(41, 54, 49)",
+              "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "outline": "rgb(41, 54, 49) none 3px",
+              "geom": [
+                0,
+                -478.25,
+                220,
+                21.75,
+                "static",
+                "0px",
+                "0px",
+                "0px",
+                "none",
+                "auto",
+                "visible",
+                "auto"
+              ],
+              "animation": "none",
+              "transition": "all"
+            }
+          ],
+          "text": [
+            {
+              "ink": "rgb(41, 54, 49)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(41, 54, 49)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(88, 106, 98)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(41, 54, 49)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(41, 54, 49)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(88, 106, 98)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(29, 29, 31)",
+              "font": "550 16px / 20.8px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+            },
+            {
+              "ink": "rgb(29, 29, 31)",
+              "font": "13px / 19.5px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+            }
+          ],
+          "blurCount": 7
+        }
+      },
+      "contrast": [
+        {
+          "role": "toolbar",
+          "min": 10.605974322475657,
+          "pass": true
+        },
+        {
+          "role": "popup",
+          "min": 11.9965590456589,
+          "pass": true
+        },
+        {
+          "role": "native",
+          "min": 11.9965590456589,
+          "pass": true
+        },
+        {
+          "role": "card",
+          "min": 10.523088511590771,
+          "pass": true
+        }
+      ],
+      "exceptions": [
+        {
+          "cls": "has-card-fill",
+          "pass": true
+        },
+        {
+          "cls": "has-custom-border",
+          "pass": true
+        },
+        {
+          "cls": "is-transparent",
+          "pass": true
+        },
+        {
+          "cls": "is-compact-fold",
+          "pass": true
+        },
+        {
+          "cls": "is-folded",
+          "pass": true
+        },
+        {
+          "cls": "is-inline-editing",
+          "pass": true
+        },
+        {
+          "cls": "ts-media-card",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "mode": "light",
+      "width": 1180,
+      "order": "runtime-last",
+      "checks": {
+        "geometry": true,
+        "fillsAndFilters": true,
+        "roleDepth": true,
+        "noExtraBlur": true,
+        "calendar": true,
+        "text": true,
+        "contrast": true,
+        "darkEdges": true,
+        "materialControls": true,
+        "solidFallback": true,
+        "pluginOffFallback": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrast": true,
+        "forced-colors": true,
+        "classic": true,
+        "apple": true,
+        "print": true,
+        "selection": true,
+        "authoredExceptions": true,
+        "opticalOwnership": true,
+        "cleanup": true
+      },
+      "pass": true,
+      "states": {
+        "old": {
+          "toolbar": {
+            "bg": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "filter": "blur(16px) saturate(1.55)",
+            "shadow": "rgba(255, 255, 255, 0.85) 0px 1px 0px 0px inset, rgba(255, 255, 255, 0.4) 1px 0px 0px 0px inset, rgba(255, 255, 255, 0.19) 0px -1px 0px 0px inset, rgba(16, 16, 32, 0.04) 0px 1px 3px 0px",
+            "border": "rgba(255, 255, 255, 0.9)",
+            "ink": "rgb(29, 29, 31)",
+            "font": "",
+            "outline": "rgb(29, 29, 31) none 3px",
+            "geom": [
+              212.5,
+              12,
+              805,
+              89,
+              "absolute",
+              "0px",
+              "0px",
+              "1px",
+              "matrix(1, 0, 0, 1, -402.5, 0)",
+              "54",
+              "visible",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "popup": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "filter": "blur(12px) saturate(1.35)",
+            "shadow": "rgba(255, 255, 255, 0.85) 0px 1px 0px 0px inset, rgba(255, 255, 255, 0.4) 1px 0px 0px 0px inset, rgba(255, 255, 255, 0.19) 0px -1px 0px 0px inset, rgba(16, 16, 32, 0.19) 0px 8px 36px -10px",
+            "border": "rgba(255, 255, 255, 0.9)",
+            "ink": "rgb(29, 29, 31)",
+            "font": "12px / 18px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+            "outline": "rgb(29, 29, 31) none 3px",
+            "geom": [
+              900,
+              450,
+              250,
+              156.078125,
+              "fixed",
+              "0px",
+              "20px",
+              "1px",
+              "none",
+              "100",
+              "auto",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "native": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "filter": "blur(12px) saturate(1.35)",
+            "shadow": "rgba(255, 255, 255, 0.85) 0px 1px 0px 0px inset, rgba(255, 255, 255, 0.4) 1px 0px 0px 0px inset, rgba(255, 255, 255, 0.19) 0px -1px 0px 0px inset, rgba(16, 16, 32, 0.03) 0px 3px 8px 0px, rgba(16, 16, 32, 0.15) 0px 12px 30px -12px",
+            "border": "rgba(255, 255, 255, 0.9)",
+            "ink": "rgb(29, 29, 31)",
+            "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+            "outline": "rgb(29, 29, 31) none 3px",
+            "geom": [
+              100,
+              550,
+              250,
+              89.75,
+              "fixed",
+              "0px",
+              "16px",
+              "1px",
+              "none",
+              "100",
+              "hidden",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "card": {
+            "bg": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.333), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.08)), none",
+            "filter": "none",
+            "shadow": "rgba(255, 255, 255, 0.8) 0px 1px 0px 0px inset, rgba(23, 35, 52, 0.03) 0px 2px 4px 0px, rgba(23, 35, 52, 0.047) 0px 10px 26px 0px",
+            "border": "rgb(216, 225, 221)",
+            "ink": "rgb(41, 54, 49)",
+            "font": "",
+            "outline": "rgb(41, 54, 49) none 3px",
+            "geom": [
+              160,
+              165,
+              260,
+              190,
+              "absolute",
+              "0px",
+              "0px",
+              "1px",
+              "none",
+              "auto",
+              "visible",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "calendar": [
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "image": "none",
+              "filter": "none",
+              "shadow": "none",
+              "border": "rgb(41, 54, 49)",
+              "ink": "rgb(41, 54, 49)",
+              "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "outline": "rgb(41, 54, 49) none 3px",
+              "geom": [
+                0,
+                -500,
+                220,
+                21.75,
+                "static",
+                "0px",
+                "0px",
+                "0px",
+                "none",
+                "auto",
+                "visible",
+                "auto"
+              ],
+              "animation": "none",
+              "transition": "all"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "image": "none",
+              "filter": "none",
+              "shadow": "none",
+              "border": "rgb(41, 54, 49)",
+              "ink": "rgb(41, 54, 49)",
+              "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "outline": "rgb(41, 54, 49) none 3px",
+              "geom": [
+                0,
+                -478.25,
+                220,
+                21.75,
+                "static",
+                "0px",
+                "0px",
+                "0px",
+                "none",
+                "auto",
+                "visible",
+                "auto"
+              ],
+              "animation": "none",
+              "transition": "all"
+            }
+          ],
+          "text": [
+            {
+              "ink": "rgb(41, 54, 49)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(41, 54, 49)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(88, 106, 98)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(41, 54, 49)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(41, 54, 49)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(88, 106, 98)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(29, 29, 31)",
+              "font": "550 16px / 20.8px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+            },
+            {
+              "ink": "rgb(29, 29, 31)",
+              "font": "13px / 19.5px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+            }
+          ],
+          "blurCount": 7
+        },
+        "next": {
+          "toolbar": {
+            "bg": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "filter": "blur(16px) saturate(1.55)",
+            "shadow": "rgba(255, 255, 255, 0.78) 0px 1px 0px 0px inset, rgba(36, 53, 72, 0.035) 0px -1px 0px 0px inset, rgba(16, 16, 32, 0.04) 0px 1px 3px 0px",
+            "border": "rgba(255, 255, 255, 0.62)",
+            "ink": "rgb(29, 29, 31)",
+            "font": "",
+            "outline": "rgb(29, 29, 31) none 3px",
+            "geom": [
+              212.5,
+              12,
+              805,
+              89,
+              "absolute",
+              "0px",
+              "0px",
+              "1px",
+              "matrix(1, 0, 0, 1, -402.5, 0)",
+              "54",
+              "visible",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "popup": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "filter": "blur(12px) saturate(1.35)",
+            "shadow": "rgba(255, 255, 255, 0.96) 0px 1px 0px 0px inset, rgba(36, 53, 72, 0.055) 0px -1px 0px 0px inset, rgba(16, 16, 32, 0.03) 0px 3px 8px 0px, rgba(16, 16, 32, 0.15) 0px 12px 30px -12px",
+            "border": "rgba(255, 255, 255, 0.88)",
+            "ink": "rgb(29, 29, 31)",
+            "font": "12px / 18px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+            "outline": "rgb(29, 29, 31) none 3px",
+            "geom": [
+              900,
+              450,
+              250,
+              156.078125,
+              "fixed",
+              "0px",
+              "20px",
+              "1px",
+              "none",
+              "100",
+              "auto",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "native": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "filter": "blur(12px) saturate(1.35)",
+            "shadow": "rgba(255, 255, 255, 0.96) 0px 1px 0px 0px inset, rgba(36, 53, 72, 0.055) 0px -1px 0px 0px inset, rgba(16, 16, 32, 0.03) 0px 3px 8px 0px, rgba(16, 16, 32, 0.15) 0px 12px 30px -12px",
+            "border": "rgba(255, 255, 255, 0.88)",
+            "ink": "rgb(29, 29, 31)",
+            "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+            "outline": "rgb(29, 29, 31) none 3px",
+            "geom": [
+              100,
+              550,
+              250,
+              89.75,
+              "fixed",
+              "0px",
+              "16px",
+              "1px",
+              "none",
+              "100",
+              "hidden",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "card": {
+            "bg": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.333), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.08)), none",
+            "filter": "none",
+            "shadow": "rgba(255, 255, 255, 0.68) 0px 1px 0px 0px inset, rgba(23, 35, 52, 0.035) 0px 1px 2px 0px, rgba(23, 35, 52, 0.16) 0px 8px 20px -10px",
+            "border": "rgb(216, 225, 221)",
+            "ink": "rgb(41, 54, 49)",
+            "font": "",
+            "outline": "rgb(41, 54, 49) none 3px",
+            "geom": [
+              160,
+              165,
+              260,
+              190,
+              "absolute",
+              "0px",
+              "0px",
+              "1px",
+              "none",
+              "auto",
+              "visible",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "calendar": [
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "image": "none",
+              "filter": "none",
+              "shadow": "none",
+              "border": "rgb(41, 54, 49)",
+              "ink": "rgb(41, 54, 49)",
+              "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "outline": "rgb(41, 54, 49) none 3px",
+              "geom": [
+                0,
+                -500,
+                220,
+                21.75,
+                "static",
+                "0px",
+                "0px",
+                "0px",
+                "none",
+                "auto",
+                "visible",
+                "auto"
+              ],
+              "animation": "none",
+              "transition": "all"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "image": "none",
+              "filter": "none",
+              "shadow": "none",
+              "border": "rgb(41, 54, 49)",
+              "ink": "rgb(41, 54, 49)",
+              "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "outline": "rgb(41, 54, 49) none 3px",
+              "geom": [
+                0,
+                -478.25,
+                220,
+                21.75,
+                "static",
+                "0px",
+                "0px",
+                "0px",
+                "none",
+                "auto",
+                "visible",
+                "auto"
+              ],
+              "animation": "none",
+              "transition": "all"
+            }
+          ],
+          "text": [
+            {
+              "ink": "rgb(41, 54, 49)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(41, 54, 49)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(88, 106, 98)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(41, 54, 49)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(41, 54, 49)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(88, 106, 98)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(29, 29, 31)",
+              "font": "550 16px / 20.8px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+            },
+            {
+              "ink": "rgb(29, 29, 31)",
+              "font": "13px / 19.5px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+            }
+          ],
+          "blurCount": 7
+        }
+      },
+      "contrast": [
+        {
+          "role": "toolbar",
+          "min": 10.605974322475657,
+          "pass": true
+        },
+        {
+          "role": "popup",
+          "min": 11.9965590456589,
+          "pass": true
+        },
+        {
+          "role": "native",
+          "min": 11.9965590456589,
+          "pass": true
+        },
+        {
+          "role": "card",
+          "min": 10.523088511590771,
+          "pass": true
+        }
+      ],
+      "exceptions": [
+        {
+          "cls": "has-card-fill",
+          "pass": true
+        },
+        {
+          "cls": "has-custom-border",
+          "pass": true
+        },
+        {
+          "cls": "is-transparent",
+          "pass": true
+        },
+        {
+          "cls": "is-compact-fold",
+          "pass": true
+        },
+        {
+          "cls": "is-folded",
+          "pass": true
+        },
+        {
+          "cls": "is-inline-editing",
+          "pass": true
+        },
+        {
+          "cls": "ts-media-card",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "mode": "dark",
+      "width": 390,
+      "order": "theme-last",
+      "checks": {
+        "geometry": true,
+        "fillsAndFilters": true,
+        "roleDepth": true,
+        "noExtraBlur": true,
+        "calendar": true,
+        "text": true,
+        "contrast": true,
+        "darkEdges": true,
+        "materialControls": true,
+        "solidFallback": true,
+        "pluginOffFallback": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrast": true,
+        "forced-colors": true,
+        "classic": true,
+        "apple": true,
+        "print": true,
+        "selection": true,
+        "authoredExceptions": true,
+        "cleanup": true
+      },
+      "pass": true,
+      "states": {
+        "old": {
+          "toolbar": {
+            "bg": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "filter": "blur(16px) saturate(1.55)",
+            "shadow": "rgba(255, 255, 255, 0.25) 0px 1px 0px 0px inset, rgba(255, 255, 255, 0.094) 1px 0px 0px 0px inset, rgba(0, 0, 0, 0.19) 0px -1px 0px 0px inset, rgba(0, 0, 0, 0.15) 0px 1px 3px 0px",
+            "border": "rgba(255, 255, 255, 0.19)",
+            "ink": "rgb(245, 245, 247)",
+            "font": "",
+            "outline": "rgb(245, 245, 247) none 3px",
+            "geom": [
+              58,
+              8,
+              324,
+              121,
+              "absolute",
+              "0px",
+              "0px",
+              "1px",
+              "matrix(1, 0, 0, 1, -162, 0)",
+              "54",
+              "visible",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "popup": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "filter": "blur(12px) saturate(1.35)",
+            "shadow": "rgba(255, 255, 255, 0.25) 0px 1px 0px 0px inset, rgba(255, 255, 255, 0.094) 1px 0px 0px 0px inset, rgba(0, 0, 0, 0.19) 0px -1px 0px 0px inset, rgba(0, 0, 0, 0.5) 0px 8px 36px -10px",
+            "border": "rgba(255, 255, 255, 0.19)",
+            "ink": "rgb(245, 245, 247)",
+            "font": "12px / 18px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+            "outline": "rgb(245, 245, 247) none 3px",
+            "geom": [
+              110,
+              450,
+              250,
+              156.078125,
+              "fixed",
+              "0px",
+              "20px",
+              "1px",
+              "none",
+              "100",
+              "auto",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "native": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "filter": "blur(12px) saturate(1.35)",
+            "shadow": "rgba(255, 255, 255, 0.25) 0px 1px 0px 0px inset, rgba(255, 255, 255, 0.094) 1px 0px 0px 0px inset, rgba(0, 0, 0, 0.19) 0px -1px 0px 0px inset, rgba(0, 0, 0, 0.15) 0px 4px 10px 0px, rgba(0, 0, 0, 0.4) 0px 14px 32px -12px",
+            "border": "rgba(255, 255, 255, 0.19)",
+            "ink": "rgb(245, 245, 247)",
+            "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+            "outline": "rgb(245, 245, 247) none 3px",
+            "geom": [
+              100,
+              550,
+              250,
+              89.75,
+              "fixed",
+              "0px",
+              "16px",
+              "1px",
+              "none",
+              "100",
+              "hidden",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "card": {
+            "bg": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.047), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.01)), none",
+            "filter": "none",
+            "shadow": "rgba(255, 255, 255, 0.16) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 5px 0px, rgba(0, 0, 0, 0.2) 0px 12px 28px 0px",
+            "border": "rgb(59, 73, 66)",
+            "ink": "rgb(226, 234, 229)",
+            "font": "",
+            "outline": "rgb(226, 234, 229) none 3px",
+            "geom": [
+              160,
+              165,
+              260,
+              190,
+              "absolute",
+              "0px",
+              "0px",
+              "1px",
+              "none",
+              "auto",
+              "visible",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "calendar": [
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "image": "none",
+              "filter": "none",
+              "shadow": "none",
+              "border": "rgb(226, 234, 229)",
+              "ink": "rgb(226, 234, 229)",
+              "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "outline": "rgb(226, 234, 229) none 3px",
+              "geom": [
+                0,
+                -500,
+                220,
+                21.75,
+                "static",
+                "0px",
+                "0px",
+                "0px",
+                "none",
+                "auto",
+                "visible",
+                "auto"
+              ],
+              "animation": "none",
+              "transition": "all"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "image": "none",
+              "filter": "none",
+              "shadow": "none",
+              "border": "rgb(226, 234, 229)",
+              "ink": "rgb(226, 234, 229)",
+              "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "outline": "rgb(226, 234, 229) none 3px",
+              "geom": [
+                0,
+                -478.25,
+                220,
+                21.75,
+                "static",
+                "0px",
+                "0px",
+                "0px",
+                "none",
+                "auto",
+                "visible",
+                "auto"
+              ],
+              "animation": "none",
+              "transition": "all"
+            }
+          ],
+          "text": [
+            {
+              "ink": "rgb(226, 234, 229)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(226, 234, 229)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(177, 193, 183)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(226, 234, 229)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(226, 234, 229)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(177, 193, 183)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(245, 245, 247)",
+              "font": "550 16px / 20.8px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+            },
+            {
+              "ink": "rgb(245, 245, 247)",
+              "font": "13px / 19.5px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+            }
+          ],
+          "blurCount": 7
+        },
+        "next": {
+          "toolbar": {
+            "bg": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "filter": "blur(16px) saturate(1.55)",
+            "shadow": "rgba(220, 234, 255, 0.2) 0px 1px 0px 0px inset, rgba(12, 10, 9, 0.26) 0px -1px 0px 0px inset, rgba(0, 0, 0, 0.15) 0px 1px 3px 0px",
+            "border": "rgba(220, 230, 246, 0.1)",
+            "ink": "rgb(245, 245, 247)",
+            "font": "",
+            "outline": "rgb(245, 245, 247) none 3px",
+            "geom": [
+              58,
+              8,
+              324,
+              121,
+              "absolute",
+              "0px",
+              "0px",
+              "1px",
+              "matrix(1, 0, 0, 1, -162, 0)",
+              "54",
+              "visible",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "popup": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "filter": "blur(12px) saturate(1.35)",
+            "shadow": "rgba(224, 237, 255, 0.29) 0px 1px 0px 0px inset, rgba(12, 10, 9, 0.32) 0px -1px 0px 0px inset, rgba(0, 0, 0, 0.15) 0px 4px 10px 0px, rgba(0, 0, 0, 0.4) 0px 14px 32px -12px",
+            "border": "rgba(220, 230, 246, 0.17)",
+            "ink": "rgb(245, 245, 247)",
+            "font": "12px / 18px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+            "outline": "rgb(245, 245, 247) none 3px",
+            "geom": [
+              110,
+              450,
+              250,
+              156.078125,
+              "fixed",
+              "0px",
+              "20px",
+              "1px",
+              "none",
+              "100",
+              "auto",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "native": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "filter": "blur(12px) saturate(1.35)",
+            "shadow": "rgba(224, 237, 255, 0.29) 0px 1px 0px 0px inset, rgba(12, 10, 9, 0.32) 0px -1px 0px 0px inset, rgba(0, 0, 0, 0.15) 0px 4px 10px 0px, rgba(0, 0, 0, 0.4) 0px 14px 32px -12px",
+            "border": "rgba(220, 230, 246, 0.17)",
+            "ink": "rgb(245, 245, 247)",
+            "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+            "outline": "rgb(245, 245, 247) none 3px",
+            "geom": [
+              100,
+              550,
+              250,
+              89.75,
+              "fixed",
+              "0px",
+              "16px",
+              "1px",
+              "none",
+              "100",
+              "hidden",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "card": {
+            "bg": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.047), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.01)), none",
+            "filter": "none",
+            "shadow": "rgba(218, 232, 250, 0.11) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.14) 0px 1px 3px 0px, rgba(0, 0, 0, 0.32) 0px 10px 20px -10px",
+            "border": "rgb(59, 73, 66)",
+            "ink": "rgb(226, 234, 229)",
+            "font": "",
+            "outline": "rgb(226, 234, 229) none 3px",
+            "geom": [
+              160,
+              165,
+              260,
+              190,
+              "absolute",
+              "0px",
+              "0px",
+              "1px",
+              "none",
+              "auto",
+              "visible",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "calendar": [
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "image": "none",
+              "filter": "none",
+              "shadow": "none",
+              "border": "rgb(226, 234, 229)",
+              "ink": "rgb(226, 234, 229)",
+              "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "outline": "rgb(226, 234, 229) none 3px",
+              "geom": [
+                0,
+                -500,
+                220,
+                21.75,
+                "static",
+                "0px",
+                "0px",
+                "0px",
+                "none",
+                "auto",
+                "visible",
+                "auto"
+              ],
+              "animation": "none",
+              "transition": "all"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "image": "none",
+              "filter": "none",
+              "shadow": "none",
+              "border": "rgb(226, 234, 229)",
+              "ink": "rgb(226, 234, 229)",
+              "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "outline": "rgb(226, 234, 229) none 3px",
+              "geom": [
+                0,
+                -478.25,
+                220,
+                21.75,
+                "static",
+                "0px",
+                "0px",
+                "0px",
+                "none",
+                "auto",
+                "visible",
+                "auto"
+              ],
+              "animation": "none",
+              "transition": "all"
+            }
+          ],
+          "text": [
+            {
+              "ink": "rgb(226, 234, 229)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(226, 234, 229)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(177, 193, 183)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(226, 234, 229)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(226, 234, 229)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(177, 193, 183)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(245, 245, 247)",
+              "font": "550 16px / 20.8px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+            },
+            {
+              "ink": "rgb(245, 245, 247)",
+              "font": "13px / 19.5px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+            }
+          ],
+          "blurCount": 7
+        }
+      },
+      "contrast": [
+        {
+          "role": "toolbar",
+          "min": 6.827103494503471,
+          "pass": true
+        },
+        {
+          "role": "popup",
+          "min": 7.394069231351412,
+          "pass": true
+        },
+        {
+          "role": "native",
+          "min": 7.394069231351412,
+          "pass": true
+        },
+        {
+          "role": "card",
+          "min": 8.412135666949789,
+          "pass": true
+        }
+      ],
+      "exceptions": [
+        {
+          "cls": "has-card-fill",
+          "pass": true
+        },
+        {
+          "cls": "has-custom-border",
+          "pass": true
+        },
+        {
+          "cls": "is-transparent",
+          "pass": true
+        },
+        {
+          "cls": "is-compact-fold",
+          "pass": true
+        },
+        {
+          "cls": "is-folded",
+          "pass": true
+        },
+        {
+          "cls": "is-inline-editing",
+          "pass": true
+        },
+        {
+          "cls": "ts-media-card",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "mode": "dark",
+      "width": 390,
+      "order": "runtime-last",
+      "checks": {
+        "geometry": true,
+        "fillsAndFilters": true,
+        "roleDepth": true,
+        "noExtraBlur": true,
+        "calendar": true,
+        "text": true,
+        "contrast": true,
+        "darkEdges": true,
+        "materialControls": true,
+        "solidFallback": true,
+        "pluginOffFallback": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrast": true,
+        "forced-colors": true,
+        "classic": true,
+        "apple": true,
+        "print": true,
+        "selection": true,
+        "authoredExceptions": true,
+        "cleanup": true
+      },
+      "pass": true,
+      "states": {
+        "old": {
+          "toolbar": {
+            "bg": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "filter": "blur(16px) saturate(1.55)",
+            "shadow": "rgba(255, 255, 255, 0.25) 0px 1px 0px 0px inset, rgba(255, 255, 255, 0.094) 1px 0px 0px 0px inset, rgba(0, 0, 0, 0.19) 0px -1px 0px 0px inset, rgba(0, 0, 0, 0.15) 0px 1px 3px 0px",
+            "border": "rgba(255, 255, 255, 0.19)",
+            "ink": "rgb(245, 245, 247)",
+            "font": "",
+            "outline": "rgb(245, 245, 247) none 3px",
+            "geom": [
+              58,
+              8,
+              324,
+              121,
+              "absolute",
+              "0px",
+              "0px",
+              "1px",
+              "matrix(1, 0, 0, 1, -162, 0)",
+              "54",
+              "visible",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "popup": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "filter": "blur(12px) saturate(1.35)",
+            "shadow": "rgba(255, 255, 255, 0.25) 0px 1px 0px 0px inset, rgba(255, 255, 255, 0.094) 1px 0px 0px 0px inset, rgba(0, 0, 0, 0.19) 0px -1px 0px 0px inset, rgba(0, 0, 0, 0.5) 0px 8px 36px -10px",
+            "border": "rgba(255, 255, 255, 0.19)",
+            "ink": "rgb(245, 245, 247)",
+            "font": "12px / 18px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+            "outline": "rgb(245, 245, 247) none 3px",
+            "geom": [
+              110,
+              450,
+              250,
+              156.078125,
+              "fixed",
+              "0px",
+              "20px",
+              "1px",
+              "none",
+              "100",
+              "auto",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "native": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "filter": "blur(12px) saturate(1.35)",
+            "shadow": "rgba(255, 255, 255, 0.25) 0px 1px 0px 0px inset, rgba(255, 255, 255, 0.094) 1px 0px 0px 0px inset, rgba(0, 0, 0, 0.19) 0px -1px 0px 0px inset, rgba(0, 0, 0, 0.15) 0px 4px 10px 0px, rgba(0, 0, 0, 0.4) 0px 14px 32px -12px",
+            "border": "rgba(255, 255, 255, 0.19)",
+            "ink": "rgb(245, 245, 247)",
+            "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+            "outline": "rgb(245, 245, 247) none 3px",
+            "geom": [
+              100,
+              550,
+              250,
+              89.75,
+              "fixed",
+              "0px",
+              "16px",
+              "1px",
+              "none",
+              "100",
+              "hidden",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "card": {
+            "bg": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.047), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.01)), none",
+            "filter": "none",
+            "shadow": "rgba(255, 255, 255, 0.16) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 5px 0px, rgba(0, 0, 0, 0.2) 0px 12px 28px 0px",
+            "border": "rgb(59, 73, 66)",
+            "ink": "rgb(226, 234, 229)",
+            "font": "",
+            "outline": "rgb(226, 234, 229) none 3px",
+            "geom": [
+              160,
+              165,
+              260,
+              190,
+              "absolute",
+              "0px",
+              "0px",
+              "1px",
+              "none",
+              "auto",
+              "visible",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "calendar": [
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "image": "none",
+              "filter": "none",
+              "shadow": "none",
+              "border": "rgb(226, 234, 229)",
+              "ink": "rgb(226, 234, 229)",
+              "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "outline": "rgb(226, 234, 229) none 3px",
+              "geom": [
+                0,
+                -500,
+                220,
+                21.75,
+                "static",
+                "0px",
+                "0px",
+                "0px",
+                "none",
+                "auto",
+                "visible",
+                "auto"
+              ],
+              "animation": "none",
+              "transition": "all"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "image": "none",
+              "filter": "none",
+              "shadow": "none",
+              "border": "rgb(226, 234, 229)",
+              "ink": "rgb(226, 234, 229)",
+              "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "outline": "rgb(226, 234, 229) none 3px",
+              "geom": [
+                0,
+                -478.25,
+                220,
+                21.75,
+                "static",
+                "0px",
+                "0px",
+                "0px",
+                "none",
+                "auto",
+                "visible",
+                "auto"
+              ],
+              "animation": "none",
+              "transition": "all"
+            }
+          ],
+          "text": [
+            {
+              "ink": "rgb(226, 234, 229)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(226, 234, 229)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(177, 193, 183)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(226, 234, 229)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(226, 234, 229)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(177, 193, 183)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(245, 245, 247)",
+              "font": "550 16px / 20.8px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+            },
+            {
+              "ink": "rgb(245, 245, 247)",
+              "font": "13px / 19.5px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+            }
+          ],
+          "blurCount": 7
+        },
+        "next": {
+          "toolbar": {
+            "bg": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "filter": "blur(16px) saturate(1.55)",
+            "shadow": "rgba(220, 234, 255, 0.2) 0px 1px 0px 0px inset, rgba(12, 10, 9, 0.26) 0px -1px 0px 0px inset, rgba(0, 0, 0, 0.15) 0px 1px 3px 0px",
+            "border": "rgba(220, 230, 246, 0.1)",
+            "ink": "rgb(245, 245, 247)",
+            "font": "",
+            "outline": "rgb(245, 245, 247) none 3px",
+            "geom": [
+              58,
+              8,
+              324,
+              121,
+              "absolute",
+              "0px",
+              "0px",
+              "1px",
+              "matrix(1, 0, 0, 1, -162, 0)",
+              "54",
+              "visible",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "popup": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "filter": "blur(12px) saturate(1.35)",
+            "shadow": "rgba(224, 237, 255, 0.29) 0px 1px 0px 0px inset, rgba(12, 10, 9, 0.32) 0px -1px 0px 0px inset, rgba(0, 0, 0, 0.15) 0px 4px 10px 0px, rgba(0, 0, 0, 0.4) 0px 14px 32px -12px",
+            "border": "rgba(220, 230, 246, 0.17)",
+            "ink": "rgb(245, 245, 247)",
+            "font": "12px / 18px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+            "outline": "rgb(245, 245, 247) none 3px",
+            "geom": [
+              110,
+              450,
+              250,
+              156.078125,
+              "fixed",
+              "0px",
+              "20px",
+              "1px",
+              "none",
+              "100",
+              "auto",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "native": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "filter": "blur(12px) saturate(1.35)",
+            "shadow": "rgba(224, 237, 255, 0.29) 0px 1px 0px 0px inset, rgba(12, 10, 9, 0.32) 0px -1px 0px 0px inset, rgba(0, 0, 0, 0.15) 0px 4px 10px 0px, rgba(0, 0, 0, 0.4) 0px 14px 32px -12px",
+            "border": "rgba(220, 230, 246, 0.17)",
+            "ink": "rgb(245, 245, 247)",
+            "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+            "outline": "rgb(245, 245, 247) none 3px",
+            "geom": [
+              100,
+              550,
+              250,
+              89.75,
+              "fixed",
+              "0px",
+              "16px",
+              "1px",
+              "none",
+              "100",
+              "hidden",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "card": {
+            "bg": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.047), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.01)), none",
+            "filter": "none",
+            "shadow": "rgba(218, 232, 250, 0.11) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.14) 0px 1px 3px 0px, rgba(0, 0, 0, 0.32) 0px 10px 20px -10px",
+            "border": "rgb(59, 73, 66)",
+            "ink": "rgb(226, 234, 229)",
+            "font": "",
+            "outline": "rgb(226, 234, 229) none 3px",
+            "geom": [
+              160,
+              165,
+              260,
+              190,
+              "absolute",
+              "0px",
+              "0px",
+              "1px",
+              "none",
+              "auto",
+              "visible",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "calendar": [
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "image": "none",
+              "filter": "none",
+              "shadow": "none",
+              "border": "rgb(226, 234, 229)",
+              "ink": "rgb(226, 234, 229)",
+              "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "outline": "rgb(226, 234, 229) none 3px",
+              "geom": [
+                0,
+                -500,
+                220,
+                21.75,
+                "static",
+                "0px",
+                "0px",
+                "0px",
+                "none",
+                "auto",
+                "visible",
+                "auto"
+              ],
+              "animation": "none",
+              "transition": "all"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "image": "none",
+              "filter": "none",
+              "shadow": "none",
+              "border": "rgb(226, 234, 229)",
+              "ink": "rgb(226, 234, 229)",
+              "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "outline": "rgb(226, 234, 229) none 3px",
+              "geom": [
+                0,
+                -478.25,
+                220,
+                21.75,
+                "static",
+                "0px",
+                "0px",
+                "0px",
+                "none",
+                "auto",
+                "visible",
+                "auto"
+              ],
+              "animation": "none",
+              "transition": "all"
+            }
+          ],
+          "text": [
+            {
+              "ink": "rgb(226, 234, 229)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(226, 234, 229)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(177, 193, 183)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(226, 234, 229)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(226, 234, 229)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(177, 193, 183)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(245, 245, 247)",
+              "font": "550 16px / 20.8px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+            },
+            {
+              "ink": "rgb(245, 245, 247)",
+              "font": "13px / 19.5px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+            }
+          ],
+          "blurCount": 7
+        }
+      },
+      "contrast": [
+        {
+          "role": "toolbar",
+          "min": 6.827103494503471,
+          "pass": true
+        },
+        {
+          "role": "popup",
+          "min": 7.394069231351412,
+          "pass": true
+        },
+        {
+          "role": "native",
+          "min": 7.394069231351412,
+          "pass": true
+        },
+        {
+          "role": "card",
+          "min": 8.412135666949789,
+          "pass": true
+        }
+      ],
+      "exceptions": [
+        {
+          "cls": "has-card-fill",
+          "pass": true
+        },
+        {
+          "cls": "has-custom-border",
+          "pass": true
+        },
+        {
+          "cls": "is-transparent",
+          "pass": true
+        },
+        {
+          "cls": "is-compact-fold",
+          "pass": true
+        },
+        {
+          "cls": "is-folded",
+          "pass": true
+        },
+        {
+          "cls": "is-inline-editing",
+          "pass": true
+        },
+        {
+          "cls": "ts-media-card",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "mode": "dark",
+      "width": 1180,
+      "order": "theme-last",
+      "checks": {
+        "geometry": true,
+        "fillsAndFilters": true,
+        "roleDepth": true,
+        "noExtraBlur": true,
+        "calendar": true,
+        "text": true,
+        "contrast": true,
+        "darkEdges": true,
+        "materialControls": true,
+        "solidFallback": true,
+        "pluginOffFallback": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrast": true,
+        "forced-colors": true,
+        "classic": true,
+        "apple": true,
+        "print": true,
+        "selection": true,
+        "authoredExceptions": true,
+        "opticalOwnership": true,
+        "cleanup": true
+      },
+      "pass": true,
+      "states": {
+        "old": {
+          "toolbar": {
+            "bg": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "filter": "blur(16px) saturate(1.55)",
+            "shadow": "rgba(255, 255, 255, 0.25) 0px 1px 0px 0px inset, rgba(255, 255, 255, 0.094) 1px 0px 0px 0px inset, rgba(0, 0, 0, 0.19) 0px -1px 0px 0px inset, rgba(0, 0, 0, 0.15) 0px 1px 3px 0px",
+            "border": "rgba(255, 255, 255, 0.19)",
+            "ink": "rgb(245, 245, 247)",
+            "font": "",
+            "outline": "rgb(245, 245, 247) none 3px",
+            "geom": [
+              212.5,
+              12,
+              805,
+              89,
+              "absolute",
+              "0px",
+              "0px",
+              "1px",
+              "matrix(1, 0, 0, 1, -402.5, 0)",
+              "54",
+              "visible",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "popup": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "filter": "blur(12px) saturate(1.35)",
+            "shadow": "rgba(255, 255, 255, 0.25) 0px 1px 0px 0px inset, rgba(255, 255, 255, 0.094) 1px 0px 0px 0px inset, rgba(0, 0, 0, 0.19) 0px -1px 0px 0px inset, rgba(0, 0, 0, 0.5) 0px 8px 36px -10px",
+            "border": "rgba(255, 255, 255, 0.19)",
+            "ink": "rgb(245, 245, 247)",
+            "font": "12px / 18px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+            "outline": "rgb(245, 245, 247) none 3px",
+            "geom": [
+              900,
+              450,
+              250,
+              156.078125,
+              "fixed",
+              "0px",
+              "20px",
+              "1px",
+              "none",
+              "100",
+              "auto",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "native": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "filter": "blur(12px) saturate(1.35)",
+            "shadow": "rgba(255, 255, 255, 0.25) 0px 1px 0px 0px inset, rgba(255, 255, 255, 0.094) 1px 0px 0px 0px inset, rgba(0, 0, 0, 0.19) 0px -1px 0px 0px inset, rgba(0, 0, 0, 0.15) 0px 4px 10px 0px, rgba(0, 0, 0, 0.4) 0px 14px 32px -12px",
+            "border": "rgba(255, 255, 255, 0.19)",
+            "ink": "rgb(245, 245, 247)",
+            "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+            "outline": "rgb(245, 245, 247) none 3px",
+            "geom": [
+              100,
+              550,
+              250,
+              89.75,
+              "fixed",
+              "0px",
+              "16px",
+              "1px",
+              "none",
+              "100",
+              "hidden",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "card": {
+            "bg": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.047), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.01)), none",
+            "filter": "none",
+            "shadow": "rgba(255, 255, 255, 0.16) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 5px 0px, rgba(0, 0, 0, 0.2) 0px 12px 28px 0px",
+            "border": "rgb(59, 73, 66)",
+            "ink": "rgb(226, 234, 229)",
+            "font": "",
+            "outline": "rgb(226, 234, 229) none 3px",
+            "geom": [
+              160,
+              165,
+              260,
+              190,
+              "absolute",
+              "0px",
+              "0px",
+              "1px",
+              "none",
+              "auto",
+              "visible",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "calendar": [
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "image": "none",
+              "filter": "none",
+              "shadow": "none",
+              "border": "rgb(226, 234, 229)",
+              "ink": "rgb(226, 234, 229)",
+              "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "outline": "rgb(226, 234, 229) none 3px",
+              "geom": [
+                0,
+                -500,
+                220,
+                21.75,
+                "static",
+                "0px",
+                "0px",
+                "0px",
+                "none",
+                "auto",
+                "visible",
+                "auto"
+              ],
+              "animation": "none",
+              "transition": "all"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "image": "none",
+              "filter": "none",
+              "shadow": "none",
+              "border": "rgb(226, 234, 229)",
+              "ink": "rgb(226, 234, 229)",
+              "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "outline": "rgb(226, 234, 229) none 3px",
+              "geom": [
+                0,
+                -478.25,
+                220,
+                21.75,
+                "static",
+                "0px",
+                "0px",
+                "0px",
+                "none",
+                "auto",
+                "visible",
+                "auto"
+              ],
+              "animation": "none",
+              "transition": "all"
+            }
+          ],
+          "text": [
+            {
+              "ink": "rgb(226, 234, 229)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(226, 234, 229)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(177, 193, 183)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(226, 234, 229)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(226, 234, 229)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(177, 193, 183)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(245, 245, 247)",
+              "font": "550 16px / 20.8px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+            },
+            {
+              "ink": "rgb(245, 245, 247)",
+              "font": "13px / 19.5px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+            }
+          ],
+          "blurCount": 7
+        },
+        "next": {
+          "toolbar": {
+            "bg": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "filter": "blur(16px) saturate(1.55)",
+            "shadow": "rgba(220, 234, 255, 0.2) 0px 1px 0px 0px inset, rgba(12, 10, 9, 0.26) 0px -1px 0px 0px inset, rgba(0, 0, 0, 0.15) 0px 1px 3px 0px",
+            "border": "rgba(220, 230, 246, 0.1)",
+            "ink": "rgb(245, 245, 247)",
+            "font": "",
+            "outline": "rgb(245, 245, 247) none 3px",
+            "geom": [
+              212.5,
+              12,
+              805,
+              89,
+              "absolute",
+              "0px",
+              "0px",
+              "1px",
+              "matrix(1, 0, 0, 1, -402.5, 0)",
+              "54",
+              "visible",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "popup": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "filter": "blur(12px) saturate(1.35)",
+            "shadow": "rgba(224, 237, 255, 0.29) 0px 1px 0px 0px inset, rgba(12, 10, 9, 0.32) 0px -1px 0px 0px inset, rgba(0, 0, 0, 0.15) 0px 4px 10px 0px, rgba(0, 0, 0, 0.4) 0px 14px 32px -12px",
+            "border": "rgba(220, 230, 246, 0.17)",
+            "ink": "rgb(245, 245, 247)",
+            "font": "12px / 18px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+            "outline": "rgb(245, 245, 247) none 3px",
+            "geom": [
+              900,
+              450,
+              250,
+              156.078125,
+              "fixed",
+              "0px",
+              "20px",
+              "1px",
+              "none",
+              "100",
+              "auto",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "native": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "filter": "blur(12px) saturate(1.35)",
+            "shadow": "rgba(224, 237, 255, 0.29) 0px 1px 0px 0px inset, rgba(12, 10, 9, 0.32) 0px -1px 0px 0px inset, rgba(0, 0, 0, 0.15) 0px 4px 10px 0px, rgba(0, 0, 0, 0.4) 0px 14px 32px -12px",
+            "border": "rgba(220, 230, 246, 0.17)",
+            "ink": "rgb(245, 245, 247)",
+            "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+            "outline": "rgb(245, 245, 247) none 3px",
+            "geom": [
+              100,
+              550,
+              250,
+              89.75,
+              "fixed",
+              "0px",
+              "16px",
+              "1px",
+              "none",
+              "100",
+              "hidden",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "card": {
+            "bg": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.047), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.01)), none",
+            "filter": "none",
+            "shadow": "rgba(218, 232, 250, 0.11) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.14) 0px 1px 3px 0px, rgba(0, 0, 0, 0.32) 0px 10px 20px -10px",
+            "border": "rgb(59, 73, 66)",
+            "ink": "rgb(226, 234, 229)",
+            "font": "",
+            "outline": "rgb(226, 234, 229) none 3px",
+            "geom": [
+              160,
+              165,
+              260,
+              190,
+              "absolute",
+              "0px",
+              "0px",
+              "1px",
+              "none",
+              "auto",
+              "visible",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "calendar": [
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "image": "none",
+              "filter": "none",
+              "shadow": "none",
+              "border": "rgb(226, 234, 229)",
+              "ink": "rgb(226, 234, 229)",
+              "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "outline": "rgb(226, 234, 229) none 3px",
+              "geom": [
+                0,
+                -500,
+                220,
+                21.75,
+                "static",
+                "0px",
+                "0px",
+                "0px",
+                "none",
+                "auto",
+                "visible",
+                "auto"
+              ],
+              "animation": "none",
+              "transition": "all"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "image": "none",
+              "filter": "none",
+              "shadow": "none",
+              "border": "rgb(226, 234, 229)",
+              "ink": "rgb(226, 234, 229)",
+              "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "outline": "rgb(226, 234, 229) none 3px",
+              "geom": [
+                0,
+                -478.25,
+                220,
+                21.75,
+                "static",
+                "0px",
+                "0px",
+                "0px",
+                "none",
+                "auto",
+                "visible",
+                "auto"
+              ],
+              "animation": "none",
+              "transition": "all"
+            }
+          ],
+          "text": [
+            {
+              "ink": "rgb(226, 234, 229)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(226, 234, 229)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(177, 193, 183)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(226, 234, 229)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(226, 234, 229)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(177, 193, 183)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(245, 245, 247)",
+              "font": "550 16px / 20.8px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+            },
+            {
+              "ink": "rgb(245, 245, 247)",
+              "font": "13px / 19.5px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+            }
+          ],
+          "blurCount": 7
+        }
+      },
+      "contrast": [
+        {
+          "role": "toolbar",
+          "min": 6.827103494503471,
+          "pass": true
+        },
+        {
+          "role": "popup",
+          "min": 7.394069231351412,
+          "pass": true
+        },
+        {
+          "role": "native",
+          "min": 7.394069231351412,
+          "pass": true
+        },
+        {
+          "role": "card",
+          "min": 8.412135666949789,
+          "pass": true
+        }
+      ],
+      "exceptions": [
+        {
+          "cls": "has-card-fill",
+          "pass": true
+        },
+        {
+          "cls": "has-custom-border",
+          "pass": true
+        },
+        {
+          "cls": "is-transparent",
+          "pass": true
+        },
+        {
+          "cls": "is-compact-fold",
+          "pass": true
+        },
+        {
+          "cls": "is-folded",
+          "pass": true
+        },
+        {
+          "cls": "is-inline-editing",
+          "pass": true
+        },
+        {
+          "cls": "ts-media-card",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "mode": "dark",
+      "width": 1180,
+      "order": "runtime-last",
+      "checks": {
+        "geometry": true,
+        "fillsAndFilters": true,
+        "roleDepth": true,
+        "noExtraBlur": true,
+        "calendar": true,
+        "text": true,
+        "contrast": true,
+        "darkEdges": true,
+        "materialControls": true,
+        "solidFallback": true,
+        "pluginOffFallback": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrast": true,
+        "forced-colors": true,
+        "classic": true,
+        "apple": true,
+        "print": true,
+        "selection": true,
+        "authoredExceptions": true,
+        "opticalOwnership": true,
+        "cleanup": true
+      },
+      "pass": true,
+      "states": {
+        "old": {
+          "toolbar": {
+            "bg": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "filter": "blur(16px) saturate(1.55)",
+            "shadow": "rgba(255, 255, 255, 0.25) 0px 1px 0px 0px inset, rgba(255, 255, 255, 0.094) 1px 0px 0px 0px inset, rgba(0, 0, 0, 0.19) 0px -1px 0px 0px inset, rgba(0, 0, 0, 0.15) 0px 1px 3px 0px",
+            "border": "rgba(255, 255, 255, 0.19)",
+            "ink": "rgb(245, 245, 247)",
+            "font": "",
+            "outline": "rgb(245, 245, 247) none 3px",
+            "geom": [
+              212.5,
+              12,
+              805,
+              89,
+              "absolute",
+              "0px",
+              "0px",
+              "1px",
+              "matrix(1, 0, 0, 1, -402.5, 0)",
+              "54",
+              "visible",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "popup": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "filter": "blur(12px) saturate(1.35)",
+            "shadow": "rgba(255, 255, 255, 0.25) 0px 1px 0px 0px inset, rgba(255, 255, 255, 0.094) 1px 0px 0px 0px inset, rgba(0, 0, 0, 0.19) 0px -1px 0px 0px inset, rgba(0, 0, 0, 0.5) 0px 8px 36px -10px",
+            "border": "rgba(255, 255, 255, 0.19)",
+            "ink": "rgb(245, 245, 247)",
+            "font": "12px / 18px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+            "outline": "rgb(245, 245, 247) none 3px",
+            "geom": [
+              900,
+              450,
+              250,
+              156.078125,
+              "fixed",
+              "0px",
+              "20px",
+              "1px",
+              "none",
+              "100",
+              "auto",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "native": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "filter": "blur(12px) saturate(1.35)",
+            "shadow": "rgba(255, 255, 255, 0.25) 0px 1px 0px 0px inset, rgba(255, 255, 255, 0.094) 1px 0px 0px 0px inset, rgba(0, 0, 0, 0.19) 0px -1px 0px 0px inset, rgba(0, 0, 0, 0.15) 0px 4px 10px 0px, rgba(0, 0, 0, 0.4) 0px 14px 32px -12px",
+            "border": "rgba(255, 255, 255, 0.19)",
+            "ink": "rgb(245, 245, 247)",
+            "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+            "outline": "rgb(245, 245, 247) none 3px",
+            "geom": [
+              100,
+              550,
+              250,
+              89.75,
+              "fixed",
+              "0px",
+              "16px",
+              "1px",
+              "none",
+              "100",
+              "hidden",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "card": {
+            "bg": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.047), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.01)), none",
+            "filter": "none",
+            "shadow": "rgba(255, 255, 255, 0.16) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 5px 0px, rgba(0, 0, 0, 0.2) 0px 12px 28px 0px",
+            "border": "rgb(59, 73, 66)",
+            "ink": "rgb(226, 234, 229)",
+            "font": "",
+            "outline": "rgb(226, 234, 229) none 3px",
+            "geom": [
+              160,
+              165,
+              260,
+              190,
+              "absolute",
+              "0px",
+              "0px",
+              "1px",
+              "none",
+              "auto",
+              "visible",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "calendar": [
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "image": "none",
+              "filter": "none",
+              "shadow": "none",
+              "border": "rgb(226, 234, 229)",
+              "ink": "rgb(226, 234, 229)",
+              "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "outline": "rgb(226, 234, 229) none 3px",
+              "geom": [
+                0,
+                -500,
+                220,
+                21.75,
+                "static",
+                "0px",
+                "0px",
+                "0px",
+                "none",
+                "auto",
+                "visible",
+                "auto"
+              ],
+              "animation": "none",
+              "transition": "all"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "image": "none",
+              "filter": "none",
+              "shadow": "none",
+              "border": "rgb(226, 234, 229)",
+              "ink": "rgb(226, 234, 229)",
+              "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "outline": "rgb(226, 234, 229) none 3px",
+              "geom": [
+                0,
+                -478.25,
+                220,
+                21.75,
+                "static",
+                "0px",
+                "0px",
+                "0px",
+                "none",
+                "auto",
+                "visible",
+                "auto"
+              ],
+              "animation": "none",
+              "transition": "all"
+            }
+          ],
+          "text": [
+            {
+              "ink": "rgb(226, 234, 229)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(226, 234, 229)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(177, 193, 183)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(226, 234, 229)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(226, 234, 229)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(177, 193, 183)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(245, 245, 247)",
+              "font": "550 16px / 20.8px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+            },
+            {
+              "ink": "rgb(245, 245, 247)",
+              "font": "13px / 19.5px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+            }
+          ],
+          "blurCount": 7
+        },
+        "next": {
+          "toolbar": {
+            "bg": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "filter": "blur(16px) saturate(1.55)",
+            "shadow": "rgba(220, 234, 255, 0.2) 0px 1px 0px 0px inset, rgba(12, 10, 9, 0.26) 0px -1px 0px 0px inset, rgba(0, 0, 0, 0.15) 0px 1px 3px 0px",
+            "border": "rgba(220, 230, 246, 0.1)",
+            "ink": "rgb(245, 245, 247)",
+            "font": "",
+            "outline": "rgb(245, 245, 247) none 3px",
+            "geom": [
+              212.5,
+              12,
+              805,
+              89,
+              "absolute",
+              "0px",
+              "0px",
+              "1px",
+              "matrix(1, 0, 0, 1, -402.5, 0)",
+              "54",
+              "visible",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "popup": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "filter": "blur(12px) saturate(1.35)",
+            "shadow": "rgba(224, 237, 255, 0.29) 0px 1px 0px 0px inset, rgba(12, 10, 9, 0.32) 0px -1px 0px 0px inset, rgba(0, 0, 0, 0.15) 0px 4px 10px 0px, rgba(0, 0, 0, 0.4) 0px 14px 32px -12px",
+            "border": "rgba(220, 230, 246, 0.17)",
+            "ink": "rgb(245, 245, 247)",
+            "font": "12px / 18px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+            "outline": "rgb(245, 245, 247) none 3px",
+            "geom": [
+              900,
+              450,
+              250,
+              156.078125,
+              "fixed",
+              "0px",
+              "20px",
+              "1px",
+              "none",
+              "100",
+              "auto",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "native": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "filter": "blur(12px) saturate(1.35)",
+            "shadow": "rgba(224, 237, 255, 0.29) 0px 1px 0px 0px inset, rgba(12, 10, 9, 0.32) 0px -1px 0px 0px inset, rgba(0, 0, 0, 0.15) 0px 4px 10px 0px, rgba(0, 0, 0, 0.4) 0px 14px 32px -12px",
+            "border": "rgba(220, 230, 246, 0.17)",
+            "ink": "rgb(245, 245, 247)",
+            "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+            "outline": "rgb(245, 245, 247) none 3px",
+            "geom": [
+              100,
+              550,
+              250,
+              89.75,
+              "fixed",
+              "0px",
+              "16px",
+              "1px",
+              "none",
+              "100",
+              "hidden",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "card": {
+            "bg": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.047), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.01)), none",
+            "filter": "none",
+            "shadow": "rgba(218, 232, 250, 0.11) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.14) 0px 1px 3px 0px, rgba(0, 0, 0, 0.32) 0px 10px 20px -10px",
+            "border": "rgb(59, 73, 66)",
+            "ink": "rgb(226, 234, 229)",
+            "font": "",
+            "outline": "rgb(226, 234, 229) none 3px",
+            "geom": [
+              160,
+              165,
+              260,
+              190,
+              "absolute",
+              "0px",
+              "0px",
+              "1px",
+              "none",
+              "auto",
+              "visible",
+              "auto"
+            ],
+            "animation": "none",
+            "transition": "all"
+          },
+          "calendar": [
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "image": "none",
+              "filter": "none",
+              "shadow": "none",
+              "border": "rgb(226, 234, 229)",
+              "ink": "rgb(226, 234, 229)",
+              "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "outline": "rgb(226, 234, 229) none 3px",
+              "geom": [
+                0,
+                -500,
+                220,
+                21.75,
+                "static",
+                "0px",
+                "0px",
+                "0px",
+                "none",
+                "auto",
+                "visible",
+                "auto"
+              ],
+              "animation": "none",
+              "transition": "all"
+            },
+            {
+              "bg": "rgba(0, 0, 0, 0)",
+              "image": "none",
+              "filter": "none",
+              "shadow": "none",
+              "border": "rgb(226, 234, 229)",
+              "ink": "rgb(226, 234, 229)",
+              "font": "15px / 21.75px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "outline": "rgb(226, 234, 229) none 3px",
+              "geom": [
+                0,
+                -478.25,
+                220,
+                21.75,
+                "static",
+                "0px",
+                "0px",
+                "0px",
+                "none",
+                "auto",
+                "visible",
+                "auto"
+              ],
+              "animation": "none",
+              "transition": "all"
+            }
+          ],
+          "text": [
+            {
+              "ink": "rgb(226, 234, 229)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(226, 234, 229)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(177, 193, 183)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(226, 234, 229)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(226, 234, 229)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(177, 193, 183)",
+              "font": ""
+            },
+            {
+              "ink": "rgb(245, 245, 247)",
+              "font": "550 16px / 20.8px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+            },
+            {
+              "ink": "rgb(245, 245, 247)",
+              "font": "13px / 19.5px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+            }
+          ],
+          "blurCount": 7
+        }
+      },
+      "contrast": [
+        {
+          "role": "toolbar",
+          "min": 6.827103494503471,
+          "pass": true
+        },
+        {
+          "role": "popup",
+          "min": 7.394069231351412,
+          "pass": true
+        },
+        {
+          "role": "native",
+          "min": 7.394069231351412,
+          "pass": true
+        },
+        {
+          "role": "card",
+          "min": 8.412135666949789,
+          "pass": true
+        }
+      ],
+      "exceptions": [
+        {
+          "cls": "has-card-fill",
+          "pass": true
+        },
+        {
+          "cls": "has-custom-border",
+          "pass": true
+        },
+        {
+          "cls": "is-transparent",
+          "pass": true
+        },
+        {
+          "cls": "is-compact-fold",
+          "pass": true
+        },
+        {
+          "cls": "is-folded",
+          "pass": true
+        },
+        {
+          "cls": "is-inline-editing",
+          "pass": true
+        },
+        {
+          "cls": "ts-media-card",
+          "pass": true
+        }
+      ]
+    }
+  ]
+}

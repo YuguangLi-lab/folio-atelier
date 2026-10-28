@@ -1,38 +1,61 @@
 {
-  "version": "3.33.0",
-  "themeSHA256": "9d28382753c67d21fdae877e3548c3577364b516f587db85640bbb1a200e1be5",
-  "surfaceCases": 44,
-  "minimumSampledTextContrast": 7.0152155517322585,
-  "contrastSamples": 64,
-  "relations": [
-    {
-      "mode": "apple",
-      "layouts": 6,
-      "checks": 24,
-      "pass": true
-    },
-    {
-      "mode": "liquid",
-      "layouts": 6,
-      "checks": 24,
-      "pass": true
-    },
-    {
-      "mode": "clear",
-      "layouts": 6,
-      "checks": 24,
-      "pass": true
-    }
-  ],
-  "upgradeChecks": [
-    "dry run is read only",
-    "explicit settings and appearance preserved byte for byte",
-    "previous theme and settings backed up before replacement",
-    "concurrent settings change refused without writes"
-  ],
+  "version": "3.39.0",
   "pass": true,
+  "themeSHA256": "35f4de409ebecd2b0fbc04f55c9f945e329e2cf2266fc9caa9d61dee0d448c85",
+  "companionVersion": "1.3.38-folio.10",
+  "companionRuntimeUnchanged": true,
   "nativeVerified": false,
-  "realVaultModified": false,
-  "previousArchiveSHA256": "404fc9c45ce31c927e606791fdfe164cfb94a70e7f795a0e4027151003ae67d7",
-  "scope": "Owned offline Chromium fixtures; selected controls only, no native Obsidian acceptance."
+  "fpsMeasured": false,
+  "installedToRealVault": false,
+  "controlsCases": 12,
+  "backgroundCases": 24,
+  "depthCases": 8,
+  "workspaceCases": 4,
+  "cardsCases": 4,
+  "zonesCases": 4,
+  "profilesCases": 6,
+  "boardCases": 24,
+  "popupCases": 24,
+  "popupOpticsCases": 4,
+  "toolbarSelectors": 111,
+  "toolbarCombinations": 12,
+  "surfacesCases": 44,
+  "relationLayouts": 6,
+  "runtimeChecks": 56,
+  "continuousPointerEvents": 1000,
+  "continuousPointerCounters": {
+    "closest": 0,
+    "queries": 0,
+    "rects": 0,
+    "raf": 0,
+    "maps": 0
+  },
+  "interactionThemeCases": 4,
+  "inFlightColorTransitionsCancelled": true,
+  "backdropDeclarationsBefore": 31,
+  "backdropDeclarationsAfter": 31,
+  "scope": "Complete CSS, source-derived DOM, actual plugin component runtimes and isolated Chromium. No native Obsidian or FPS claim.",
+  "reports": [
+    "controls.json",
+    "depth.json",
+    "backgrounds.json",
+    "workspace.json",
+    "cards-runtime.json",
+    "zones.json",
+    "profiles-gallery.json",
+    "interaction-theme.json",
+    "board.json",
+    "popovers.json",
+    "popup-optics.json",
+    "all-toolbars.json",
+    "surfaces.json",
+    "relations-clear.json",
+    "budget.json",
+    "upgrade.json",
+    "interaction-runtime.json",
+    "controls-cancellation.json",
+    "companion-baseline.json"
+  ],
+  "publishedDuringValidation": false,
+  "validationContext": "Offline acceptance snapshot generated before GitHub publication; not a live publication status."
 }

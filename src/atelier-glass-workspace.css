@@ -1,0 +1,38 @@
+/* Native floating controls and current-pane guidance. Paint only: Obsidian
+ * retains tab direction, divider hit areas, prompt sizing, overlay placement,
+ * tooltip arrows and notification behavior. No generated layer or animation.
+ * Text, editors, settings bodies and plugin optical surfaces stay untouched. */
+@media screen {
+  body.atelier-surface-liquid.atelier-glass-native-overlays :is(
+    .prompt,
+    .menu:not(.ts-ui-menu),
+    .suggestion-container,
+    .tooltip:not(:is(.mod-error,.mod-warning,.is-error,.is-warning)),
+    .notice:not(:is(.mod-error,.mod-warning,.is-error,.is-warning))
+  ):not([data-ts-glass-optics=true]):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background: var(--folio-glass-sheen), var(--folio-native-fill, var(--folio-popover-fill, var(--folio-glass-fill)));
+    border-color: var(--folio-popup-edge, var(--folio-glass-edge));
+    box-shadow: var(--folio-popup-light, var(--folio-glass-light)), var(--folio-popup-shadow, var(--atelier-ui-shadow-md));
+    -webkit-backdrop-filter: var(--folio-native-filter, var(--folio-glass-filter));
+    backdrop-filter: var(--folio-native-filter, var(--folio-glass-filter));
+    color: var(--atelier-ui-ink);
+  }
+  body.atelier-surface-liquid.atelier-glass-native-overlays .prompt {
+    box-shadow: var(--folio-popup-light, var(--folio-glass-light)), var(--folio-popup-shadow, var(--atelier-ui-shadow-lg));
+  }
+  /* The directional triangle inherits only the material's color; the native
+   * transparent sides remain transparent in all four tooltip directions. */
+  body.atelier-surface-liquid.atelier-glass-native-overlays .tooltip:not(:is(.mod-error,.mod-warning,.is-error,.is-warning)) {
+    --background-modifier-message: var(--folio-native-fill, var(--folio-popover-fill, var(--folio-glass-fill)));
+  }
+  /* The app marks the active leaf and foreground window. Highlight only that
+   * header. Inactive headers keep opaque labels and gently denser material.
+   * Repeated mode class matches the established toolbar override specificity. */
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-surface-liquid.atelier-surface-liquid.atelier-glass-pane-focus.is-focused .workspace-leaf.mod-active > .workspace-leaf-content > .view-header {
+    box-shadow: var(--folio-toolbar-light, var(--folio-glass-light)), inset 0 -1px 0 color-mix(in srgb, var(--atelier-accent) 55%, var(--atelier-ui-line)), var(--folio-toolbar-shadow, var(--atelier-ui-shadow-sm)) !important;
+  }
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-surface-liquid.atelier-surface-liquid.atelier-glass-pane-focus.is-focused .workspace-leaf:not(.mod-active) > .workspace-leaf-content > .view-header {
+    background: color-mix(in srgb, var(--folio-toolbar-fill, var(--folio-glass-fill)) 65%, var(--atelier-ui-panel)) !important;
+    box-shadow: inset 0 -1px 0 var(--atelier-ui-line) !important;
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "pass": true,
+  "scope": "Structural CSS/runtime budget; not a rendering time or native FPS measurement. Actual interaction and idle-card filter tests are reported separately.",
+  "themeSHA256": "35f4de409ebecd2b0fbc04f55c9f945e329e2cf2266fc9caa9d61dee0d448c85",
+  "beforeSHA256": "46ff64db9641b500eb9ef86845fd6019b577d0062afd21c00bb411db139baa5d",
+  "checks": {
+    "noAddedFilters": true,
+    "noAddedBackdropDeclarations": true,
+    "noAddedKeyframes": true,
+    "noAddedWillChange": true,
+    "selfContained": true,
+    "controlsPaintOnly": true,
+    "depthTokensOnly": true,
+    "boundedColorFeedback": true,
+    "reducedMotionPresent": true,
+    "gestureCancellationPresent": true,
+    "pluginRuntimeUnchanged": true
+  },
+  "previous": {
+    "filters": 0,
+    "backdrops": 31,
+    "keyframes": 0,
+    "willChange": 0
+  },
+  "current": {
+    "filters": 0,
+    "backdrops": 31,
+    "keyframes": 0,
+    "willChange": 0
+  },
+  "runtimeSHA256": {
+    "main.js": "4a4646656a658ebc1fdeccc7d6524d1191ff7391dde27aab698d564a7ad8f431",
+    "styles.css": "70fc955f57c3581bae7b83d11ed87e0deff2b2c61296b7ad29d105f52afe6c67",
+    "manifest.json": "1ad5e9353e8ddf3bd870a9ab3878c485d271a548a3a03b5145bff112094ed78c"
+  }
+}

@@ -8,6 +8,21 @@
       "bytes": 798
     },
     {
+      "path": "src/board-mindmap.ts",
+      "sha256": "b4d540f4c1c11227f0a7f2c52425ee55e18b73e528476981a02ab8dd878aeffa",
+      "bytes": 7174
+    },
+    {
+      "path": "src/brain-reading-positions.ts",
+      "sha256": "fb8b8f728ab444aa518d67f81f82c423195408d4bf2d2abbbd7da725f3e1c2e3",
+      "bytes": 7627
+    },
+    {
+      "path": "src/ink-model.ts",
+      "sha256": "bc1538bde86b34402d1530aaf2c27ef4a9d563250c73b053c79944fd42524bd9",
+      "bytes": 10135
+    },
+    {
       "path": "src/background-image.ts",
       "sha256": "c2334c2b994044759839fd166916e615bd5f2f0219b314531e7d28e235a16de4",
       "bytes": 6455
@@ -26,6 +41,11 @@
       "path": "src/brain-colors.ts",
       "sha256": "968057ffbb8ab976c6f26606d91ee89d1ebe8f553430133ae41381671f609920",
       "bytes": 1543
+    },
+    {
+      "path": "src/portable-sha256.ts",
+      "sha256": "8f898fa854538e532183665eab1ddc73b7f0d43d38b16d5807d5bfd08df62027",
+      "bytes": 3027
     },
     {
       "path": "src/markdown-literals.ts",
@@ -74,8 +94,8 @@
     },
     {
       "path": "src/paragraph-card.ts",
-      "sha256": "b6d409db2550810bcae11393e71ddc3ca82d9b343373f6450dbde5ae93db3a6a",
-      "bytes": 5472
+      "sha256": "03a47ca61fcbdea5f3f5b4ee5d48202f1ce52f0992f171fbbde8ac527ecc03ec",
+      "bytes": 5444
     },
     {
       "path": "src/online-video.ts",
@@ -99,13 +119,8 @@
     },
     {
       "path": "src/relation-geometry-checkpoint.ts",
-      "sha256": "7368bf29d72320e8eb620486191a558453ec3a30c299368e6c386f9cadcdf892",
-      "bytes": 3367
-    },
-    {
-      "path": "src/board-mindmap.ts",
-      "sha256": "b4d540f4c1c11227f0a7f2c52425ee55e18b73e528476981a02ab8dd878aeffa",
-      "bytes": 7174
+      "sha256": "ad5df69b1c73988d4197643056e3a6f5001234f92adcf01a86354b3561b11232",
+      "bytes": 3339
     },
     {
       "path": "src/board-path.ts",
@@ -154,8 +169,8 @@
     },
     {
       "path": "src/model.ts",
-      "sha256": "46413d3ed0c80eeaa67a5ec3eb28408b0f8f65d5fb2e788fca6bfac405d7e0a7",
-      "bytes": 34984
+      "sha256": "612d223c92c8d2e808548112c5afbcebd0594cf7aece28362210766435f01ae1",
+      "bytes": 36840
     },
     {
       "path": "src/local-relations.ts",
@@ -188,21 +203,31 @@
       "bytes": 8802
     },
     {
+      "path": "src/board-chrome.ts",
+      "sha256": "c7e12950ab595469405915894f6b9275f8f3199907a64aa3a6c241b8b788ee08",
+      "bytes": 6316
+    },
+    {
+      "path": "src/local-relations-chrome.ts",
+      "sha256": "0b3e11adbe5dc9f84673fa57e639a260b5626d230bb03243deb9536172ef0528",
+      "bytes": 5114
+    },
+    {
       "path": "src/local-relations-view.ts",
-      "sha256": "43e795ed7c3ba1bec2056d763a9f693d8c1b670117fee1a5583ce7e27f1eb32c",
-      "bytes": 103893
+      "sha256": "d8186875ebb146abd891d074fec145eec30e983b312bcb28bc35fb79dff2e787",
+      "bytes": 105764
     }
   ],
   "sourceCopies": {
     "local-relations-view.ts": {
       "origin": "src/local-relations-view.ts",
-      "sha256": "43e795ed7c3ba1bec2056d763a9f693d8c1b670117fee1a5583ce7e27f1eb32c",
-      "bytes": 103893
+      "sha256": "d8186875ebb146abd891d074fec145eec30e983b312bcb28bc35fb79dff2e787",
+      "bytes": 105764
     },
     "local-relations.css": {
       "origin": "src/local-relations.css",
-      "sha256": "b8bc0657e283159644c624e2a3a3d3b0a65061ea406963a0fb0d6f090d18a376",
-      "bytes": 45531
+      "sha256": "6d7209c94741c8715db6567d95da1af56748e01e94d8a4c6aaa7cdcb8f8080c3",
+      "bytes": 50029
     },
     "local-relations.ts": {
       "origin": "src/local-relations.ts",
@@ -236,8 +261,8 @@
     },
     "model.ts": {
       "origin": "src/model.ts",
-      "sha256": "46413d3ed0c80eeaa67a5ec3eb28408b0f8f65d5fb2e788fca6bfac405d7e0a7",
-      "bytes": 34984
+      "sha256": "612d223c92c8d2e808548112c5afbcebd0594cf7aece28362210766435f01ae1",
+      "bytes": 36840
     }
   },
   "styles": [
@@ -247,11 +272,11 @@
     },
     {
       "path": "plugin.css",
-      "sha256": "729d0991151e87d5a55683fdfc2c26a150d000c4744e8d3477609f80a6d5e1d9"
+      "sha256": "70fc955f57c3581bae7b83d11ed87e0deff2b2c61296b7ad29d105f52afe6c67"
     },
     {
       "path": "theme.css",
-      "sha256": "9d28382753c67d21fdae877e3548c3577364b516f587db85640bbb1a200e1be5"
+      "sha256": "35f4de409ebecd2b0fbc04f55c9f945e329e2cf2266fc9caa9d61dee0d448c85"
     }
   ],
   "cases": [
@@ -259,15 +284,15 @@
       "theme": "light",
       "width": 320,
       "normal": {
-        "paths": 12,
+        "paths": 8,
         "controls": [
           {
             "key": "center-info",
             "rect": {
-              "left": 267,
+              "left": 251,
               "right": 295,
-              "top": 199,
-              "bottom": 227
+              "top": 240,
+              "bottom": 284
             },
             "hit": true,
             "crossings": []
@@ -275,10 +300,10 @@
           {
             "key": "pin-center",
             "rect": {
-              "left": 236,
-              "right": 264,
-              "top": 199,
-              "bottom": 227
+              "left": 204,
+              "right": 248,
+              "top": 240,
+              "bottom": 284
             },
             "hit": true,
             "crossings": []
@@ -286,10 +311,10 @@
           {
             "key": "source",
             "rect": {
-              "left": 89.5,
-              "right": 168.5,
-              "top": 199,
-              "bottom": 227
+              "left": 73.5,
+              "right": 152.5,
+              "top": 240,
+              "bottom": 284
             },
             "hit": true,
             "crossings": []
@@ -303,15 +328,15 @@
       "variants": [
         {
           "name": "short-title",
-          "paths": 12,
+          "paths": 8,
           "controls": [
             {
               "key": "center-info",
               "rect": {
                 "left": 202.5,
-                "right": 230.5,
-                "top": 199,
-                "bottom": 227
+                "right": 246.5,
+                "top": 240,
+                "bottom": 284
               },
               "hit": true,
               "crossings": []
@@ -319,10 +344,10 @@
             {
               "key": "pin-center",
               "rect": {
-                "left": 171.5,
+                "left": 155.5,
                 "right": 199.5,
-                "top": 199,
-                "bottom": 227
+                "top": 240,
+                "bottom": 284
               },
               "hit": true,
               "crossings": []
@@ -330,10 +355,10 @@
             {
               "key": "source",
               "rect": {
-                "left": 89.5,
-                "right": 168.5,
-                "top": 199,
-                "bottom": 227
+                "left": 73.5,
+                "right": 152.5,
+                "top": 240,
+                "bottom": 284
               },
               "hit": true,
               "crossings": []
@@ -343,15 +368,15 @@
         },
         {
           "name": "second-page",
-          "paths": 10,
+          "paths": 6,
           "controls": [
             {
               "key": "center-info",
               "rect": {
-                "left": 267,
+                "left": 251,
                 "right": 295,
-                "top": 199,
-                "bottom": 227
+                "top": 240,
+                "bottom": 284
               },
               "hit": true,
               "crossings": []
@@ -359,10 +384,10 @@
             {
               "key": "pin-center",
               "rect": {
-                "left": 236,
-                "right": 264,
-                "top": 199,
-                "bottom": 227
+                "left": 204,
+                "right": 248,
+                "top": 240,
+                "bottom": 284
               },
               "hit": true,
               "crossings": []
@@ -370,10 +395,10 @@
             {
               "key": "source",
               "rect": {
-                "left": 89.5,
-                "right": 168.5,
-                "top": 199,
-                "bottom": 227
+                "left": 73.5,
+                "right": 152.5,
+                "top": 240,
+                "bottom": 284
               },
               "hit": true,
               "crossings": []
@@ -383,15 +408,15 @@
         },
         {
           "name": "scrolled-lists",
-          "paths": 10,
+          "paths": 6,
           "controls": [
             {
               "key": "center-info",
               "rect": {
-                "left": 267,
+                "left": 251,
                 "right": 295,
-                "top": 199,
-                "bottom": 227
+                "top": 240,
+                "bottom": 284
               },
               "hit": true,
               "crossings": []
@@ -399,10 +424,10 @@
             {
               "key": "pin-center",
               "rect": {
-                "left": 236,
-                "right": 264,
-                "top": 199,
-                "bottom": 227
+                "left": 204,
+                "right": 248,
+                "top": 240,
+                "bottom": 284
               },
               "hit": true,
               "crossings": []
@@ -410,10 +435,10 @@
             {
               "key": "source",
               "rect": {
-                "left": 89.5,
-                "right": 168.5,
-                "top": 199,
-                "bottom": 227
+                "left": 73.5,
+                "right": 152.5,
+                "top": 240,
+                "bottom": 284
               },
               "hit": true,
               "crossings": []
@@ -438,15 +463,15 @@
       "theme": "light",
       "width": 600,
       "normal": {
-        "paths": 12,
+        "paths": 8,
         "controls": [
           {
             "key": "center-info",
             "rect": {
-              "left": 547,
+              "left": 531,
               "right": 575,
-              "top": 199,
-              "bottom": 227
+              "top": 240,
+              "bottom": 284
             },
             "hit": true,
             "crossings": []
@@ -454,10 +479,10 @@
           {
             "key": "pin-center",
             "rect": {
-              "left": 516,
-              "right": 544,
-              "top": 199,
-              "bottom": 227
+              "left": 484,
+              "right": 528,
+              "top": 240,
+              "bottom": 284
             },
             "hit": true,
             "crossings": []
@@ -465,10 +490,10 @@
           {
             "key": "source",
             "rect": {
-              "left": 229.5,
-              "right": 308.5,
-              "top": 199,
-              "bottom": 227
+              "left": 213.5,
+              "right": 292.5,
+              "top": 240,
+              "bottom": 284
             },
             "hit": true,
             "crossings": []
@@ -482,15 +507,15 @@
       "variants": [
         {
           "name": "short-title",
-          "paths": 12,
+          "paths": 8,
           "controls": [
             {
               "key": "center-info",
               "rect": {
                 "left": 342.5,
-                "right": 370.5,
-                "top": 199,
-                "bottom": 227
+                "right": 386.5,
+                "top": 240,
+                "bottom": 284
               },
               "hit": true,
               "crossings": []
@@ -498,10 +523,10 @@
             {
               "key": "pin-center",
               "rect": {
-                "left": 311.5,
+                "left": 295.5,
                 "right": 339.5,
-                "top": 199,
-                "bottom": 227
+                "top": 240,
+                "bottom": 284
               },
               "hit": true,
               "crossings": []
@@ -509,10 +534,10 @@
             {
               "key": "source",
               "rect": {
-                "left": 229.5,
-                "right": 308.5,
-                "top": 199,
-                "bottom": 227
+                "left": 213.5,
+                "right": 292.5,
+                "top": 240,
+                "bottom": 284
               },
               "hit": true,
               "crossings": []
@@ -522,15 +547,15 @@
         },
         {
           "name": "second-page",
-          "paths": 10,
+          "paths": 6,
           "controls": [
             {
               "key": "center-info",
               "rect": {
-                "left": 547,
+                "left": 531,
                 "right": 575,
-                "top": 199,
-                "bottom": 227
+                "top": 240,
+                "bottom": 284
               },
               "hit": true,
               "crossings": []
@@ -538,10 +563,10 @@
             {
               "key": "pin-center",
               "rect": {
-                "left": 516,
-                "right": 544,
-                "top": 199,
-                "bottom": 227
+                "left": 484,
+                "right": 528,
+                "top": 240,
+                "bottom": 284
               },
               "hit": true,
               "crossings": []
@@ -549,10 +574,10 @@
             {
               "key": "source",
               "rect": {
-                "left": 229.5,
-                "right": 308.5,
-                "top": 199,
-                "bottom": 227
+                "left": 213.5,
+                "right": 292.5,
+                "top": 240,
+                "bottom": 284
               },
               "hit": true,
               "crossings": []
@@ -562,15 +587,15 @@
         },
         {
           "name": "scrolled-lists",
-          "paths": 10,
+          "paths": 6,
           "controls": [
             {
               "key": "center-info",
               "rect": {
-                "left": 547,
+                "left": 531,
                 "right": 575,
-                "top": 199,
-                "bottom": 227
+                "top": 240,
+                "bottom": 284
               },
               "hit": true,
               "crossings": []
@@ -578,10 +603,10 @@
             {
               "key": "pin-center",
               "rect": {
-                "left": 516,
-                "right": 544,
-                "top": 199,
-                "bottom": 227
+                "left": 484,
+                "right": 528,
+                "top": 240,
+                "bottom": 284
               },
               "hit": true,
               "crossings": []
@@ -589,10 +614,10 @@
             {
               "key": "source",
               "rect": {
-                "left": 229.5,
-                "right": 308.5,
-                "top": 199,
-                "bottom": 227
+                "left": 213.5,
+                "right": 292.5,
+                "top": 240,
+                "bottom": 284
               },
               "hit": true,
               "crossings": []
@@ -624,8 +649,8 @@
             "rect": {
               "left": 553,
               "right": 581,
-              "top": 316,
-              "bottom": 344
+              "top": 320.5,
+              "bottom": 348.5
             },
             "hit": true,
             "crossings": []
@@ -635,8 +660,8 @@
             "rect": {
               "left": 522,
               "right": 550,
-              "top": 316,
-              "bottom": 344
+              "top": 320.5,
+              "bottom": 348.5
             },
             "hit": true,
             "crossings": []
@@ -646,8 +671,8 @@
             "rect": {
               "left": 409.5,
               "right": 488.5,
-              "top": 316,
-              "bottom": 344
+              "top": 320.5,
+              "bottom": 348.5
             },
             "hit": true,
             "crossings": []
@@ -668,8 +693,8 @@
               "rect": {
                 "left": 522.5,
                 "right": 550.5,
-                "top": 316,
-                "bottom": 344
+                "top": 320.5,
+                "bottom": 348.5
               },
               "hit": true,
               "crossings": []
@@ -679,8 +704,8 @@
               "rect": {
                 "left": 491.5,
                 "right": 519.5,
-                "top": 316,
-                "bottom": 344
+                "top": 320.5,
+                "bottom": 348.5
               },
               "hit": true,
               "crossings": []
@@ -690,8 +715,8 @@
               "rect": {
                 "left": 409.5,
                 "right": 488.5,
-                "top": 316,
-                "bottom": 344
+                "top": 320.5,
+                "bottom": 348.5
               },
               "hit": true,
               "crossings": []
@@ -708,8 +733,8 @@
               "rect": {
                 "left": 553,
                 "right": 581,
-                "top": 364,
-                "bottom": 392
+                "top": 368.5,
+                "bottom": 396.5
               },
               "hit": true,
               "crossings": []
@@ -719,8 +744,8 @@
               "rect": {
                 "left": 522,
                 "right": 550,
-                "top": 364,
-                "bottom": 392
+                "top": 368.5,
+                "bottom": 396.5
               },
               "hit": true,
               "crossings": []
@@ -730,8 +755,8 @@
               "rect": {
                 "left": 409.5,
                 "right": 488.5,
-                "top": 364,
-                "bottom": 392
+                "top": 368.5,
+                "bottom": 396.5
               },
               "hit": true,
               "crossings": []
@@ -748,8 +773,8 @@
               "rect": {
                 "left": 553,
                 "right": 581,
-                "top": 364,
-                "bottom": 392
+                "top": 368.5,
+                "bottom": 396.5
               },
               "hit": true,
               "crossings": []
@@ -759,8 +784,8 @@
               "rect": {
                 "left": 522,
                 "right": 550,
-                "top": 364,
-                "bottom": 392
+                "top": 368.5,
+                "bottom": 396.5
               },
               "hit": true,
               "crossings": []
@@ -770,8 +795,8 @@
               "rect": {
                 "left": 409.5,
                 "right": 488.5,
-                "top": 364,
-                "bottom": 392
+                "top": 368.5,
+                "bottom": 396.5
               },
               "hit": true,
               "crossings": []
@@ -796,15 +821,15 @@
       "theme": "dark",
       "width": 320,
       "normal": {
-        "paths": 12,
+        "paths": 8,
         "controls": [
           {
             "key": "center-info",
             "rect": {
-              "left": 267,
+              "left": 251,
               "right": 295,
-              "top": 199,
-              "bottom": 227
+              "top": 240,
+              "bottom": 284
             },
             "hit": true,
             "crossings": []
@@ -812,10 +837,10 @@
           {
             "key": "pin-center",
             "rect": {
-              "left": 236,
-              "right": 264,
-              "top": 199,
-              "bottom": 227
+              "left": 204,
+              "right": 248,
+              "top": 240,
+              "bottom": 284
             },
             "hit": true,
             "crossings": []
@@ -823,10 +848,10 @@
           {
             "key": "source",
             "rect": {
-              "left": 89.5,
-              "right": 168.5,
-              "top": 199,
-              "bottom": 227
+              "left": 73.5,
+              "right": 152.5,
+              "top": 240,
+              "bottom": 284
             },
             "hit": true,
             "crossings": []
@@ -840,15 +865,15 @@
       "variants": [
         {
           "name": "short-title",
-          "paths": 12,
+          "paths": 8,
           "controls": [
             {
               "key": "center-info",
               "rect": {
                 "left": 202.5,
-                "right": 230.5,
-                "top": 199,
-                "bottom": 227
+                "right": 246.5,
+                "top": 240,
+                "bottom": 284
               },
               "hit": true,
               "crossings": []
@@ -856,10 +881,10 @@
             {
               "key": "pin-center",
               "rect": {
-                "left": 171.5,
+                "left": 155.5,
                 "right": 199.5,
-                "top": 199,
-                "bottom": 227
+                "top": 240,
+                "bottom": 284
               },
               "hit": true,
               "crossings": []
@@ -867,10 +892,10 @@
             {
               "key": "source",
               "rect": {
-                "left": 89.5,
-                "right": 168.5,
-                "top": 199,
-                "bottom": 227
+                "left": 73.5,
+                "right": 152.5,
+                "top": 240,
+                "bottom": 284
               },
               "hit": true,
               "crossings": []
@@ -880,15 +905,15 @@
         },
         {
           "name": "second-page",
-          "paths": 10,
+          "paths": 6,
           "controls": [
             {
               "key": "center-info",
               "rect": {
-                "left": 267,
+                "left": 251,
                 "right": 295,
-                "top": 199,
-                "bottom": 227
+                "top": 240,
+                "bottom": 284
               },
               "hit": true,
               "crossings": []
@@ -896,10 +921,10 @@
             {
               "key": "pin-center",
               "rect": {
-                "left": 236,
-                "right": 264,
-                "top": 199,
-                "bottom": 227
+                "left": 204,
+                "right": 248,
+                "top": 240,
+                "bottom": 284
               },
               "hit": true,
               "crossings": []
@@ -907,10 +932,10 @@
             {
               "key": "source",
               "rect": {
-                "left": 89.5,
-                "right": 168.5,
-                "top": 199,
-                "bottom": 227
+                "left": 73.5,
+                "right": 152.5,
+                "top": 240,
+                "bottom": 284
               },
               "hit": true,
               "crossings": []
@@ -920,15 +945,15 @@
         },
         {
           "name": "scrolled-lists",
-          "paths": 10,
+          "paths": 6,
           "controls": [
             {
               "key": "center-info",
               "rect": {
-                "left": 267,
+                "left": 251,
                 "right": 295,
-                "top": 199,
-                "bottom": 227
+                "top": 240,
+                "bottom": 284
               },
               "hit": true,
               "crossings": []
@@ -936,10 +961,10 @@
             {
               "key": "pin-center",
               "rect": {
-                "left": 236,
-                "right": 264,
-                "top": 199,
-                "bottom": 227
+                "left": 204,
+                "right": 248,
+                "top": 240,
+                "bottom": 284
               },
               "hit": true,
               "crossings": []
@@ -947,10 +972,10 @@
             {
               "key": "source",
               "rect": {
-                "left": 89.5,
-                "right": 168.5,
-                "top": 199,
-                "bottom": 227
+                "left": 73.5,
+                "right": 152.5,
+                "top": 240,
+                "bottom": 284
               },
               "hit": true,
               "crossings": []
@@ -975,15 +1000,15 @@
       "theme": "dark",
       "width": 600,
       "normal": {
-        "paths": 12,
+        "paths": 8,
         "controls": [
           {
             "key": "center-info",
             "rect": {
-              "left": 547,
+              "left": 531,
               "right": 575,
-              "top": 199,
-              "bottom": 227
+              "top": 240,
+              "bottom": 284
             },
             "hit": true,
             "crossings": []
@@ -991,10 +1016,10 @@
           {
             "key": "pin-center",
             "rect": {
-              "left": 516,
-              "right": 544,
-              "top": 199,
-              "bottom": 227
+              "left": 484,
+              "right": 528,
+              "top": 240,
+              "bottom": 284
             },
             "hit": true,
             "crossings": []
@@ -1002,10 +1027,10 @@
           {
             "key": "source",
             "rect": {
-              "left": 229.5,
-              "right": 308.5,
-              "top": 199,
-              "bottom": 227
+              "left": 213.5,
+              "right": 292.5,
+              "top": 240,
+              "bottom": 284
             },
             "hit": true,
             "crossings": []
@@ -1019,15 +1044,15 @@
       "variants": [
         {
           "name": "short-title",
-          "paths": 12,
+          "paths": 8,
           "controls": [
             {
               "key": "center-info",
               "rect": {
                 "left": 342.5,
-                "right": 370.5,
-                "top": 199,
-                "bottom": 227
+                "right": 386.5,
+                "top": 240,
+                "bottom": 284
               },
               "hit": true,
               "crossings": []
@@ -1035,10 +1060,10 @@
             {
               "key": "pin-center",
               "rect": {
-                "left": 311.5,
+                "left": 295.5,
                 "right": 339.5,
-                "top": 199,
-                "bottom": 227
+                "top": 240,
+                "bottom": 284
               },
               "hit": true,
               "crossings": []
@@ -1046,10 +1071,10 @@
             {
               "key": "source",
               "rect": {
-                "left": 229.5,
-                "right": 308.5,
-                "top": 199,
-                "bottom": 227
+                "left": 213.5,
+                "right": 292.5,
+                "top": 240,
+                "bottom": 284
               },
               "hit": true,
               "crossings": []
@@ -1059,15 +1084,15 @@
         },
         {
           "name": "second-page",
-          "paths": 10,
+          "paths": 6,
           "controls": [
             {
               "key": "center-info",
               "rect": {
-                "left": 547,
+                "left": 531,
                 "right": 575,
-                "top": 199,
-                "bottom": 227
+                "top": 240,
+                "bottom": 284
               },
               "hit": true,
               "crossings": []
@@ -1075,10 +1100,10 @@
             {
               "key": "pin-center",
               "rect": {
-                "left": 516,
-                "right": 544,
-                "top": 199,
-                "bottom": 227
+                "left": 484,
+                "right": 528,
+                "top": 240,
+                "bottom": 284
               },
               "hit": true,
               "crossings": []
@@ -1086,10 +1111,10 @@
             {
               "key": "source",
               "rect": {
-                "left": 229.5,
-                "right": 308.5,
-                "top": 199,
-                "bottom": 227
+                "left": 213.5,
+                "right": 292.5,
+                "top": 240,
+                "bottom": 284
               },
               "hit": true,
               "crossings": []
@@ -1099,15 +1124,15 @@
         },
         {
           "name": "scrolled-lists",
-          "paths": 10,
+          "paths": 6,
           "controls": [
             {
               "key": "center-info",
               "rect": {
-                "left": 547,
+                "left": 531,
                 "right": 575,
-                "top": 199,
-                "bottom": 227
+                "top": 240,
+                "bottom": 284
               },
               "hit": true,
               "crossings": []
@@ -1115,10 +1140,10 @@
             {
               "key": "pin-center",
               "rect": {
-                "left": 516,
-                "right": 544,
-                "top": 199,
-                "bottom": 227
+                "left": 484,
+                "right": 528,
+                "top": 240,
+                "bottom": 284
               },
               "hit": true,
               "crossings": []
@@ -1126,10 +1151,10 @@
             {
               "key": "source",
               "rect": {
-                "left": 229.5,
-                "right": 308.5,
-                "top": 199,
-                "bottom": 227
+                "left": 213.5,
+                "right": 292.5,
+                "top": 240,
+                "bottom": 284
               },
               "hit": true,
               "crossings": []
@@ -1161,8 +1186,8 @@
             "rect": {
               "left": 553,
               "right": 581,
-              "top": 316,
-              "bottom": 344
+              "top": 320.5,
+              "bottom": 348.5
             },
             "hit": true,
             "crossings": []
@@ -1172,8 +1197,8 @@
             "rect": {
               "left": 522,
               "right": 550,
-              "top": 316,
-              "bottom": 344
+              "top": 320.5,
+              "bottom": 348.5
             },
             "hit": true,
             "crossings": []
@@ -1183,8 +1208,8 @@
             "rect": {
               "left": 409.5,
               "right": 488.5,
-              "top": 316,
-              "bottom": 344
+              "top": 320.5,
+              "bottom": 348.5
             },
             "hit": true,
             "crossings": []
@@ -1205,8 +1230,8 @@
               "rect": {
                 "left": 522.5,
                 "right": 550.5,
-                "top": 316,
-                "bottom": 344
+                "top": 320.5,
+                "bottom": 348.5
               },
               "hit": true,
               "crossings": []
@@ -1216,8 +1241,8 @@
               "rect": {
                 "left": 491.5,
                 "right": 519.5,
-                "top": 316,
-                "bottom": 344
+                "top": 320.5,
+                "bottom": 348.5
               },
               "hit": true,
               "crossings": []
@@ -1227,8 +1252,8 @@
               "rect": {
                 "left": 409.5,
                 "right": 488.5,
-                "top": 316,
-                "bottom": 344
+                "top": 320.5,
+                "bottom": 348.5
               },
               "hit": true,
               "crossings": []
@@ -1245,8 +1270,8 @@
               "rect": {
                 "left": 553,
                 "right": 581,
-                "top": 364,
-                "bottom": 392
+                "top": 368.5,
+                "bottom": 396.5
               },
               "hit": true,
               "crossings": []
@@ -1256,8 +1281,8 @@
               "rect": {
                 "left": 522,
                 "right": 550,
-                "top": 364,
-                "bottom": 392
+                "top": 368.5,
+                "bottom": 396.5
               },
               "hit": true,
               "crossings": []
@@ -1267,8 +1292,8 @@
               "rect": {
                 "left": 409.5,
                 "right": 488.5,
-                "top": 364,
-                "bottom": 392
+                "top": 368.5,
+                "bottom": 396.5
               },
               "hit": true,
               "crossings": []
@@ -1285,8 +1310,8 @@
               "rect": {
                 "left": 553,
                 "right": 581,
-                "top": 364,
-                "bottom": 392
+                "top": 368.5,
+                "bottom": 396.5
               },
               "hit": true,
               "crossings": []
@@ -1296,8 +1321,8 @@
               "rect": {
                 "left": 522,
                 "right": 550,
-                "top": 364,
-                "bottom": 392
+                "top": 368.5,
+                "bottom": 396.5
               },
               "hit": true,
               "crossings": []
@@ -1307,8 +1332,8 @@
               "rect": {
                 "left": 409.5,
                 "right": 488.5,
-                "top": 364,
-                "bottom": 392
+                "top": 368.5,
+                "bottom": 396.5
               },
               "hit": true,
               "crossings": []

@@ -1,0 +1,260 @@
+{
+  "pass": true,
+  "scope": "111 explicit toolbar selectors in owned minimal DOM; real 1.3.38 dynamic appearance stylesheet; computed paint and geometry, not native Obsidian",
+  "themeSHA256": "35f4de409ebecd2b0fbc04f55c9f945e329e2cf2266fc9caa9d61dee0d448c85",
+  "selectors": 111,
+  "cases": [
+    {
+      "color": "light",
+      "width": 320,
+      "appearance": "paper",
+      "checks": {
+        "surfaces": true,
+        "nested": true,
+        "calendar": true,
+        "content": true,
+        "hidden": true,
+        "solid": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrast": true,
+        "forced-colors": true,
+        "classic": true,
+        "apple": true,
+        "print": true
+      },
+      "pass": true,
+      "failures": []
+    },
+    {
+      "color": "light",
+      "width": 320,
+      "appearance": "glass",
+      "checks": {
+        "surfaces": true,
+        "nested": true,
+        "calendar": true,
+        "content": true,
+        "hidden": true,
+        "solid": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrast": true,
+        "forced-colors": true,
+        "classic": true,
+        "apple": true,
+        "print": true
+      },
+      "pass": true,
+      "failures": []
+    },
+    {
+      "color": "light",
+      "width": 320,
+      "appearance": "off",
+      "checks": {
+        "surfaces": true,
+        "nested": true,
+        "calendar": true,
+        "content": true,
+        "hidden": true,
+        "solid": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrast": true,
+        "forced-colors": true,
+        "classic": true,
+        "apple": true,
+        "print": true
+      },
+      "pass": true,
+      "failures": []
+    },
+    {
+      "color": "light",
+      "width": 1180,
+      "appearance": "paper",
+      "checks": {
+        "surfaces": true,
+        "nested": true,
+        "calendar": true,
+        "content": true,
+        "hidden": true,
+        "solid": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrast": true,
+        "forced-colors": true,
+        "classic": true,
+        "apple": true,
+        "print": true
+      },
+      "pass": true,
+      "failures": []
+    },
+    {
+      "color": "light",
+      "width": 1180,
+      "appearance": "glass",
+      "checks": {
+        "surfaces": true,
+        "nested": true,
+        "calendar": true,
+        "content": true,
+        "hidden": true,
+        "solid": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrast": true,
+        "forced-colors": true,
+        "classic": true,
+        "apple": true,
+        "print": true
+      },
+      "pass": true,
+      "failures": []
+    },
+    {
+      "color": "light",
+      "width": 1180,
+      "appearance": "off",
+      "checks": {
+        "surfaces": true,
+        "nested": true,
+        "calendar": true,
+        "content": true,
+        "hidden": true,
+        "solid": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrast": true,
+        "forced-colors": true,
+        "classic": true,
+        "apple": true,
+        "print": true
+      },
+      "pass": true,
+      "failures": []
+    },
+    {
+      "color": "dark",
+      "width": 320,
+      "appearance": "paper",
+      "checks": {
+        "surfaces": true,
+        "nested": true,
+        "calendar": true,
+        "content": true,
+        "hidden": true,
+        "solid": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrast": true,
+        "forced-colors": true,
+        "classic": true,
+        "apple": true,
+        "print": true
+      },
+      "pass": true,
+      "failures": []
+    },
+    {
+      "color": "dark",
+      "width": 320,
+      "appearance": "glass",
+      "checks": {
+        "surfaces": true,
+        "nested": true,
+        "calendar": true,
+        "content": true,
+        "hidden": true,
+        "solid": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrast": true,
+        "forced-colors": true,
+        "classic": true,
+        "apple": true,
+        "print": true
+      },
+      "pass": true,
+      "failures": []
+    },
+    {
+      "color": "dark",
+      "width": 320,
+      "appearance": "off",
+      "checks": {
+        "surfaces": true,
+        "nested": true,
+        "calendar": true,
+        "content": true,
+        "hidden": true,
+        "solid": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrast": true,
+        "forced-colors": true,
+        "classic": true,
+        "apple": true,
+        "print": true
+      },
+      "pass": true,
+      "failures": []
+    },
+    {
+      "color": "dark",
+      "width": 1180,
+      "appearance": "paper",
+      "checks": {
+        "surfaces": true,
+        "nested": true,
+        "calendar": true,
+        "content": true,
+        "hidden": true,
+        "solid": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrast": true,
+        "forced-colors": true,
+        "classic": true,
+        "apple": true,
+        "print": true
+      },
+      "pass": true,
+      "failures": []
+    },
+    {
+      "color": "dark",
+      "width": 1180,
+      "appearance": "glass",
+      "checks": {
+        "surfaces": true,
+        "nested": true,
+        "calendar": true,
+        "content": true,
+        "hidden": true,
+        "solid": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrast": true,
+        "forced-colors": true,
+        "classic": true,
+        "apple": true,
+        "print": true
+      },
+      "pass": true,
+      "failures": []
+    },
+    {
+      "color": "dark",
+      "width": 1180,
+      "appearance": "off",
+      "checks": {
+        "surfaces": true,
+        "nested": true,
+        "calendar": true,
+        "content": true,
+        "hidden": true,
+        "solid": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrast": true,
+        "forced-colors": true,
+        "classic": true,
+        "apple": true,
+        "print": true
+      },
+      "pass": true,
+      "failures": []
+    }
+  ]
+}

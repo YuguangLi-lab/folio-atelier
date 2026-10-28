@@ -1,0 +1,76 @@
+/* ThoughtSpace 1.3.38 floating surfaces. Keep the plugin's placement,
+ * scrolling, hidden state, hit areas and SVG optics. Text-heavy overlays use
+ * a denser version of the shared material, so all existing solid/system
+ * preferences remain authoritative. References: GITHUB-REFERENCES-3.37.0.md. */
+@media screen {
+  body.atelier-surface-liquid {
+    --folio-popover-fill: color-mix(in srgb, var(--folio-glass-fill) 75%, var(--atelier-ui-raised));
+  }
+  /* Deliberate specificity: beat the plugin's four-root appearance rules in
+   * either injection order. An active optical surface stays plugin-owned. */
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-surface-liquid.atelier-surface-liquid :is(
+    .ts-ui-menu,
+    .ts-root .ts-tools-palette,
+    .ts-root .ts-rail-popover,
+    .ts-root .ts-footer > .ts-canvas-settings-panel,
+    .ts-brain-shell .ts-brain-search-results,
+    .ts-source-popover,
+    .ts-local-relations > .ts-local-relations-picker,
+    .ts-local-relations > .ts-local-relations-filter-panel,
+    .ts-local-relations > .ts-local-relations-more-panel
+  ):not([data-ts-glass-optics=true]):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background: var(--folio-glass-sheen), var(--folio-popover-fill) !important;
+    border-color: var(--folio-popup-edge, var(--folio-glass-edge)) !important;
+    border-radius: var(--atelier-ui-radius-md) !important;
+    box-shadow: var(--folio-popup-light, var(--folio-glass-light)), var(--folio-popup-shadow, var(--atelier-ui-shadow-lg)) !important;
+    -webkit-backdrop-filter: var(--folio-popover-filter, var(--folio-glass-filter)) !important;
+    backdrop-filter: var(--folio-popover-filter, var(--folio-glass-filter)) !important;
+    color: var(--atelier-ui-ink);
+  }
+  /* These in-flow bars share their parent's glass. Do not flatten search
+   * results or other independently positioned children of a toolbar. */
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-surface-liquid.atelier-surface-liquid :is(
+    .ts-root .ts-footer > .ts-canvas-settings-panel > .ts-canvas-controls,
+    .ts-local-relations > .ts-local-relations-more-panel > .ts-local-relations-secondary-toolbar,
+    .ts-local-relations > .ts-local-relations-filter-panel .ts-local-relations-controls
+  ):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background: transparent !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+  /* Fields remain stable over colored canvases. Checkbox, range and color
+   * inputs retain their state cues; authored excerpts are outside this rule. */
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-surface-liquid.atelier-surface-liquid :is(
+    .ts-root .ts-canvas-settings-panel,
+    .ts-local-relations > .ts-local-relations-picker,
+    .ts-local-relations > .ts-local-relations-filter-panel
+  ) :is(select,input[type=search],input[type=text],input:not([type])):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background-color: var(--folio-glass-field);
+    color: var(--atelier-ui-ink);
+    border-color: var(--atelier-ui-line-strong);
+  }
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-surface-liquid.atelier-surface-liquid :is(
+    .ts-ui-menu,
+    .ts-root .ts-tools-palette,
+    .ts-root .ts-rail-popover,
+    .ts-root .ts-canvas-settings-panel,
+    .ts-brain-shell .ts-brain-search-results,
+    .ts-source-popover,
+    .ts-local-relations > .ts-local-relations-picker,
+    .ts-local-relations > .ts-local-relations-filter-panel,
+    .ts-local-relations > .ts-local-relations-more-panel
+  ) :is(button,input,select,[role=menuitem]):focus-visible:not(:is(:disabled,[aria-disabled=true],.is-disabled)):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    outline: 2px solid var(--atelier-ui-ink);
+    outline-offset: -3px;
+  }
+  /* Only neutral menu labels: selected, disabled and destructive items keep
+   * the plugin's semantic colors, including keyboard selection. */
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-surface-liquid.atelier-surface-liquid .ts-ui-menu .menu-item:not(:is(.selected,.is-disabled,.is-warning,[aria-disabled=true])):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    color: var(--atelier-ui-ink);
+  }
+  body.atelier-surface-liquid .ts-ui-menu .menu-separator:not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    border-color: var(--atelier-ui-line);
+  }
+}

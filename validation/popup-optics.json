@@ -1,0 +1,367 @@
+{
+  "pass": true,
+  "scope": "Actual ThoughtSpace 1.3.38-folio.10 menu optical runtime in isolated Chromium; source-derived menu fixture, not native Obsidian",
+  "themeSHA256": "35f4de409ebecd2b0fbc04f55c9f945e329e2cf2266fc9caa9d61dee0d448c85",
+  "cases": [
+    {
+      "color": "light",
+      "order": "theme-last",
+      "checks": {
+        "optics": true,
+        "hit": true,
+        "solid": true,
+        "solidRestore": true,
+        "prefers-reduced-transparency": true,
+        "prefers-reduced-transparencyRestore": true,
+        "prefers-contrast": true,
+        "prefers-contrastRestore": true,
+        "forced-colors": true,
+        "forced-colorsRestore": true,
+        "pluginOff": true,
+        "pluginRestore": true,
+        "narrowNoOptics": true,
+        "cleanup": true
+      },
+      "states": {
+        "active": {
+          "background": "color(srgb 0.984314 0.984314 0.992157 / 0.26)",
+          "alpha": 0.26,
+          "filter": "url(\"#ts-glass-lens-2\")",
+          "optics": "true",
+          "shieldDisplay": "block",
+          "shieldPointer": "none",
+          "definitions": 1
+        },
+        "solid": {
+          "background": "rgb(255, 255, 255)",
+          "alpha": 1,
+          "filter": "none",
+          "optics": "true",
+          "shieldDisplay": "none",
+          "shieldPointer": "none",
+          "definitions": 1
+        },
+        "restored": {
+          "background": "color(srgb 0.984314 0.984314 0.992157 / 0.26)",
+          "alpha": 0.26,
+          "filter": "url(\"#ts-glass-lens-2\")",
+          "optics": "true",
+          "shieldDisplay": "block",
+          "shieldPointer": "none",
+          "definitions": 1
+        },
+        "prefers-reduced-transparency": {
+          "background": "color(srgb 1 1 1)",
+          "alpha": 1,
+          "filter": "none",
+          "shieldDisplay": null,
+          "shieldPointer": null,
+          "definitions": 0
+        },
+        "prefers-contrast": {
+          "background": "color(srgb 1 1 1)",
+          "alpha": 1,
+          "filter": "none",
+          "shieldDisplay": null,
+          "shieldPointer": null,
+          "definitions": 0
+        },
+        "forced-colors": {
+          "background": "rgb(255, 255, 255)",
+          "alpha": 1,
+          "filter": "none",
+          "shieldDisplay": null,
+          "shieldPointer": null,
+          "definitions": 0
+        },
+        "pluginOff": {
+          "background": "color(srgb 1 1 1)",
+          "alpha": 1,
+          "filter": "none",
+          "shieldDisplay": null,
+          "shieldPointer": null,
+          "definitions": 0
+        },
+        "narrow": {
+          "background": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+          "alpha": 0.865,
+          "filter": "blur(12px) saturate(1.35)",
+          "shieldDisplay": null,
+          "shieldPointer": null,
+          "definitions": 0
+        }
+      },
+      "pass": true
+    },
+    {
+      "color": "light",
+      "order": "runtime-last",
+      "checks": {
+        "optics": true,
+        "hit": true,
+        "solid": true,
+        "solidRestore": true,
+        "prefers-reduced-transparency": true,
+        "prefers-reduced-transparencyRestore": true,
+        "prefers-contrast": true,
+        "prefers-contrastRestore": true,
+        "forced-colors": true,
+        "forced-colorsRestore": true,
+        "pluginOff": true,
+        "pluginRestore": true,
+        "narrowNoOptics": true,
+        "cleanup": true
+      },
+      "states": {
+        "active": {
+          "background": "color(srgb 0.984314 0.984314 0.992157 / 0.26)",
+          "alpha": 0.26,
+          "filter": "url(\"#ts-glass-lens-2\")",
+          "optics": "true",
+          "shieldDisplay": "block",
+          "shieldPointer": "none",
+          "definitions": 1
+        },
+        "solid": {
+          "background": "rgb(255, 255, 255)",
+          "alpha": 1,
+          "filter": "none",
+          "optics": "true",
+          "shieldDisplay": "none",
+          "shieldPointer": "none",
+          "definitions": 1
+        },
+        "restored": {
+          "background": "color(srgb 0.984314 0.984314 0.992157 / 0.26)",
+          "alpha": 0.26,
+          "filter": "url(\"#ts-glass-lens-2\")",
+          "optics": "true",
+          "shieldDisplay": "block",
+          "shieldPointer": "none",
+          "definitions": 1
+        },
+        "prefers-reduced-transparency": {
+          "background": "color(srgb 1 1 1)",
+          "alpha": 1,
+          "filter": "none",
+          "shieldDisplay": null,
+          "shieldPointer": null,
+          "definitions": 0
+        },
+        "prefers-contrast": {
+          "background": "color(srgb 1 1 1)",
+          "alpha": 1,
+          "filter": "none",
+          "shieldDisplay": null,
+          "shieldPointer": null,
+          "definitions": 0
+        },
+        "forced-colors": {
+          "background": "rgb(255, 255, 255)",
+          "alpha": 1,
+          "filter": "none",
+          "shieldDisplay": null,
+          "shieldPointer": null,
+          "definitions": 0
+        },
+        "pluginOff": {
+          "background": "color(srgb 1 1 1)",
+          "alpha": 1,
+          "filter": "none",
+          "shieldDisplay": null,
+          "shieldPointer": null,
+          "definitions": 0
+        },
+        "narrow": {
+          "background": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+          "alpha": 0.865,
+          "filter": "blur(12px) saturate(1.35)",
+          "shieldDisplay": null,
+          "shieldPointer": null,
+          "definitions": 0
+        }
+      },
+      "pass": true
+    },
+    {
+      "color": "dark",
+      "order": "theme-last",
+      "checks": {
+        "optics": true,
+        "hit": true,
+        "solid": true,
+        "solidRestore": true,
+        "prefers-reduced-transparency": true,
+        "prefers-reduced-transparencyRestore": true,
+        "prefers-contrast": true,
+        "prefers-contrastRestore": true,
+        "forced-colors": true,
+        "forced-colorsRestore": true,
+        "pluginOff": true,
+        "pluginRestore": true,
+        "narrowNoOptics": true,
+        "cleanup": true
+      },
+      "states": {
+        "active": {
+          "background": "color(srgb 0.172549 0.172549 0.180392 / 0.26)",
+          "alpha": 0.26,
+          "filter": "url(\"#ts-glass-lens-2\")",
+          "optics": "true",
+          "shieldDisplay": "block",
+          "shieldPointer": "none",
+          "definitions": 1
+        },
+        "solid": {
+          "background": "rgb(48, 48, 52)",
+          "alpha": 1,
+          "filter": "none",
+          "optics": "true",
+          "shieldDisplay": "none",
+          "shieldPointer": "none",
+          "definitions": 1
+        },
+        "restored": {
+          "background": "color(srgb 0.172549 0.172549 0.180392 / 0.26)",
+          "alpha": 0.26,
+          "filter": "url(\"#ts-glass-lens-2\")",
+          "optics": "true",
+          "shieldDisplay": "block",
+          "shieldPointer": "none",
+          "definitions": 1
+        },
+        "prefers-reduced-transparency": {
+          "background": "color(srgb 0.188235 0.188235 0.203922)",
+          "alpha": 1,
+          "filter": "none",
+          "shieldDisplay": null,
+          "shieldPointer": null,
+          "definitions": 0
+        },
+        "prefers-contrast": {
+          "background": "color(srgb 0.188235 0.188235 0.203922)",
+          "alpha": 1,
+          "filter": "none",
+          "shieldDisplay": null,
+          "shieldPointer": null,
+          "definitions": 0
+        },
+        "forced-colors": {
+          "background": "rgb(255, 255, 255)",
+          "alpha": 1,
+          "filter": "none",
+          "shieldDisplay": null,
+          "shieldPointer": null,
+          "definitions": 0
+        },
+        "pluginOff": {
+          "background": "color(srgb 0.188235 0.188235 0.203922)",
+          "alpha": 1,
+          "filter": "none",
+          "shieldDisplay": null,
+          "shieldPointer": null,
+          "definitions": 0
+        },
+        "narrow": {
+          "background": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+          "alpha": 0.895,
+          "filter": "blur(12px) saturate(1.35)",
+          "shieldDisplay": null,
+          "shieldPointer": null,
+          "definitions": 0
+        }
+      },
+      "pass": true
+    },
+    {
+      "color": "dark",
+      "order": "runtime-last",
+      "checks": {
+        "optics": true,
+        "hit": true,
+        "solid": true,
+        "solidRestore": true,
+        "prefers-reduced-transparency": true,
+        "prefers-reduced-transparencyRestore": true,
+        "prefers-contrast": true,
+        "prefers-contrastRestore": true,
+        "forced-colors": true,
+        "forced-colorsRestore": true,
+        "pluginOff": true,
+        "pluginRestore": true,
+        "narrowNoOptics": true,
+        "cleanup": true
+      },
+      "states": {
+        "active": {
+          "background": "color(srgb 0.172549 0.172549 0.180392 / 0.26)",
+          "alpha": 0.26,
+          "filter": "url(\"#ts-glass-lens-2\")",
+          "optics": "true",
+          "shieldDisplay": "block",
+          "shieldPointer": "none",
+          "definitions": 1
+        },
+        "solid": {
+          "background": "rgb(48, 48, 52)",
+          "alpha": 1,
+          "filter": "none",
+          "optics": "true",
+          "shieldDisplay": "none",
+          "shieldPointer": "none",
+          "definitions": 1
+        },
+        "restored": {
+          "background": "color(srgb 0.172549 0.172549 0.180392 / 0.26)",
+          "alpha": 0.26,
+          "filter": "url(\"#ts-glass-lens-2\")",
+          "optics": "true",
+          "shieldDisplay": "block",
+          "shieldPointer": "none",
+          "definitions": 1
+        },
+        "prefers-reduced-transparency": {
+          "background": "color(srgb 0.188235 0.188235 0.203922)",
+          "alpha": 1,
+          "filter": "none",
+          "shieldDisplay": null,
+          "shieldPointer": null,
+          "definitions": 0
+        },
+        "prefers-contrast": {
+          "background": "color(srgb 0.188235 0.188235 0.203922)",
+          "alpha": 1,
+          "filter": "none",
+          "shieldDisplay": null,
+          "shieldPointer": null,
+          "definitions": 0
+        },
+        "forced-colors": {
+          "background": "rgb(255, 255, 255)",
+          "alpha": 1,
+          "filter": "none",
+          "shieldDisplay": null,
+          "shieldPointer": null,
+          "definitions": 0
+        },
+        "pluginOff": {
+          "background": "color(srgb 0.188235 0.188235 0.203922)",
+          "alpha": 1,
+          "filter": "none",
+          "shieldDisplay": null,
+          "shieldPointer": null,
+          "definitions": 0
+        },
+        "narrow": {
+          "background": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+          "alpha": 0.895,
+          "filter": "blur(12px) saturate(1.35)",
+          "shieldDisplay": null,
+          "shieldPointer": null,
+          "definitions": 0
+        }
+      },
+      "pass": true
+    }
+  ]
+}

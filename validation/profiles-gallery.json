@@ -1,0 +1,980 @@
+{
+  "pass": true,
+  "scope": "Six source-derived board galleries; real exported profiles, applyFolioGlassProfile, InterfaceStyleDocuments, toolbar helpers, final plugin/theme CSS. Schema adapter simulates Style Settings class/variable application, not real vault persistence. Geometry and copy belong to gallery; not native Obsidian/FPS.",
+  "themeSHA256": "35f4de409ebecd2b0fbc04f55c9f945e329e2cf2266fc9caa9d61dee0d448c85",
+  "pluginSHA256": "70fc955f57c3581bae7b83d11ed87e0deff2b2c61296b7ad29d105f52afe6c67",
+  "cases": [
+    {
+      "color": "light",
+      "profile": "reading",
+      "checks": {
+        "profileSaved": true,
+        "toolbarParameter": true,
+        "popupParameter": true,
+        "idleCards": true,
+        "cardContrast": true,
+        "cardParameter": true,
+        "controls": true,
+        "idleAfter": true,
+        "errors": true
+      },
+      "pass": true,
+      "errors": [],
+      "profileValues": {
+        "atelier-surface-mode": "atelier-surface-liquid",
+        "atelier-glass-canvas": "atelier-glass-canvas-neutral",
+        "atelier-glass-cards": true,
+        "atelier-glass-solid": false,
+        "atelier-glass-pane-focus": true,
+        "atelier-glass-native-overlays": true,
+        "atelier-glass-finish": "atelier-glass-frosted",
+        "atelier-glass-toolbar-solid": 35,
+        "atelier-glass-popup-solid": 60,
+        "atelier-glass-card-solid": 70,
+        "atelier-glass-blur": 12,
+        "atelier-glass-popup-blur": 8,
+        "atelier-glass-card-blur": 0,
+        "atelier-glass-ambient": "atelier-glass-ambient-soft",
+        "atelier-glass-ambient-strength": 20
+      },
+      "idle": {
+        "toolbar": {
+          "filter": "blur(12px) saturate(1.35)",
+          "bg": "color(srgb 0.987835 0.987835 0.995134 / 0.922)",
+          "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+          "color": "rgb(29, 29, 31)",
+          "display": "flex",
+          "rect": [
+            292.5,
+            155,
+            745,
+            89
+          ]
+        },
+        "popup": {
+          "filter": "blur(8px) saturate(1.35)",
+          "bg": "color(srgb 0.99275 0.99275 0.9971 / 0.952)",
+          "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+          "color": "rgb(29, 29, 31)",
+          "display": "block",
+          "rect": [
+            981,
+            425,
+            255,
+            214.171875
+          ]
+        },
+        "card": {
+          "filter": "none",
+          "bg": "color(srgb 0.991039 0.993843 0.993274 / 0.979)",
+          "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.333), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.08)), none",
+          "color": "rgb(41, 54, 49)",
+          "display": "flex",
+          "rect": [
+            171,
+            288,
+            350,
+            255
+          ]
+        },
+        "cards": [
+          {
+            "bg": "color(srgb 0.991039 0.993843 0.993274 / 0.979)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.333), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.08)), none",
+            "filter": "none",
+            "text": [
+              {
+                "text": "先把问题读清楚",
+                "color": "rgb(41, 54, 49)"
+              },
+              {
+                "text": "把重要材料放在眼前，区分事实、证据与自己的理解。",
+                "color": "rgb(41, 54, 49)"
+              },
+              {
+                "text": "01 / 阅读与理解",
+                "color": "rgb(88, 106, 98)"
+              }
+            ]
+          },
+          {
+            "bg": "color(srgb 0.991039 0.993843 0.993274 / 0.979)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.333), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.08)), none",
+            "filter": "none",
+            "text": [
+              {
+                "text": "留下一条可继续的线索",
+                "color": "rgb(41, 54, 49)"
+              },
+              {
+                "text": "写下尚未回答的问题，让下一次阅读有迹可循。",
+                "color": "rgb(41, 54, 49)"
+              },
+              {
+                "text": "02 / 笔记与来源",
+                "color": "rgb(88, 106, 98)"
+              }
+            ]
+          }
+        ],
+        "blur": "12px",
+        "activeStyle": "glass",
+        "saves": 1
+      },
+      "cardContrast": [
+        {
+          "card": 0,
+          "text": "先把问题读清楚",
+          "minRatio": 11.861582798667477,
+          "pass": true
+        },
+        {
+          "card": 0,
+          "text": "把重要材料放在眼前，区分事实、证据与自己的理解。",
+          "minRatio": 11.861582798667477,
+          "pass": true
+        },
+        {
+          "card": 0,
+          "text": "01 / 阅读与理解",
+          "minRatio": 5.410723484562286,
+          "pass": true
+        },
+        {
+          "card": 1,
+          "text": "留下一条可继续的线索",
+          "minRatio": 11.861582798667477,
+          "pass": true
+        },
+        {
+          "card": 1,
+          "text": "写下尚未回答的问题，让下一次阅读有迹可循。",
+          "minRatio": 11.861582798667477,
+          "pass": true
+        },
+        {
+          "card": 1,
+          "text": "02 / 笔记与来源",
+          "minRatio": 5.410723484562286,
+          "pass": true
+        }
+      ],
+      "hover": "blur(0px) saturate(1.15)",
+      "hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "color": "light",
+      "profile": "board",
+      "checks": {
+        "profileSaved": true,
+        "toolbarParameter": true,
+        "popupParameter": true,
+        "idleCards": true,
+        "cardContrast": true,
+        "cardParameter": true,
+        "controls": true,
+        "idleAfter": true,
+        "errors": true
+      },
+      "pass": true,
+      "errors": [],
+      "profileValues": {
+        "atelier-surface-mode": "atelier-surface-liquid",
+        "atelier-glass-canvas": "atelier-glass-canvas-neutral",
+        "atelier-glass-cards": true,
+        "atelier-glass-solid": false,
+        "atelier-glass-pane-focus": true,
+        "atelier-glass-native-overlays": true,
+        "atelier-glass-finish": "atelier-glass-frosted",
+        "atelier-glass-toolbar-solid": 0,
+        "atelier-glass-popup-solid": 25,
+        "atelier-glass-card-solid": 0,
+        "atelier-glass-blur": 16,
+        "atelier-glass-popup-blur": 12,
+        "atelier-glass-card-blur": 6,
+        "atelier-glass-ambient": "atelier-glass-ambient-soft",
+        "atelier-glass-ambient-strength": 35
+      },
+      "idle": {
+        "toolbar": {
+          "filter": "blur(16px) saturate(1.35)",
+          "bg": "color(srgb 0.980392 0.980392 0.992157 / 0.88)",
+          "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+          "color": "rgb(29, 29, 31)",
+          "display": "flex",
+          "rect": [
+            292.5,
+            155,
+            745,
+            89
+          ]
+        },
+        "popup": {
+          "filter": "blur(12px) saturate(1.35)",
+          "bg": "color(srgb 0.985779 0.985779 0.994312 / 0.91)",
+          "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+          "color": "rgb(29, 29, 31)",
+          "display": "block",
+          "rect": [
+            981,
+            425,
+            255,
+            214.171875
+          ]
+        },
+        "card": {
+          "filter": "none",
+          "bg": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+          "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.333), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.08)), none",
+          "color": "rgb(41, 54, 49)",
+          "display": "flex",
+          "rect": [
+            171,
+            288,
+            350,
+            255
+          ]
+        },
+        "cards": [
+          {
+            "bg": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.333), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.08)), none",
+            "filter": "none",
+            "text": [
+              {
+                "text": "从问题出发",
+                "color": "rgb(41, 54, 49)"
+              },
+              {
+                "text": "把观察整理成问题，沿着证据建立联系。",
+                "color": "rgb(41, 54, 49)"
+              },
+              {
+                "text": "01 / 研究与阅读",
+                "color": "rgb(88, 106, 98)"
+              }
+            ]
+          },
+          {
+            "bg": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.333), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.08)), none",
+            "filter": "none",
+            "text": [
+              {
+                "text": "连接值得保留的想法",
+                "color": "rgb(41, 54, 49)"
+              },
+              {
+                "text": "记录来源、对照结论，再写下自己的理解。",
+                "color": "rgb(41, 54, 49)"
+              },
+              {
+                "text": "02 / 思考与写作",
+                "color": "rgb(88, 106, 98)"
+              }
+            ]
+          }
+        ],
+        "blur": "16px",
+        "activeStyle": "glass",
+        "saves": 1
+      },
+      "cardContrast": [
+        {
+          "card": 0,
+          "text": "从问题出发",
+          "minRatio": 10.523088511590771,
+          "pass": true
+        },
+        {
+          "card": 0,
+          "text": "把观察整理成问题，沿着证据建立联系。",
+          "minRatio": 10.523088511590771,
+          "pass": true
+        },
+        {
+          "card": 0,
+          "text": "01 / 研究与阅读",
+          "minRatio": 4.800162263858083,
+          "pass": true
+        },
+        {
+          "card": 1,
+          "text": "连接值得保留的想法",
+          "minRatio": 10.523088511590771,
+          "pass": true
+        },
+        {
+          "card": 1,
+          "text": "记录来源、对照结论，再写下自己的理解。",
+          "minRatio": 10.523088511590771,
+          "pass": true
+        },
+        {
+          "card": 1,
+          "text": "02 / 思考与写作",
+          "minRatio": 4.800162263858083,
+          "pass": true
+        }
+      ],
+      "hover": "blur(6px) saturate(1.15)",
+      "hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "color": "light",
+      "profile": "presentation",
+      "checks": {
+        "profileSaved": true,
+        "toolbarParameter": true,
+        "popupParameter": true,
+        "idleCards": true,
+        "cardContrast": true,
+        "cardParameter": true,
+        "controls": true,
+        "idleAfter": true,
+        "errors": true
+      },
+      "pass": true,
+      "errors": [],
+      "profileValues": {
+        "atelier-surface-mode": "atelier-surface-liquid",
+        "atelier-glass-canvas": "atelier-glass-canvas-neutral",
+        "atelier-glass-cards": true,
+        "atelier-glass-solid": false,
+        "atelier-glass-pane-focus": true,
+        "atelier-glass-native-overlays": true,
+        "atelier-glass-finish": "atelier-glass-clear",
+        "atelier-glass-toolbar-solid": 0,
+        "atelier-glass-popup-solid": 15,
+        "atelier-glass-card-solid": 0,
+        "atelier-glass-blur": 20,
+        "atelier-glass-popup-blur": 16,
+        "atelier-glass-card-blur": 6,
+        "atelier-glass-ambient": "atelier-glass-ambient-prism",
+        "atelier-glass-ambient-strength": 45
+      },
+      "idle": {
+        "toolbar": {
+          "filter": "blur(20px) saturate(1.55)",
+          "bg": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+          "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+          "color": "rgb(29, 29, 31)",
+          "display": "flex",
+          "rect": [
+            292.5,
+            155,
+            745,
+            89
+          ]
+        },
+        "popup": {
+          "filter": "blur(16px) saturate(1.35)",
+          "bg": "color(srgb 0.983865 0.983865 0.993546 / 0.847)",
+          "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+          "color": "rgb(29, 29, 31)",
+          "display": "block",
+          "rect": [
+            981,
+            425,
+            255,
+            214.171875
+          ]
+        },
+        "card": {
+          "filter": "none",
+          "bg": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+          "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.333), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.08)), none",
+          "color": "rgb(41, 54, 49)",
+          "display": "flex",
+          "rect": [
+            171,
+            288,
+            350,
+            255
+          ]
+        },
+        "cards": [
+          {
+            "bg": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.333), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.08)), none",
+            "filter": "none",
+            "text": [
+              {
+                "text": "让想法被看见",
+                "color": "rgb(41, 54, 49)"
+              },
+              {
+                "text": "用一张画布呈现重点，给每个结论留下清晰的位置。",
+                "color": "rgb(41, 54, 49)"
+              },
+              {
+                "text": "01 / 观点与表达",
+                "color": "rgb(88, 106, 98)"
+              }
+            ]
+          },
+          {
+            "bg": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.333), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.08)), none",
+            "filter": "none",
+            "text": [
+              {
+                "text": "从材料走向叙事",
+                "color": "rgb(41, 54, 49)"
+              },
+              {
+                "text": "把关键证据与解释放在一起，分享思考的路径。",
+                "color": "rgb(41, 54, 49)"
+              },
+              {
+                "text": "02 / 整理与分享",
+                "color": "rgb(88, 106, 98)"
+              }
+            ]
+          }
+        ],
+        "blur": "20px",
+        "activeStyle": "glass",
+        "saves": 1
+      },
+      "cardContrast": [
+        {
+          "card": 0,
+          "text": "让想法被看见",
+          "minRatio": 10.523088511590771,
+          "pass": true
+        },
+        {
+          "card": 0,
+          "text": "用一张画布呈现重点，给每个结论留下清晰的位置。",
+          "minRatio": 10.523088511590771,
+          "pass": true
+        },
+        {
+          "card": 0,
+          "text": "01 / 观点与表达",
+          "minRatio": 4.800162263858083,
+          "pass": true
+        },
+        {
+          "card": 1,
+          "text": "从材料走向叙事",
+          "minRatio": 10.523088511590771,
+          "pass": true
+        },
+        {
+          "card": 1,
+          "text": "把关键证据与解释放在一起，分享思考的路径。",
+          "minRatio": 10.523088511590771,
+          "pass": true
+        },
+        {
+          "card": 1,
+          "text": "02 / 整理与分享",
+          "minRatio": 4.800162263858083,
+          "pass": true
+        }
+      ],
+      "hover": "blur(6px) saturate(1.15)",
+      "hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "color": "dark",
+      "profile": "reading",
+      "checks": {
+        "profileSaved": true,
+        "toolbarParameter": true,
+        "popupParameter": true,
+        "idleCards": true,
+        "cardContrast": true,
+        "cardParameter": true,
+        "controls": true,
+        "idleAfter": true,
+        "errors": true
+      },
+      "pass": true,
+      "errors": [],
+      "profileValues": {
+        "atelier-surface-mode": "atelier-surface-liquid",
+        "atelier-glass-canvas": "atelier-glass-canvas-neutral",
+        "atelier-glass-cards": true,
+        "atelier-glass-solid": false,
+        "atelier-glass-pane-focus": true,
+        "atelier-glass-native-overlays": true,
+        "atelier-glass-finish": "atelier-glass-frosted",
+        "atelier-glass-toolbar-solid": 35,
+        "atelier-glass-popup-solid": 60,
+        "atelier-glass-card-solid": 70,
+        "atelier-glass-blur": 12,
+        "atelier-glass-popup-blur": 8,
+        "atelier-glass-card-blur": 0,
+        "atelier-glass-ambient": "atelier-glass-ambient-soft",
+        "atelier-glass-ambient-strength": 20
+      },
+      "idle": {
+        "toolbar": {
+          "filter": "blur(12px) saturate(1.35)",
+          "bg": "color(srgb 0.168606 0.168606 0.186746 / 0.935)",
+          "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+          "color": "rgb(245, 245, 247)",
+          "display": "flex",
+          "rect": [
+            292.5,
+            155,
+            745,
+            89
+          ]
+        },
+        "popup": {
+          "filter": "blur(8px) saturate(1.35)",
+          "bg": "color(srgb 0.176471 0.176471 0.193627 / 0.96)",
+          "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+          "color": "rgb(245, 245, 247)",
+          "display": "block",
+          "rect": [
+            981,
+            425,
+            255,
+            214.171875
+          ]
+        },
+        "card": {
+          "filter": "none",
+          "bg": "color(srgb 0.134468 0.156246 0.155211 / 0.985)",
+          "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.047), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.01)), none",
+          "color": "rgb(226, 234, 229)",
+          "display": "flex",
+          "rect": [
+            171,
+            288,
+            350,
+            255
+          ]
+        },
+        "cards": [
+          {
+            "bg": "color(srgb 0.134468 0.156246 0.155211 / 0.985)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.047), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.01)), none",
+            "filter": "none",
+            "text": [
+              {
+                "text": "先把问题读清楚",
+                "color": "rgb(226, 234, 229)"
+              },
+              {
+                "text": "把重要材料放在眼前，区分事实、证据与自己的理解。",
+                "color": "rgb(226, 234, 229)"
+              },
+              {
+                "text": "01 / 阅读与理解",
+                "color": "rgb(177, 193, 183)"
+              }
+            ]
+          },
+          {
+            "bg": "color(srgb 0.134468 0.156246 0.155211 / 0.985)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.047), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.01)), none",
+            "filter": "none",
+            "text": [
+              {
+                "text": "留下一条可继续的线索",
+                "color": "rgb(226, 234, 229)"
+              },
+              {
+                "text": "写下尚未回答的问题，让下一次阅读有迹可循。",
+                "color": "rgb(226, 234, 229)"
+              },
+              {
+                "text": "02 / 笔记与来源",
+                "color": "rgb(177, 193, 183)"
+              }
+            ]
+          }
+        ],
+        "blur": "12px",
+        "activeStyle": "glass",
+        "saves": 1
+      },
+      "cardContrast": [
+        {
+          "card": 0,
+          "text": "先把问题读清楚",
+          "minRatio": 10.163199580525378,
+          "pass": true
+        },
+        {
+          "card": 0,
+          "text": "把重要材料放在眼前，区分事实、证据与自己的理解。",
+          "minRatio": 10.163199580525378,
+          "pass": true
+        },
+        {
+          "card": 0,
+          "text": "01 / 阅读与理解",
+          "minRatio": 6.632112118926154,
+          "pass": true
+        },
+        {
+          "card": 1,
+          "text": "留下一条可继续的线索",
+          "minRatio": 10.163199580525378,
+          "pass": true
+        },
+        {
+          "card": 1,
+          "text": "写下尚未回答的问题，让下一次阅读有迹可循。",
+          "minRatio": 10.163199580525378,
+          "pass": true
+        },
+        {
+          "card": 1,
+          "text": "02 / 笔记与来源",
+          "minRatio": 6.632112118926154,
+          "pass": true
+        }
+      ],
+      "hover": "blur(0px) saturate(1.15)",
+      "hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "color": "dark",
+      "profile": "board",
+      "checks": {
+        "profileSaved": true,
+        "toolbarParameter": true,
+        "popupParameter": true,
+        "idleCards": true,
+        "cardContrast": true,
+        "cardParameter": true,
+        "controls": true,
+        "idleAfter": true,
+        "errors": true
+      },
+      "pass": true,
+      "errors": [],
+      "profileValues": {
+        "atelier-surface-mode": "atelier-surface-liquid",
+        "atelier-glass-canvas": "atelier-glass-canvas-neutral",
+        "atelier-glass-cards": true,
+        "atelier-glass-solid": false,
+        "atelier-glass-pane-focus": true,
+        "atelier-glass-native-overlays": true,
+        "atelier-glass-finish": "atelier-glass-frosted",
+        "atelier-glass-toolbar-solid": 0,
+        "atelier-glass-popup-solid": 25,
+        "atelier-glass-card-solid": 0,
+        "atelier-glass-blur": 16,
+        "atelier-glass-popup-blur": 12,
+        "atelier-glass-card-blur": 6,
+        "atelier-glass-ambient": "atelier-glass-ambient-soft",
+        "atelier-glass-ambient-strength": 35
+      },
+      "idle": {
+        "toolbar": {
+          "filter": "blur(16px) saturate(1.35)",
+          "bg": "color(srgb 0.156863 0.156863 0.176471 / 0.9)",
+          "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+          "color": "rgb(245, 245, 247)",
+          "display": "flex",
+          "rect": [
+            292.5,
+            155,
+            745,
+            89
+          ]
+        },
+        "popup": {
+          "filter": "blur(12px) saturate(1.35)",
+          "bg": "color(srgb 0.165342 0.165342 0.18389 / 0.925)",
+          "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+          "color": "rgb(245, 245, 247)",
+          "display": "block",
+          "rect": [
+            981,
+            425,
+            255,
+            214.171875
+          ]
+        },
+        "card": {
+          "filter": "none",
+          "bg": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+          "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.047), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.01)), none",
+          "color": "rgb(226, 234, 229)",
+          "display": "flex",
+          "rect": [
+            171,
+            288,
+            350,
+            255
+          ]
+        },
+        "cards": [
+          {
+            "bg": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.047), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.01)), none",
+            "filter": "none",
+            "text": [
+              {
+                "text": "从问题出发",
+                "color": "rgb(226, 234, 229)"
+              },
+              {
+                "text": "把观察整理成问题，沿着证据建立联系。",
+                "color": "rgb(226, 234, 229)"
+              },
+              {
+                "text": "01 / 研究与阅读",
+                "color": "rgb(177, 193, 183)"
+              }
+            ]
+          },
+          {
+            "bg": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.047), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.01)), none",
+            "filter": "none",
+            "text": [
+              {
+                "text": "连接值得保留的想法",
+                "color": "rgb(226, 234, 229)"
+              },
+              {
+                "text": "记录来源、对照结论，再写下自己的理解。",
+                "color": "rgb(226, 234, 229)"
+              },
+              {
+                "text": "02 / 思考与写作",
+                "color": "rgb(177, 193, 183)"
+              }
+            ]
+          }
+        ],
+        "blur": "16px",
+        "activeStyle": "glass",
+        "saves": 1
+      },
+      "cardContrast": [
+        {
+          "card": 0,
+          "text": "从问题出发",
+          "minRatio": 9.346309713440675,
+          "pass": true
+        },
+        {
+          "card": 0,
+          "text": "把观察整理成问题，沿着证据建立联系。",
+          "minRatio": 9.346309713440675,
+          "pass": true
+        },
+        {
+          "card": 0,
+          "text": "01 / 研究与阅读",
+          "minRatio": 6.09904129370082,
+          "pass": true
+        },
+        {
+          "card": 1,
+          "text": "连接值得保留的想法",
+          "minRatio": 9.346309713440675,
+          "pass": true
+        },
+        {
+          "card": 1,
+          "text": "记录来源、对照结论，再写下自己的理解。",
+          "minRatio": 9.346309713440675,
+          "pass": true
+        },
+        {
+          "card": 1,
+          "text": "02 / 思考与写作",
+          "minRatio": 6.09904129370082,
+          "pass": true
+        }
+      ],
+      "hover": "blur(6px) saturate(1.15)",
+      "hits": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "color": "dark",
+      "profile": "presentation",
+      "checks": {
+        "profileSaved": true,
+        "toolbarParameter": true,
+        "popupParameter": true,
+        "idleCards": true,
+        "cardContrast": true,
+        "cardParameter": true,
+        "controls": true,
+        "idleAfter": true,
+        "errors": true
+      },
+      "pass": true,
+      "errors": [],
+      "profileValues": {
+        "atelier-surface-mode": "atelier-surface-liquid",
+        "atelier-glass-canvas": "atelier-glass-canvas-neutral",
+        "atelier-glass-cards": true,
+        "atelier-glass-solid": false,
+        "atelier-glass-pane-focus": true,
+        "atelier-glass-native-overlays": true,
+        "atelier-glass-finish": "atelier-glass-clear",
+        "atelier-glass-toolbar-solid": 0,
+        "atelier-glass-popup-solid": 15,
+        "atelier-glass-card-solid": 0,
+        "atelier-glass-blur": 20,
+        "atelier-glass-popup-blur": 16,
+        "atelier-glass-card-blur": 6,
+        "atelier-glass-ambient": "atelier-glass-ambient-prism",
+        "atelier-glass-ambient-strength": 45
+      },
+      "idle": {
+        "toolbar": {
+          "filter": "blur(20px) saturate(1.55)",
+          "bg": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+          "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+          "color": "rgb(245, 245, 247)",
+          "display": "flex",
+          "rect": [
+            292.5,
+            155,
+            745,
+            89
+          ]
+        },
+        "popup": {
+          "filter": "blur(16px) saturate(1.35)",
+          "bg": "color(srgb 0.162204 0.162204 0.181144 / 0.881)",
+          "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+          "color": "rgb(245, 245, 247)",
+          "display": "block",
+          "rect": [
+            981,
+            425,
+            255,
+            214.171875
+          ]
+        },
+        "card": {
+          "filter": "none",
+          "bg": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+          "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.047), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.01)), none",
+          "color": "rgb(226, 234, 229)",
+          "display": "flex",
+          "rect": [
+            171,
+            288,
+            350,
+            255
+          ]
+        },
+        "cards": [
+          {
+            "bg": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.047), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.01)), none",
+            "filter": "none",
+            "text": [
+              {
+                "text": "让想法被看见",
+                "color": "rgb(226, 234, 229)"
+              },
+              {
+                "text": "用一张画布呈现重点，给每个结论留下清晰的位置。",
+                "color": "rgb(226, 234, 229)"
+              },
+              {
+                "text": "01 / 观点与表达",
+                "color": "rgb(177, 193, 183)"
+              }
+            ]
+          },
+          {
+            "bg": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "image": "linear-gradient(145deg, rgba(255, 255, 255, 0.047), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.01)), none",
+            "filter": "none",
+            "text": [
+              {
+                "text": "从材料走向叙事",
+                "color": "rgb(226, 234, 229)"
+              },
+              {
+                "text": "把关键证据与解释放在一起，分享思考的路径。",
+                "color": "rgb(226, 234, 229)"
+              },
+              {
+                "text": "02 / 整理与分享",
+                "color": "rgb(177, 193, 183)"
+              }
+            ]
+          }
+        ],
+        "blur": "20px",
+        "activeStyle": "glass",
+        "saves": 1
+      },
+      "cardContrast": [
+        {
+          "card": 0,
+          "text": "让想法被看见",
+          "minRatio": 9.346309713440675,
+          "pass": true
+        },
+        {
+          "card": 0,
+          "text": "用一张画布呈现重点，给每个结论留下清晰的位置。",
+          "minRatio": 9.346309713440675,
+          "pass": true
+        },
+        {
+          "card": 0,
+          "text": "01 / 观点与表达",
+          "minRatio": 6.09904129370082,
+          "pass": true
+        },
+        {
+          "card": 1,
+          "text": "从材料走向叙事",
+          "minRatio": 9.346309713440675,
+          "pass": true
+        },
+        {
+          "card": 1,
+          "text": "把关键证据与解释放在一起，分享思考的路径。",
+          "minRatio": 9.346309713440675,
+          "pass": true
+        },
+        {
+          "card": 1,
+          "text": "02 / 整理与分享",
+          "minRatio": 6.09904129370082,
+          "pass": true
+        }
+      ],
+      "hover": "blur(6px) saturate(1.15)",
+      "hits": [
+        true,
+        true,
+        true
+      ]
+    }
+  ]
+}

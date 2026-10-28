@@ -1,0 +1,63 @@
+/* Static material roles for the existing glass sheets. These tokens only
+ * adjust edges and existing shadows; fills, blur controls, geometry and the
+ * plugin's SVG optical surfaces retain their owners. This is a CSS material
+ * approximation, not Apple's native Liquid Glass implementation. */
+@media screen {
+  @media (prefers-reduced-transparency: no-preference) and (prefers-contrast: no-preference) and (forced-colors: none) {
+    @supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+      body:is(.theme-light,.theme-dark).atelier-surface-liquid:not(.atelier-glass-solid) {
+        --folio-toolbar-edge: rgb(255 255 255 / .62);
+        --folio-toolbar-light: inset 0 1px 0 rgb(255 255 255 / .78), inset 0 -1px 0 rgb(36 53 72 / .035);
+        --folio-toolbar-shadow: var(--atelier-ui-shadow-sm);
+        --folio-popup-edge: rgb(255 255 255 / .88);
+        --folio-popup-light: inset 0 1px 0 rgb(255 255 255 / .96), inset 0 -1px 0 rgb(36 53 72 / .055);
+        --folio-popup-shadow: var(--atelier-ui-shadow-md);
+        --folio-card-edge: rgb(255 255 255 / .68);
+        --folio-card-shadow: 0 1px 2px rgb(23 35 52 / .035), 0 8px 20px -10px rgb(23 35 52 / .16);
+      }
+      body.theme-dark.atelier-surface-liquid:not(.atelier-glass-solid) {
+        --folio-toolbar-edge: rgb(220 230 246 / .10);
+        --folio-toolbar-light: inset 0 1px 0 rgb(220 234 255 / .20), inset 0 -1px 0 rgb(12 10 9 / .26);
+        --folio-popup-edge: rgb(220 230 246 / .17);
+        --folio-popup-light: inset 0 1px 0 rgb(224 237 255 / .29), inset 0 -1px 0 rgb(12 10 9 / .32);
+        --folio-card-edge: rgb(218 232 250 / .11);
+        --folio-card-shadow: 0 1px 3px rgb(0 0 0 / .14), 0 10px 20px -10px rgb(0 0 0 / .32);
+      }
+      /* These independently positioned surfaces are listed in the toolbar
+       * inventory but carry popup depth. Only their role aliases change. */
+      body.atelier-surface-liquid :is(.ts-handwriting-popover,.canvas-submenu):not([data-ts-glass-optics=true]):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+        --folio-toolbar-edge: var(--folio-popup-edge, var(--folio-glass-edge));
+        --folio-toolbar-light: var(--folio-popup-light, var(--folio-glass-light));
+        --folio-toolbar-shadow: var(--folio-popup-shadow, var(--atelier-ui-shadow-sm));
+      }
+      /* Preserve the prior flat preference rather than introducing a second
+       * shadow switch. A zero shadow stays valid when combined with insets. */
+      body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-flat {
+        --folio-toolbar-light: 0 0 0 0 transparent;
+        --folio-toolbar-shadow: 0 0 0 0 transparent;
+        --folio-popup-light: 0 0 0 0 transparent;
+        --folio-popup-shadow: 0 0 0 0 transparent;
+        --folio-card-shadow: 0 0 0 0 transparent;
+      }
+      /* The plugin's explicit glass-off choice must also restore the prior
+       * solid paint. No new role tokens escape into that fallback. */
+      html:has(> head > style[data-thoughtspace-tokens][data-interface-style=glass][data-glass-effects=false]) body:is(.theme-light,.theme-dark).atelier-surface-liquid {
+        --folio-toolbar-edge: initial;
+        --folio-toolbar-light: initial;
+        --folio-toolbar-shadow: initial;
+        --folio-popup-edge: initial;
+        --folio-popup-light: initial;
+        --folio-popup-shadow: initial;
+        --folio-card-edge: rgb(255 255 255 / .8);
+        --folio-card-shadow: 0 2px 4px #17233408, 0 10px 26px #1723340c;
+      }
+      html:has(> head > style[data-thoughtspace-tokens][data-interface-style=glass][data-glass-effects=false]) body.theme-dark.atelier-surface-liquid {
+        --folio-card-edge: rgb(255 255 255 / .16);
+        --folio-card-shadow: 0 2px 5px #0003, 0 12px 28px #0003;
+      }
+      html:has(> head > style[data-thoughtspace-tokens][data-interface-style=glass][data-glass-effects=false]) body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-flat {
+        --folio-card-shadow: 0 0 0 0 transparent;
+      }
+    }
+  }
+}

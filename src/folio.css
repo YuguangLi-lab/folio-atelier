@@ -49,8 +49,8 @@ settings:
       - label: 液态玻璃
         value: atelier-surface-liquid
   - id: atelier-glass-blur
-    title: 玻璃模糊强度
-    description: 仅影响液态玻璃的导航和浮动工具；不模糊正文、白板卡片或视频。
+    title: 工具栏模糊强度
+    description: 调整导航和工具栏的背景模糊；正文和视频保持清晰，浮层与卡片可在下方分别设置。
     type: variable-number-slider
     default: 16
     min: 8
@@ -68,6 +68,105 @@ settings:
         value: atelier-glass-frosted
       - label: 通透高光
         value: atelier-glass-clear
+  - id: atelier-glass-toolbar-solid
+    title: 工具栏实色混合
+    description: 0 保留当前玻璃质感；数值越高，底色越实。100 为不透明底色；彻底关闭模糊请使用“减少透明效果”。
+    type: variable-number-slider
+    default: 0
+    min: 0
+    max: 100
+    step: 5
+  - id: atelier-glass-popup-solid
+    title: 浮层实色混合
+    description: 独立控制菜单、搜索结果与原生浮层的底色；默认 25，在通透与文字清楚之间保持平衡。
+    type: variable-number-slider
+    default: 25
+    min: 0
+    max: 100
+    step: 5
+  - id: atelier-glass-popup-blur
+    title: 浮层模糊强度（像素）
+    description: 控制普通浮层的背景模糊；插件已激活的光学折射由插件管理。
+    type: variable-number-slider
+    default: 12
+    min: 0
+    max: 24
+    step: 2
+  - id: atelier-glass-card-solid
+    title: 卡片实色混合
+    description: 为普通玻璃卡片增加实体底色；自定义填色、媒体、特殊纸张和编辑中的卡片保持原样。
+    type: variable-number-slider
+    default: 0
+    min: 0
+    max: 100
+    step: 5
+  - id: atelier-glass-card-blur
+    title: 卡片悬停模糊（像素）
+    description: 仅在鼠标悬停或键盘聚焦普通玻璃卡片时生效；闲置卡片不增加模糊，0 可关闭该模糊。
+    type: variable-number-slider
+    default: 6
+    min: 0
+    max: 12
+    step: 2
+  - id: atelier-glass-pane-focus
+    title: 当前分栏聚焦
+    description: 在当前窗口的活动面板标题栏显示细强调线；其他标题栏更安静，正文不变暗。
+    type: class-toggle
+    default: true
+    addCommand: true
+  - id: atelier-glass-native-overlays
+    title: 原生浮层玻璃
+    description: 适配命令面板、快速切换、普通工具提示与通知，保留警告和错误的语义外观。
+    type: class-toggle
+    default: true
+    addCommand: true
+  - id: atelier-glass-canvas
+    title: 玻璃画布底色
+    description: 仅在液态玻璃模式下调整白板的纯色、点阵和网格底色；保留网格缩放、吸附及已选纸张或背景图片。
+    type: class-select
+    allowEmpty: false
+    default: atelier-glass-canvas-neutral
+    options:
+      - label: 雾白 / 石墨
+        value: atelier-glass-canvas-neutral
+      - label: 冷雾蓝
+        value: atelier-glass-canvas-mist
+      - label: 暖砂米
+        value: atelier-glass-canvas-sand
+      - label: 跟随插件
+        value: atelier-glass-canvas-original
+  - id: atelier-glass-ambient
+    title: 玻璃背景光感
+    description: 用静态柔光衬托玻璃，覆盖普通白板和配套工作区；不影响纸张、背景图片与正文。选择“跟随插件”底色时不启用。
+    type: class-select
+    allowEmpty: false
+    default: atelier-glass-ambient-soft
+    options:
+      - label: 柔和雾光
+        value: atelier-glass-ambient-soft
+      - label: 棱彩柔光
+        value: atelier-glass-ambient-prism
+      - label: 纯色背景
+        value: atelier-glass-ambient-off
+  - id: atelier-glass-ambient-strength
+    title: 背景光感强度
+    description: 调整光晕浓度；0 为无光晕，建议日常阅读使用 25–45。没有背景动画。
+    type: variable-number-slider
+    default: 35
+    min: 0
+    max: 100
+    step: 5
+  - id: atelier-glass-grid-original
+    title: 保留插件网格对比度
+    description: 默认使用更细腻的网格和点阵；开启后恢复插件原有对比度。网格尺寸、移动原点与吸附不变。
+    type: class-toggle
+    default: false
+  - id: atelier-glass-cards
+    title: 卡片玻璃质感
+    description: 液态玻璃模式下，普通卡片显示通透边缘与柔和高光；鼠标悬停或键盘聚焦时启用轻磨砂。自定义填色、特殊纸张、透明卡片、媒体与编辑中的卡片保持原样。
+    type: class-toggle
+    default: true
+    addCommand: true
   - id: atelier-glass-solid
     title: 减少透明效果
     description: 保留圆角与层次，使用实色表面；系统减少透明度或提高对比度时也会自动启用实色。
@@ -2282,3 +2381,19 @@ body.atelier-grid-reading-on:not(.atelier-grid-off) .workspace-leaf-content[data
 /* @folio-source atelier-native-ui.css */
 /* @folio-source atelier-thoughtspace-ui.css */
 /* @folio-source atelier-surface-modes.css */
+
+/* @folio-source atelier-liquid-plugin.css */
+
+/* @folio-source atelier-glass-toolbars.css */
+
+/* @folio-source atelier-glass-backgrounds.css */
+
+/* @folio-source atelier-glass-popovers.css */
+
+/* @folio-source atelier-glass-zones.css */
+
+/* @folio-source atelier-glass-workspace.css */
+
+/* @folio-source atelier-glass-depth.css */
+
+/* @folio-source atelier-glass-controls.css */

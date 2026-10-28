@@ -1,0 +1,51 @@
+/* Material controls, not extra surfaces. Blend only the existing paint layer;
+ * all controls inherit global solid/accessibility preferences. No animation. */
+@media screen {
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid {
+    --folio-toolbar-solid: calc(clamp(0, var(--atelier-glass-toolbar-solid, 0), 100) * 1%);
+    --folio-popup-solid: calc(clamp(0, var(--atelier-glass-popup-solid, 25), 100) * 1%);
+    --folio-card-solid: calc(clamp(0, var(--atelier-glass-card-solid, 0), 100) * 1%);
+    --folio-toolbar-fill: color-mix(in srgb, var(--atelier-ui-raised) var(--folio-toolbar-solid), var(--folio-glass-fill));
+    --folio-toolbar-filter: var(--folio-glass-filter);
+    --folio-popover-fill: color-mix(in srgb, var(--atelier-ui-raised) var(--folio-popup-solid), var(--folio-glass-fill));
+    --folio-popover-filter: none;
+    --folio-card-fill: color-mix(in srgb, var(--background-primary) var(--folio-card-solid), var(--folio-card-base-fill));
+    --folio-card-filter: none;
+    --folio-native-fill: var(--folio-popover-fill);
+    --folio-native-filter: var(--folio-popover-filter);
+  }
+  @supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    body:is(.theme-light,.theme-dark).atelier-surface-liquid {
+      --folio-popover-filter: blur(clamp(0px, calc(var(--atelier-glass-popup-blur, 12) * 1px), 24px)) saturate(135%);
+      --folio-card-filter: blur(clamp(0px, calc(var(--atelier-glass-card-blur, 6) * 1px), 12px)) saturate(115%);
+    }
+  }
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-glass-solid,
+  html:has(> head > style[data-thoughtspace-tokens][data-interface-style=glass][data-glass-effects=false]) body:is(.theme-light,.theme-dark).atelier-surface-liquid {
+    --folio-toolbar-filter: none;
+    --folio-popover-filter: none;
+    --folio-card-filter: none;
+    --folio-card-fill: var(--background-primary);
+  }
+  @media (prefers-reduced-transparency: reduce), (prefers-contrast: more), (forced-colors: active) {
+    body:is(.theme-light,.theme-dark).atelier-surface-liquid {
+      --folio-toolbar-filter: none;
+      --folio-popover-filter: none;
+      --folio-card-filter: none;
+      --folio-card-fill: var(--background-primary);
+    }
+  }
+  /* The companion plugin sets this marker only during an accepted canvas
+   * gesture, then removes it. Scope is one interacting pane, not the app.
+   * Existing optics pause through the plugin runtime, without rebuilding maps. */
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid :is(.ts-root,.ts-brain-shell,.ts-ui-menu)[data-ts-glass-interacting=true]:not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    --folio-glass-filter: none;
+    --folio-toolbar-filter: none;
+    --folio-popover-filter: none;
+    --folio-card-filter: none;
+    --folio-glass-fill: var(--atelier-ui-raised);
+    --folio-toolbar-fill: var(--atelier-ui-raised);
+    --folio-popover-fill: var(--atelier-ui-raised);
+    --folio-card-fill: var(--background-primary);
+  }
+}

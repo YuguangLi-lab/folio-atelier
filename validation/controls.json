@@ -1,0 +1,2592 @@
+{
+  "pass": true,
+  "scope": "Actual plugin CSS and toolbar navigation/overflow/wheel helpers in source-derived isolated DOM; no native Obsidian or FPS claim",
+  "integrated": true,
+  "themeSHA256": "35f4de409ebecd2b0fbc04f55c9f945e329e2cf2266fc9caa9d61dee0d448c85",
+  "previousReleaseSHA256": "46ff64db9641b500eb9ef86845fd6019b577d0062afd21c00bb411db139baa5d",
+  "pluginSHA256": "70fc955f57c3581bae7b83d11ed87e0deff2b2c61296b7ad29d105f52afe6c67",
+  "moduleSHA256": "fecdd970fc5d8130d4f2ec5be8ef845e6ab8501e38132c95ce6b1408f6a9338e",
+  "paintOnlyProperties": [
+    "transition-property",
+    "transition-duration",
+    "transition-timing-function",
+    "transition-delay",
+    "background-color",
+    "border-color",
+    "color",
+    "outline",
+    "outline-offset",
+    "box-shadow",
+    "stroke-width"
+  ],
+  "cases": [
+    {
+      "color": "light",
+      "width": 320,
+      "appearance": "paper",
+      "checks": {
+        "geometry": true,
+        "previousReleaseGeometry": true,
+        "native": true,
+        "calendar": true,
+        "danger": true,
+        "disabled": true,
+        "noNestedFilters": true,
+        "hover": true,
+        "boundedTransition": true,
+        "selected": true,
+        "ariaSelected": true,
+        "keyboardFocus": true,
+        "railKeyboard": true,
+        "dockKeyboard": true,
+        "overflowFocus": true,
+        "nativeSelect": true,
+        "searchInput": true,
+        "callback": true,
+        "hidden": true,
+        "runningFeedbackStarted": true,
+        "runningFeedbackCancelled": true,
+        "dragImmediate": true,
+        "dragRestored": true,
+        "prefers-reduced-motionCancelsRunning": true,
+        "prefers-reduced-motion": true,
+        "prefers-reduced-transparencyCancelsRunning": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrastCancelsRunning": true,
+        "prefers-contrast": true,
+        "forced-colorsCancelsRunning": true,
+        "forced-colors": true,
+        "manualSolid": true,
+        "pluginOff": true,
+        "classic": true,
+        "apple": true,
+        "print": true,
+        "idleAnimations": true,
+        "errors": true
+      },
+      "pass": true,
+      "errors": [],
+      "motionStart": [
+        {
+          "property": "background-color",
+          "duration": 120
+        },
+        {
+          "property": "border-bottom-color",
+          "duration": 120
+        },
+        {
+          "property": "border-left-color",
+          "duration": 120
+        },
+        {
+          "property": "border-right-color",
+          "duration": 120
+        },
+        {
+          "property": "border-top-color",
+          "duration": 120
+        }
+      ],
+      "motionAfterDrag": [],
+      "otherModes": [
+        {
+          "mode": "classic",
+          "current": {
+            "geometry": [
+              2.5,
+              294.5,
+              44,
+              44
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px \"??\", -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif, \"??\", ui-sans-serif, -apple-system, \"system-ui\", system-ui, \"Segoe UI\", \"Google Sans Flex\", Roboto, \"Inter Variable\", Inter, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.298039 0.376471 0.392157 / 0.09)",
+              "rgb(41, 54, 49)",
+              "rgb(41, 54, 49)",
+              "none",
+              "1",
+              "rgb(41, 54, 49) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          },
+          "original": {
+            "geometry": [
+              2.5,
+              294.5,
+              44,
+              44
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px \"??\", -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif, \"??\", ui-sans-serif, -apple-system, \"system-ui\", system-ui, \"Segoe UI\", \"Google Sans Flex\", Roboto, \"Inter Variable\", Inter, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.298039 0.376471 0.392157 / 0.09)",
+              "rgb(41, 54, 49)",
+              "rgb(41, 54, 49)",
+              "none",
+              "1",
+              "rgb(41, 54, 49) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          }
+        },
+        {
+          "mode": "apple",
+          "current": {
+            "geometry": [
+              2.5,
+              294.5,
+              44,
+              44
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.298039 0.376471 0.392157 / 0.09)",
+              "rgb(41, 54, 49)",
+              "rgb(41, 54, 49)",
+              "none",
+              "1",
+              "rgb(41, 54, 49) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          },
+          "original": {
+            "geometry": [
+              2.5,
+              294.5,
+              44,
+              44
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.298039 0.376471 0.392157 / 0.09)",
+              "rgb(41, 54, 49)",
+              "rgb(41, 54, 49)",
+              "none",
+              "1",
+              "rgb(41, 54, 49) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          }
+        }
+      ]
+    },
+    {
+      "color": "light",
+      "width": 320,
+      "appearance": "glass",
+      "checks": {
+        "geometry": true,
+        "previousReleaseGeometry": true,
+        "native": true,
+        "calendar": true,
+        "danger": true,
+        "disabled": true,
+        "noNestedFilters": true,
+        "hover": true,
+        "boundedTransition": true,
+        "selected": true,
+        "ariaSelected": true,
+        "keyboardFocus": true,
+        "railKeyboard": true,
+        "dockKeyboard": true,
+        "overflowFocus": true,
+        "nativeSelect": true,
+        "searchInput": true,
+        "callback": true,
+        "hidden": true,
+        "runningFeedbackStarted": true,
+        "runningFeedbackCancelled": true,
+        "dragImmediate": true,
+        "dragRestored": true,
+        "prefers-reduced-motionCancelsRunning": true,
+        "prefers-reduced-motion": true,
+        "prefers-reduced-transparencyCancelsRunning": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrastCancelsRunning": true,
+        "prefers-contrast": true,
+        "forced-colorsCancelsRunning": true,
+        "forced-colors": true,
+        "manualSolid": true,
+        "pluginOff": true,
+        "classic": true,
+        "apple": true,
+        "print": true,
+        "idleAnimations": true,
+        "errors": true
+      },
+      "pass": true,
+      "errors": [],
+      "motionStart": [
+        {
+          "property": "background-color",
+          "duration": 120
+        },
+        {
+          "property": "border-bottom-color",
+          "duration": 120
+        },
+        {
+          "property": "border-left-color",
+          "duration": 120
+        },
+        {
+          "property": "border-right-color",
+          "duration": 120
+        },
+        {
+          "property": "border-top-color",
+          "duration": 120
+        }
+      ],
+      "motionAfterDrag": [],
+      "otherModes": [
+        {
+          "mode": "classic",
+          "current": {
+            "geometry": [
+              2.5,
+              294.5,
+              44,
+              44
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px \"??\", -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif, \"??\", ui-sans-serif, -apple-system, \"system-ui\", system-ui, \"Segoe UI\", \"Google Sans Flex\", Roboto, \"Inter Variable\", Inter, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.298039 0.376471 0.392157 / 0.09)",
+              "rgb(41, 54, 49)",
+              "rgb(41, 54, 49)",
+              "none",
+              "1",
+              "rgb(41, 54, 49) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          },
+          "original": {
+            "geometry": [
+              2.5,
+              294.5,
+              44,
+              44
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px \"??\", -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif, \"??\", ui-sans-serif, -apple-system, \"system-ui\", system-ui, \"Segoe UI\", \"Google Sans Flex\", Roboto, \"Inter Variable\", Inter, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.298039 0.376471 0.392157 / 0.09)",
+              "rgb(41, 54, 49)",
+              "rgb(41, 54, 49)",
+              "none",
+              "1",
+              "rgb(41, 54, 49) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          }
+        },
+        {
+          "mode": "apple",
+          "current": {
+            "geometry": [
+              2.5,
+              294.5,
+              44,
+              44
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.298039 0.376471 0.392157 / 0.09)",
+              "rgb(41, 54, 49)",
+              "rgb(41, 54, 49)",
+              "none",
+              "1",
+              "rgb(41, 54, 49) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          },
+          "original": {
+            "geometry": [
+              2.5,
+              294.5,
+              44,
+              44
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.298039 0.376471 0.392157 / 0.09)",
+              "rgb(41, 54, 49)",
+              "rgb(41, 54, 49)",
+              "none",
+              "1",
+              "rgb(41, 54, 49) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          }
+        }
+      ]
+    },
+    {
+      "color": "light",
+      "width": 640,
+      "appearance": "paper",
+      "checks": {
+        "geometry": true,
+        "previousReleaseGeometry": true,
+        "native": true,
+        "calendar": true,
+        "danger": true,
+        "disabled": true,
+        "noNestedFilters": true,
+        "hover": true,
+        "boundedTransition": true,
+        "selected": true,
+        "ariaSelected": true,
+        "keyboardFocus": true,
+        "railKeyboard": true,
+        "dockKeyboard": true,
+        "overflowFocus": true,
+        "nativeSelect": true,
+        "searchInput": true,
+        "callback": true,
+        "hidden": true,
+        "runningFeedbackStarted": true,
+        "runningFeedbackCancelled": true,
+        "dragImmediate": true,
+        "dragRestored": true,
+        "prefers-reduced-motionCancelsRunning": true,
+        "prefers-reduced-motion": true,
+        "prefers-reduced-transparencyCancelsRunning": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrastCancelsRunning": true,
+        "prefers-contrast": true,
+        "forced-colorsCancelsRunning": true,
+        "forced-colors": true,
+        "manualSolid": true,
+        "pluginOff": true,
+        "classic": true,
+        "apple": true,
+        "print": true,
+        "idleAnimations": true,
+        "errors": true
+      },
+      "pass": true,
+      "errors": [],
+      "motionStart": [
+        {
+          "property": "background-color",
+          "duration": 120
+        },
+        {
+          "property": "border-bottom-color",
+          "duration": 120
+        },
+        {
+          "property": "border-left-color",
+          "duration": 120
+        },
+        {
+          "property": "border-right-color",
+          "duration": 120
+        },
+        {
+          "property": "border-top-color",
+          "duration": 120
+        }
+      ],
+      "motionAfterDrag": [],
+      "otherModes": [
+        {
+          "mode": "classic",
+          "current": {
+            "geometry": [
+              6.5,
+              302.5,
+              36,
+              36
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px \"??\", -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif, \"??\", ui-sans-serif, -apple-system, \"system-ui\", system-ui, \"Segoe UI\", \"Google Sans Flex\", Roboto, \"Inter Variable\", Inter, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.298039 0.376471 0.392157 / 0.09)",
+              "rgb(41, 54, 49)",
+              "rgb(41, 54, 49)",
+              "none",
+              "1",
+              "rgb(41, 54, 49) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          },
+          "original": {
+            "geometry": [
+              6.5,
+              302.5,
+              36,
+              36
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px \"??\", -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif, \"??\", ui-sans-serif, -apple-system, \"system-ui\", system-ui, \"Segoe UI\", \"Google Sans Flex\", Roboto, \"Inter Variable\", Inter, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.298039 0.376471 0.392157 / 0.09)",
+              "rgb(41, 54, 49)",
+              "rgb(41, 54, 49)",
+              "none",
+              "1",
+              "rgb(41, 54, 49) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          }
+        },
+        {
+          "mode": "apple",
+          "current": {
+            "geometry": [
+              6.5,
+              302.5,
+              36,
+              36
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.298039 0.376471 0.392157 / 0.09)",
+              "rgb(41, 54, 49)",
+              "rgb(41, 54, 49)",
+              "none",
+              "1",
+              "rgb(41, 54, 49) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          },
+          "original": {
+            "geometry": [
+              6.5,
+              302.5,
+              36,
+              36
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.298039 0.376471 0.392157 / 0.09)",
+              "rgb(41, 54, 49)",
+              "rgb(41, 54, 49)",
+              "none",
+              "1",
+              "rgb(41, 54, 49) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          }
+        }
+      ]
+    },
+    {
+      "color": "light",
+      "width": 640,
+      "appearance": "glass",
+      "checks": {
+        "geometry": true,
+        "previousReleaseGeometry": true,
+        "native": true,
+        "calendar": true,
+        "danger": true,
+        "disabled": true,
+        "noNestedFilters": true,
+        "hover": true,
+        "boundedTransition": true,
+        "selected": true,
+        "ariaSelected": true,
+        "keyboardFocus": true,
+        "railKeyboard": true,
+        "dockKeyboard": true,
+        "overflowFocus": true,
+        "nativeSelect": true,
+        "searchInput": true,
+        "callback": true,
+        "hidden": true,
+        "runningFeedbackStarted": true,
+        "runningFeedbackCancelled": true,
+        "dragImmediate": true,
+        "dragRestored": true,
+        "prefers-reduced-motionCancelsRunning": true,
+        "prefers-reduced-motion": true,
+        "prefers-reduced-transparencyCancelsRunning": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrastCancelsRunning": true,
+        "prefers-contrast": true,
+        "forced-colorsCancelsRunning": true,
+        "forced-colors": true,
+        "manualSolid": true,
+        "pluginOff": true,
+        "classic": true,
+        "apple": true,
+        "print": true,
+        "idleAnimations": true,
+        "errors": true
+      },
+      "pass": true,
+      "errors": [],
+      "motionStart": [
+        {
+          "property": "background-color",
+          "duration": 120
+        },
+        {
+          "property": "border-bottom-color",
+          "duration": 120
+        },
+        {
+          "property": "border-left-color",
+          "duration": 120
+        },
+        {
+          "property": "border-right-color",
+          "duration": 120
+        },
+        {
+          "property": "border-top-color",
+          "duration": 120
+        }
+      ],
+      "motionAfterDrag": [],
+      "otherModes": [
+        {
+          "mode": "classic",
+          "current": {
+            "geometry": [
+              6.5,
+              302.5,
+              36,
+              36
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px \"??\", -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif, \"??\", ui-sans-serif, -apple-system, \"system-ui\", system-ui, \"Segoe UI\", \"Google Sans Flex\", Roboto, \"Inter Variable\", Inter, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.298039 0.376471 0.392157 / 0.09)",
+              "rgb(41, 54, 49)",
+              "rgb(41, 54, 49)",
+              "none",
+              "1",
+              "rgb(41, 54, 49) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          },
+          "original": {
+            "geometry": [
+              6.5,
+              302.5,
+              36,
+              36
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px \"??\", -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif, \"??\", ui-sans-serif, -apple-system, \"system-ui\", system-ui, \"Segoe UI\", \"Google Sans Flex\", Roboto, \"Inter Variable\", Inter, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.298039 0.376471 0.392157 / 0.09)",
+              "rgb(41, 54, 49)",
+              "rgb(41, 54, 49)",
+              "none",
+              "1",
+              "rgb(41, 54, 49) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          }
+        },
+        {
+          "mode": "apple",
+          "current": {
+            "geometry": [
+              6.5,
+              302.5,
+              36,
+              36
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.298039 0.376471 0.392157 / 0.09)",
+              "rgb(41, 54, 49)",
+              "rgb(41, 54, 49)",
+              "none",
+              "1",
+              "rgb(41, 54, 49) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          },
+          "original": {
+            "geometry": [
+              6.5,
+              302.5,
+              36,
+              36
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.298039 0.376471 0.392157 / 0.09)",
+              "rgb(41, 54, 49)",
+              "rgb(41, 54, 49)",
+              "none",
+              "1",
+              "rgb(41, 54, 49) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          }
+        }
+      ]
+    },
+    {
+      "color": "light",
+      "width": 1180,
+      "appearance": "paper",
+      "checks": {
+        "geometry": true,
+        "previousReleaseGeometry": true,
+        "native": true,
+        "calendar": true,
+        "danger": true,
+        "disabled": true,
+        "noNestedFilters": true,
+        "hover": true,
+        "boundedTransition": true,
+        "selected": true,
+        "ariaSelected": true,
+        "keyboardFocus": true,
+        "railKeyboard": true,
+        "dockKeyboard": true,
+        "overflowFocus": true,
+        "nativeSelect": true,
+        "searchInput": true,
+        "callback": true,
+        "hidden": true,
+        "runningFeedbackStarted": true,
+        "runningFeedbackCancelled": true,
+        "dragImmediate": true,
+        "dragRestored": true,
+        "prefers-reduced-motionCancelsRunning": true,
+        "prefers-reduced-motion": true,
+        "prefers-reduced-transparencyCancelsRunning": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrastCancelsRunning": true,
+        "prefers-contrast": true,
+        "forced-colorsCancelsRunning": true,
+        "forced-colors": true,
+        "manualSolid": true,
+        "pluginOff": true,
+        "classic": true,
+        "apple": true,
+        "print": true,
+        "idleAnimations": true,
+        "errors": true
+      },
+      "pass": true,
+      "errors": [],
+      "motionStart": [
+        {
+          "property": "background-color",
+          "duration": 120
+        },
+        {
+          "property": "border-bottom-color",
+          "duration": 120
+        },
+        {
+          "property": "border-left-color",
+          "duration": 120
+        },
+        {
+          "property": "border-right-color",
+          "duration": 120
+        },
+        {
+          "property": "border-top-color",
+          "duration": 120
+        }
+      ],
+      "motionAfterDrag": [],
+      "otherModes": [
+        {
+          "mode": "classic",
+          "current": {
+            "geometry": [
+              6.5,
+              302.5,
+              36,
+              36
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px \"??\", -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif, \"??\", ui-sans-serif, -apple-system, \"system-ui\", system-ui, \"Segoe UI\", \"Google Sans Flex\", Roboto, \"Inter Variable\", Inter, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.298039 0.376471 0.392157 / 0.09)",
+              "rgb(41, 54, 49)",
+              "rgb(41, 54, 49)",
+              "none",
+              "1",
+              "rgb(41, 54, 49) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          },
+          "original": {
+            "geometry": [
+              6.5,
+              302.5,
+              36,
+              36
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px \"??\", -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif, \"??\", ui-sans-serif, -apple-system, \"system-ui\", system-ui, \"Segoe UI\", \"Google Sans Flex\", Roboto, \"Inter Variable\", Inter, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.298039 0.376471 0.392157 / 0.09)",
+              "rgb(41, 54, 49)",
+              "rgb(41, 54, 49)",
+              "none",
+              "1",
+              "rgb(41, 54, 49) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          }
+        },
+        {
+          "mode": "apple",
+          "current": {
+            "geometry": [
+              6.5,
+              302.5,
+              36,
+              36
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.298039 0.376471 0.392157 / 0.09)",
+              "rgb(41, 54, 49)",
+              "rgb(41, 54, 49)",
+              "none",
+              "1",
+              "rgb(41, 54, 49) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          },
+          "original": {
+            "geometry": [
+              6.5,
+              302.5,
+              36,
+              36
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.298039 0.376471 0.392157 / 0.09)",
+              "rgb(41, 54, 49)",
+              "rgb(41, 54, 49)",
+              "none",
+              "1",
+              "rgb(41, 54, 49) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          }
+        }
+      ]
+    },
+    {
+      "color": "light",
+      "width": 1180,
+      "appearance": "glass",
+      "checks": {
+        "geometry": true,
+        "previousReleaseGeometry": true,
+        "native": true,
+        "calendar": true,
+        "danger": true,
+        "disabled": true,
+        "noNestedFilters": true,
+        "hover": true,
+        "boundedTransition": true,
+        "selected": true,
+        "ariaSelected": true,
+        "keyboardFocus": true,
+        "railKeyboard": true,
+        "dockKeyboard": true,
+        "overflowFocus": true,
+        "nativeSelect": true,
+        "searchInput": true,
+        "callback": true,
+        "hidden": true,
+        "runningFeedbackStarted": true,
+        "runningFeedbackCancelled": true,
+        "dragImmediate": true,
+        "dragRestored": true,
+        "prefers-reduced-motionCancelsRunning": true,
+        "prefers-reduced-motion": true,
+        "prefers-reduced-transparencyCancelsRunning": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrastCancelsRunning": true,
+        "prefers-contrast": true,
+        "forced-colorsCancelsRunning": true,
+        "forced-colors": true,
+        "manualSolid": true,
+        "pluginOff": true,
+        "classic": true,
+        "apple": true,
+        "print": true,
+        "idleAnimations": true,
+        "errors": true
+      },
+      "pass": true,
+      "errors": [],
+      "motionStart": [
+        {
+          "property": "background-color",
+          "duration": 120
+        },
+        {
+          "property": "border-bottom-color",
+          "duration": 120
+        },
+        {
+          "property": "border-left-color",
+          "duration": 120
+        },
+        {
+          "property": "border-right-color",
+          "duration": 120
+        },
+        {
+          "property": "border-top-color",
+          "duration": 120
+        }
+      ],
+      "motionAfterDrag": [],
+      "otherModes": [
+        {
+          "mode": "classic",
+          "current": {
+            "geometry": [
+              6.5,
+              302.5,
+              36,
+              36
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px \"??\", -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif, \"??\", ui-sans-serif, -apple-system, \"system-ui\", system-ui, \"Segoe UI\", \"Google Sans Flex\", Roboto, \"Inter Variable\", Inter, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.298039 0.376471 0.392157 / 0.09)",
+              "rgb(41, 54, 49)",
+              "rgb(41, 54, 49)",
+              "none",
+              "1",
+              "rgb(41, 54, 49) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          },
+          "original": {
+            "geometry": [
+              6.5,
+              302.5,
+              36,
+              36
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px \"??\", -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif, \"??\", ui-sans-serif, -apple-system, \"system-ui\", system-ui, \"Segoe UI\", \"Google Sans Flex\", Roboto, \"Inter Variable\", Inter, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.298039 0.376471 0.392157 / 0.09)",
+              "rgb(41, 54, 49)",
+              "rgb(41, 54, 49)",
+              "none",
+              "1",
+              "rgb(41, 54, 49) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          }
+        },
+        {
+          "mode": "apple",
+          "current": {
+            "geometry": [
+              6.5,
+              302.5,
+              36,
+              36
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.298039 0.376471 0.392157 / 0.09)",
+              "rgb(41, 54, 49)",
+              "rgb(41, 54, 49)",
+              "none",
+              "1",
+              "rgb(41, 54, 49) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          },
+          "original": {
+            "geometry": [
+              6.5,
+              302.5,
+              36,
+              36
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.298039 0.376471 0.392157 / 0.09)",
+              "rgb(41, 54, 49)",
+              "rgb(41, 54, 49)",
+              "none",
+              "1",
+              "rgb(41, 54, 49) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          }
+        }
+      ]
+    },
+    {
+      "color": "dark",
+      "width": 320,
+      "appearance": "paper",
+      "checks": {
+        "geometry": true,
+        "previousReleaseGeometry": true,
+        "native": true,
+        "calendar": true,
+        "danger": true,
+        "disabled": true,
+        "noNestedFilters": true,
+        "hover": true,
+        "boundedTransition": true,
+        "selected": true,
+        "ariaSelected": true,
+        "keyboardFocus": true,
+        "railKeyboard": true,
+        "dockKeyboard": true,
+        "overflowFocus": true,
+        "nativeSelect": true,
+        "searchInput": true,
+        "callback": true,
+        "hidden": true,
+        "runningFeedbackStarted": true,
+        "runningFeedbackCancelled": true,
+        "dragImmediate": true,
+        "dragRestored": true,
+        "prefers-reduced-motionCancelsRunning": true,
+        "prefers-reduced-motion": true,
+        "prefers-reduced-transparencyCancelsRunning": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrastCancelsRunning": true,
+        "prefers-contrast": true,
+        "forced-colorsCancelsRunning": true,
+        "forced-colors": true,
+        "manualSolid": true,
+        "pluginOff": true,
+        "classic": true,
+        "apple": true,
+        "print": true,
+        "idleAnimations": true,
+        "errors": true
+      },
+      "pass": true,
+      "errors": [],
+      "motionStart": [
+        {
+          "property": "background-color",
+          "duration": 120
+        },
+        {
+          "property": "border-bottom-color",
+          "duration": 120
+        },
+        {
+          "property": "border-left-color",
+          "duration": 120
+        },
+        {
+          "property": "border-right-color",
+          "duration": 120
+        },
+        {
+          "property": "border-top-color",
+          "duration": 120
+        }
+      ],
+      "motionAfterDrag": [],
+      "otherModes": [
+        {
+          "mode": "classic",
+          "current": {
+            "geometry": [
+              2.5,
+              294.5,
+              44,
+              44
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px \"??\", -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif, \"??\", ui-sans-serif, -apple-system, \"system-ui\", system-ui, \"Segoe UI\", \"Google Sans Flex\", Roboto, \"Inter Variable\", Inter, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.694118 0.796078 0.811765 / 0.09)",
+              "rgb(226, 234, 229)",
+              "rgb(226, 234, 229)",
+              "none",
+              "1",
+              "rgb(226, 234, 229) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          },
+          "original": {
+            "geometry": [
+              2.5,
+              294.5,
+              44,
+              44
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px \"??\", -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif, \"??\", ui-sans-serif, -apple-system, \"system-ui\", system-ui, \"Segoe UI\", \"Google Sans Flex\", Roboto, \"Inter Variable\", Inter, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.694118 0.796078 0.811765 / 0.09)",
+              "rgb(226, 234, 229)",
+              "rgb(226, 234, 229)",
+              "none",
+              "1",
+              "rgb(226, 234, 229) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          }
+        },
+        {
+          "mode": "apple",
+          "current": {
+            "geometry": [
+              2.5,
+              294.5,
+              44,
+              44
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.694118 0.796078 0.811765 / 0.09)",
+              "rgb(226, 234, 229)",
+              "rgb(226, 234, 229)",
+              "none",
+              "1",
+              "rgb(226, 234, 229) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          },
+          "original": {
+            "geometry": [
+              2.5,
+              294.5,
+              44,
+              44
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.694118 0.796078 0.811765 / 0.09)",
+              "rgb(226, 234, 229)",
+              "rgb(226, 234, 229)",
+              "none",
+              "1",
+              "rgb(226, 234, 229) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          }
+        }
+      ]
+    },
+    {
+      "color": "dark",
+      "width": 320,
+      "appearance": "glass",
+      "checks": {
+        "geometry": true,
+        "previousReleaseGeometry": true,
+        "native": true,
+        "calendar": true,
+        "danger": true,
+        "disabled": true,
+        "noNestedFilters": true,
+        "hover": true,
+        "boundedTransition": true,
+        "selected": true,
+        "ariaSelected": true,
+        "keyboardFocus": true,
+        "railKeyboard": true,
+        "dockKeyboard": true,
+        "overflowFocus": true,
+        "nativeSelect": true,
+        "searchInput": true,
+        "callback": true,
+        "hidden": true,
+        "runningFeedbackStarted": true,
+        "runningFeedbackCancelled": true,
+        "dragImmediate": true,
+        "dragRestored": true,
+        "prefers-reduced-motionCancelsRunning": true,
+        "prefers-reduced-motion": true,
+        "prefers-reduced-transparencyCancelsRunning": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrastCancelsRunning": true,
+        "prefers-contrast": true,
+        "forced-colorsCancelsRunning": true,
+        "forced-colors": true,
+        "manualSolid": true,
+        "pluginOff": true,
+        "classic": true,
+        "apple": true,
+        "print": true,
+        "idleAnimations": true,
+        "errors": true
+      },
+      "pass": true,
+      "errors": [],
+      "motionStart": [
+        {
+          "property": "background-color",
+          "duration": 120
+        },
+        {
+          "property": "border-bottom-color",
+          "duration": 120
+        },
+        {
+          "property": "border-left-color",
+          "duration": 120
+        },
+        {
+          "property": "border-right-color",
+          "duration": 120
+        },
+        {
+          "property": "border-top-color",
+          "duration": 120
+        }
+      ],
+      "motionAfterDrag": [],
+      "otherModes": [
+        {
+          "mode": "classic",
+          "current": {
+            "geometry": [
+              2.5,
+              294.5,
+              44,
+              44
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px \"??\", -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif, \"??\", ui-sans-serif, -apple-system, \"system-ui\", system-ui, \"Segoe UI\", \"Google Sans Flex\", Roboto, \"Inter Variable\", Inter, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.694118 0.796078 0.811765 / 0.09)",
+              "rgb(226, 234, 229)",
+              "rgb(226, 234, 229)",
+              "none",
+              "1",
+              "rgb(226, 234, 229) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          },
+          "original": {
+            "geometry": [
+              2.5,
+              294.5,
+              44,
+              44
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px \"??\", -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif, \"??\", ui-sans-serif, -apple-system, \"system-ui\", system-ui, \"Segoe UI\", \"Google Sans Flex\", Roboto, \"Inter Variable\", Inter, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.694118 0.796078 0.811765 / 0.09)",
+              "rgb(226, 234, 229)",
+              "rgb(226, 234, 229)",
+              "none",
+              "1",
+              "rgb(226, 234, 229) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          }
+        },
+        {
+          "mode": "apple",
+          "current": {
+            "geometry": [
+              2.5,
+              294.5,
+              44,
+              44
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.694118 0.796078 0.811765 / 0.09)",
+              "rgb(226, 234, 229)",
+              "rgb(226, 234, 229)",
+              "none",
+              "1",
+              "rgb(226, 234, 229) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          },
+          "original": {
+            "geometry": [
+              2.5,
+              294.5,
+              44,
+              44
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.694118 0.796078 0.811765 / 0.09)",
+              "rgb(226, 234, 229)",
+              "rgb(226, 234, 229)",
+              "none",
+              "1",
+              "rgb(226, 234, 229) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          }
+        }
+      ]
+    },
+    {
+      "color": "dark",
+      "width": 640,
+      "appearance": "paper",
+      "checks": {
+        "geometry": true,
+        "previousReleaseGeometry": true,
+        "native": true,
+        "calendar": true,
+        "danger": true,
+        "disabled": true,
+        "noNestedFilters": true,
+        "hover": true,
+        "boundedTransition": true,
+        "selected": true,
+        "ariaSelected": true,
+        "keyboardFocus": true,
+        "railKeyboard": true,
+        "dockKeyboard": true,
+        "overflowFocus": true,
+        "nativeSelect": true,
+        "searchInput": true,
+        "callback": true,
+        "hidden": true,
+        "runningFeedbackStarted": true,
+        "runningFeedbackCancelled": true,
+        "dragImmediate": true,
+        "dragRestored": true,
+        "prefers-reduced-motionCancelsRunning": true,
+        "prefers-reduced-motion": true,
+        "prefers-reduced-transparencyCancelsRunning": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrastCancelsRunning": true,
+        "prefers-contrast": true,
+        "forced-colorsCancelsRunning": true,
+        "forced-colors": true,
+        "manualSolid": true,
+        "pluginOff": true,
+        "classic": true,
+        "apple": true,
+        "print": true,
+        "idleAnimations": true,
+        "errors": true
+      },
+      "pass": true,
+      "errors": [],
+      "motionStart": [
+        {
+          "property": "background-color",
+          "duration": 120
+        },
+        {
+          "property": "border-bottom-color",
+          "duration": 120
+        },
+        {
+          "property": "border-left-color",
+          "duration": 120
+        },
+        {
+          "property": "border-right-color",
+          "duration": 120
+        },
+        {
+          "property": "border-top-color",
+          "duration": 120
+        }
+      ],
+      "motionAfterDrag": [],
+      "otherModes": [
+        {
+          "mode": "classic",
+          "current": {
+            "geometry": [
+              6.5,
+              302.5,
+              36,
+              36
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px \"??\", -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif, \"??\", ui-sans-serif, -apple-system, \"system-ui\", system-ui, \"Segoe UI\", \"Google Sans Flex\", Roboto, \"Inter Variable\", Inter, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.694118 0.796078 0.811765 / 0.09)",
+              "rgb(226, 234, 229)",
+              "rgb(226, 234, 229)",
+              "none",
+              "1",
+              "rgb(226, 234, 229) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          },
+          "original": {
+            "geometry": [
+              6.5,
+              302.5,
+              36,
+              36
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px \"??\", -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif, \"??\", ui-sans-serif, -apple-system, \"system-ui\", system-ui, \"Segoe UI\", \"Google Sans Flex\", Roboto, \"Inter Variable\", Inter, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.694118 0.796078 0.811765 / 0.09)",
+              "rgb(226, 234, 229)",
+              "rgb(226, 234, 229)",
+              "none",
+              "1",
+              "rgb(226, 234, 229) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          }
+        },
+        {
+          "mode": "apple",
+          "current": {
+            "geometry": [
+              6.5,
+              302.5,
+              36,
+              36
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.694118 0.796078 0.811765 / 0.09)",
+              "rgb(226, 234, 229)",
+              "rgb(226, 234, 229)",
+              "none",
+              "1",
+              "rgb(226, 234, 229) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          },
+          "original": {
+            "geometry": [
+              6.5,
+              302.5,
+              36,
+              36
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.694118 0.796078 0.811765 / 0.09)",
+              "rgb(226, 234, 229)",
+              "rgb(226, 234, 229)",
+              "none",
+              "1",
+              "rgb(226, 234, 229) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          }
+        }
+      ]
+    },
+    {
+      "color": "dark",
+      "width": 640,
+      "appearance": "glass",
+      "checks": {
+        "geometry": true,
+        "previousReleaseGeometry": true,
+        "native": true,
+        "calendar": true,
+        "danger": true,
+        "disabled": true,
+        "noNestedFilters": true,
+        "hover": true,
+        "boundedTransition": true,
+        "selected": true,
+        "ariaSelected": true,
+        "keyboardFocus": true,
+        "railKeyboard": true,
+        "dockKeyboard": true,
+        "overflowFocus": true,
+        "nativeSelect": true,
+        "searchInput": true,
+        "callback": true,
+        "hidden": true,
+        "runningFeedbackStarted": true,
+        "runningFeedbackCancelled": true,
+        "dragImmediate": true,
+        "dragRestored": true,
+        "prefers-reduced-motionCancelsRunning": true,
+        "prefers-reduced-motion": true,
+        "prefers-reduced-transparencyCancelsRunning": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrastCancelsRunning": true,
+        "prefers-contrast": true,
+        "forced-colorsCancelsRunning": true,
+        "forced-colors": true,
+        "manualSolid": true,
+        "pluginOff": true,
+        "classic": true,
+        "apple": true,
+        "print": true,
+        "idleAnimations": true,
+        "errors": true
+      },
+      "pass": true,
+      "errors": [],
+      "motionStart": [
+        {
+          "property": "background-color",
+          "duration": 120
+        },
+        {
+          "property": "border-bottom-color",
+          "duration": 120
+        },
+        {
+          "property": "border-left-color",
+          "duration": 120
+        },
+        {
+          "property": "border-right-color",
+          "duration": 120
+        },
+        {
+          "property": "border-top-color",
+          "duration": 120
+        }
+      ],
+      "motionAfterDrag": [],
+      "otherModes": [
+        {
+          "mode": "classic",
+          "current": {
+            "geometry": [
+              6.5,
+              302.5,
+              36,
+              36
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px \"??\", -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif, \"??\", ui-sans-serif, -apple-system, \"system-ui\", system-ui, \"Segoe UI\", \"Google Sans Flex\", Roboto, \"Inter Variable\", Inter, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.694118 0.796078 0.811765 / 0.09)",
+              "rgb(226, 234, 229)",
+              "rgb(226, 234, 229)",
+              "none",
+              "1",
+              "rgb(226, 234, 229) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          },
+          "original": {
+            "geometry": [
+              6.5,
+              302.5,
+              36,
+              36
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px \"??\", -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif, \"??\", ui-sans-serif, -apple-system, \"system-ui\", system-ui, \"Segoe UI\", \"Google Sans Flex\", Roboto, \"Inter Variable\", Inter, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.694118 0.796078 0.811765 / 0.09)",
+              "rgb(226, 234, 229)",
+              "rgb(226, 234, 229)",
+              "none",
+              "1",
+              "rgb(226, 234, 229) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          }
+        },
+        {
+          "mode": "apple",
+          "current": {
+            "geometry": [
+              6.5,
+              302.5,
+              36,
+              36
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.694118 0.796078 0.811765 / 0.09)",
+              "rgb(226, 234, 229)",
+              "rgb(226, 234, 229)",
+              "none",
+              "1",
+              "rgb(226, 234, 229) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          },
+          "original": {
+            "geometry": [
+              6.5,
+              302.5,
+              36,
+              36
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.694118 0.796078 0.811765 / 0.09)",
+              "rgb(226, 234, 229)",
+              "rgb(226, 234, 229)",
+              "none",
+              "1",
+              "rgb(226, 234, 229) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          }
+        }
+      ]
+    },
+    {
+      "color": "dark",
+      "width": 1180,
+      "appearance": "paper",
+      "checks": {
+        "geometry": true,
+        "previousReleaseGeometry": true,
+        "native": true,
+        "calendar": true,
+        "danger": true,
+        "disabled": true,
+        "noNestedFilters": true,
+        "hover": true,
+        "boundedTransition": true,
+        "selected": true,
+        "ariaSelected": true,
+        "keyboardFocus": true,
+        "railKeyboard": true,
+        "dockKeyboard": true,
+        "overflowFocus": true,
+        "nativeSelect": true,
+        "searchInput": true,
+        "callback": true,
+        "hidden": true,
+        "runningFeedbackStarted": true,
+        "runningFeedbackCancelled": true,
+        "dragImmediate": true,
+        "dragRestored": true,
+        "prefers-reduced-motionCancelsRunning": true,
+        "prefers-reduced-motion": true,
+        "prefers-reduced-transparencyCancelsRunning": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrastCancelsRunning": true,
+        "prefers-contrast": true,
+        "forced-colorsCancelsRunning": true,
+        "forced-colors": true,
+        "manualSolid": true,
+        "pluginOff": true,
+        "classic": true,
+        "apple": true,
+        "print": true,
+        "idleAnimations": true,
+        "errors": true
+      },
+      "pass": true,
+      "errors": [],
+      "motionStart": [
+        {
+          "property": "background-color",
+          "duration": 120
+        },
+        {
+          "property": "border-bottom-color",
+          "duration": 120
+        },
+        {
+          "property": "border-left-color",
+          "duration": 120
+        },
+        {
+          "property": "border-right-color",
+          "duration": 120
+        },
+        {
+          "property": "border-top-color",
+          "duration": 120
+        }
+      ],
+      "motionAfterDrag": [],
+      "otherModes": [
+        {
+          "mode": "classic",
+          "current": {
+            "geometry": [
+              6.5,
+              302.5,
+              36,
+              36
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px \"??\", -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif, \"??\", ui-sans-serif, -apple-system, \"system-ui\", system-ui, \"Segoe UI\", \"Google Sans Flex\", Roboto, \"Inter Variable\", Inter, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.694118 0.796078 0.811765 / 0.09)",
+              "rgb(226, 234, 229)",
+              "rgb(226, 234, 229)",
+              "none",
+              "1",
+              "rgb(226, 234, 229) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          },
+          "original": {
+            "geometry": [
+              6.5,
+              302.5,
+              36,
+              36
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px \"??\", -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif, \"??\", ui-sans-serif, -apple-system, \"system-ui\", system-ui, \"Segoe UI\", \"Google Sans Flex\", Roboto, \"Inter Variable\", Inter, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.694118 0.796078 0.811765 / 0.09)",
+              "rgb(226, 234, 229)",
+              "rgb(226, 234, 229)",
+              "none",
+              "1",
+              "rgb(226, 234, 229) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          }
+        },
+        {
+          "mode": "apple",
+          "current": {
+            "geometry": [
+              6.5,
+              302.5,
+              36,
+              36
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.694118 0.796078 0.811765 / 0.09)",
+              "rgb(226, 234, 229)",
+              "rgb(226, 234, 229)",
+              "none",
+              "1",
+              "rgb(226, 234, 229) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          },
+          "original": {
+            "geometry": [
+              6.5,
+              302.5,
+              36,
+              36
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.694118 0.796078 0.811765 / 0.09)",
+              "rgb(226, 234, 229)",
+              "rgb(226, 234, 229)",
+              "none",
+              "1",
+              "rgb(226, 234, 229) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          }
+        }
+      ]
+    },
+    {
+      "color": "dark",
+      "width": 1180,
+      "appearance": "glass",
+      "checks": {
+        "geometry": true,
+        "previousReleaseGeometry": true,
+        "native": true,
+        "calendar": true,
+        "danger": true,
+        "disabled": true,
+        "noNestedFilters": true,
+        "hover": true,
+        "boundedTransition": true,
+        "selected": true,
+        "ariaSelected": true,
+        "keyboardFocus": true,
+        "railKeyboard": true,
+        "dockKeyboard": true,
+        "overflowFocus": true,
+        "nativeSelect": true,
+        "searchInput": true,
+        "callback": true,
+        "hidden": true,
+        "runningFeedbackStarted": true,
+        "runningFeedbackCancelled": true,
+        "dragImmediate": true,
+        "dragRestored": true,
+        "prefers-reduced-motionCancelsRunning": true,
+        "prefers-reduced-motion": true,
+        "prefers-reduced-transparencyCancelsRunning": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrastCancelsRunning": true,
+        "prefers-contrast": true,
+        "forced-colorsCancelsRunning": true,
+        "forced-colors": true,
+        "manualSolid": true,
+        "pluginOff": true,
+        "classic": true,
+        "apple": true,
+        "print": true,
+        "idleAnimations": true,
+        "errors": true
+      },
+      "pass": true,
+      "errors": [],
+      "motionStart": [
+        {
+          "property": "background-color",
+          "duration": 120
+        },
+        {
+          "property": "border-bottom-color",
+          "duration": 120
+        },
+        {
+          "property": "border-left-color",
+          "duration": 120
+        },
+        {
+          "property": "border-right-color",
+          "duration": 120
+        },
+        {
+          "property": "border-top-color",
+          "duration": 120
+        }
+      ],
+      "motionAfterDrag": [],
+      "otherModes": [
+        {
+          "mode": "classic",
+          "current": {
+            "geometry": [
+              6.5,
+              302.5,
+              36,
+              36
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px \"??\", -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif, \"??\", ui-sans-serif, -apple-system, \"system-ui\", system-ui, \"Segoe UI\", \"Google Sans Flex\", Roboto, \"Inter Variable\", Inter, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.694118 0.796078 0.811765 / 0.09)",
+              "rgb(226, 234, 229)",
+              "rgb(226, 234, 229)",
+              "none",
+              "1",
+              "rgb(226, 234, 229) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          },
+          "original": {
+            "geometry": [
+              6.5,
+              302.5,
+              36,
+              36
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px \"??\", -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif, \"??\", ui-sans-serif, -apple-system, \"system-ui\", system-ui, \"Segoe UI\", \"Google Sans Flex\", Roboto, \"Inter Variable\", Inter, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.694118 0.796078 0.811765 / 0.09)",
+              "rgb(226, 234, 229)",
+              "rgb(226, 234, 229)",
+              "none",
+              "1",
+              "rgb(226, 234, 229) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          }
+        },
+        {
+          "mode": "apple",
+          "current": {
+            "geometry": [
+              6.5,
+              302.5,
+              36,
+              36
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.694118 0.796078 0.811765 / 0.09)",
+              "rgb(226, 234, 229)",
+              "rgb(226, 234, 229)",
+              "none",
+              "1",
+              "rgb(226, 234, 229) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          },
+          "original": {
+            "geometry": [
+              6.5,
+              302.5,
+              36,
+              36
+            ],
+            "layout": [
+              "flex",
+              "static",
+              "7px",
+              "0px",
+              "visible",
+              "auto",
+              "none",
+              "500 12px -apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "normal"
+            ],
+            "paint": [
+              "color(srgb 0.694118 0.796078 0.811765 / 0.09)",
+              "rgb(226, 234, 229)",
+              "rgb(226, 234, 229)",
+              "none",
+              "1",
+              "rgb(226, 234, 229) none 3px"
+            ],
+            "transition": [
+              "background-color, color",
+              "0.12s, 0.12s",
+              "0s, 0s"
+            ],
+            "filter": "none",
+            "visibility": "visible"
+          }
+        }
+      ]
+    }
+  ]
+}

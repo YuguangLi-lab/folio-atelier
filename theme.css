@@ -49,8 +49,8 @@ settings:
       - label: 液态玻璃
         value: atelier-surface-liquid
   - id: atelier-glass-blur
-    title: 玻璃模糊强度
-    description: 仅影响液态玻璃的导航和浮动工具；不模糊正文、白板卡片或视频。
+    title: 工具栏模糊强度
+    description: 调整导航和工具栏的背景模糊；正文和视频保持清晰，浮层与卡片可在下方分别设置。
     type: variable-number-slider
     default: 16
     min: 8
@@ -68,6 +68,105 @@ settings:
         value: atelier-glass-frosted
       - label: 通透高光
         value: atelier-glass-clear
+  - id: atelier-glass-toolbar-solid
+    title: 工具栏实色混合
+    description: 0 保留当前玻璃质感；数值越高，底色越实。100 为不透明底色；彻底关闭模糊请使用“减少透明效果”。
+    type: variable-number-slider
+    default: 0
+    min: 0
+    max: 100
+    step: 5
+  - id: atelier-glass-popup-solid
+    title: 浮层实色混合
+    description: 独立控制菜单、搜索结果与原生浮层的底色；默认 25，在通透与文字清楚之间保持平衡。
+    type: variable-number-slider
+    default: 25
+    min: 0
+    max: 100
+    step: 5
+  - id: atelier-glass-popup-blur
+    title: 浮层模糊强度（像素）
+    description: 控制普通浮层的背景模糊；插件已激活的光学折射由插件管理。
+    type: variable-number-slider
+    default: 12
+    min: 0
+    max: 24
+    step: 2
+  - id: atelier-glass-card-solid
+    title: 卡片实色混合
+    description: 为普通玻璃卡片增加实体底色；自定义填色、媒体、特殊纸张和编辑中的卡片保持原样。
+    type: variable-number-slider
+    default: 0
+    min: 0
+    max: 100
+    step: 5
+  - id: atelier-glass-card-blur
+    title: 卡片悬停模糊（像素）
+    description: 仅在鼠标悬停或键盘聚焦普通玻璃卡片时生效；闲置卡片不增加模糊，0 可关闭该模糊。
+    type: variable-number-slider
+    default: 6
+    min: 0
+    max: 12
+    step: 2
+  - id: atelier-glass-pane-focus
+    title: 当前分栏聚焦
+    description: 在当前窗口的活动面板标题栏显示细强调线；其他标题栏更安静，正文不变暗。
+    type: class-toggle
+    default: true
+    addCommand: true
+  - id: atelier-glass-native-overlays
+    title: 原生浮层玻璃
+    description: 适配命令面板、快速切换、普通工具提示与通知，保留警告和错误的语义外观。
+    type: class-toggle
+    default: true
+    addCommand: true
+  - id: atelier-glass-canvas
+    title: 玻璃画布底色
+    description: 仅在液态玻璃模式下调整白板的纯色、点阵和网格底色；保留网格缩放、吸附及已选纸张或背景图片。
+    type: class-select
+    allowEmpty: false
+    default: atelier-glass-canvas-neutral
+    options:
+      - label: 雾白 / 石墨
+        value: atelier-glass-canvas-neutral
+      - label: 冷雾蓝
+        value: atelier-glass-canvas-mist
+      - label: 暖砂米
+        value: atelier-glass-canvas-sand
+      - label: 跟随插件
+        value: atelier-glass-canvas-original
+  - id: atelier-glass-ambient
+    title: 玻璃背景光感
+    description: 用静态柔光衬托玻璃，覆盖普通白板和配套工作区；不影响纸张、背景图片与正文。选择“跟随插件”底色时不启用。
+    type: class-select
+    allowEmpty: false
+    default: atelier-glass-ambient-soft
+    options:
+      - label: 柔和雾光
+        value: atelier-glass-ambient-soft
+      - label: 棱彩柔光
+        value: atelier-glass-ambient-prism
+      - label: 纯色背景
+        value: atelier-glass-ambient-off
+  - id: atelier-glass-ambient-strength
+    title: 背景光感强度
+    description: 调整光晕浓度；0 为无光晕，建议日常阅读使用 25–45。没有背景动画。
+    type: variable-number-slider
+    default: 35
+    min: 0
+    max: 100
+    step: 5
+  - id: atelier-glass-grid-original
+    title: 保留插件网格对比度
+    description: 默认使用更细腻的网格和点阵；开启后恢复插件原有对比度。网格尺寸、移动原点与吸附不变。
+    type: class-toggle
+    default: false
+  - id: atelier-glass-cards
+    title: 卡片玻璃质感
+    description: 液态玻璃模式下，普通卡片显示通透边缘与柔和高光；鼠标悬停或键盘聚焦时启用轻磨砂。自定义填色、特殊纸张、透明卡片、媒体与编辑中的卡片保持原样。
+    type: class-toggle
+    default: true
+    addCommand: true
   - id: atelier-glass-solid
     title: 减少透明效果
     description: 保留圆角与层次，使用实色表面；系统减少透明度或提高对比度时也会自动启用实色。
@@ -4570,6 +4669,1525 @@ body.atelier-plugin-polish .ts-local-relations-lines path[data-kind]:not(:where(
     --atelier-ui-shadow-md: 0 0 0 0 transparent;
     --atelier-ui-shadow-lg: 0 0 0 0 transparent;
     --folio-glass-light: inset 0 0 0 0 transparent;
+  }
+}
+
+
+/* ThoughtSpace glass refinement: actual outer shells used by Folio.9 and
+ * 1.3.38. Paint only: plugin owns positions, dimensions, overflow and hiding.
+ * One blur per floating shell; no canvas-wide filter or decorative overlay. */
+@media screen {
+  body.atelier-surface-liquid {
+    --folio-glass-hover: rgb(29 29 31 / .065);
+    --folio-glass-row: rgb(255 255 255 / .28);
+    --folio-glass-field: #ffffff;
+    --folio-glass-canvas: #eef0f3;
+  }
+  body.theme-dark.atelier-surface-liquid {
+    --folio-glass-hover: rgb(255 255 255 / .09);
+    --folio-glass-row: rgb(255 255 255 / .025);
+    --folio-glass-field: #303034;
+    --folio-glass-canvas: #202226;
+  }
+  body.atelier-surface-liquid.atelier-glass-canvas-mist { --folio-glass-canvas: #e7eef2; }
+  body.theme-dark.atelier-surface-liquid.atelier-glass-canvas-mist { --folio-glass-canvas: #1c272e; }
+  body.atelier-surface-liquid.atelier-glass-canvas-sand { --folio-glass-canvas: #f2ede5; }
+  body.theme-dark.atelier-surface-liquid.atelier-glass-canvas-sand { --folio-glass-canvas: #292621; }
+
+  /* Preserve paper/image layers and the inline grid origin/size used by zoom
+   * and snapping. Only the ground beneath the existing pattern is replaced. */
+  body.atelier-surface-liquid:not(.atelier-glass-canvas-original) .ts-root:is([data-background=plain],[data-background=dots],[data-background=grid]) :is(.ts-main > .ts-stage,.ts-brain-stage):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background-color: var(--folio-glass-canvas);
+  }
+
+  /* Tokens stay on chrome, never inherited by authored cards or editors. */
+  body.atelier-surface-liquid .ts-root.ts-root.ts-root :is(.ts-board-rail,.ts-floating-formatbar,.ts-view-dock,.ts-rail-popover,.ts-inspector,.ts-minimap):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    --ts-canvas-chrome-line: var(--atelier-ui-line);
+    --ts-board-line: var(--atelier-ui-line);
+    --ts-board-panel: var(--atelier-ui-raised);
+    --ts-format-line: var(--atelier-ui-line);
+    --ts-format-wash: var(--folio-glass-row);
+    --ts-format-active: var(--atelier-ui-subtle);
+    color: var(--atelier-ui-ink);
+  }
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid .ts-root.ts-root.ts-root .ts-main > :is(.ts-board-rail,.ts-floating-formatbar):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)),
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid .ts-root.ts-root.ts-root .ts-footer > .ts-view-dock:not([data-ts-glass-optics=true]):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background: var(--folio-glass-sheen), var(--folio-toolbar-fill, var(--folio-glass-fill)) !important;
+    border-color: var(--folio-toolbar-edge, var(--folio-glass-edge)) !important;
+    border-radius: var(--atelier-ui-radius-lg) !important;
+    box-shadow: var(--folio-toolbar-light, var(--folio-glass-light)), var(--folio-toolbar-shadow, var(--atelier-ui-shadow-md)) !important;
+    -webkit-backdrop-filter: var(--folio-toolbar-filter, var(--folio-glass-filter)) !important;
+    backdrop-filter: var(--folio-toolbar-filter, var(--folio-glass-filter)) !important;
+  }
+  body.atelier-surface-liquid .ts-root.ts-root.ts-root .ts-floating-formatbar .ts-commandbar:not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)),
+  body.atelier-surface-liquid .ts-root.ts-root.ts-root .ts-view-dock :is(.ts-canvas-controls,.ts-camera-controls,.ts-zoom):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background: transparent !important;
+    border-color: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+  body.atelier-surface-liquid .ts-root.ts-root.ts-root .ts-floating-formatbar > :is(.ts-format-heading,.ts-card-context):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background: transparent;
+    color: var(--atelier-ui-ink);
+    border-color: var(--atelier-ui-line);
+  }
+  body.atelier-surface-liquid .ts-root.ts-root.ts-root .ts-floating-formatbar > .ts-format-row:not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background: var(--folio-glass-row);
+    border-color: var(--atelier-ui-line);
+    border-radius: 0 0 15px 15px;
+  }
+  body.atelier-surface-liquid .ts-root.ts-root.ts-root :is(.ts-floating-formatbar,.ts-view-dock) :is(select,.ts-format-field):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background-color: var(--folio-glass-field);
+    color: var(--atelier-ui-ink);
+    border-color: var(--atelier-ui-line);
+    box-shadow: none;
+  }
+  body.atelier-surface-liquid .ts-root.ts-root.ts-root :is(.ts-floating-formatbar,.ts-view-dock,.ts-rail-popover) :is(.ts-format-label,.ts-format-context,.ts-background-caption,.ts-rail-caption,.ts-rail-search-icon):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    color: var(--atelier-ui-ink);
+  }
+
+  /* Rows use a single shared hover/pressed treatment. Preserve primary,
+   * destructive and unavailable commands and their original callbacks. */
+  body.atelier-surface-liquid .ts-root.ts-root.ts-root :is(.ts-board-rail,.ts-floating-formatbar,.ts-view-dock,.ts-rail-popover,.ts-inspector) :is(.ts-button,.ts-format-mode-button,.ts-format-scroll):not(:is(.ts-primary,.mod-cta,.is-warning,.mod-warning,.is-danger,.ts-danger,.mod-destructive,:disabled,[aria-disabled=true])):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    color: var(--atelier-ui-ink) !important;
+  }
+  body.atelier-surface-liquid .ts-root.ts-root.ts-root :is(.ts-board-rail,.ts-floating-formatbar,.ts-view-dock,.ts-rail-popover,.ts-inspector) :is(.ts-button,.ts-format-mode-button,.ts-format-scroll):hover:not(:is(.ts-primary,.mod-cta,.is-warning,.mod-warning,.is-danger,.ts-danger,.mod-destructive,:disabled,[aria-disabled=true])):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background: var(--folio-glass-hover) !important;
+  }
+  body.atelier-surface-liquid .ts-root.ts-root.ts-root :is(.ts-board-rail,.ts-floating-formatbar,.ts-view-dock,.ts-rail-popover) :is(.ts-button,.ts-format-mode-button):is(.is-active,[aria-pressed=true],[aria-expanded=true]):not(:is(.ts-primary,.mod-cta,.is-warning,.mod-warning,.is-danger,.ts-danger,.mod-destructive,:disabled,[aria-disabled=true])):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background: var(--atelier-ui-subtle) !important;
+    color: var(--atelier-ui-ink) !important;
+    box-shadow: inset 0 0 0 1px var(--atelier-accent) !important;
+  }
+  body.atelier-surface-liquid .ts-root.ts-root.ts-root :is(.ts-board-rail,.ts-floating-formatbar,.ts-view-dock,.ts-rail-popover) :is(button,select,input,[role=button]):focus-visible:not(:is(:disabled,[aria-disabled=true])):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    outline: 2px solid var(--atelier-ui-ink);
+    outline-offset: -3px;
+  }
+  body.atelier-surface-liquid .ts-root.ts-root.ts-root :is(.ts-rail-popover,.ts-tools-palette) :is(.ts-rail-search,.ts-rail-popover-header,.ts-tools-palette-header):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background-color: var(--atelier-ui-raised);
+    border-color: var(--atelier-ui-line);
+    color: var(--atelier-ui-ink);
+  }
+  body.atelier-surface-liquid .ts-root.ts-root.ts-root .ts-floating-formatbar .ts-format-mode-button:not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    border-radius: 8px !important;
+  }
+  /* Context menus and map have solid paint for precision and legibility. */
+  body.atelier-surface-liquid .ts-root.ts-root.ts-root .ts-main > :is(.ts-inspector,.ts-minimap):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background: var(--atelier-ui-raised) !important;
+    border-color: var(--atelier-ui-line-strong) !important;
+    border-radius: var(--atelier-ui-radius-lg) !important;
+    box-shadow: var(--atelier-ui-shadow-md) !important;
+    backdrop-filter: none !important;
+  }
+  body.atelier-surface-liquid .ts-root.ts-root.ts-root .ts-view-dock .ts-zoom [role=button]:not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    color: var(--atelier-ui-ink);
+  }
+  body.atelier-surface-liquid .ts-root.ts-root.ts-root .ts-floating-formatbar :is(.ts-format-mode,.ts-batch-format-switch):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background-color: var(--folio-glass-hover);
+    border-radius: 8px;
+  }
+  @media (prefers-reduced-transparency: reduce), (prefers-contrast: more), (forced-colors: active) {
+    body.atelier-surface-liquid { --folio-glass-row: var(--atelier-ui-panel); }
+  }
+  /* 1.3.38 reserves a full-height rail column. Give only its compact tool group
+   * glass; retain the column's square edge and native dimensions/scrolling.
+   * Three root classes plus body states beat the plugin's four-root runtime
+   * sheet regardless of injection order; this specificity is intentional. */
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid .ts-root.ts-root.ts-root .ts-main.ts-board-layout > .ts-board-rail:not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background: var(--atelier-ui-panel) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid .ts-root.ts-root.ts-root .ts-main.ts-board-layout > .ts-board-rail > .ts-rail-tools:not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background: var(--folio-glass-sheen), var(--folio-toolbar-fill, var(--folio-glass-fill)) !important;
+    border-radius: 14px;
+    box-shadow: var(--folio-toolbar-light, var(--folio-glass-light)), inset 0 0 0 1px var(--folio-toolbar-edge, var(--folio-glass-edge));
+    -webkit-backdrop-filter: var(--folio-toolbar-filter, var(--folio-glass-filter));
+    backdrop-filter: var(--folio-toolbar-filter, var(--folio-glass-filter));
+  }
+
+  /* CSS material, not a second refraction engine. Existing plugin optical
+   * surfaces keep their SVG filter and content shield. The user can still
+   * request solid surfaces from either the theme or the plugin. */
+  html:has(> head > style[data-thoughtspace-tokens][data-interface-style=glass][data-glass-effects=false]) body:is(.theme-light,.theme-dark).atelier-surface-liquid {
+    --folio-glass-fill: var(--atelier-ui-raised);
+    --folio-glass-filter: none;
+    --folio-glass-sheen: none;
+    --folio-card-fill: var(--background-primary);
+    --folio-card-filter: none;
+    --folio-card-sheen: none;
+  }
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-glass-solid .ts-root.ts-root.ts-root [data-ts-glass-optics=true]:not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background: var(--atelier-ui-raised) !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+  body.atelier-surface-liquid.atelier-glass-solid .ts-root [data-ts-glass-optics=true] > .ts-glass-content-shield { display: none !important; }
+
+  /* Author intent wins. No pseudo-element overlays, transforms or blur of
+   * text itself. Only ordinary card surfaces opt in. Idle cards cost no blur. */
+  body.atelier-surface-liquid {
+    --folio-card-base-fill: var(--background-primary);
+    --folio-card-fill: var(--background-primary);
+    --folio-card-filter: none;
+    --folio-card-sheen: none;
+    --folio-card-edge: rgb(255 255 255 / .8);
+    --folio-card-shadow: 0 2px 4px #17233408, 0 10px 26px #1723340c;
+  }
+  body.theme-dark.atelier-surface-liquid {
+    --folio-card-edge: rgb(255 255 255 / .16);
+    --folio-card-shadow: 0 2px 5px #0003, 0 12px 28px #0003;
+  }
+  @supports ((backdrop-filter: blur(6px)) or (-webkit-backdrop-filter: blur(6px))) {
+    body.atelier-surface-liquid {
+      --folio-card-base-fill: rgb(252 252 254 / .93);
+      --folio-card-filter: blur(6px) saturate(115%);
+      --folio-card-sheen: linear-gradient(145deg, #ffffff55, #ffffff00 42%, #ffffff14);
+    }
+    body.theme-dark.atelier-surface-liquid {
+      --folio-card-base-fill: rgb(35 37 41 / .95);
+      --folio-card-sheen: linear-gradient(145deg, #ffffff0c, #ffffff00 42%, #ffffff03);
+    }
+  }
+  body.atelier-surface-liquid.atelier-glass-cards .ts-root .ts-main .ts-world > .ts-node.ts-card:not(:is(.has-card-fill,.has-custom-border,.is-transparent,.is-compact-fold,.is-folded,.is-inline-editing,.ts-media-card,[data-card-style])):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background: var(--folio-card-sheen), var(--folio-card-fill) !important;
+    box-shadow: inset 0 1px 0 var(--folio-card-edge), var(--folio-card-shadow) !important;
+  }
+  @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    body.atelier-surface-liquid.atelier-glass-cards .ts-root .ts-main .ts-world > .ts-node.ts-card:is(:hover,:focus-within):not(:is(.has-card-fill,.has-custom-border,.is-transparent,.is-compact-fold,.is-folded,.is-inline-editing,.ts-media-card,[data-card-style])):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+      -webkit-backdrop-filter: var(--folio-card-filter) !important;
+      backdrop-filter: var(--folio-card-filter) !important;
+    }
+  }
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-glass-solid {
+    --folio-card-fill: var(--background-primary);
+    --folio-card-filter: none;
+    --folio-card-sheen: none;
+  }
+  body.atelier-surface-liquid.atelier-flat { --folio-card-shadow: 0 0 0 0 transparent; }
+  @media (prefers-reduced-transparency: reduce), (prefers-contrast: more), (forced-colors: active) {
+    body:is(.theme-light,.theme-dark).atelier-surface-liquid {
+      --folio-card-fill: var(--background-primary);
+      --folio-card-filter: none;
+      --folio-card-sheen: none;
+    }
+  }
+}
+
+
+/* All audited toolbar surfaces, CSS glass approximation. Explicit names avoid
+ * painting arbitrary content panels. Paint only: no geometry, positioning,
+ * pointer events, overflow, animation or titlebar drag-region changes.
+ * Repeated mode class intentionally wins over ThoughtSpace 1.3.38's four-root
+ * runtime sheet in either loading order. Existing SVG optics retain ownership.
+ */
+@media screen {
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-surface-liquid.atelier-surface-liquid :is(.ts-topbar,
+    .ts-commandbar,
+    .ts-floating-formatbar,
+    .ts-view-dock,
+    .ts-markdown-tools,
+    .ts-inline-editor-bar,
+    .ts-card-context-actions,
+    .ts-card-actions,
+    .ts-pdf-controls,
+    .ts-pdf-selection-tools,
+    .ts-brain-topbar,
+    .ts-brain-controls,
+    .ts-brain-selection-actions,
+    .ts-brain-tools-header,
+    .ts-brain-footer,
+    .ts-mm-commandbar,
+    .ts-mm-preview-bar,
+    .ts-mm-tool-actions,
+    .ts-mm-footer,
+    .ts-note-markdown-toolbar,
+    .ts-writing-header,
+    .ts-writing-formatbar,
+    .ts-writing-composer-tools,
+    .ts-writing-dock-head,
+    .ts-writing-reference-heading,
+    .ts-writing-panel-head,
+    .ts-writing-panel-foot,
+    .ts-writing-reference-actions,
+    .ts-reading-commandbar,
+    .ts-reading-tools,
+    .ts-reading-aside-tabs,
+    .ts-reading-footer,
+    .ts-reference-reading-footer,
+    .ts-selection-note-footer,
+    .ts-media-workspace__header,
+    .ts-media-workspace__savebar,
+    .ts-media-workspace__panel-switcher,
+    .ts-media-workspace__layout-control,
+    .ts-media-workspace__timeline-tools,
+    .ts-media-workspace__composer-actions,
+    .ts-media-workspace__draft-tools,
+    .ts-media-workspace__capture-actions,
+    .ts-media-card__toolbar,
+    .ts-media-card__extra-actions,
+    .ts-media-card__capture-actions,
+    .ts-online-workspace__header,
+    .ts-online-workspace__composer-actions,
+    .ts-online-workspace__composer-tools,
+    .ts-online-workspace__capture-actions,
+    .ts-online-board-player__footer,
+    .ts-media-image-modal__actions,
+    .ts-handwriting-toolbar,
+    .ts-handwriting-footer,
+    .ts-handwriting-selection-actions,
+    .ts-handwriting-popover,
+    .ts-handwriting-export-footer,
+    .ts-local-relations-toolbar,
+    .ts-local-relations-secondary-toolbar,
+    .ts-local-relations-controls,
+    .ts-hub-tools,
+    .ts-hub-heading,
+    .ts-hub-footer,
+    .ts-collection-header,
+    .ts-collection-selection-tools,
+    .ts-collection-card-tools,
+    .ts-collection-composer-footer,
+    .ts-materials-tabs,
+    .ts-materials-source-actions,
+    .ts-materials-filters,
+    .ts-materials-footer,
+    .ts-materials-pane-switch,
+    .ts-materials-reading-switch,
+    .ts-task-filters,
+    .ts-db-filters,
+    .ts-db-custom-filters,
+    .ts-native-tools,
+    .ts-native-footer,
+    .ts-settings-header,
+    .ts-catalog-toolbar,
+    .ts-catalog-filters,
+    .ts-catalog-footer,
+    .ts-board-search-filters,
+    .ts-board-search-footer,
+    .ts-view-toolbar,
+    .ts-view-footer,
+    .ts-editor-search-footer,
+    .ts-layout-preview-header,
+    .ts-layout-footer,
+    .ts-brain-position-create,
+    .ts-brain-position-footer,
+    .ts-attachment-browser-controls,
+    .ts-attachment-browser-footer,
+    .ts-reuse-footer,
+    .ts-group-footer,
+    .ts-action-footer,
+    .ts-capture-footer,
+    .ts-paper-settings-footer,
+    .ts-background-settings-footer,
+    .ts-yingjian-footer,
+    .workspace-tab-header-container,
+    .view-header,
+    .workspace-ribbon.mod-left,
+    .workspace-ribbon.mod-right,
+    .nav-header,
+    .status-bar,
+    .canvas-controls,
+    .canvas-menu,
+    .canvas-card-menu,
+    .canvas-submenu,
+    .pdf-toolbar,
+    .pdf-findbar):not([data-ts-glass-optics=true]):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background: var(--folio-glass-sheen), var(--folio-toolbar-fill, var(--folio-glass-fill)) !important;
+    border-color: var(--folio-toolbar-edge, var(--folio-glass-edge)) !important;
+    box-shadow: var(--folio-toolbar-light, var(--folio-glass-light)), var(--folio-toolbar-shadow, var(--atelier-ui-shadow-sm)) !important;
+    -webkit-backdrop-filter: var(--folio-toolbar-filter, var(--folio-glass-filter)) !important;
+    backdrop-filter: var(--folio-toolbar-filter, var(--folio-glass-filter)) !important;
+    color: var(--atelier-ui-ink);
+  }
+  /* A toolbar within another toolbar belongs to the same glass sheet. Keep
+   * its borders/radius/layout, but remove the stacked material and blur.
+   * Canvas submenus are independently positioned below their parent. */
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-surface-liquid.atelier-surface-liquid :is(.ts-topbar,
+    .ts-commandbar,
+    .ts-floating-formatbar,
+    .ts-view-dock,
+    .ts-markdown-tools,
+    .ts-inline-editor-bar,
+    .ts-card-context-actions,
+    .ts-card-actions,
+    .ts-pdf-controls,
+    .ts-pdf-selection-tools,
+    .ts-brain-topbar,
+    .ts-brain-controls,
+    .ts-brain-selection-actions,
+    .ts-brain-tools-header,
+    .ts-brain-footer,
+    .ts-mm-commandbar,
+    .ts-mm-preview-bar,
+    .ts-mm-tool-actions,
+    .ts-mm-footer,
+    .ts-note-markdown-toolbar,
+    .ts-writing-header,
+    .ts-writing-formatbar,
+    .ts-writing-composer-tools,
+    .ts-writing-dock-head,
+    .ts-writing-reference-heading,
+    .ts-writing-panel-head,
+    .ts-writing-panel-foot,
+    .ts-writing-reference-actions,
+    .ts-reading-commandbar,
+    .ts-reading-tools,
+    .ts-reading-aside-tabs,
+    .ts-reading-footer,
+    .ts-reference-reading-footer,
+    .ts-selection-note-footer,
+    .ts-media-workspace__header,
+    .ts-media-workspace__savebar,
+    .ts-media-workspace__panel-switcher,
+    .ts-media-workspace__layout-control,
+    .ts-media-workspace__timeline-tools,
+    .ts-media-workspace__composer-actions,
+    .ts-media-workspace__draft-tools,
+    .ts-media-workspace__capture-actions,
+    .ts-media-card__toolbar,
+    .ts-media-card__extra-actions,
+    .ts-media-card__capture-actions,
+    .ts-online-workspace__header,
+    .ts-online-workspace__composer-actions,
+    .ts-online-workspace__composer-tools,
+    .ts-online-workspace__capture-actions,
+    .ts-online-board-player__footer,
+    .ts-media-image-modal__actions,
+    .ts-handwriting-toolbar,
+    .ts-handwriting-footer,
+    .ts-handwriting-selection-actions,
+    .ts-handwriting-popover,
+    .ts-handwriting-export-footer,
+    .ts-local-relations-toolbar,
+    .ts-local-relations-secondary-toolbar,
+    .ts-local-relations-controls,
+    .ts-hub-tools,
+    .ts-hub-heading,
+    .ts-hub-footer,
+    .ts-collection-header,
+    .ts-collection-selection-tools,
+    .ts-collection-card-tools,
+    .ts-collection-composer-footer,
+    .ts-materials-tabs,
+    .ts-materials-source-actions,
+    .ts-materials-filters,
+    .ts-materials-footer,
+    .ts-materials-pane-switch,
+    .ts-materials-reading-switch,
+    .ts-task-filters,
+    .ts-db-filters,
+    .ts-db-custom-filters,
+    .ts-native-tools,
+    .ts-native-footer,
+    .ts-settings-header,
+    .ts-catalog-toolbar,
+    .ts-catalog-filters,
+    .ts-catalog-footer,
+    .ts-board-search-filters,
+    .ts-board-search-footer,
+    .ts-view-toolbar,
+    .ts-view-footer,
+    .ts-editor-search-footer,
+    .ts-layout-preview-header,
+    .ts-layout-footer,
+    .ts-brain-position-create,
+    .ts-brain-position-footer,
+    .ts-attachment-browser-controls,
+    .ts-attachment-browser-footer,
+    .ts-reuse-footer,
+    .ts-group-footer,
+    .ts-action-footer,
+    .ts-capture-footer,
+    .ts-paper-settings-footer,
+    .ts-background-settings-footer,
+    .ts-yingjian-footer,
+    .workspace-tab-header-container,
+    .view-header,
+    .workspace-ribbon.mod-left,
+    .workspace-ribbon.mod-right,
+    .nav-header,
+    .status-bar,
+    .canvas-controls,
+    .canvas-menu,
+    .canvas-card-menu,
+    .canvas-submenu,
+    .pdf-toolbar,
+    .pdf-findbar) :is(.ts-topbar,
+    .ts-commandbar,
+    .ts-floating-formatbar,
+    .ts-view-dock,
+    .ts-markdown-tools,
+    .ts-inline-editor-bar,
+    .ts-card-context-actions,
+    .ts-card-actions,
+    .ts-pdf-controls,
+    .ts-pdf-selection-tools,
+    .ts-brain-topbar,
+    .ts-brain-controls,
+    .ts-brain-selection-actions,
+    .ts-brain-tools-header,
+    .ts-brain-footer,
+    .ts-mm-commandbar,
+    .ts-mm-preview-bar,
+    .ts-mm-tool-actions,
+    .ts-mm-footer,
+    .ts-note-markdown-toolbar,
+    .ts-writing-header,
+    .ts-writing-formatbar,
+    .ts-writing-composer-tools,
+    .ts-writing-dock-head,
+    .ts-writing-reference-heading,
+    .ts-writing-panel-head,
+    .ts-writing-panel-foot,
+    .ts-writing-reference-actions,
+    .ts-reading-commandbar,
+    .ts-reading-tools,
+    .ts-reading-aside-tabs,
+    .ts-reading-footer,
+    .ts-reference-reading-footer,
+    .ts-selection-note-footer,
+    .ts-media-workspace__header,
+    .ts-media-workspace__savebar,
+    .ts-media-workspace__panel-switcher,
+    .ts-media-workspace__layout-control,
+    .ts-media-workspace__timeline-tools,
+    .ts-media-workspace__composer-actions,
+    .ts-media-workspace__draft-tools,
+    .ts-media-workspace__capture-actions,
+    .ts-media-card__toolbar,
+    .ts-media-card__extra-actions,
+    .ts-media-card__capture-actions,
+    .ts-online-workspace__header,
+    .ts-online-workspace__composer-actions,
+    .ts-online-workspace__composer-tools,
+    .ts-online-workspace__capture-actions,
+    .ts-online-board-player__footer,
+    .ts-media-image-modal__actions,
+    .ts-handwriting-toolbar,
+    .ts-handwriting-footer,
+    .ts-handwriting-selection-actions,
+    .ts-handwriting-popover,
+    .ts-handwriting-export-footer,
+    .ts-local-relations-toolbar,
+    .ts-local-relations-secondary-toolbar,
+    .ts-local-relations-controls,
+    .ts-hub-tools,
+    .ts-hub-heading,
+    .ts-hub-footer,
+    .ts-collection-header,
+    .ts-collection-selection-tools,
+    .ts-collection-card-tools,
+    .ts-collection-composer-footer,
+    .ts-materials-tabs,
+    .ts-materials-source-actions,
+    .ts-materials-filters,
+    .ts-materials-footer,
+    .ts-materials-pane-switch,
+    .ts-materials-reading-switch,
+    .ts-task-filters,
+    .ts-db-filters,
+    .ts-db-custom-filters,
+    .ts-native-tools,
+    .ts-native-footer,
+    .ts-settings-header,
+    .ts-catalog-toolbar,
+    .ts-catalog-filters,
+    .ts-catalog-footer,
+    .ts-board-search-filters,
+    .ts-board-search-footer,
+    .ts-view-toolbar,
+    .ts-view-footer,
+    .ts-editor-search-footer,
+    .ts-layout-preview-header,
+    .ts-layout-footer,
+    .ts-brain-position-create,
+    .ts-brain-position-footer,
+    .ts-attachment-browser-controls,
+    .ts-attachment-browser-footer,
+    .ts-reuse-footer,
+    .ts-group-footer,
+    .ts-action-footer,
+    .ts-capture-footer,
+    .ts-paper-settings-footer,
+    .ts-background-settings-footer,
+    .ts-yingjian-footer,
+    .workspace-tab-header-container,
+    .view-header,
+    .workspace-ribbon.mod-left,
+    .workspace-ribbon.mod-right,
+    .nav-header,
+    .status-bar,
+    .canvas-controls,
+    .canvas-menu,
+    .canvas-card-menu,
+    .canvas-submenu,
+    .pdf-toolbar,
+    .pdf-findbar):not(.canvas-submenu):not([data-ts-glass-optics=true]):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background: transparent !important;
+    box-shadow: none !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+  /* Plain action labels need opaque ink through the glass. Semantic actions,
+   * active accents and disabled states continue to use their own styling. */
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-surface-liquid.atelier-surface-liquid :is(.ts-topbar,
+    .ts-commandbar,
+    .ts-floating-formatbar,
+    .ts-view-dock,
+    .ts-markdown-tools,
+    .ts-inline-editor-bar,
+    .ts-card-context-actions,
+    .ts-card-actions,
+    .ts-pdf-controls,
+    .ts-pdf-selection-tools,
+    .ts-brain-topbar,
+    .ts-brain-controls,
+    .ts-brain-selection-actions,
+    .ts-brain-tools-header,
+    .ts-brain-footer,
+    .ts-mm-commandbar,
+    .ts-mm-preview-bar,
+    .ts-mm-tool-actions,
+    .ts-mm-footer,
+    .ts-note-markdown-toolbar,
+    .ts-writing-header,
+    .ts-writing-formatbar,
+    .ts-writing-composer-tools,
+    .ts-writing-dock-head,
+    .ts-writing-reference-heading,
+    .ts-writing-panel-head,
+    .ts-writing-panel-foot,
+    .ts-writing-reference-actions,
+    .ts-reading-commandbar,
+    .ts-reading-tools,
+    .ts-reading-aside-tabs,
+    .ts-reading-footer,
+    .ts-reference-reading-footer,
+    .ts-selection-note-footer,
+    .ts-media-workspace__header,
+    .ts-media-workspace__savebar,
+    .ts-media-workspace__panel-switcher,
+    .ts-media-workspace__layout-control,
+    .ts-media-workspace__timeline-tools,
+    .ts-media-workspace__composer-actions,
+    .ts-media-workspace__draft-tools,
+    .ts-media-workspace__capture-actions,
+    .ts-media-card__toolbar,
+    .ts-media-card__extra-actions,
+    .ts-media-card__capture-actions,
+    .ts-online-workspace__header,
+    .ts-online-workspace__composer-actions,
+    .ts-online-workspace__composer-tools,
+    .ts-online-workspace__capture-actions,
+    .ts-online-board-player__footer,
+    .ts-media-image-modal__actions,
+    .ts-handwriting-toolbar,
+    .ts-handwriting-footer,
+    .ts-handwriting-selection-actions,
+    .ts-handwriting-popover,
+    .ts-handwriting-export-footer,
+    .ts-local-relations-toolbar,
+    .ts-local-relations-secondary-toolbar,
+    .ts-local-relations-controls,
+    .ts-hub-tools,
+    .ts-hub-heading,
+    .ts-hub-footer,
+    .ts-collection-header,
+    .ts-collection-selection-tools,
+    .ts-collection-card-tools,
+    .ts-collection-composer-footer,
+    .ts-materials-tabs,
+    .ts-materials-source-actions,
+    .ts-materials-filters,
+    .ts-materials-footer,
+    .ts-materials-pane-switch,
+    .ts-materials-reading-switch,
+    .ts-task-filters,
+    .ts-db-filters,
+    .ts-db-custom-filters,
+    .ts-native-tools,
+    .ts-native-footer,
+    .ts-settings-header,
+    .ts-catalog-toolbar,
+    .ts-catalog-filters,
+    .ts-catalog-footer,
+    .ts-board-search-filters,
+    .ts-board-search-footer,
+    .ts-view-toolbar,
+    .ts-view-footer,
+    .ts-editor-search-footer,
+    .ts-layout-preview-header,
+    .ts-layout-footer,
+    .ts-brain-position-create,
+    .ts-brain-position-footer,
+    .ts-attachment-browser-controls,
+    .ts-attachment-browser-footer,
+    .ts-reuse-footer,
+    .ts-group-footer,
+    .ts-action-footer,
+    .ts-capture-footer,
+    .ts-paper-settings-footer,
+    .ts-background-settings-footer,
+    .ts-yingjian-footer,
+    .workspace-tab-header-container,
+    .view-header,
+    .workspace-ribbon.mod-left,
+    .workspace-ribbon.mod-right,
+    .nav-header,
+    .status-bar,
+    .canvas-controls,
+    .canvas-menu,
+    .canvas-card-menu,
+    .canvas-submenu,
+    .pdf-toolbar,
+    .pdf-findbar) :is(button,.clickable-icon):not(:is(.mod-cta,.ts-primary,.is-primary,.is-active,.is-selected,.is-warning,.mod-warning,.is-danger,.ts-danger,.mod-destructive,:disabled,[aria-disabled=true],[aria-pressed=true],[aria-selected=true])):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    color: var(--atelier-ui-ink) !important;
+  }
+  /* Cover plugin-owned optical toolbars outside the board as well. */
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-surface-liquid.atelier-surface-liquid.atelier-glass-solid :is(.ts-view-dock,.ts-rail-popover,.ts-handwriting-popover,.ts-ui-menu)[data-ts-glass-optics=true]:not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background: var(--atelier-ui-raised) !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-surface-liquid.atelier-surface-liquid.atelier-glass-solid :is(.ts-view-dock,.ts-rail-popover,.ts-handwriting-popover,.ts-ui-menu)[data-ts-glass-optics=true] > .ts-glass-content-shield { display: none !important; }
+}
+
+
+/* Independent, static ambient material; source references in REFERENCES.md.
+ * Paint the viewport parent, not the zoomed grid. No generated overlay,
+ * stacking/position changes, page-wide filter, image requests or animation. */
+@media screen {
+  body.atelier-surface-liquid {
+    --folio-ambient-a: #a9c9df;
+    --folio-ambient-b: #dfc9ad;
+    --folio-ambient-c: #acd4c7;
+    --folio-ambient-workspace-factor: .6;
+    --folio-ambient-opacity: calc(clamp(0, var(--atelier-glass-ambient-strength, 35), 100) * 1%);
+    --folio-ambient-layer:
+      radial-gradient(ellipse at 6% 8%, color-mix(in srgb, var(--folio-ambient-a) var(--folio-ambient-opacity), transparent), transparent 62%),
+      radial-gradient(ellipse at 96% 92%, color-mix(in srgb, var(--folio-ambient-b) var(--folio-ambient-opacity), transparent), transparent 64%);
+    --folio-grid-quiet: color-mix(in srgb, var(--atelier-ui-ink) 6%, transparent);
+    --folio-grid-snap-strength: 8%;
+    --folio-dot-quiet: color-mix(in srgb, var(--atelier-ui-ink) 17%, transparent);
+    --folio-dot-snap-strength: 24%;
+  }
+  body.theme-dark.atelier-surface-liquid {
+    --folio-ambient-a: #345b70;
+    --folio-ambient-b: #665342;
+    --folio-ambient-c: #39675b;
+    --folio-grid-quiet: color-mix(in srgb, var(--atelier-ui-ink) 5%, transparent);
+    --folio-grid-snap-strength: 9%;
+    --folio-dot-quiet: color-mix(in srgb, var(--atelier-ui-ink) 15%, transparent);
+    --folio-dot-snap-strength: 22%;
+  }
+  body.atelier-surface-liquid.atelier-glass-canvas-mist {
+    --folio-ambient-a: #9fc6e0;
+    --folio-ambient-b: #b5d5ce;
+  }
+  body.theme-dark.atelier-surface-liquid.atelier-glass-canvas-mist {
+    --folio-ambient-a: #315e79;
+    --folio-ambient-b: #365f59;
+  }
+  body.atelier-surface-liquid.atelier-glass-canvas-sand {
+    --folio-ambient-a: #d5bfa5;
+    --folio-ambient-b: #e3c2ad;
+  }
+  body.theme-dark.atelier-surface-liquid.atelier-glass-canvas-sand {
+    --folio-ambient-a: #66533f;
+    --folio-ambient-b: #705247;
+  }
+  body.atelier-surface-liquid.atelier-glass-ambient-prism {
+    --folio-ambient-layer:
+      radial-gradient(ellipse at 4% 4%, color-mix(in srgb, var(--folio-ambient-a) var(--folio-ambient-opacity), transparent), transparent 60%),
+      radial-gradient(ellipse at 98% 8%, color-mix(in srgb, var(--folio-ambient-c) var(--folio-ambient-opacity), transparent), transparent 58%),
+      radial-gradient(ellipse at 72% 100%, color-mix(in srgb, var(--folio-ambient-b) var(--folio-ambient-opacity), transparent), transparent 66%);
+  }
+
+  /* Only ordinary backgrounds opt in; paper grain/image controls own their
+   * layers. Inline background size/position on the stage remain untouched. */
+  body.atelier-surface-liquid:not(.atelier-glass-ambient-off):not(.atelier-glass-canvas-original) .ts-root:is([data-background=plain],[data-background=dots],[data-background=grid]) :is(.ts-main:has(> .ts-stage),.ts-brain-shell:has(> .ts-brain-stage)):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background-color: var(--folio-glass-canvas);
+    background-image: var(--folio-ambient-layer);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  body.atelier-surface-liquid:not(.atelier-glass-ambient-off):not(.atelier-glass-canvas-original) .ts-root:is([data-background=plain],[data-background=dots],[data-background=grid]) :is(.ts-main > .ts-stage,.ts-brain-shell > .ts-brain-stage):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background-color: transparent;
+  }
+  body.atelier-surface-liquid:not(.atelier-glass-canvas-original):not(.atelier-glass-grid-original) .ts-root:is([data-background=grid],[data-background=dots]) :is(.ts-main > .ts-stage,.ts-brain-stage):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    --ts-grid-ink: var(--folio-grid-quiet);
+    --ts-dot-ink: var(--folio-dot-quiet);
+  }
+  body.atelier-surface-liquid:not(.atelier-glass-canvas-original):not(.atelier-glass-grid-original) .ts-root[data-snap=true]:is([data-background=grid],[data-background=dots]) :is(.ts-main > .ts-stage,.ts-brain-stage):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    --ts-grid-ink: color-mix(in srgb, var(--ts-accent) var(--folio-grid-snap-strength), transparent);
+    --ts-dot-ink: color-mix(in srgb, var(--ts-accent) var(--folio-dot-snap-strength), transparent);
+  }
+  /* One quiet layer per workspace. Factors multiply the user's master
+   * intensity locally: whiteboards keep 1; reading 0.32; navigation 0.2;
+   * organizing workspaces 0.6. Never paint editors or document/media bodies.
+   * Redeclare the layer here: inherited custom properties have already resolved
+   * their var() references on body and cannot react to a child's factor alone. */
+  body.atelier-surface-liquid:not(.atelier-glass-ambient-off):not(.atelier-glass-canvas-original) :is(.ts-space-hub,.ts-writing,.ts-reading-desk,.ts-reference-reading,.ts-media-workspace,.ts-online-workspace,.ts-materials-panel,.ts-local-relations,.ts-handwriting,.ts-sidebar,.ts-journal,.ts-database-modal,.ts-collection-content,.ts-layout-planner,.ts-mindmap-studio,.ts-board-search,.ts-section-catalog,.ts-saved-views,.ts-native-bridge,.workspace-leaf-content:is([data-type="file-explorer"],[data-type="search"],[data-type="outline"],[data-type="bookmarks"],[data-type="backlink"])):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    --folio-ambient-workspace-opacity: calc(clamp(0, var(--atelier-glass-ambient-strength, 35), 100) * var(--folio-ambient-workspace-factor) * 1%);
+    --folio-ambient-workspace-layer:
+      radial-gradient(ellipse at 6% 8%, color-mix(in srgb, var(--folio-ambient-a) var(--folio-ambient-workspace-opacity), transparent), transparent 62%),
+      radial-gradient(ellipse at 96% 92%, color-mix(in srgb, var(--folio-ambient-b) var(--folio-ambient-workspace-opacity), transparent), transparent 64%);
+    background-image: var(--folio-ambient-workspace-layer) !important;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  body.atelier-surface-liquid:not(.atelier-glass-ambient-off):not(.atelier-glass-canvas-original) :is(.ts-writing,.ts-reading-desk,.ts-reference-reading,.ts-journal):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    --folio-ambient-workspace-factor: .32;
+  }
+  body.atelier-surface-liquid:not(.atelier-glass-ambient-off):not(.atelier-glass-canvas-original) :is(.ts-sidebar,.ts-board-search,.ts-section-catalog,.ts-saved-views,.ts-native-bridge,.workspace-leaf-content:is([data-type="file-explorer"],[data-type="search"],[data-type="outline"],[data-type="bookmarks"],[data-type="backlink"])):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    --folio-ambient-workspace-factor: .2;
+  }
+  body.atelier-surface-liquid:not(.atelier-glass-ambient-off):not(.atelier-glass-canvas-original) :is(.ts-media-workspace,.ts-online-workspace,.ts-handwriting):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    --folio-ambient-workspace-factor: .45;
+  }
+  body.atelier-surface-liquid:not(.atelier-glass-ambient-off):not(.atelier-glass-canvas-original).atelier-glass-ambient-prism :is(.ts-space-hub,.ts-writing,.ts-reading-desk,.ts-reference-reading,.ts-media-workspace,.ts-online-workspace,.ts-materials-panel,.ts-local-relations,.ts-handwriting,.ts-sidebar,.ts-journal,.ts-database-modal,.ts-collection-content,.ts-layout-planner,.ts-mindmap-studio,.ts-board-search,.ts-section-catalog,.ts-saved-views,.ts-native-bridge,.workspace-leaf-content:is([data-type="file-explorer"],[data-type="search"],[data-type="outline"],[data-type="bookmarks"],[data-type="backlink"])):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    --folio-ambient-workspace-layer:
+      radial-gradient(ellipse at 4% 4%, color-mix(in srgb, var(--folio-ambient-a) var(--folio-ambient-workspace-opacity), transparent), transparent 60%),
+      radial-gradient(ellipse at 98% 8%, color-mix(in srgb, var(--folio-ambient-c) var(--folio-ambient-workspace-opacity), transparent), transparent 58%),
+      radial-gradient(ellipse at 72% 100%, color-mix(in srgb, var(--folio-ambient-b) var(--folio-ambient-workspace-opacity), transparent), transparent 66%);
+  }
+  /* Reference readers and materials can be embedded inside another workspace.
+   * Let the outer viewport carry the ambiance rather than stacking gradients. */
+  body.atelier-surface-liquid:not(.atelier-glass-ambient-off):not(.atelier-glass-canvas-original) :is(.ts-space-hub,.ts-writing,.ts-reading-desk,.ts-reference-reading,.ts-media-workspace,.ts-online-workspace,.ts-materials-panel,.ts-local-relations,.ts-handwriting,.ts-sidebar,.ts-journal,.ts-database-modal,.ts-collection-content,.ts-layout-planner,.ts-mindmap-studio,.ts-board-search,.ts-section-catalog,.ts-saved-views,.ts-native-bridge,.workspace-leaf-content:is([data-type="file-explorer"],[data-type="search"],[data-type="outline"],[data-type="bookmarks"],[data-type="backlink"])) :is(.ts-space-hub,.ts-writing,.ts-reading-desk,.ts-reference-reading,.ts-media-workspace,.ts-online-workspace,.ts-materials-panel,.ts-local-relations,.ts-handwriting,.ts-sidebar,.ts-journal,.ts-database-modal,.ts-collection-content,.ts-layout-planner,.ts-mindmap-studio,.ts-board-search,.ts-section-catalog,.ts-saved-views,.ts-native-bridge,.workspace-leaf-content:is([data-type="file-explorer"],[data-type="search"],[data-type="outline"],[data-type="bookmarks"],[data-type="backlink"])):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background-image: none !important;
+  }
+  /* A user or system solid preference removes ambient decoration as well. */
+  body.atelier-surface-liquid.atelier-glass-solid { --folio-ambient-layer: none; }
+  body.atelier-surface-liquid.atelier-glass-solid :is(.ts-space-hub,.ts-writing,.ts-reading-desk,.ts-reference-reading,.ts-media-workspace,.ts-online-workspace,.ts-materials-panel,.ts-local-relations,.ts-handwriting,.ts-sidebar,.ts-journal,.ts-database-modal,.ts-collection-content,.ts-layout-planner,.ts-mindmap-studio,.ts-board-search,.ts-section-catalog,.ts-saved-views,.ts-native-bridge,.workspace-leaf-content:is([data-type="file-explorer"],[data-type="search"],[data-type="outline"],[data-type="bookmarks"],[data-type="backlink"])):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) { --folio-ambient-workspace-layer: none !important; }
+  html:has(> head > style[data-thoughtspace-tokens][data-interface-style=glass][data-glass-effects=false]) body.atelier-surface-liquid { --folio-ambient-layer: none; }
+  html:has(> head > style[data-thoughtspace-tokens][data-interface-style=glass][data-glass-effects=false]) body.atelier-surface-liquid :is(.ts-space-hub,.ts-writing,.ts-reading-desk,.ts-reference-reading,.ts-media-workspace,.ts-online-workspace,.ts-materials-panel,.ts-local-relations,.ts-handwriting,.ts-sidebar,.ts-journal,.ts-database-modal,.ts-collection-content,.ts-layout-planner,.ts-mindmap-studio,.ts-board-search,.ts-section-catalog,.ts-saved-views,.ts-native-bridge,.workspace-leaf-content:is([data-type="file-explorer"],[data-type="search"],[data-type="outline"],[data-type="bookmarks"],[data-type="backlink"])):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) { --folio-ambient-workspace-layer: none !important; }
+  @media (prefers-reduced-transparency: reduce), (prefers-contrast: more), (forced-colors: active) {
+    body:is(.theme-light,.theme-dark).atelier-surface-liquid { --folio-ambient-layer: none; }
+    body:is(.theme-light,.theme-dark).atelier-surface-liquid :is(.ts-space-hub,.ts-writing,.ts-reading-desk,.ts-reference-reading,.ts-media-workspace,.ts-online-workspace,.ts-materials-panel,.ts-local-relations,.ts-handwriting,.ts-sidebar,.ts-journal,.ts-database-modal,.ts-collection-content,.ts-layout-planner,.ts-mindmap-studio,.ts-board-search,.ts-section-catalog,.ts-saved-views,.ts-native-bridge,.workspace-leaf-content:is([data-type="file-explorer"],[data-type="search"],[data-type="outline"],[data-type="bookmarks"],[data-type="backlink"])):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) { --folio-ambient-workspace-layer: none !important; }
+  }
+}
+
+
+/* ThoughtSpace 1.3.38 floating surfaces. Keep the plugin's placement,
+ * scrolling, hidden state, hit areas and SVG optics. Text-heavy overlays use
+ * a denser version of the shared material, so all existing solid/system
+ * preferences remain authoritative. References: GITHUB-REFERENCES-3.37.0.md. */
+@media screen {
+  body.atelier-surface-liquid {
+    --folio-popover-fill: color-mix(in srgb, var(--folio-glass-fill) 75%, var(--atelier-ui-raised));
+  }
+  /* Deliberate specificity: beat the plugin's four-root appearance rules in
+   * either injection order. An active optical surface stays plugin-owned. */
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-surface-liquid.atelier-surface-liquid :is(
+    .ts-ui-menu,
+    .ts-root .ts-tools-palette,
+    .ts-root .ts-rail-popover,
+    .ts-root .ts-footer > .ts-canvas-settings-panel,
+    .ts-brain-shell .ts-brain-search-results,
+    .ts-source-popover,
+    .ts-local-relations > .ts-local-relations-picker,
+    .ts-local-relations > .ts-local-relations-filter-panel,
+    .ts-local-relations > .ts-local-relations-more-panel
+  ):not([data-ts-glass-optics=true]):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background: var(--folio-glass-sheen), var(--folio-popover-fill) !important;
+    border-color: var(--folio-popup-edge, var(--folio-glass-edge)) !important;
+    border-radius: var(--atelier-ui-radius-md) !important;
+    box-shadow: var(--folio-popup-light, var(--folio-glass-light)), var(--folio-popup-shadow, var(--atelier-ui-shadow-lg)) !important;
+    -webkit-backdrop-filter: var(--folio-popover-filter, var(--folio-glass-filter)) !important;
+    backdrop-filter: var(--folio-popover-filter, var(--folio-glass-filter)) !important;
+    color: var(--atelier-ui-ink);
+  }
+  /* These in-flow bars share their parent's glass. Do not flatten search
+   * results or other independently positioned children of a toolbar. */
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-surface-liquid.atelier-surface-liquid :is(
+    .ts-root .ts-footer > .ts-canvas-settings-panel > .ts-canvas-controls,
+    .ts-local-relations > .ts-local-relations-more-panel > .ts-local-relations-secondary-toolbar,
+    .ts-local-relations > .ts-local-relations-filter-panel .ts-local-relations-controls
+  ):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background: transparent !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+  /* Fields remain stable over colored canvases. Checkbox, range and color
+   * inputs retain their state cues; authored excerpts are outside this rule. */
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-surface-liquid.atelier-surface-liquid :is(
+    .ts-root .ts-canvas-settings-panel,
+    .ts-local-relations > .ts-local-relations-picker,
+    .ts-local-relations > .ts-local-relations-filter-panel
+  ) :is(select,input[type=search],input[type=text],input:not([type])):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background-color: var(--folio-glass-field);
+    color: var(--atelier-ui-ink);
+    border-color: var(--atelier-ui-line-strong);
+  }
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-surface-liquid.atelier-surface-liquid :is(
+    .ts-ui-menu,
+    .ts-root .ts-tools-palette,
+    .ts-root .ts-rail-popover,
+    .ts-root .ts-canvas-settings-panel,
+    .ts-brain-shell .ts-brain-search-results,
+    .ts-source-popover,
+    .ts-local-relations > .ts-local-relations-picker,
+    .ts-local-relations > .ts-local-relations-filter-panel,
+    .ts-local-relations > .ts-local-relations-more-panel
+  ) :is(button,input,select,[role=menuitem]):focus-visible:not(:is(:disabled,[aria-disabled=true],.is-disabled)):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    outline: 2px solid var(--atelier-ui-ink);
+    outline-offset: -3px;
+  }
+  /* Only neutral menu labels: selected, disabled and destructive items keep
+   * the plugin's semantic colors, including keyboard selection. */
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-surface-liquid.atelier-surface-liquid .ts-ui-menu .menu-item:not(:is(.selected,.is-disabled,.is-warning,[aria-disabled=true])):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    color: var(--atelier-ui-ink);
+  }
+  body.atelier-surface-liquid .ts-ui-menu .menu-separator:not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    border-color: var(--atelier-ui-line);
+  }
+}
+
+
+/* Material controls, not extra surfaces. Blend only the existing paint layer;
+ * all controls inherit global solid/accessibility preferences. No animation. */
+@media screen {
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid {
+    --folio-toolbar-solid: calc(clamp(0, var(--atelier-glass-toolbar-solid, 0), 100) * 1%);
+    --folio-popup-solid: calc(clamp(0, var(--atelier-glass-popup-solid, 25), 100) * 1%);
+    --folio-card-solid: calc(clamp(0, var(--atelier-glass-card-solid, 0), 100) * 1%);
+    --folio-toolbar-fill: color-mix(in srgb, var(--atelier-ui-raised) var(--folio-toolbar-solid), var(--folio-glass-fill));
+    --folio-toolbar-filter: var(--folio-glass-filter);
+    --folio-popover-fill: color-mix(in srgb, var(--atelier-ui-raised) var(--folio-popup-solid), var(--folio-glass-fill));
+    --folio-popover-filter: none;
+    --folio-card-fill: color-mix(in srgb, var(--background-primary) var(--folio-card-solid), var(--folio-card-base-fill));
+    --folio-card-filter: none;
+    --folio-native-fill: var(--folio-popover-fill);
+    --folio-native-filter: var(--folio-popover-filter);
+  }
+  @supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    body:is(.theme-light,.theme-dark).atelier-surface-liquid {
+      --folio-popover-filter: blur(clamp(0px, calc(var(--atelier-glass-popup-blur, 12) * 1px), 24px)) saturate(135%);
+      --folio-card-filter: blur(clamp(0px, calc(var(--atelier-glass-card-blur, 6) * 1px), 12px)) saturate(115%);
+    }
+  }
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-glass-solid,
+  html:has(> head > style[data-thoughtspace-tokens][data-interface-style=glass][data-glass-effects=false]) body:is(.theme-light,.theme-dark).atelier-surface-liquid {
+    --folio-toolbar-filter: none;
+    --folio-popover-filter: none;
+    --folio-card-filter: none;
+    --folio-card-fill: var(--background-primary);
+  }
+  @media (prefers-reduced-transparency: reduce), (prefers-contrast: more), (forced-colors: active) {
+    body:is(.theme-light,.theme-dark).atelier-surface-liquid {
+      --folio-toolbar-filter: none;
+      --folio-popover-filter: none;
+      --folio-card-filter: none;
+      --folio-card-fill: var(--background-primary);
+    }
+  }
+  /* The companion plugin sets this marker only during an accepted canvas
+   * gesture, then removes it. Scope is one interacting pane, not the app.
+   * Existing optics pause through the plugin runtime, without rebuilding maps. */
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid :is(.ts-root,.ts-brain-shell,.ts-ui-menu)[data-ts-glass-interacting=true]:not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    --folio-glass-filter: none;
+    --folio-toolbar-filter: none;
+    --folio-popover-filter: none;
+    --folio-card-filter: none;
+    --folio-glass-fill: var(--atelier-ui-raised);
+    --folio-toolbar-fill: var(--atelier-ui-raised);
+    --folio-popover-fill: var(--atelier-ui-raised);
+    --folio-card-fill: var(--background-primary);
+  }
+}
+
+
+/* Native floating controls and current-pane guidance. Paint only: Obsidian
+ * retains tab direction, divider hit areas, prompt sizing, overlay placement,
+ * tooltip arrows and notification behavior. No generated layer or animation.
+ * Text, editors, settings bodies and plugin optical surfaces stay untouched. */
+@media screen {
+  body.atelier-surface-liquid.atelier-glass-native-overlays :is(
+    .prompt,
+    .menu:not(.ts-ui-menu),
+    .suggestion-container,
+    .tooltip:not(:is(.mod-error,.mod-warning,.is-error,.is-warning)),
+    .notice:not(:is(.mod-error,.mod-warning,.is-error,.is-warning))
+  ):not([data-ts-glass-optics=true]):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background: var(--folio-glass-sheen), var(--folio-native-fill, var(--folio-popover-fill, var(--folio-glass-fill)));
+    border-color: var(--folio-popup-edge, var(--folio-glass-edge));
+    box-shadow: var(--folio-popup-light, var(--folio-glass-light)), var(--folio-popup-shadow, var(--atelier-ui-shadow-md));
+    -webkit-backdrop-filter: var(--folio-native-filter, var(--folio-glass-filter));
+    backdrop-filter: var(--folio-native-filter, var(--folio-glass-filter));
+    color: var(--atelier-ui-ink);
+  }
+  body.atelier-surface-liquid.atelier-glass-native-overlays .prompt {
+    box-shadow: var(--folio-popup-light, var(--folio-glass-light)), var(--folio-popup-shadow, var(--atelier-ui-shadow-lg));
+  }
+  /* The directional triangle inherits only the material's color; the native
+   * transparent sides remain transparent in all four tooltip directions. */
+  body.atelier-surface-liquid.atelier-glass-native-overlays .tooltip:not(:is(.mod-error,.mod-warning,.is-error,.is-warning)) {
+    --background-modifier-message: var(--folio-native-fill, var(--folio-popover-fill, var(--folio-glass-fill)));
+  }
+  /* The app marks the active leaf and foreground window. Highlight only that
+   * header. Inactive headers keep opaque labels and gently denser material.
+   * Repeated mode class matches the established toolbar override specificity. */
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-surface-liquid.atelier-surface-liquid.atelier-glass-pane-focus.is-focused .workspace-leaf.mod-active > .workspace-leaf-content > .view-header {
+    box-shadow: var(--folio-toolbar-light, var(--folio-glass-light)), inset 0 -1px 0 color-mix(in srgb, var(--atelier-accent) 55%, var(--atelier-ui-line)), var(--folio-toolbar-shadow, var(--atelier-ui-shadow-sm)) !important;
+  }
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-surface-liquid.atelier-surface-liquid.atelier-glass-pane-focus.is-focused .workspace-leaf:not(.mod-active) > .workspace-leaf-content > .view-header {
+    background: color-mix(in srgb, var(--folio-toolbar-fill, var(--folio-glass-fill)) 65%, var(--atelier-ui-panel)) !important;
+    box-shadow: inset 0 -1px 0 var(--atelier-ui-line) !important;
+  }
+}
+
+
+/* Static material roles for the existing glass sheets. These tokens only
+ * adjust edges and existing shadows; fills, blur controls, geometry and the
+ * plugin's SVG optical surfaces retain their owners. This is a CSS material
+ * approximation, not Apple's native Liquid Glass implementation. */
+@media screen {
+  @media (prefers-reduced-transparency: no-preference) and (prefers-contrast: no-preference) and (forced-colors: none) {
+    @supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+      body:is(.theme-light,.theme-dark).atelier-surface-liquid:not(.atelier-glass-solid) {
+        --folio-toolbar-edge: rgb(255 255 255 / .62);
+        --folio-toolbar-light: inset 0 1px 0 rgb(255 255 255 / .78), inset 0 -1px 0 rgb(36 53 72 / .035);
+        --folio-toolbar-shadow: var(--atelier-ui-shadow-sm);
+        --folio-popup-edge: rgb(255 255 255 / .88);
+        --folio-popup-light: inset 0 1px 0 rgb(255 255 255 / .96), inset 0 -1px 0 rgb(36 53 72 / .055);
+        --folio-popup-shadow: var(--atelier-ui-shadow-md);
+        --folio-card-edge: rgb(255 255 255 / .68);
+        --folio-card-shadow: 0 1px 2px rgb(23 35 52 / .035), 0 8px 20px -10px rgb(23 35 52 / .16);
+      }
+      body.theme-dark.atelier-surface-liquid:not(.atelier-glass-solid) {
+        --folio-toolbar-edge: rgb(220 230 246 / .10);
+        --folio-toolbar-light: inset 0 1px 0 rgb(220 234 255 / .20), inset 0 -1px 0 rgb(12 10 9 / .26);
+        --folio-popup-edge: rgb(220 230 246 / .17);
+        --folio-popup-light: inset 0 1px 0 rgb(224 237 255 / .29), inset 0 -1px 0 rgb(12 10 9 / .32);
+        --folio-card-edge: rgb(218 232 250 / .11);
+        --folio-card-shadow: 0 1px 3px rgb(0 0 0 / .14), 0 10px 20px -10px rgb(0 0 0 / .32);
+      }
+      /* These independently positioned surfaces are listed in the toolbar
+       * inventory but carry popup depth. Only their role aliases change. */
+      body.atelier-surface-liquid :is(.ts-handwriting-popover,.canvas-submenu):not([data-ts-glass-optics=true]):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+        --folio-toolbar-edge: var(--folio-popup-edge, var(--folio-glass-edge));
+        --folio-toolbar-light: var(--folio-popup-light, var(--folio-glass-light));
+        --folio-toolbar-shadow: var(--folio-popup-shadow, var(--atelier-ui-shadow-sm));
+      }
+      /* Preserve the prior flat preference rather than introducing a second
+       * shadow switch. A zero shadow stays valid when combined with insets. */
+      body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-flat {
+        --folio-toolbar-light: 0 0 0 0 transparent;
+        --folio-toolbar-shadow: 0 0 0 0 transparent;
+        --folio-popup-light: 0 0 0 0 transparent;
+        --folio-popup-shadow: 0 0 0 0 transparent;
+        --folio-card-shadow: 0 0 0 0 transparent;
+      }
+      /* The plugin's explicit glass-off choice must also restore the prior
+       * solid paint. No new role tokens escape into that fallback. */
+      html:has(> head > style[data-thoughtspace-tokens][data-interface-style=glass][data-glass-effects=false]) body:is(.theme-light,.theme-dark).atelier-surface-liquid {
+        --folio-toolbar-edge: initial;
+        --folio-toolbar-light: initial;
+        --folio-toolbar-shadow: initial;
+        --folio-popup-edge: initial;
+        --folio-popup-light: initial;
+        --folio-popup-shadow: initial;
+        --folio-card-edge: rgb(255 255 255 / .8);
+        --folio-card-shadow: 0 2px 4px #17233408, 0 10px 26px #1723340c;
+      }
+      html:has(> head > style[data-thoughtspace-tokens][data-interface-style=glass][data-glass-effects=false]) body.theme-dark.atelier-surface-liquid {
+        --folio-card-edge: rgb(255 255 255 / .16);
+        --folio-card-shadow: 0 2px 5px #0003, 0 12px 28px #0003;
+      }
+      html:has(> head > style[data-thoughtspace-tokens][data-interface-style=glass][data-glass-effects=false]) body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-flat {
+        --folio-card-shadow: 0 0 0 0 transparent;
+      }
+    }
+  }
+}
+
+
+/* ThoughtSpace controls, refined within audited toolbar boundaries only.
+ * Existing heights, widths, gaps, padding, scroll owners and click areas stay
+ * plugin-owned. This is paint-only CSS: no extra backdrop surface or listener.
+ * Feedback is bounded to three color properties; all reductions and accepted
+ * board gestures make it immediate. Authored content and calendar stay out. */
+@media screen {
+  body.atelier-surface-liquid {
+    --folio-control-duration: 120ms;
+    --folio-control-properties: background-color, color, border-color;
+    --folio-control-easing: cubic-bezier(.2,.7,.2,1);
+    --folio-control-hover: color-mix(in srgb, var(--atelier-accent) 8%, transparent);
+    --folio-control-edge: color-mix(in srgb, var(--atelier-ui-line) 42%, transparent);
+    --folio-control-field: color-mix(in srgb, var(--atelier-ui-raised) 66%, transparent);
+  }
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-surface-liquid.atelier-surface-liquid :is(.ts-topbar,
+    .ts-commandbar,
+    .ts-floating-formatbar,
+    .ts-view-dock,
+    .ts-markdown-tools,
+    .ts-inline-editor-bar,
+    .ts-card-context-actions,
+    .ts-card-actions,
+    .ts-pdf-controls,
+    .ts-pdf-selection-tools,
+    .ts-brain-topbar,
+    .ts-brain-controls,
+    .ts-brain-selection-actions,
+    .ts-brain-tools-header,
+    .ts-brain-footer,
+    .ts-mm-commandbar,
+    .ts-mm-preview-bar,
+    .ts-mm-tool-actions,
+    .ts-mm-footer,
+    .ts-note-markdown-toolbar,
+    .ts-writing-header,
+    .ts-writing-formatbar,
+    .ts-writing-composer-tools,
+    .ts-writing-dock-head,
+    .ts-writing-reference-heading,
+    .ts-writing-panel-head,
+    .ts-writing-panel-foot,
+    .ts-writing-reference-actions,
+    .ts-reading-commandbar,
+    .ts-reading-tools,
+    .ts-reading-aside-tabs,
+    .ts-reading-footer,
+    .ts-reference-reading-footer,
+    .ts-selection-note-footer,
+    .ts-media-workspace__header,
+    .ts-media-workspace__savebar,
+    .ts-media-workspace__panel-switcher,
+    .ts-media-workspace__layout-control,
+    .ts-media-workspace__timeline-tools,
+    .ts-media-workspace__composer-actions,
+    .ts-media-workspace__draft-tools,
+    .ts-media-workspace__capture-actions,
+    .ts-media-card__toolbar,
+    .ts-media-card__extra-actions,
+    .ts-media-card__capture-actions,
+    .ts-online-workspace__header,
+    .ts-online-workspace__composer-actions,
+    .ts-online-workspace__composer-tools,
+    .ts-online-workspace__capture-actions,
+    .ts-online-board-player__footer,
+    .ts-media-image-modal__actions,
+    .ts-handwriting-toolbar,
+    .ts-handwriting-footer,
+    .ts-handwriting-selection-actions,
+    .ts-handwriting-popover,
+    .ts-handwriting-export-footer,
+    .ts-local-relations-toolbar,
+    .ts-local-relations-secondary-toolbar,
+    .ts-local-relations-controls,
+    .ts-hub-tools,
+    .ts-hub-heading,
+    .ts-hub-footer,
+    .ts-collection-header,
+    .ts-collection-selection-tools,
+    .ts-collection-card-tools,
+    .ts-collection-composer-footer,
+    .ts-materials-tabs,
+    .ts-materials-source-actions,
+    .ts-materials-filters,
+    .ts-materials-footer,
+    .ts-materials-pane-switch,
+    .ts-materials-reading-switch,
+    .ts-db-filters,
+    .ts-db-custom-filters,
+    .ts-native-tools,
+    .ts-native-footer,
+    .ts-settings-header,
+    .ts-catalog-toolbar,
+    .ts-catalog-filters,
+    .ts-catalog-footer,
+    .ts-board-search-filters,
+    .ts-board-search-footer,
+    .ts-view-toolbar,
+    .ts-view-footer,
+    .ts-editor-search-footer,
+    .ts-layout-preview-header,
+    .ts-layout-footer,
+    .ts-brain-position-create,
+    .ts-brain-position-footer,
+    .ts-attachment-browser-controls,
+    .ts-attachment-browser-footer,
+    .ts-reuse-footer,
+    .ts-group-footer,
+    .ts-action-footer,
+    .ts-capture-footer,
+    .ts-paper-settings-footer,
+    .ts-background-settings-footer,
+    .ts-yingjian-footer,
+    .ts-task-filters,
+    .ts-board-rail,
+    .ts-rail-popover,
+    .ts-tools-palette) :is(button,.ts-button,[role=button]):not(:is(.ts-primary,.mod-cta,.is-warning,.mod-warning,.is-danger,.ts-danger,.mod-destructive,:disabled,[aria-disabled=true],.is-disabled)):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *, .markdown-rendered *, .markdown-preview-view *, .cm-editor *, .pdf-container *)) {
+    transition-property: var(--folio-control-properties) !important;
+    transition-duration: var(--folio-control-duration) !important;
+    transition-timing-function: var(--folio-control-easing) !important;
+    transition-delay: 0s !important;
+  }
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-surface-liquid.atelier-surface-liquid :is(.ts-topbar,
+    .ts-commandbar,
+    .ts-floating-formatbar,
+    .ts-view-dock,
+    .ts-markdown-tools,
+    .ts-inline-editor-bar,
+    .ts-card-context-actions,
+    .ts-card-actions,
+    .ts-pdf-controls,
+    .ts-pdf-selection-tools,
+    .ts-brain-topbar,
+    .ts-brain-controls,
+    .ts-brain-selection-actions,
+    .ts-brain-tools-header,
+    .ts-brain-footer,
+    .ts-mm-commandbar,
+    .ts-mm-preview-bar,
+    .ts-mm-tool-actions,
+    .ts-mm-footer,
+    .ts-note-markdown-toolbar,
+    .ts-writing-header,
+    .ts-writing-formatbar,
+    .ts-writing-composer-tools,
+    .ts-writing-dock-head,
+    .ts-writing-reference-heading,
+    .ts-writing-panel-head,
+    .ts-writing-panel-foot,
+    .ts-writing-reference-actions,
+    .ts-reading-commandbar,
+    .ts-reading-tools,
+    .ts-reading-aside-tabs,
+    .ts-reading-footer,
+    .ts-reference-reading-footer,
+    .ts-selection-note-footer,
+    .ts-media-workspace__header,
+    .ts-media-workspace__savebar,
+    .ts-media-workspace__panel-switcher,
+    .ts-media-workspace__layout-control,
+    .ts-media-workspace__timeline-tools,
+    .ts-media-workspace__composer-actions,
+    .ts-media-workspace__draft-tools,
+    .ts-media-workspace__capture-actions,
+    .ts-media-card__toolbar,
+    .ts-media-card__extra-actions,
+    .ts-media-card__capture-actions,
+    .ts-online-workspace__header,
+    .ts-online-workspace__composer-actions,
+    .ts-online-workspace__composer-tools,
+    .ts-online-workspace__capture-actions,
+    .ts-online-board-player__footer,
+    .ts-media-image-modal__actions,
+    .ts-handwriting-toolbar,
+    .ts-handwriting-footer,
+    .ts-handwriting-selection-actions,
+    .ts-handwriting-popover,
+    .ts-handwriting-export-footer,
+    .ts-local-relations-toolbar,
+    .ts-local-relations-secondary-toolbar,
+    .ts-local-relations-controls,
+    .ts-hub-tools,
+    .ts-hub-heading,
+    .ts-hub-footer,
+    .ts-collection-header,
+    .ts-collection-selection-tools,
+    .ts-collection-card-tools,
+    .ts-collection-composer-footer,
+    .ts-materials-tabs,
+    .ts-materials-source-actions,
+    .ts-materials-filters,
+    .ts-materials-footer,
+    .ts-materials-pane-switch,
+    .ts-materials-reading-switch,
+    .ts-db-filters,
+    .ts-db-custom-filters,
+    .ts-native-tools,
+    .ts-native-footer,
+    .ts-settings-header,
+    .ts-catalog-toolbar,
+    .ts-catalog-filters,
+    .ts-catalog-footer,
+    .ts-board-search-filters,
+    .ts-board-search-footer,
+    .ts-view-toolbar,
+    .ts-view-footer,
+    .ts-editor-search-footer,
+    .ts-layout-preview-header,
+    .ts-layout-footer,
+    .ts-brain-position-create,
+    .ts-brain-position-footer,
+    .ts-attachment-browser-controls,
+    .ts-attachment-browser-footer,
+    .ts-reuse-footer,
+    .ts-group-footer,
+    .ts-action-footer,
+    .ts-capture-footer,
+    .ts-paper-settings-footer,
+    .ts-background-settings-footer,
+    .ts-yingjian-footer,
+    .ts-task-filters,
+    .ts-board-rail,
+    .ts-rail-popover,
+    .ts-tools-palette) :is(button,.ts-button,[role=button]):not(:is(.ts-primary,.mod-cta,.is-warning,.mod-warning,.is-danger,.ts-danger,.mod-destructive,:disabled,[aria-disabled=true],.is-disabled)):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *, .markdown-rendered *, .markdown-preview-view *, .cm-editor *, .pdf-container *)):hover:not(:is(.is-active,.is-current,.selected,[aria-selected=true],[aria-pressed=true],[aria-expanded=true])) {
+    background-color: var(--folio-control-hover) !important;
+    border-color: var(--atelier-ui-line) !important;
+    color: var(--atelier-ui-ink) !important;
+  }
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-surface-liquid.atelier-surface-liquid :is(.ts-topbar,
+    .ts-commandbar,
+    .ts-floating-formatbar,
+    .ts-view-dock,
+    .ts-markdown-tools,
+    .ts-inline-editor-bar,
+    .ts-card-context-actions,
+    .ts-card-actions,
+    .ts-pdf-controls,
+    .ts-pdf-selection-tools,
+    .ts-brain-topbar,
+    .ts-brain-controls,
+    .ts-brain-selection-actions,
+    .ts-brain-tools-header,
+    .ts-brain-footer,
+    .ts-mm-commandbar,
+    .ts-mm-preview-bar,
+    .ts-mm-tool-actions,
+    .ts-mm-footer,
+    .ts-note-markdown-toolbar,
+    .ts-writing-header,
+    .ts-writing-formatbar,
+    .ts-writing-composer-tools,
+    .ts-writing-dock-head,
+    .ts-writing-reference-heading,
+    .ts-writing-panel-head,
+    .ts-writing-panel-foot,
+    .ts-writing-reference-actions,
+    .ts-reading-commandbar,
+    .ts-reading-tools,
+    .ts-reading-aside-tabs,
+    .ts-reading-footer,
+    .ts-reference-reading-footer,
+    .ts-selection-note-footer,
+    .ts-media-workspace__header,
+    .ts-media-workspace__savebar,
+    .ts-media-workspace__panel-switcher,
+    .ts-media-workspace__layout-control,
+    .ts-media-workspace__timeline-tools,
+    .ts-media-workspace__composer-actions,
+    .ts-media-workspace__draft-tools,
+    .ts-media-workspace__capture-actions,
+    .ts-media-card__toolbar,
+    .ts-media-card__extra-actions,
+    .ts-media-card__capture-actions,
+    .ts-online-workspace__header,
+    .ts-online-workspace__composer-actions,
+    .ts-online-workspace__composer-tools,
+    .ts-online-workspace__capture-actions,
+    .ts-online-board-player__footer,
+    .ts-media-image-modal__actions,
+    .ts-handwriting-toolbar,
+    .ts-handwriting-footer,
+    .ts-handwriting-selection-actions,
+    .ts-handwriting-popover,
+    .ts-handwriting-export-footer,
+    .ts-local-relations-toolbar,
+    .ts-local-relations-secondary-toolbar,
+    .ts-local-relations-controls,
+    .ts-hub-tools,
+    .ts-hub-heading,
+    .ts-hub-footer,
+    .ts-collection-header,
+    .ts-collection-selection-tools,
+    .ts-collection-card-tools,
+    .ts-collection-composer-footer,
+    .ts-materials-tabs,
+    .ts-materials-source-actions,
+    .ts-materials-filters,
+    .ts-materials-footer,
+    .ts-materials-pane-switch,
+    .ts-materials-reading-switch,
+    .ts-db-filters,
+    .ts-db-custom-filters,
+    .ts-native-tools,
+    .ts-native-footer,
+    .ts-settings-header,
+    .ts-catalog-toolbar,
+    .ts-catalog-filters,
+    .ts-catalog-footer,
+    .ts-board-search-filters,
+    .ts-board-search-footer,
+    .ts-view-toolbar,
+    .ts-view-footer,
+    .ts-editor-search-footer,
+    .ts-layout-preview-header,
+    .ts-layout-footer,
+    .ts-brain-position-create,
+    .ts-brain-position-footer,
+    .ts-attachment-browser-controls,
+    .ts-attachment-browser-footer,
+    .ts-reuse-footer,
+    .ts-group-footer,
+    .ts-action-footer,
+    .ts-capture-footer,
+    .ts-paper-settings-footer,
+    .ts-background-settings-footer,
+    .ts-yingjian-footer,
+    .ts-task-filters,
+    .ts-board-rail,
+    .ts-rail-popover,
+    .ts-tools-palette) :is(button,.ts-button,[role=button]):not(:is(.ts-primary,.mod-cta,.is-warning,.mod-warning,.is-danger,.ts-danger,.mod-destructive,:disabled,[aria-disabled=true],.is-disabled)):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *, .markdown-rendered *, .markdown-preview-view *, .cm-editor *, .pdf-container *)):is(.is-active,.is-current,.selected,[aria-selected=true],[aria-pressed=true],[aria-expanded=true]) {
+    background-color: var(--atelier-ui-subtle) !important;
+    border-color: color-mix(in srgb, var(--atelier-accent) 48%, var(--atelier-ui-line)) !important;
+    color: var(--atelier-ui-ink) !important;
+  }
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-surface-liquid.atelier-surface-liquid :is(.ts-topbar,
+    .ts-commandbar,
+    .ts-floating-formatbar,
+    .ts-view-dock,
+    .ts-markdown-tools,
+    .ts-inline-editor-bar,
+    .ts-card-context-actions,
+    .ts-card-actions,
+    .ts-pdf-controls,
+    .ts-pdf-selection-tools,
+    .ts-brain-topbar,
+    .ts-brain-controls,
+    .ts-brain-selection-actions,
+    .ts-brain-tools-header,
+    .ts-brain-footer,
+    .ts-mm-commandbar,
+    .ts-mm-preview-bar,
+    .ts-mm-tool-actions,
+    .ts-mm-footer,
+    .ts-note-markdown-toolbar,
+    .ts-writing-header,
+    .ts-writing-formatbar,
+    .ts-writing-composer-tools,
+    .ts-writing-dock-head,
+    .ts-writing-reference-heading,
+    .ts-writing-panel-head,
+    .ts-writing-panel-foot,
+    .ts-writing-reference-actions,
+    .ts-reading-commandbar,
+    .ts-reading-tools,
+    .ts-reading-aside-tabs,
+    .ts-reading-footer,
+    .ts-reference-reading-footer,
+    .ts-selection-note-footer,
+    .ts-media-workspace__header,
+    .ts-media-workspace__savebar,
+    .ts-media-workspace__panel-switcher,
+    .ts-media-workspace__layout-control,
+    .ts-media-workspace__timeline-tools,
+    .ts-media-workspace__composer-actions,
+    .ts-media-workspace__draft-tools,
+    .ts-media-workspace__capture-actions,
+    .ts-media-card__toolbar,
+    .ts-media-card__extra-actions,
+    .ts-media-card__capture-actions,
+    .ts-online-workspace__header,
+    .ts-online-workspace__composer-actions,
+    .ts-online-workspace__composer-tools,
+    .ts-online-workspace__capture-actions,
+    .ts-online-board-player__footer,
+    .ts-media-image-modal__actions,
+    .ts-handwriting-toolbar,
+    .ts-handwriting-footer,
+    .ts-handwriting-selection-actions,
+    .ts-handwriting-popover,
+    .ts-handwriting-export-footer,
+    .ts-local-relations-toolbar,
+    .ts-local-relations-secondary-toolbar,
+    .ts-local-relations-controls,
+    .ts-hub-tools,
+    .ts-hub-heading,
+    .ts-hub-footer,
+    .ts-collection-header,
+    .ts-collection-selection-tools,
+    .ts-collection-card-tools,
+    .ts-collection-composer-footer,
+    .ts-materials-tabs,
+    .ts-materials-source-actions,
+    .ts-materials-filters,
+    .ts-materials-footer,
+    .ts-materials-pane-switch,
+    .ts-materials-reading-switch,
+    .ts-db-filters,
+    .ts-db-custom-filters,
+    .ts-native-tools,
+    .ts-native-footer,
+    .ts-settings-header,
+    .ts-catalog-toolbar,
+    .ts-catalog-filters,
+    .ts-catalog-footer,
+    .ts-board-search-filters,
+    .ts-board-search-footer,
+    .ts-view-toolbar,
+    .ts-view-footer,
+    .ts-editor-search-footer,
+    .ts-layout-preview-header,
+    .ts-layout-footer,
+    .ts-brain-position-create,
+    .ts-brain-position-footer,
+    .ts-attachment-browser-controls,
+    .ts-attachment-browser-footer,
+    .ts-reuse-footer,
+    .ts-group-footer,
+    .ts-action-footer,
+    .ts-capture-footer,
+    .ts-paper-settings-footer,
+    .ts-background-settings-footer,
+    .ts-yingjian-footer,
+    .ts-task-filters,
+    .ts-board-rail,
+    .ts-rail-popover,
+    .ts-tools-palette) :is(button,.ts-button,[role=button]):not(:is(.ts-primary,.mod-cta,.is-warning,.mod-warning,.is-danger,.ts-danger,.mod-destructive,:disabled,[aria-disabled=true],.is-disabled)):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *, .markdown-rendered *, .markdown-preview-view *, .cm-editor *, .pdf-container *)):focus-visible {
+    outline: 2px solid var(--atelier-ui-ink);
+    outline-offset: -3px;
+  }
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-surface-liquid.atelier-surface-liquid .ts-root .ts-floating-formatbar .ts-commandbar :is(.ts-appearance-group,.ts-edge-format-group) .ts-format-field:not(:where(.ts-calendar-plugin,.ts-calendar-plugin *, .markdown-rendered *, .markdown-preview-view *, .cm-editor *, .pdf-container *)) {
+    background-color: var(--folio-control-field) !important;
+    border-color: var(--folio-control-edge) !important;
+    transition-property: var(--folio-control-properties) !important;
+    transition-duration: var(--folio-control-duration) !important;
+    transition-timing-function: var(--folio-control-easing) !important;
+    transition-delay: 0s !important;
+  }
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-surface-liquid.atelier-surface-liquid .ts-root .ts-floating-formatbar .ts-commandbar :is(.ts-appearance-group,.ts-edge-format-group) .ts-format-field:hover:not(:where(.ts-calendar-plugin,.ts-calendar-plugin *, .markdown-rendered *, .markdown-preview-view *, .cm-editor *, .pdf-container *)) {
+    border-color: var(--atelier-ui-line-strong) !important;
+  }
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-surface-liquid.atelier-surface-liquid .ts-root .ts-floating-formatbar .ts-commandbar :is(.ts-appearance-group,.ts-edge-format-group) .ts-format-field:focus-within:not(:where(.ts-calendar-plugin,.ts-calendar-plugin *, .markdown-rendered *, .markdown-preview-view *, .cm-editor *, .pdf-container *)) {
+    background-color: var(--atelier-ui-subtle) !important;
+    border-color: var(--atelier-accent) !important;
+  }
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-surface-liquid.atelier-surface-liquid .ts-root .ts-floating-formatbar .ts-commandbar :is(.ts-appearance-group,.ts-edge-format-group) .ts-format-field > .ts-format-label:not(:where(.ts-calendar-plugin,.ts-calendar-plugin *, .markdown-rendered *, .markdown-preview-view *, .cm-editor *, .pdf-container *)) { color: var(--atelier-ui-muted) !important; }
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-surface-liquid.atelier-surface-liquid .ts-root .ts-floating-formatbar .ts-commandbar :is(.ts-appearance-group,.ts-edge-format-group) .ts-format-field select:not(:where(.ts-calendar-plugin,.ts-calendar-plugin *, .markdown-rendered *, .markdown-preview-view *, .cm-editor *, .pdf-container *)) {
+    background-color: transparent !important;
+    color: var(--atelier-ui-ink) !important;
+  }
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-surface-liquid.atelier-surface-liquid .ts-root .ts-floating-formatbar :is(.ts-format-mode,.ts-batch-format-switch):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *, .markdown-rendered *, .markdown-preview-view *, .cm-editor *, .pdf-container *)) {
+    background-color: color-mix(in srgb, var(--atelier-ui-raised) 48%, transparent);
+    box-shadow: inset 0 0 0 1px var(--folio-control-edge);
+  }
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-surface-liquid.atelier-surface-liquid :is(.ts-floating-formatbar,.ts-view-dock,.ts-board-rail,.ts-rail-popover) :is(button,[role=button]) > span:first-child > svg.svg-icon:not(:where(.ts-calendar-plugin,.ts-calendar-plugin *, .markdown-rendered *, .markdown-preview-view *, .cm-editor *, .pdf-container *)) {
+    stroke-width: 1.7;
+  }
+  /* Detached menus are owned and marked by themePluginMenu; do not affect
+   * native menus or semantic destructive/disabled items. */
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-surface-liquid.atelier-surface-liquid .ts-ui-menu .menu-item:not(:is(.is-warning,.is-danger,.is-disabled,[aria-disabled=true])):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *, .markdown-rendered *, .markdown-preview-view *, .cm-editor *, .pdf-container *)) {
+    transition-property: var(--folio-control-properties) !important;
+    transition-duration: var(--folio-control-duration) !important;
+    transition-timing-function: var(--folio-control-easing) !important;
+    transition-delay: 0s !important;
+  }
+  body.atelier-surface-liquid :is(.ts-root,.ts-brain-shell,.ts-ui-menu)[data-ts-glass-interacting=true],
+  body.atelier-surface-liquid.atelier-glass-solid,
+  html:has(> head > style[data-thoughtspace-tokens][data-interface-style=glass][data-glass-effects=false]) body.atelier-surface-liquid { --folio-control-duration: 0s; --folio-control-properties: none; }
+  @media (prefers-reduced-motion: reduce), (prefers-reduced-transparency: reduce), (prefers-contrast: more), (forced-colors: active) {
+    body.atelier-surface-liquid { --folio-control-duration: 0s; --folio-control-properties: none; }
   }
 }
 

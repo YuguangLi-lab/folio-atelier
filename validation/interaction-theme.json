@@ -1,0 +1,3765 @@
+{
+  "pass": true,
+  "scope": "Full latest theme + actual plugin CSS and InterfaceStyleDocuments/SVG/interaction runtime. DOM source fixture accepts canvas events using the actual preventDefault/stopPropagation contract; not complete BoardView rendering, native Obsidian or FPS. CSS isolation is per pane; SVG optics intentionally pause per document.",
+  "themeSHA256": "35f4de409ebecd2b0fbc04f55c9f945e329e2cf2266fc9caa9d61dee0d448c85",
+  "cases": [
+    {
+      "color": "light",
+      "style": "glass",
+      "checks": [
+        "All active-pane material types have blur before interaction",
+        "Material probes are visibly rendered",
+        "Focused card active; idle card stays inexpensive",
+        "Actual SVG dock active",
+        "pointerup: accepted event marks active pane only",
+        "pointerup: toolbar, focused card and popup filters disabled",
+        "pointerup: independent pane and source material unchanged",
+        "pointerup: geometry and hit behavior unchanged",
+        "pointerup: detached owned menu pauses",
+        "pointerup: actual SVG dock pauses",
+        "pointerup: material restored exactly",
+        "pointerup: transient markers removed",
+        "pointercancel: accepted event marks active pane only",
+        "pointercancel: toolbar, focused card and popup filters disabled",
+        "pointercancel: independent pane and source material unchanged",
+        "pointercancel: geometry and hit behavior unchanged",
+        "pointercancel: detached owned menu pauses",
+        "pointercancel: actual SVG dock pauses",
+        "pointercancel: material restored exactly",
+        "pointercancel: transient markers removed",
+        "No browser runtime errors"
+      ],
+      "states": {
+        "baseline": {
+          "a": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              20,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              960,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-toolbar": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              30,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-card": {
+            "filter": "blur(6px) saturate(1.15)",
+            "fill": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              50,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-popup": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              456,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-dock": {
+            "filter": "url(\"#ts-glass-lens-1\")",
+            "fill": "color(srgb 0.984314 0.984314 0.992157 / 0.26)",
+            "marker": null,
+            "optics": "true",
+            "rect": [
+              28,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-toolbar": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              970,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-card": {
+            "filter": "none",
+            "fill": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              990,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-popup": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1396,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b-dock": {
+            "filter": "url(\"#ts-glass-lens-2\")",
+            "fill": "color(srgb 0.984314 0.984314 0.992157 / 0.26)",
+            "marker": null,
+            "optics": "true",
+            "rect": [
+              968,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "menu": {
+            "filter": "url(\"#ts-glass-lens-3\")",
+            "fill": "color(srgb 0.984314 0.984314 0.992157 / 0.26)",
+            "marker": null,
+            "optics": "true",
+            "rect": [
+              30,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "detached-source": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1620,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          }
+        },
+        "pointerup-active": {
+          "a": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": "true",
+            "optics": null,
+            "rect": [
+              20,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              960,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-toolbar": {
+            "filter": "none",
+            "fill": "rgb(255, 255, 255)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              30,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-card": {
+            "filter": "none",
+            "fill": "rgb(253, 254, 253)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              50,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-popup": {
+            "filter": "none",
+            "fill": "rgb(255, 255, 255)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              456,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-dock": {
+            "filter": "none",
+            "fill": "color(srgb 0.984314 0.984314 0.992157 / 0.26)",
+            "marker": null,
+            "optics": "true",
+            "rect": [
+              28,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-toolbar": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              970,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-card": {
+            "filter": "none",
+            "fill": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              990,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-popup": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1396,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b-dock": {
+            "filter": "none",
+            "fill": "color(srgb 0.984314 0.984314 0.992157 / 0.26)",
+            "marker": null,
+            "optics": "true",
+            "rect": [
+              968,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "menu": {
+            "filter": "none",
+            "fill": "color(srgb 0.984314 0.984314 0.992157 / 0.26)",
+            "marker": "true",
+            "optics": "true",
+            "rect": [
+              30,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "detached-source": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1620,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          }
+        },
+        "pointerup-restored": {
+          "a": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              20,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              960,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-toolbar": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              30,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-card": {
+            "filter": "blur(6px) saturate(1.15)",
+            "fill": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              50,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-popup": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              456,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-dock": {
+            "filter": "url(\"#ts-glass-lens-1\")",
+            "fill": "color(srgb 0.984314 0.984314 0.992157 / 0.26)",
+            "marker": null,
+            "optics": "true",
+            "rect": [
+              28,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-toolbar": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              970,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-card": {
+            "filter": "none",
+            "fill": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              990,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-popup": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1396,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b-dock": {
+            "filter": "url(\"#ts-glass-lens-2\")",
+            "fill": "color(srgb 0.984314 0.984314 0.992157 / 0.26)",
+            "marker": null,
+            "optics": "true",
+            "rect": [
+              968,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "menu": {
+            "filter": "url(\"#ts-glass-lens-3\")",
+            "fill": "color(srgb 0.984314 0.984314 0.992157 / 0.26)",
+            "marker": null,
+            "optics": "true",
+            "rect": [
+              30,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "detached-source": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1620,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          }
+        },
+        "pointercancel-active": {
+          "a": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": "true",
+            "optics": null,
+            "rect": [
+              20,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              960,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-toolbar": {
+            "filter": "none",
+            "fill": "rgb(255, 255, 255)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              30,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-card": {
+            "filter": "none",
+            "fill": "rgb(253, 254, 253)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              50,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-popup": {
+            "filter": "none",
+            "fill": "rgb(255, 255, 255)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              456,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-dock": {
+            "filter": "none",
+            "fill": "color(srgb 0.984314 0.984314 0.992157 / 0.26)",
+            "marker": null,
+            "optics": "true",
+            "rect": [
+              28,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-toolbar": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              970,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-card": {
+            "filter": "none",
+            "fill": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              990,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-popup": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1396,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b-dock": {
+            "filter": "none",
+            "fill": "color(srgb 0.984314 0.984314 0.992157 / 0.26)",
+            "marker": null,
+            "optics": "true",
+            "rect": [
+              968,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "menu": {
+            "filter": "none",
+            "fill": "color(srgb 0.984314 0.984314 0.992157 / 0.26)",
+            "marker": "true",
+            "optics": "true",
+            "rect": [
+              30,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "detached-source": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1620,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          }
+        },
+        "pointercancel-restored": {
+          "a": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              20,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              960,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-toolbar": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              30,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-card": {
+            "filter": "blur(6px) saturate(1.15)",
+            "fill": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              50,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-popup": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              456,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-dock": {
+            "filter": "url(\"#ts-glass-lens-1\")",
+            "fill": "color(srgb 0.984314 0.984314 0.992157 / 0.26)",
+            "marker": null,
+            "optics": "true",
+            "rect": [
+              28,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-toolbar": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              970,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-card": {
+            "filter": "none",
+            "fill": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              990,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-popup": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1396,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b-dock": {
+            "filter": "url(\"#ts-glass-lens-2\")",
+            "fill": "color(srgb 0.984314 0.984314 0.992157 / 0.26)",
+            "marker": null,
+            "optics": "true",
+            "rect": [
+              968,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "menu": {
+            "filter": "url(\"#ts-glass-lens-3\")",
+            "fill": "color(srgb 0.984314 0.984314 0.992157 / 0.26)",
+            "marker": null,
+            "optics": "true",
+            "rect": [
+              30,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "detached-source": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1620,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          }
+        }
+      },
+      "errors": [],
+      "pass": true
+    },
+    {
+      "color": "light",
+      "style": "paper",
+      "checks": [
+        "All active-pane material types have blur before interaction",
+        "Material probes are visibly rendered",
+        "Focused card active; idle card stays inexpensive",
+        "pointerup: accepted event marks active pane only",
+        "pointerup: toolbar, focused card and popup filters disabled",
+        "pointerup: independent pane and source material unchanged",
+        "pointerup: geometry and hit behavior unchanged",
+        "pointerup: detached owned menu pauses",
+        "pointerup: material restored exactly",
+        "pointerup: transient markers removed",
+        "pointercancel: accepted event marks active pane only",
+        "pointercancel: toolbar, focused card and popup filters disabled",
+        "pointercancel: independent pane and source material unchanged",
+        "pointercancel: geometry and hit behavior unchanged",
+        "pointercancel: detached owned menu pauses",
+        "pointercancel: material restored exactly",
+        "pointercancel: transient markers removed",
+        "No browser runtime errors"
+      ],
+      "states": {
+        "baseline": {
+          "a": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              20,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              960,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-toolbar": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              30,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-card": {
+            "filter": "blur(6px) saturate(1.15)",
+            "fill": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              50,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-popup": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              456,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-dock": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              28,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-toolbar": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              970,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-card": {
+            "filter": "none",
+            "fill": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              990,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-popup": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1396,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b-dock": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              968,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "menu": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              30,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "detached-source": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1620,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          }
+        },
+        "pointerup-active": {
+          "a": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": "true",
+            "optics": null,
+            "rect": [
+              20,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              960,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-toolbar": {
+            "filter": "none",
+            "fill": "rgb(255, 255, 255)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              30,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-card": {
+            "filter": "none",
+            "fill": "rgb(253, 254, 253)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              50,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-popup": {
+            "filter": "none",
+            "fill": "rgb(255, 255, 255)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              456,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-dock": {
+            "filter": "none",
+            "fill": "rgb(255, 255, 255)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              28,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-toolbar": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              970,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-card": {
+            "filter": "none",
+            "fill": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              990,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-popup": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1396,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b-dock": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              968,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "menu": {
+            "filter": "none",
+            "fill": "rgb(255, 255, 255)",
+            "marker": "true",
+            "optics": null,
+            "rect": [
+              30,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "detached-source": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1620,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          }
+        },
+        "pointerup-restored": {
+          "a": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              20,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              960,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-toolbar": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              30,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-card": {
+            "filter": "blur(6px) saturate(1.15)",
+            "fill": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              50,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-popup": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              456,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-dock": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              28,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-toolbar": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              970,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-card": {
+            "filter": "none",
+            "fill": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              990,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-popup": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1396,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b-dock": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              968,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "menu": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              30,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "detached-source": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1620,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          }
+        },
+        "pointercancel-active": {
+          "a": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": "true",
+            "optics": null,
+            "rect": [
+              20,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              960,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-toolbar": {
+            "filter": "none",
+            "fill": "rgb(255, 255, 255)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              30,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-card": {
+            "filter": "none",
+            "fill": "rgb(253, 254, 253)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              50,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-popup": {
+            "filter": "none",
+            "fill": "rgb(255, 255, 255)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              456,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-dock": {
+            "filter": "none",
+            "fill": "rgb(255, 255, 255)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              28,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-toolbar": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              970,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-card": {
+            "filter": "none",
+            "fill": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              990,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-popup": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1396,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b-dock": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              968,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "menu": {
+            "filter": "none",
+            "fill": "rgb(255, 255, 255)",
+            "marker": "true",
+            "optics": null,
+            "rect": [
+              30,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "detached-source": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1620,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          }
+        },
+        "pointercancel-restored": {
+          "a": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              20,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              960,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-toolbar": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              30,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-card": {
+            "filter": "blur(6px) saturate(1.15)",
+            "fill": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              50,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-popup": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              456,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-dock": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              28,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-toolbar": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              970,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-card": {
+            "filter": "none",
+            "fill": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              990,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-popup": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1396,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b-dock": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              968,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "menu": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              30,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "detached-source": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1620,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          }
+        }
+      },
+      "errors": [],
+      "pass": true
+    },
+    {
+      "color": "dark",
+      "style": "glass",
+      "checks": [
+        "All active-pane material types have blur before interaction",
+        "Material probes are visibly rendered",
+        "Focused card active; idle card stays inexpensive",
+        "Actual SVG dock active",
+        "pointerup: accepted event marks active pane only",
+        "pointerup: toolbar, focused card and popup filters disabled",
+        "pointerup: independent pane and source material unchanged",
+        "pointerup: geometry and hit behavior unchanged",
+        "pointerup: detached owned menu pauses",
+        "pointerup: actual SVG dock pauses",
+        "pointerup: material restored exactly",
+        "pointerup: transient markers removed",
+        "pointercancel: accepted event marks active pane only",
+        "pointercancel: toolbar, focused card and popup filters disabled",
+        "pointercancel: independent pane and source material unchanged",
+        "pointercancel: geometry and hit behavior unchanged",
+        "pointercancel: detached owned menu pauses",
+        "pointercancel: actual SVG dock pauses",
+        "pointercancel: material restored exactly",
+        "pointercancel: transient markers removed",
+        "No browser runtime errors"
+      ],
+      "states": {
+        "baseline": {
+          "a": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              20,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              960,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-toolbar": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              30,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-card": {
+            "filter": "blur(6px) saturate(1.15)",
+            "fill": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              50,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-popup": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              456,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-dock": {
+            "filter": "url(\"#ts-glass-lens-1\")",
+            "fill": "color(srgb 0.172549 0.172549 0.180392 / 0.26)",
+            "marker": null,
+            "optics": "true",
+            "rect": [
+              28,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-toolbar": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              970,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-card": {
+            "filter": "none",
+            "fill": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              990,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-popup": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1396,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b-dock": {
+            "filter": "url(\"#ts-glass-lens-2\")",
+            "fill": "color(srgb 0.172549 0.172549 0.180392 / 0.26)",
+            "marker": null,
+            "optics": "true",
+            "rect": [
+              968,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "menu": {
+            "filter": "url(\"#ts-glass-lens-3\")",
+            "fill": "color(srgb 0.172549 0.172549 0.180392 / 0.26)",
+            "marker": null,
+            "optics": "true",
+            "rect": [
+              30,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "detached-source": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1620,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          }
+        },
+        "pointerup-active": {
+          "a": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": "true",
+            "optics": null,
+            "rect": [
+              20,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              960,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-toolbar": {
+            "filter": "none",
+            "fill": "rgb(48, 48, 52)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              30,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-card": {
+            "filter": "none",
+            "fill": "rgb(34, 41, 39)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              50,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-popup": {
+            "filter": "none",
+            "fill": "rgb(48, 48, 52)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              456,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-dock": {
+            "filter": "none",
+            "fill": "color(srgb 0.172549 0.172549 0.180392 / 0.26)",
+            "marker": null,
+            "optics": "true",
+            "rect": [
+              28,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-toolbar": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              970,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-card": {
+            "filter": "none",
+            "fill": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              990,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-popup": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1396,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b-dock": {
+            "filter": "none",
+            "fill": "color(srgb 0.172549 0.172549 0.180392 / 0.26)",
+            "marker": null,
+            "optics": "true",
+            "rect": [
+              968,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "menu": {
+            "filter": "none",
+            "fill": "color(srgb 0.172549 0.172549 0.180392 / 0.26)",
+            "marker": "true",
+            "optics": "true",
+            "rect": [
+              30,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "detached-source": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1620,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          }
+        },
+        "pointerup-restored": {
+          "a": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              20,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              960,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-toolbar": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              30,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-card": {
+            "filter": "blur(6px) saturate(1.15)",
+            "fill": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              50,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-popup": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              456,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-dock": {
+            "filter": "url(\"#ts-glass-lens-1\")",
+            "fill": "color(srgb 0.172549 0.172549 0.180392 / 0.26)",
+            "marker": null,
+            "optics": "true",
+            "rect": [
+              28,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-toolbar": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              970,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-card": {
+            "filter": "none",
+            "fill": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              990,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-popup": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1396,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b-dock": {
+            "filter": "url(\"#ts-glass-lens-2\")",
+            "fill": "color(srgb 0.172549 0.172549 0.180392 / 0.26)",
+            "marker": null,
+            "optics": "true",
+            "rect": [
+              968,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "menu": {
+            "filter": "url(\"#ts-glass-lens-3\")",
+            "fill": "color(srgb 0.172549 0.172549 0.180392 / 0.26)",
+            "marker": null,
+            "optics": "true",
+            "rect": [
+              30,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "detached-source": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1620,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          }
+        },
+        "pointercancel-active": {
+          "a": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": "true",
+            "optics": null,
+            "rect": [
+              20,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              960,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-toolbar": {
+            "filter": "none",
+            "fill": "rgb(48, 48, 52)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              30,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-card": {
+            "filter": "none",
+            "fill": "rgb(34, 41, 39)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              50,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-popup": {
+            "filter": "none",
+            "fill": "rgb(48, 48, 52)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              456,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-dock": {
+            "filter": "none",
+            "fill": "color(srgb 0.172549 0.172549 0.180392 / 0.26)",
+            "marker": null,
+            "optics": "true",
+            "rect": [
+              28,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-toolbar": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              970,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-card": {
+            "filter": "none",
+            "fill": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              990,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-popup": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1396,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b-dock": {
+            "filter": "none",
+            "fill": "color(srgb 0.172549 0.172549 0.180392 / 0.26)",
+            "marker": null,
+            "optics": "true",
+            "rect": [
+              968,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "menu": {
+            "filter": "none",
+            "fill": "color(srgb 0.172549 0.172549 0.180392 / 0.26)",
+            "marker": "true",
+            "optics": "true",
+            "rect": [
+              30,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "detached-source": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1620,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          }
+        },
+        "pointercancel-restored": {
+          "a": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              20,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              960,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-toolbar": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              30,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-card": {
+            "filter": "blur(6px) saturate(1.15)",
+            "fill": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              50,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-popup": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              456,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-dock": {
+            "filter": "url(\"#ts-glass-lens-1\")",
+            "fill": "color(srgb 0.172549 0.172549 0.180392 / 0.26)",
+            "marker": null,
+            "optics": "true",
+            "rect": [
+              28,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-toolbar": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              970,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-card": {
+            "filter": "none",
+            "fill": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              990,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-popup": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1396,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b-dock": {
+            "filter": "url(\"#ts-glass-lens-2\")",
+            "fill": "color(srgb 0.172549 0.172549 0.180392 / 0.26)",
+            "marker": null,
+            "optics": "true",
+            "rect": [
+              968,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "menu": {
+            "filter": "url(\"#ts-glass-lens-3\")",
+            "fill": "color(srgb 0.172549 0.172549 0.180392 / 0.26)",
+            "marker": null,
+            "optics": "true",
+            "rect": [
+              30,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "detached-source": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1620,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          }
+        }
+      },
+      "errors": [],
+      "pass": true
+    },
+    {
+      "color": "dark",
+      "style": "paper",
+      "checks": [
+        "All active-pane material types have blur before interaction",
+        "Material probes are visibly rendered",
+        "Focused card active; idle card stays inexpensive",
+        "pointerup: accepted event marks active pane only",
+        "pointerup: toolbar, focused card and popup filters disabled",
+        "pointerup: independent pane and source material unchanged",
+        "pointerup: geometry and hit behavior unchanged",
+        "pointerup: detached owned menu pauses",
+        "pointerup: material restored exactly",
+        "pointerup: transient markers removed",
+        "pointercancel: accepted event marks active pane only",
+        "pointercancel: toolbar, focused card and popup filters disabled",
+        "pointercancel: independent pane and source material unchanged",
+        "pointercancel: geometry and hit behavior unchanged",
+        "pointercancel: detached owned menu pauses",
+        "pointercancel: material restored exactly",
+        "pointercancel: transient markers removed",
+        "No browser runtime errors"
+      ],
+      "states": {
+        "baseline": {
+          "a": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              20,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              960,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-toolbar": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              30,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-card": {
+            "filter": "blur(6px) saturate(1.15)",
+            "fill": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              50,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-popup": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              456,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-dock": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              28,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-toolbar": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              970,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-card": {
+            "filter": "none",
+            "fill": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              990,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-popup": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1396,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b-dock": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              968,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "menu": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              30,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "detached-source": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1620,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          }
+        },
+        "pointerup-active": {
+          "a": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": "true",
+            "optics": null,
+            "rect": [
+              20,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              960,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-toolbar": {
+            "filter": "none",
+            "fill": "rgb(48, 48, 52)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              30,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-card": {
+            "filter": "none",
+            "fill": "rgb(34, 41, 39)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              50,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-popup": {
+            "filter": "none",
+            "fill": "rgb(48, 48, 52)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              456,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-dock": {
+            "filter": "none",
+            "fill": "rgb(48, 48, 52)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              28,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-toolbar": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              970,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-card": {
+            "filter": "none",
+            "fill": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              990,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-popup": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1396,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b-dock": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              968,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "menu": {
+            "filter": "none",
+            "fill": "rgb(48, 48, 52)",
+            "marker": "true",
+            "optics": null,
+            "rect": [
+              30,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "detached-source": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1620,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          }
+        },
+        "pointerup-restored": {
+          "a": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              20,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              960,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-toolbar": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              30,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-card": {
+            "filter": "blur(6px) saturate(1.15)",
+            "fill": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              50,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-popup": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              456,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-dock": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              28,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-toolbar": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              970,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-card": {
+            "filter": "none",
+            "fill": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              990,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-popup": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1396,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b-dock": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              968,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "menu": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              30,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "detached-source": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1620,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          }
+        },
+        "pointercancel-active": {
+          "a": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": "true",
+            "optics": null,
+            "rect": [
+              20,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              960,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-toolbar": {
+            "filter": "none",
+            "fill": "rgb(48, 48, 52)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              30,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-card": {
+            "filter": "none",
+            "fill": "rgb(34, 41, 39)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              50,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-popup": {
+            "filter": "none",
+            "fill": "rgb(48, 48, 52)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              456,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-dock": {
+            "filter": "none",
+            "fill": "rgb(48, 48, 52)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              28,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-toolbar": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              970,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-card": {
+            "filter": "none",
+            "fill": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              990,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-popup": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1396,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b-dock": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              968,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "menu": {
+            "filter": "none",
+            "fill": "rgb(48, 48, 52)",
+            "marker": "true",
+            "optics": null,
+            "rect": [
+              30,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "detached-source": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1620,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          }
+        },
+        "pointercancel-restored": {
+          "a": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              20,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b": {
+            "filter": "none",
+            "fill": "rgba(0, 0, 0, 0)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              960,
+              20,
+              920,
+              640
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-toolbar": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              30,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-card": {
+            "filter": "blur(6px) saturate(1.15)",
+            "fill": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              50,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "a-popup": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              456,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "a-dock": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              28,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-toolbar": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              970,
+              30,
+              65,
+              46
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-card": {
+            "filter": "none",
+            "fill": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              990,
+              120,
+              260,
+              150
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "b-popup": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1396,
+              565,
+              230,
+              70
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "b-dock": {
+            "filter": "blur(16px) saturate(1.55)",
+            "fill": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              968,
+              575,
+              170,
+              50
+            ],
+            "pointerEvents": "auto",
+            "display": "flex",
+            "visibility": "visible"
+          },
+          "menu": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              30,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          },
+          "detached-source": {
+            "filter": "blur(12px) saturate(1.35)",
+            "fill": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "marker": null,
+            "optics": null,
+            "rect": [
+              1620,
+              720,
+              250,
+              60
+            ],
+            "pointerEvents": "auto",
+            "display": "block",
+            "visibility": "visible"
+          }
+        }
+      },
+      "errors": [],
+      "pass": true
+    }
+  ]
+}

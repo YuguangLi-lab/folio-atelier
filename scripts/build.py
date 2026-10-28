@@ -6,7 +6,11 @@ source = (root / 'src/folio.css').read_text()
 modules = []
 EXPECTED_MODULES = ['palette.css', 'thoughtspace-current.css',
                     'atelier-foundation.css', 'atelier-native-ui.css',
-                    'atelier-thoughtspace-ui.css', 'atelier-surface-modes.css']
+                    'atelier-thoughtspace-ui.css', 'atelier-surface-modes.css',
+                    'atelier-liquid-plugin.css', 'atelier-glass-toolbars.css', 'atelier-glass-backgrounds.css',
+                    'atelier-glass-popovers.css', 'atelier-glass-zones.css',
+                    'atelier-glass-workspace.css', 'atelier-glass-depth.css',
+                    'atelier-glass-controls.css']
 def inline(match):
     name = match.group(1)
     assert name in EXPECTED_MODULES, name

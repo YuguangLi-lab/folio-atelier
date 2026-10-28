@@ -1,0 +1,13 @@
+{
+  "version": "1.3.38-folio.10",
+  "runtimeSHA256": {
+    "main.js": "4a4646656a658ebc1fdeccc7d6524d1191ff7391dde27aab698d564a7ad8f431",
+    "styles.css": "70fc955f57c3581bae7b83d11ed87e0deff2b2c61296b7ad29d105f52afe6c67",
+    "manifest.json": "1ad5e9353e8ddf3bd870a9ab3878c485d271a548a3a03b5145bff112094ed78c"
+  },
+  "validatedBaseUnitTests": 10382,
+  "validatedBaseFailures": 0,
+  "baselineEvidenceDate": "2026-10-23",
+  "unitTestsRerunForThisCSSRelease": false,
+  "scope": "Unchanged companion runtime, identity rechecked; current CSS and browser interaction tests are separate reports."
+}

@@ -1,0 +1,2875 @@
+{
+  "pass": true,
+  "scope": "Owned source-derived board and floating controls with pinned plugin CSS/runtime; sliders and pane marker isolation, not native app",
+  "themeSHA256": "35f4de409ebecd2b0fbc04f55c9f945e329e2cf2266fc9caa9d61dee0d448c85",
+  "cases": [
+    {
+      "color": "light",
+      "width": 390,
+      "checks": {
+        "defaultMaterial": true,
+        "idle": true,
+        "palettePopup": true,
+        "toolbarIsolation": true,
+        "paletteControl": true,
+        "popupIsolation": true,
+        "cardIsolation": true,
+        "separateBlur": true,
+        "paneIsolation": true,
+        "restore": true,
+        "solid": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrast": true,
+        "forced-colors": true,
+        "pluginOff": true
+      },
+      "states": {
+        "idle": {
+          "toolbar": {
+            "bg": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "alpha": 0.82,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "324px",
+              "56px",
+              "none",
+              "static",
+              "5px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "palette": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "alpha": 0.865,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "436px",
+              "max-content",
+              "none",
+              "absolute",
+              "0px",
+              "auto 0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "popup": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "alpha": 0.865,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "260px",
+              "94px",
+              "none",
+              "fixed",
+              "16px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "card": {
+            "bg": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "alpha": 0.93,
+            "filter": "none",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.333), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.08)), none",
+            "geom": [
+              "260px",
+              "190px",
+              "none",
+              "absolute",
+              "0px",
+              "0px"
+            ],
+            "color": "rgb(41, 54, 49)"
+          },
+          "other": {
+            "bg": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "alpha": 0.82,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "16px",
+              "53px",
+              "none",
+              "static",
+              "4px 8px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          }
+        },
+        "base": {
+          "toolbar": {
+            "bg": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "alpha": 0.82,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "324px",
+              "56px",
+              "none",
+              "static",
+              "5px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "palette": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "alpha": 0.865,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "436px",
+              "max-content",
+              "none",
+              "absolute",
+              "0px",
+              "auto 0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "popup": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "alpha": 0.865,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "260px",
+              "94px",
+              "none",
+              "fixed",
+              "16px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "card": {
+            "bg": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "alpha": 0.93,
+            "filter": "blur(6px) saturate(1.15)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.333), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.08)), none",
+            "geom": [
+              "260px",
+              "190px",
+              "none",
+              "absolute",
+              "0px",
+              "0px"
+            ],
+            "color": "rgb(41, 54, 49)"
+          },
+          "other": {
+            "bg": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "alpha": 0.82,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "16px",
+              "53px",
+              "none",
+              "static",
+              "4px 8px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          }
+        },
+        "toolbarSolid": {
+          "toolbar": {
+            "bg": "color(srgb 1 1 1)",
+            "alpha": 1,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "324px",
+              "56px",
+              "none",
+              "static",
+              "5px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "palette": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "alpha": 0.865,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "436px",
+              "max-content",
+              "none",
+              "absolute",
+              "0px",
+              "auto 0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "popup": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "alpha": 0.865,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "260px",
+              "94px",
+              "none",
+              "fixed",
+              "16px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "card": {
+            "bg": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "alpha": 0.93,
+            "filter": "blur(6px) saturate(1.15)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.333), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.08)), none",
+            "geom": [
+              "260px",
+              "190px",
+              "none",
+              "absolute",
+              "0px",
+              "0px"
+            ],
+            "color": "rgb(41, 54, 49)"
+          },
+          "other": {
+            "bg": "color(srgb 1 1 1)",
+            "alpha": 1,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "16px",
+              "53px",
+              "none",
+              "static",
+              "4px 8px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          }
+        },
+        "popupSolid": {
+          "toolbar": {
+            "bg": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "alpha": 0.82,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "324px",
+              "56px",
+              "none",
+              "static",
+              "5px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "palette": {
+            "bg": "color(srgb 1 1 1)",
+            "alpha": 1,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "436px",
+              "max-content",
+              "none",
+              "absolute",
+              "0px",
+              "auto 0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "popup": {
+            "bg": "color(srgb 1 1 1)",
+            "alpha": 1,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "260px",
+              "94px",
+              "none",
+              "fixed",
+              "16px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "card": {
+            "bg": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "alpha": 0.93,
+            "filter": "blur(6px) saturate(1.15)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.333), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.08)), none",
+            "geom": [
+              "260px",
+              "190px",
+              "none",
+              "absolute",
+              "0px",
+              "0px"
+            ],
+            "color": "rgb(41, 54, 49)"
+          },
+          "other": {
+            "bg": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "alpha": 0.82,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "16px",
+              "53px",
+              "none",
+              "static",
+              "4px 8px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          }
+        },
+        "cardSolid": {
+          "toolbar": {
+            "bg": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "alpha": 0.82,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "324px",
+              "56px",
+              "none",
+              "static",
+              "5px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "palette": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "alpha": 0.865,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "436px",
+              "max-content",
+              "none",
+              "absolute",
+              "0px",
+              "auto 0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "popup": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "alpha": 0.865,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "260px",
+              "94px",
+              "none",
+              "fixed",
+              "16px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "card": {
+            "bg": "color(srgb 0.992157 0.996078 0.992157)",
+            "alpha": 1,
+            "filter": "blur(6px) saturate(1.15)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.333), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.08)), none",
+            "geom": [
+              "260px",
+              "190px",
+              "none",
+              "absolute",
+              "0px",
+              "0px"
+            ],
+            "color": "rgb(41, 54, 49)"
+          },
+          "other": {
+            "bg": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "alpha": 0.82,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "16px",
+              "53px",
+              "none",
+              "static",
+              "4px 8px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          }
+        },
+        "separate": {
+          "toolbar": {
+            "bg": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "alpha": 0.82,
+            "filter": "blur(24px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "324px",
+              "56px",
+              "none",
+              "static",
+              "5px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "palette": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "alpha": 0.865,
+            "filter": "blur(22px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "436px",
+              "max-content",
+              "none",
+              "absolute",
+              "0px",
+              "auto 0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "popup": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "alpha": 0.865,
+            "filter": "blur(22px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "260px",
+              "94px",
+              "none",
+              "fixed",
+              "16px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "card": {
+            "bg": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "alpha": 0.93,
+            "filter": "blur(2px) saturate(1.15)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.333), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.08)), none",
+            "geom": [
+              "260px",
+              "190px",
+              "none",
+              "absolute",
+              "0px",
+              "0px"
+            ],
+            "color": "rgb(41, 54, 49)"
+          },
+          "other": {
+            "bg": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "alpha": 0.82,
+            "filter": "blur(24px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "16px",
+              "53px",
+              "none",
+              "static",
+              "4px 8px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          }
+        },
+        "interacting": {
+          "toolbar": {
+            "bg": "rgb(255, 255, 255)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "324px",
+              "56px",
+              "none",
+              "static",
+              "5px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "palette": {
+            "bg": "rgb(255, 255, 255)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "436px",
+              "max-content",
+              "none",
+              "absolute",
+              "0px",
+              "auto 0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "popup": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "alpha": 0.865,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "260px",
+              "94px",
+              "none",
+              "fixed",
+              "16px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "card": {
+            "bg": "rgb(253, 254, 253)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.333), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.08)), none",
+            "geom": [
+              "260px",
+              "190px",
+              "none",
+              "absolute",
+              "0px",
+              "0px"
+            ],
+            "color": "rgb(41, 54, 49)"
+          },
+          "other": {
+            "bg": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "alpha": 0.82,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "16px",
+              "53px",
+              "none",
+              "static",
+              "4px 8px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          }
+        },
+        "solid": {
+          "toolbar": {
+            "bg": "color(srgb 1 1 1)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "324px",
+              "56px",
+              "none",
+              "static",
+              "5px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "palette": {
+            "bg": "color(srgb 1 1 1)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "436px",
+              "max-content",
+              "none",
+              "absolute",
+              "0px",
+              "auto 0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "popup": {
+            "bg": "color(srgb 1 1 1)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "260px",
+              "94px",
+              "none",
+              "fixed",
+              "16px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "card": {
+            "bg": "rgb(253, 254, 253)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "260px",
+              "190px",
+              "none",
+              "absolute",
+              "0px",
+              "0px"
+            ],
+            "color": "rgb(41, 54, 49)"
+          },
+          "other": {
+            "bg": "color(srgb 1 1 1)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "16px",
+              "53px",
+              "none",
+              "static",
+              "4px 8px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          }
+        },
+        "off": {
+          "toolbar": {
+            "bg": "color(srgb 1 1 1)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "324px",
+              "56px",
+              "none",
+              "static",
+              "5px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "palette": {
+            "bg": "color(srgb 1 1 1)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "436px",
+              "max-content",
+              "none",
+              "absolute",
+              "0px",
+              "auto 0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "popup": {
+            "bg": "color(srgb 1 1 1)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "260px",
+              "94px",
+              "none",
+              "fixed",
+              "16px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "card": {
+            "bg": "rgb(253, 254, 253)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "260px",
+              "190px",
+              "none",
+              "absolute",
+              "0px",
+              "0px"
+            ],
+            "color": "rgb(41, 54, 49)"
+          },
+          "other": {
+            "bg": "color(srgb 1 1 1)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "16px",
+              "53px",
+              "none",
+              "static",
+              "4px 8px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          }
+        }
+      },
+      "pass": true
+    },
+    {
+      "color": "light",
+      "width": 1180,
+      "checks": {
+        "defaultMaterial": true,
+        "idle": true,
+        "palettePopup": true,
+        "toolbarIsolation": true,
+        "paletteControl": true,
+        "popupIsolation": true,
+        "cardIsolation": true,
+        "separateBlur": true,
+        "paneIsolation": true,
+        "restore": true,
+        "solid": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrast": true,
+        "forced-colors": true,
+        "pluginOff": true
+      },
+      "states": {
+        "idle": {
+          "toolbar": {
+            "bg": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "alpha": 0.82,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "452px",
+              "42px",
+              "none",
+              "static",
+              "5px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "palette": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "alpha": 0.865,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "436px",
+              "max-content",
+              "none",
+              "absolute",
+              "0px",
+              "auto 0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "popup": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "alpha": 0.865,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "260px",
+              "94px",
+              "none",
+              "fixed",
+              "16px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "card": {
+            "bg": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "alpha": 0.93,
+            "filter": "none",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.333), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.08)), none",
+            "geom": [
+              "260px",
+              "190px",
+              "none",
+              "absolute",
+              "0px",
+              "0px"
+            ],
+            "color": "rgb(41, 54, 49)"
+          },
+          "other": {
+            "bg": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "alpha": 0.82,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "16px",
+              "48px",
+              "none",
+              "static",
+              "4px 8px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          }
+        },
+        "base": {
+          "toolbar": {
+            "bg": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "alpha": 0.82,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "452px",
+              "42px",
+              "none",
+              "static",
+              "5px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "palette": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "alpha": 0.865,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "436px",
+              "max-content",
+              "none",
+              "absolute",
+              "0px",
+              "auto 0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "popup": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "alpha": 0.865,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "260px",
+              "94px",
+              "none",
+              "fixed",
+              "16px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "card": {
+            "bg": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "alpha": 0.93,
+            "filter": "blur(6px) saturate(1.15)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.333), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.08)), none",
+            "geom": [
+              "260px",
+              "190px",
+              "none",
+              "absolute",
+              "0px",
+              "0px"
+            ],
+            "color": "rgb(41, 54, 49)"
+          },
+          "other": {
+            "bg": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "alpha": 0.82,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "16px",
+              "48px",
+              "none",
+              "static",
+              "4px 8px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          }
+        },
+        "toolbarSolid": {
+          "toolbar": {
+            "bg": "color(srgb 1 1 1)",
+            "alpha": 1,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "452px",
+              "42px",
+              "none",
+              "static",
+              "5px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "palette": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "alpha": 0.865,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "436px",
+              "max-content",
+              "none",
+              "absolute",
+              "0px",
+              "auto 0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "popup": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "alpha": 0.865,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "260px",
+              "94px",
+              "none",
+              "fixed",
+              "16px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "card": {
+            "bg": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "alpha": 0.93,
+            "filter": "blur(6px) saturate(1.15)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.333), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.08)), none",
+            "geom": [
+              "260px",
+              "190px",
+              "none",
+              "absolute",
+              "0px",
+              "0px"
+            ],
+            "color": "rgb(41, 54, 49)"
+          },
+          "other": {
+            "bg": "color(srgb 1 1 1)",
+            "alpha": 1,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "16px",
+              "48px",
+              "none",
+              "static",
+              "4px 8px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          }
+        },
+        "popupSolid": {
+          "toolbar": {
+            "bg": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "alpha": 0.82,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "452px",
+              "42px",
+              "none",
+              "static",
+              "5px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "palette": {
+            "bg": "color(srgb 1 1 1)",
+            "alpha": 1,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "436px",
+              "max-content",
+              "none",
+              "absolute",
+              "0px",
+              "auto 0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "popup": {
+            "bg": "color(srgb 1 1 1)",
+            "alpha": 1,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "260px",
+              "94px",
+              "none",
+              "fixed",
+              "16px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "card": {
+            "bg": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "alpha": 0.93,
+            "filter": "blur(6px) saturate(1.15)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.333), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.08)), none",
+            "geom": [
+              "260px",
+              "190px",
+              "none",
+              "absolute",
+              "0px",
+              "0px"
+            ],
+            "color": "rgb(41, 54, 49)"
+          },
+          "other": {
+            "bg": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "alpha": 0.82,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "16px",
+              "48px",
+              "none",
+              "static",
+              "4px 8px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          }
+        },
+        "cardSolid": {
+          "toolbar": {
+            "bg": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "alpha": 0.82,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "452px",
+              "42px",
+              "none",
+              "static",
+              "5px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "palette": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "alpha": 0.865,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "436px",
+              "max-content",
+              "none",
+              "absolute",
+              "0px",
+              "auto 0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "popup": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "alpha": 0.865,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "260px",
+              "94px",
+              "none",
+              "fixed",
+              "16px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "card": {
+            "bg": "color(srgb 0.992157 0.996078 0.992157)",
+            "alpha": 1,
+            "filter": "blur(6px) saturate(1.15)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.333), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.08)), none",
+            "geom": [
+              "260px",
+              "190px",
+              "none",
+              "absolute",
+              "0px",
+              "0px"
+            ],
+            "color": "rgb(41, 54, 49)"
+          },
+          "other": {
+            "bg": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "alpha": 0.82,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "16px",
+              "48px",
+              "none",
+              "static",
+              "4px 8px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          }
+        },
+        "separate": {
+          "toolbar": {
+            "bg": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "alpha": 0.82,
+            "filter": "blur(24px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "452px",
+              "42px",
+              "none",
+              "static",
+              "5px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "palette": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "alpha": 0.865,
+            "filter": "blur(22px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "436px",
+              "max-content",
+              "none",
+              "absolute",
+              "0px",
+              "auto 0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "popup": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "alpha": 0.865,
+            "filter": "blur(22px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "260px",
+              "94px",
+              "none",
+              "fixed",
+              "16px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "card": {
+            "bg": "color(srgb 0.988235 0.988235 0.996078 / 0.93)",
+            "alpha": 0.93,
+            "filter": "blur(2px) saturate(1.15)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.333), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.08)), none",
+            "geom": [
+              "260px",
+              "190px",
+              "none",
+              "absolute",
+              "0px",
+              "0px"
+            ],
+            "color": "rgb(41, 54, 49)"
+          },
+          "other": {
+            "bg": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "alpha": 0.82,
+            "filter": "blur(24px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "16px",
+              "48px",
+              "none",
+              "static",
+              "4px 8px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          }
+        },
+        "interacting": {
+          "toolbar": {
+            "bg": "rgb(255, 255, 255)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "452px",
+              "42px",
+              "none",
+              "static",
+              "5px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "palette": {
+            "bg": "rgb(255, 255, 255)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "436px",
+              "max-content",
+              "none",
+              "absolute",
+              "0px",
+              "auto 0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "popup": {
+            "bg": "color(srgb 0.986059 0.986059 0.994424 / 0.865)",
+            "alpha": 0.865,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "260px",
+              "94px",
+              "none",
+              "fixed",
+              "16px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "card": {
+            "bg": "rgb(253, 254, 253)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.333), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.08)), none",
+            "geom": [
+              "260px",
+              "190px",
+              "none",
+              "absolute",
+              "0px",
+              "0px"
+            ],
+            "color": "rgb(41, 54, 49)"
+          },
+          "other": {
+            "bg": "color(srgb 0.980392 0.980392 0.992157 / 0.82)",
+            "alpha": 0.82,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.07) 100%), none",
+            "geom": [
+              "16px",
+              "48px",
+              "none",
+              "static",
+              "4px 8px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          }
+        },
+        "solid": {
+          "toolbar": {
+            "bg": "color(srgb 1 1 1)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "452px",
+              "42px",
+              "none",
+              "static",
+              "5px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "palette": {
+            "bg": "color(srgb 1 1 1)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "436px",
+              "max-content",
+              "none",
+              "absolute",
+              "0px",
+              "auto 0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "popup": {
+            "bg": "color(srgb 1 1 1)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "260px",
+              "94px",
+              "none",
+              "fixed",
+              "16px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "card": {
+            "bg": "rgb(253, 254, 253)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "260px",
+              "190px",
+              "none",
+              "absolute",
+              "0px",
+              "0px"
+            ],
+            "color": "rgb(41, 54, 49)"
+          },
+          "other": {
+            "bg": "color(srgb 1 1 1)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "16px",
+              "48px",
+              "none",
+              "static",
+              "4px 8px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          }
+        },
+        "off": {
+          "toolbar": {
+            "bg": "color(srgb 1 1 1)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "452px",
+              "42px",
+              "none",
+              "static",
+              "5px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "palette": {
+            "bg": "color(srgb 1 1 1)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "436px",
+              "max-content",
+              "none",
+              "absolute",
+              "0px",
+              "auto 0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "popup": {
+            "bg": "color(srgb 1 1 1)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "260px",
+              "94px",
+              "none",
+              "fixed",
+              "16px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          },
+          "card": {
+            "bg": "rgb(253, 254, 253)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "260px",
+              "190px",
+              "none",
+              "absolute",
+              "0px",
+              "0px"
+            ],
+            "color": "rgb(41, 54, 49)"
+          },
+          "other": {
+            "bg": "color(srgb 1 1 1)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "16px",
+              "48px",
+              "none",
+              "static",
+              "4px 8px",
+              "0px"
+            ],
+            "color": "rgb(29, 29, 31)"
+          }
+        }
+      },
+      "pass": true
+    },
+    {
+      "color": "dark",
+      "width": 390,
+      "checks": {
+        "defaultMaterial": true,
+        "idle": true,
+        "palettePopup": true,
+        "toolbarIsolation": true,
+        "paletteControl": true,
+        "popupIsolation": true,
+        "cardIsolation": true,
+        "separateBlur": true,
+        "paneIsolation": true,
+        "restore": true,
+        "solid": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrast": true,
+        "forced-colors": true,
+        "pluginOff": true
+      },
+      "states": {
+        "idle": {
+          "toolbar": {
+            "bg": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "alpha": 0.86,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "324px",
+              "56px",
+              "none",
+              "static",
+              "5px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "palette": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "alpha": 0.895,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "436px",
+              "max-content",
+              "none",
+              "absolute",
+              "0px",
+              "auto 0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "popup": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "alpha": 0.895,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "260px",
+              "94px",
+              "none",
+              "fixed",
+              "16px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "card": {
+            "bg": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "alpha": 0.95,
+            "filter": "none",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.047), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.01)), none",
+            "geom": [
+              "260px",
+              "190px",
+              "none",
+              "absolute",
+              "0px",
+              "0px"
+            ],
+            "color": "rgb(226, 234, 229)"
+          },
+          "other": {
+            "bg": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "alpha": 0.86,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "16px",
+              "53px",
+              "none",
+              "static",
+              "4px 8px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          }
+        },
+        "base": {
+          "toolbar": {
+            "bg": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "alpha": 0.86,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "324px",
+              "56px",
+              "none",
+              "static",
+              "5px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "palette": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "alpha": 0.895,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "436px",
+              "max-content",
+              "none",
+              "absolute",
+              "0px",
+              "auto 0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "popup": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "alpha": 0.895,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "260px",
+              "94px",
+              "none",
+              "fixed",
+              "16px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "card": {
+            "bg": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "alpha": 0.95,
+            "filter": "blur(6px) saturate(1.15)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.047), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.01)), none",
+            "geom": [
+              "260px",
+              "190px",
+              "none",
+              "absolute",
+              "0px",
+              "0px"
+            ],
+            "color": "rgb(226, 234, 229)"
+          },
+          "other": {
+            "bg": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "alpha": 0.86,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "16px",
+              "53px",
+              "none",
+              "static",
+              "4px 8px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          }
+        },
+        "toolbarSolid": {
+          "toolbar": {
+            "bg": "color(srgb 0.188235 0.188235 0.203922)",
+            "alpha": 1,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "324px",
+              "56px",
+              "none",
+              "static",
+              "5px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "palette": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "alpha": 0.895,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "436px",
+              "max-content",
+              "none",
+              "absolute",
+              "0px",
+              "auto 0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "popup": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "alpha": 0.895,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "260px",
+              "94px",
+              "none",
+              "fixed",
+              "16px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "card": {
+            "bg": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "alpha": 0.95,
+            "filter": "blur(6px) saturate(1.15)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.047), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.01)), none",
+            "geom": [
+              "260px",
+              "190px",
+              "none",
+              "absolute",
+              "0px",
+              "0px"
+            ],
+            "color": "rgb(226, 234, 229)"
+          },
+          "other": {
+            "bg": "color(srgb 0.188235 0.188235 0.203922)",
+            "alpha": 1,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "16px",
+              "53px",
+              "none",
+              "static",
+              "4px 8px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          }
+        },
+        "popupSolid": {
+          "toolbar": {
+            "bg": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "alpha": 0.86,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "324px",
+              "56px",
+              "none",
+              "static",
+              "5px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "palette": {
+            "bg": "color(srgb 0.188235 0.188235 0.203922)",
+            "alpha": 1,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "436px",
+              "max-content",
+              "none",
+              "absolute",
+              "0px",
+              "auto 0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "popup": {
+            "bg": "color(srgb 0.188235 0.188235 0.203922)",
+            "alpha": 1,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "260px",
+              "94px",
+              "none",
+              "fixed",
+              "16px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "card": {
+            "bg": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "alpha": 0.95,
+            "filter": "blur(6px) saturate(1.15)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.047), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.01)), none",
+            "geom": [
+              "260px",
+              "190px",
+              "none",
+              "absolute",
+              "0px",
+              "0px"
+            ],
+            "color": "rgb(226, 234, 229)"
+          },
+          "other": {
+            "bg": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "alpha": 0.86,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "16px",
+              "53px",
+              "none",
+              "static",
+              "4px 8px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          }
+        },
+        "cardSolid": {
+          "toolbar": {
+            "bg": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "alpha": 0.86,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "324px",
+              "56px",
+              "none",
+              "static",
+              "5px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "palette": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "alpha": 0.895,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "436px",
+              "max-content",
+              "none",
+              "absolute",
+              "0px",
+              "auto 0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "popup": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "alpha": 0.895,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "260px",
+              "94px",
+              "none",
+              "fixed",
+              "16px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "card": {
+            "bg": "color(srgb 0.133333 0.160784 0.152941)",
+            "alpha": 1,
+            "filter": "blur(6px) saturate(1.15)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.047), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.01)), none",
+            "geom": [
+              "260px",
+              "190px",
+              "none",
+              "absolute",
+              "0px",
+              "0px"
+            ],
+            "color": "rgb(226, 234, 229)"
+          },
+          "other": {
+            "bg": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "alpha": 0.86,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "16px",
+              "53px",
+              "none",
+              "static",
+              "4px 8px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          }
+        },
+        "separate": {
+          "toolbar": {
+            "bg": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "alpha": 0.86,
+            "filter": "blur(24px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "324px",
+              "56px",
+              "none",
+              "static",
+              "5px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "palette": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "alpha": 0.895,
+            "filter": "blur(22px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "436px",
+              "max-content",
+              "none",
+              "absolute",
+              "0px",
+              "auto 0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "popup": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "alpha": 0.895,
+            "filter": "blur(22px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "260px",
+              "94px",
+              "none",
+              "fixed",
+              "16px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "card": {
+            "bg": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "alpha": 0.95,
+            "filter": "blur(2px) saturate(1.15)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.047), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.01)), none",
+            "geom": [
+              "260px",
+              "190px",
+              "none",
+              "absolute",
+              "0px",
+              "0px"
+            ],
+            "color": "rgb(226, 234, 229)"
+          },
+          "other": {
+            "bg": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "alpha": 0.86,
+            "filter": "blur(24px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "16px",
+              "53px",
+              "none",
+              "static",
+              "4px 8px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          }
+        },
+        "interacting": {
+          "toolbar": {
+            "bg": "rgb(48, 48, 52)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "324px",
+              "56px",
+              "none",
+              "static",
+              "5px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "palette": {
+            "bg": "rgb(48, 48, 52)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "436px",
+              "max-content",
+              "none",
+              "absolute",
+              "0px",
+              "auto 0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "popup": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "alpha": 0.895,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "260px",
+              "94px",
+              "none",
+              "fixed",
+              "16px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "card": {
+            "bg": "rgb(34, 41, 39)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.047), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.01)), none",
+            "geom": [
+              "260px",
+              "190px",
+              "none",
+              "absolute",
+              "0px",
+              "0px"
+            ],
+            "color": "rgb(226, 234, 229)"
+          },
+          "other": {
+            "bg": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "alpha": 0.86,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "16px",
+              "53px",
+              "none",
+              "static",
+              "4px 8px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          }
+        },
+        "solid": {
+          "toolbar": {
+            "bg": "color(srgb 0.188235 0.188235 0.203922)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "324px",
+              "56px",
+              "none",
+              "static",
+              "5px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "palette": {
+            "bg": "color(srgb 0.188235 0.188235 0.203922)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "436px",
+              "max-content",
+              "none",
+              "absolute",
+              "0px",
+              "auto 0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "popup": {
+            "bg": "color(srgb 0.188235 0.188235 0.203922)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "260px",
+              "94px",
+              "none",
+              "fixed",
+              "16px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "card": {
+            "bg": "rgb(34, 41, 39)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "260px",
+              "190px",
+              "none",
+              "absolute",
+              "0px",
+              "0px"
+            ],
+            "color": "rgb(226, 234, 229)"
+          },
+          "other": {
+            "bg": "color(srgb 0.188235 0.188235 0.203922)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "16px",
+              "53px",
+              "none",
+              "static",
+              "4px 8px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          }
+        },
+        "off": {
+          "toolbar": {
+            "bg": "color(srgb 0.188235 0.188235 0.203922)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "324px",
+              "56px",
+              "none",
+              "static",
+              "5px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "palette": {
+            "bg": "color(srgb 0.188235 0.188235 0.203922)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "436px",
+              "max-content",
+              "none",
+              "absolute",
+              "0px",
+              "auto 0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "popup": {
+            "bg": "color(srgb 0.188235 0.188235 0.203922)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "260px",
+              "94px",
+              "none",
+              "fixed",
+              "16px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "card": {
+            "bg": "rgb(34, 41, 39)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "260px",
+              "190px",
+              "none",
+              "absolute",
+              "0px",
+              "0px"
+            ],
+            "color": "rgb(226, 234, 229)"
+          },
+          "other": {
+            "bg": "color(srgb 0.188235 0.188235 0.203922)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "16px",
+              "53px",
+              "none",
+              "static",
+              "4px 8px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          }
+        }
+      },
+      "pass": true
+    },
+    {
+      "color": "dark",
+      "width": 1180,
+      "checks": {
+        "defaultMaterial": true,
+        "idle": true,
+        "palettePopup": true,
+        "toolbarIsolation": true,
+        "paletteControl": true,
+        "popupIsolation": true,
+        "cardIsolation": true,
+        "separateBlur": true,
+        "paneIsolation": true,
+        "restore": true,
+        "solid": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrast": true,
+        "forced-colors": true,
+        "pluginOff": true
+      },
+      "states": {
+        "idle": {
+          "toolbar": {
+            "bg": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "alpha": 0.86,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "452px",
+              "42px",
+              "none",
+              "static",
+              "5px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "palette": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "alpha": 0.895,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "436px",
+              "max-content",
+              "none",
+              "absolute",
+              "0px",
+              "auto 0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "popup": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "alpha": 0.895,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "260px",
+              "94px",
+              "none",
+              "fixed",
+              "16px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "card": {
+            "bg": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "alpha": 0.95,
+            "filter": "none",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.047), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.01)), none",
+            "geom": [
+              "260px",
+              "190px",
+              "none",
+              "absolute",
+              "0px",
+              "0px"
+            ],
+            "color": "rgb(226, 234, 229)"
+          },
+          "other": {
+            "bg": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "alpha": 0.86,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "16px",
+              "48px",
+              "none",
+              "static",
+              "4px 8px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          }
+        },
+        "base": {
+          "toolbar": {
+            "bg": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "alpha": 0.86,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "452px",
+              "42px",
+              "none",
+              "static",
+              "5px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "palette": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "alpha": 0.895,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "436px",
+              "max-content",
+              "none",
+              "absolute",
+              "0px",
+              "auto 0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "popup": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "alpha": 0.895,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "260px",
+              "94px",
+              "none",
+              "fixed",
+              "16px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "card": {
+            "bg": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "alpha": 0.95,
+            "filter": "blur(6px) saturate(1.15)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.047), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.01)), none",
+            "geom": [
+              "260px",
+              "190px",
+              "none",
+              "absolute",
+              "0px",
+              "0px"
+            ],
+            "color": "rgb(226, 234, 229)"
+          },
+          "other": {
+            "bg": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "alpha": 0.86,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "16px",
+              "48px",
+              "none",
+              "static",
+              "4px 8px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          }
+        },
+        "toolbarSolid": {
+          "toolbar": {
+            "bg": "color(srgb 0.188235 0.188235 0.203922)",
+            "alpha": 1,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "452px",
+              "42px",
+              "none",
+              "static",
+              "5px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "palette": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "alpha": 0.895,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "436px",
+              "max-content",
+              "none",
+              "absolute",
+              "0px",
+              "auto 0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "popup": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "alpha": 0.895,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "260px",
+              "94px",
+              "none",
+              "fixed",
+              "16px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "card": {
+            "bg": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "alpha": 0.95,
+            "filter": "blur(6px) saturate(1.15)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.047), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.01)), none",
+            "geom": [
+              "260px",
+              "190px",
+              "none",
+              "absolute",
+              "0px",
+              "0px"
+            ],
+            "color": "rgb(226, 234, 229)"
+          },
+          "other": {
+            "bg": "color(srgb 0.188235 0.188235 0.203922)",
+            "alpha": 1,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "16px",
+              "48px",
+              "none",
+              "static",
+              "4px 8px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          }
+        },
+        "popupSolid": {
+          "toolbar": {
+            "bg": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "alpha": 0.86,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "452px",
+              "42px",
+              "none",
+              "static",
+              "5px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "palette": {
+            "bg": "color(srgb 0.188235 0.188235 0.203922)",
+            "alpha": 1,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "436px",
+              "max-content",
+              "none",
+              "absolute",
+              "0px",
+              "auto 0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "popup": {
+            "bg": "color(srgb 0.188235 0.188235 0.203922)",
+            "alpha": 1,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "260px",
+              "94px",
+              "none",
+              "fixed",
+              "16px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "card": {
+            "bg": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "alpha": 0.95,
+            "filter": "blur(6px) saturate(1.15)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.047), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.01)), none",
+            "geom": [
+              "260px",
+              "190px",
+              "none",
+              "absolute",
+              "0px",
+              "0px"
+            ],
+            "color": "rgb(226, 234, 229)"
+          },
+          "other": {
+            "bg": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "alpha": 0.86,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "16px",
+              "48px",
+              "none",
+              "static",
+              "4px 8px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          }
+        },
+        "cardSolid": {
+          "toolbar": {
+            "bg": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "alpha": 0.86,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "452px",
+              "42px",
+              "none",
+              "static",
+              "5px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "palette": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "alpha": 0.895,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "436px",
+              "max-content",
+              "none",
+              "absolute",
+              "0px",
+              "auto 0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "popup": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "alpha": 0.895,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "260px",
+              "94px",
+              "none",
+              "fixed",
+              "16px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "card": {
+            "bg": "color(srgb 0.133333 0.160784 0.152941)",
+            "alpha": 1,
+            "filter": "blur(6px) saturate(1.15)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.047), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.01)), none",
+            "geom": [
+              "260px",
+              "190px",
+              "none",
+              "absolute",
+              "0px",
+              "0px"
+            ],
+            "color": "rgb(226, 234, 229)"
+          },
+          "other": {
+            "bg": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "alpha": 0.86,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "16px",
+              "48px",
+              "none",
+              "static",
+              "4px 8px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          }
+        },
+        "separate": {
+          "toolbar": {
+            "bg": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "alpha": 0.86,
+            "filter": "blur(24px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "452px",
+              "42px",
+              "none",
+              "static",
+              "5px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "palette": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "alpha": 0.895,
+            "filter": "blur(22px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "436px",
+              "max-content",
+              "none",
+              "absolute",
+              "0px",
+              "auto 0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "popup": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "alpha": 0.895,
+            "filter": "blur(22px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "260px",
+              "94px",
+              "none",
+              "fixed",
+              "16px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "card": {
+            "bg": "color(srgb 0.137255 0.145098 0.160784 / 0.95)",
+            "alpha": 0.95,
+            "filter": "blur(2px) saturate(1.15)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.047), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.01)), none",
+            "geom": [
+              "260px",
+              "190px",
+              "none",
+              "absolute",
+              "0px",
+              "0px"
+            ],
+            "color": "rgb(226, 234, 229)"
+          },
+          "other": {
+            "bg": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "alpha": 0.86,
+            "filter": "blur(24px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "16px",
+              "48px",
+              "none",
+              "static",
+              "4px 8px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          }
+        },
+        "interacting": {
+          "toolbar": {
+            "bg": "rgb(48, 48, 52)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "452px",
+              "42px",
+              "none",
+              "static",
+              "5px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "palette": {
+            "bg": "rgb(48, 48, 52)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "436px",
+              "max-content",
+              "none",
+              "absolute",
+              "0px",
+              "auto 0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "popup": {
+            "bg": "color(srgb 0.165626 0.165626 0.184138 / 0.895)",
+            "alpha": 0.895,
+            "filter": "blur(12px) saturate(1.35)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "260px",
+              "94px",
+              "none",
+              "fixed",
+              "16px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "card": {
+            "bg": "rgb(34, 41, 39)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.047), rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.01)), none",
+            "geom": [
+              "260px",
+              "190px",
+              "none",
+              "absolute",
+              "0px",
+              "0px"
+            ],
+            "color": "rgb(226, 234, 229)"
+          },
+          "other": {
+            "bg": "color(srgb 0.156863 0.156863 0.176471 / 0.86)",
+            "alpha": 0.86,
+            "filter": "blur(16px) saturate(1.55)",
+            "img": "linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0.024) 100%), none",
+            "geom": [
+              "16px",
+              "48px",
+              "none",
+              "static",
+              "4px 8px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          }
+        },
+        "solid": {
+          "toolbar": {
+            "bg": "color(srgb 0.188235 0.188235 0.203922)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "452px",
+              "42px",
+              "none",
+              "static",
+              "5px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "palette": {
+            "bg": "color(srgb 0.188235 0.188235 0.203922)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "436px",
+              "max-content",
+              "none",
+              "absolute",
+              "0px",
+              "auto 0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "popup": {
+            "bg": "color(srgb 0.188235 0.188235 0.203922)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "260px",
+              "94px",
+              "none",
+              "fixed",
+              "16px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "card": {
+            "bg": "rgb(34, 41, 39)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "260px",
+              "190px",
+              "none",
+              "absolute",
+              "0px",
+              "0px"
+            ],
+            "color": "rgb(226, 234, 229)"
+          },
+          "other": {
+            "bg": "color(srgb 0.188235 0.188235 0.203922)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "16px",
+              "48px",
+              "none",
+              "static",
+              "4px 8px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          }
+        },
+        "off": {
+          "toolbar": {
+            "bg": "color(srgb 0.188235 0.188235 0.203922)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "452px",
+              "42px",
+              "none",
+              "static",
+              "5px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "palette": {
+            "bg": "color(srgb 0.188235 0.188235 0.203922)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "436px",
+              "max-content",
+              "none",
+              "absolute",
+              "0px",
+              "auto 0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "popup": {
+            "bg": "color(srgb 0.188235 0.188235 0.203922)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "260px",
+              "94px",
+              "none",
+              "fixed",
+              "16px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          },
+          "card": {
+            "bg": "rgb(34, 41, 39)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "260px",
+              "190px",
+              "none",
+              "absolute",
+              "0px",
+              "0px"
+            ],
+            "color": "rgb(226, 234, 229)"
+          },
+          "other": {
+            "bg": "color(srgb 0.188235 0.188235 0.203922)",
+            "alpha": 1,
+            "filter": "none",
+            "img": "none, none",
+            "geom": [
+              "16px",
+              "48px",
+              "none",
+              "static",
+              "4px 8px",
+              "0px"
+            ],
+            "color": "rgb(245, 245, 247)"
+          }
+        }
+      },
+      "pass": true
+    }
+  ]
+}

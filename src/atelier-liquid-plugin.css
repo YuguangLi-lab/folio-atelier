@@ -1,0 +1,204 @@
+/* ThoughtSpace glass refinement: actual outer shells used by Folio.9 and
+ * 1.3.38. Paint only: plugin owns positions, dimensions, overflow and hiding.
+ * One blur per floating shell; no canvas-wide filter or decorative overlay. */
+@media screen {
+  body.atelier-surface-liquid {
+    --folio-glass-hover: rgb(29 29 31 / .065);
+    --folio-glass-row: rgb(255 255 255 / .28);
+    --folio-glass-field: #ffffff;
+    --folio-glass-canvas: #eef0f3;
+  }
+  body.theme-dark.atelier-surface-liquid {
+    --folio-glass-hover: rgb(255 255 255 / .09);
+    --folio-glass-row: rgb(255 255 255 / .025);
+    --folio-glass-field: #303034;
+    --folio-glass-canvas: #202226;
+  }
+  body.atelier-surface-liquid.atelier-glass-canvas-mist { --folio-glass-canvas: #e7eef2; }
+  body.theme-dark.atelier-surface-liquid.atelier-glass-canvas-mist { --folio-glass-canvas: #1c272e; }
+  body.atelier-surface-liquid.atelier-glass-canvas-sand { --folio-glass-canvas: #f2ede5; }
+  body.theme-dark.atelier-surface-liquid.atelier-glass-canvas-sand { --folio-glass-canvas: #292621; }
+
+  /* Preserve paper/image layers and the inline grid origin/size used by zoom
+   * and snapping. Only the ground beneath the existing pattern is replaced. */
+  body.atelier-surface-liquid:not(.atelier-glass-canvas-original) .ts-root:is([data-background=plain],[data-background=dots],[data-background=grid]) :is(.ts-main > .ts-stage,.ts-brain-stage):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background-color: var(--folio-glass-canvas);
+  }
+
+  /* Tokens stay on chrome, never inherited by authored cards or editors. */
+  body.atelier-surface-liquid .ts-root.ts-root.ts-root :is(.ts-board-rail,.ts-floating-formatbar,.ts-view-dock,.ts-rail-popover,.ts-inspector,.ts-minimap):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    --ts-canvas-chrome-line: var(--atelier-ui-line);
+    --ts-board-line: var(--atelier-ui-line);
+    --ts-board-panel: var(--atelier-ui-raised);
+    --ts-format-line: var(--atelier-ui-line);
+    --ts-format-wash: var(--folio-glass-row);
+    --ts-format-active: var(--atelier-ui-subtle);
+    color: var(--atelier-ui-ink);
+  }
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid .ts-root.ts-root.ts-root .ts-main > :is(.ts-board-rail,.ts-floating-formatbar):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)),
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid .ts-root.ts-root.ts-root .ts-footer > .ts-view-dock:not([data-ts-glass-optics=true]):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background: var(--folio-glass-sheen), var(--folio-toolbar-fill, var(--folio-glass-fill)) !important;
+    border-color: var(--folio-toolbar-edge, var(--folio-glass-edge)) !important;
+    border-radius: var(--atelier-ui-radius-lg) !important;
+    box-shadow: var(--folio-toolbar-light, var(--folio-glass-light)), var(--folio-toolbar-shadow, var(--atelier-ui-shadow-md)) !important;
+    -webkit-backdrop-filter: var(--folio-toolbar-filter, var(--folio-glass-filter)) !important;
+    backdrop-filter: var(--folio-toolbar-filter, var(--folio-glass-filter)) !important;
+  }
+  body.atelier-surface-liquid .ts-root.ts-root.ts-root .ts-floating-formatbar .ts-commandbar:not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)),
+  body.atelier-surface-liquid .ts-root.ts-root.ts-root .ts-view-dock :is(.ts-canvas-controls,.ts-camera-controls,.ts-zoom):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background: transparent !important;
+    border-color: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+  body.atelier-surface-liquid .ts-root.ts-root.ts-root .ts-floating-formatbar > :is(.ts-format-heading,.ts-card-context):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background: transparent;
+    color: var(--atelier-ui-ink);
+    border-color: var(--atelier-ui-line);
+  }
+  body.atelier-surface-liquid .ts-root.ts-root.ts-root .ts-floating-formatbar > .ts-format-row:not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background: var(--folio-glass-row);
+    border-color: var(--atelier-ui-line);
+    border-radius: 0 0 15px 15px;
+  }
+  body.atelier-surface-liquid .ts-root.ts-root.ts-root :is(.ts-floating-formatbar,.ts-view-dock) :is(select,.ts-format-field):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background-color: var(--folio-glass-field);
+    color: var(--atelier-ui-ink);
+    border-color: var(--atelier-ui-line);
+    box-shadow: none;
+  }
+  body.atelier-surface-liquid .ts-root.ts-root.ts-root :is(.ts-floating-formatbar,.ts-view-dock,.ts-rail-popover) :is(.ts-format-label,.ts-format-context,.ts-background-caption,.ts-rail-caption,.ts-rail-search-icon):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    color: var(--atelier-ui-ink);
+  }
+
+  /* Rows use a single shared hover/pressed treatment. Preserve primary,
+   * destructive and unavailable commands and their original callbacks. */
+  body.atelier-surface-liquid .ts-root.ts-root.ts-root :is(.ts-board-rail,.ts-floating-formatbar,.ts-view-dock,.ts-rail-popover,.ts-inspector) :is(.ts-button,.ts-format-mode-button,.ts-format-scroll):not(:is(.ts-primary,.mod-cta,.is-warning,.mod-warning,.is-danger,.ts-danger,.mod-destructive,:disabled,[aria-disabled=true])):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    color: var(--atelier-ui-ink) !important;
+  }
+  body.atelier-surface-liquid .ts-root.ts-root.ts-root :is(.ts-board-rail,.ts-floating-formatbar,.ts-view-dock,.ts-rail-popover,.ts-inspector) :is(.ts-button,.ts-format-mode-button,.ts-format-scroll):hover:not(:is(.ts-primary,.mod-cta,.is-warning,.mod-warning,.is-danger,.ts-danger,.mod-destructive,:disabled,[aria-disabled=true])):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background: var(--folio-glass-hover) !important;
+  }
+  body.atelier-surface-liquid .ts-root.ts-root.ts-root :is(.ts-board-rail,.ts-floating-formatbar,.ts-view-dock,.ts-rail-popover) :is(.ts-button,.ts-format-mode-button):is(.is-active,[aria-pressed=true],[aria-expanded=true]):not(:is(.ts-primary,.mod-cta,.is-warning,.mod-warning,.is-danger,.ts-danger,.mod-destructive,:disabled,[aria-disabled=true])):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background: var(--atelier-ui-subtle) !important;
+    color: var(--atelier-ui-ink) !important;
+    box-shadow: inset 0 0 0 1px var(--atelier-accent) !important;
+  }
+  body.atelier-surface-liquid .ts-root.ts-root.ts-root :is(.ts-board-rail,.ts-floating-formatbar,.ts-view-dock,.ts-rail-popover) :is(button,select,input,[role=button]):focus-visible:not(:is(:disabled,[aria-disabled=true])):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    outline: 2px solid var(--atelier-ui-ink);
+    outline-offset: -3px;
+  }
+  body.atelier-surface-liquid .ts-root.ts-root.ts-root :is(.ts-rail-popover,.ts-tools-palette) :is(.ts-rail-search,.ts-rail-popover-header,.ts-tools-palette-header):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background-color: var(--atelier-ui-raised);
+    border-color: var(--atelier-ui-line);
+    color: var(--atelier-ui-ink);
+  }
+  body.atelier-surface-liquid .ts-root.ts-root.ts-root .ts-floating-formatbar .ts-format-mode-button:not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    border-radius: 8px !important;
+  }
+  /* Context menus and map have solid paint for precision and legibility. */
+  body.atelier-surface-liquid .ts-root.ts-root.ts-root .ts-main > :is(.ts-inspector,.ts-minimap):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background: var(--atelier-ui-raised) !important;
+    border-color: var(--atelier-ui-line-strong) !important;
+    border-radius: var(--atelier-ui-radius-lg) !important;
+    box-shadow: var(--atelier-ui-shadow-md) !important;
+    backdrop-filter: none !important;
+  }
+  body.atelier-surface-liquid .ts-root.ts-root.ts-root .ts-view-dock .ts-zoom [role=button]:not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    color: var(--atelier-ui-ink);
+  }
+  body.atelier-surface-liquid .ts-root.ts-root.ts-root .ts-floating-formatbar :is(.ts-format-mode,.ts-batch-format-switch):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background-color: var(--folio-glass-hover);
+    border-radius: 8px;
+  }
+  @media (prefers-reduced-transparency: reduce), (prefers-contrast: more), (forced-colors: active) {
+    body.atelier-surface-liquid { --folio-glass-row: var(--atelier-ui-panel); }
+  }
+  /* 1.3.38 reserves a full-height rail column. Give only its compact tool group
+   * glass; retain the column's square edge and native dimensions/scrolling.
+   * Three root classes plus body states beat the plugin's four-root runtime
+   * sheet regardless of injection order; this specificity is intentional. */
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid .ts-root.ts-root.ts-root .ts-main.ts-board-layout > .ts-board-rail:not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background: var(--atelier-ui-panel) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid .ts-root.ts-root.ts-root .ts-main.ts-board-layout > .ts-board-rail > .ts-rail-tools:not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background: var(--folio-glass-sheen), var(--folio-toolbar-fill, var(--folio-glass-fill)) !important;
+    border-radius: 14px;
+    box-shadow: var(--folio-toolbar-light, var(--folio-glass-light)), inset 0 0 0 1px var(--folio-toolbar-edge, var(--folio-glass-edge));
+    -webkit-backdrop-filter: var(--folio-toolbar-filter, var(--folio-glass-filter));
+    backdrop-filter: var(--folio-toolbar-filter, var(--folio-glass-filter));
+  }
+
+  /* CSS material, not a second refraction engine. Existing plugin optical
+   * surfaces keep their SVG filter and content shield. The user can still
+   * request solid surfaces from either the theme or the plugin. */
+  html:has(> head > style[data-thoughtspace-tokens][data-interface-style=glass][data-glass-effects=false]) body:is(.theme-light,.theme-dark).atelier-surface-liquid {
+    --folio-glass-fill: var(--atelier-ui-raised);
+    --folio-glass-filter: none;
+    --folio-glass-sheen: none;
+    --folio-card-fill: var(--background-primary);
+    --folio-card-filter: none;
+    --folio-card-sheen: none;
+  }
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-glass-solid .ts-root.ts-root.ts-root [data-ts-glass-optics=true]:not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background: var(--atelier-ui-raised) !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+  body.atelier-surface-liquid.atelier-glass-solid .ts-root [data-ts-glass-optics=true] > .ts-glass-content-shield { display: none !important; }
+
+  /* Author intent wins. No pseudo-element overlays, transforms or blur of
+   * text itself. Only ordinary card surfaces opt in. Idle cards cost no blur. */
+  body.atelier-surface-liquid {
+    --folio-card-base-fill: var(--background-primary);
+    --folio-card-fill: var(--background-primary);
+    --folio-card-filter: none;
+    --folio-card-sheen: none;
+    --folio-card-edge: rgb(255 255 255 / .8);
+    --folio-card-shadow: 0 2px 4px #17233408, 0 10px 26px #1723340c;
+  }
+  body.theme-dark.atelier-surface-liquid {
+    --folio-card-edge: rgb(255 255 255 / .16);
+    --folio-card-shadow: 0 2px 5px #0003, 0 12px 28px #0003;
+  }
+  @supports ((backdrop-filter: blur(6px)) or (-webkit-backdrop-filter: blur(6px))) {
+    body.atelier-surface-liquid {
+      --folio-card-base-fill: rgb(252 252 254 / .93);
+      --folio-card-filter: blur(6px) saturate(115%);
+      --folio-card-sheen: linear-gradient(145deg, #ffffff55, #ffffff00 42%, #ffffff14);
+    }
+    body.theme-dark.atelier-surface-liquid {
+      --folio-card-base-fill: rgb(35 37 41 / .95);
+      --folio-card-sheen: linear-gradient(145deg, #ffffff0c, #ffffff00 42%, #ffffff03);
+    }
+  }
+  body.atelier-surface-liquid.atelier-glass-cards .ts-root .ts-main .ts-world > .ts-node.ts-card:not(:is(.has-card-fill,.has-custom-border,.is-transparent,.is-compact-fold,.is-folded,.is-inline-editing,.ts-media-card,[data-card-style])):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background: var(--folio-card-sheen), var(--folio-card-fill) !important;
+    box-shadow: inset 0 1px 0 var(--folio-card-edge), var(--folio-card-shadow) !important;
+  }
+  @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    body.atelier-surface-liquid.atelier-glass-cards .ts-root .ts-main .ts-world > .ts-node.ts-card:is(:hover,:focus-within):not(:is(.has-card-fill,.has-custom-border,.is-transparent,.is-compact-fold,.is-folded,.is-inline-editing,.ts-media-card,[data-card-style])):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+      -webkit-backdrop-filter: var(--folio-card-filter) !important;
+      backdrop-filter: var(--folio-card-filter) !important;
+    }
+  }
+  body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-glass-solid {
+    --folio-card-fill: var(--background-primary);
+    --folio-card-filter: none;
+    --folio-card-sheen: none;
+  }
+  body.atelier-surface-liquid.atelier-flat { --folio-card-shadow: 0 0 0 0 transparent; }
+  @media (prefers-reduced-transparency: reduce), (prefers-contrast: more), (forced-colors: active) {
+    body:is(.theme-light,.theme-dark).atelier-surface-liquid {
+      --folio-card-fill: var(--background-primary);
+      --folio-card-filter: none;
+      --folio-card-sheen: none;
+    }
+  }
+}

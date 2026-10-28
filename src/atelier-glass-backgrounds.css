@@ -1,0 +1,114 @@
+/* Independent, static ambient material; source references in REFERENCES.md.
+ * Paint the viewport parent, not the zoomed grid. No generated overlay,
+ * stacking/position changes, page-wide filter, image requests or animation. */
+@media screen {
+  body.atelier-surface-liquid {
+    --folio-ambient-a: #a9c9df;
+    --folio-ambient-b: #dfc9ad;
+    --folio-ambient-c: #acd4c7;
+    --folio-ambient-workspace-factor: .6;
+    --folio-ambient-opacity: calc(clamp(0, var(--atelier-glass-ambient-strength, 35), 100) * 1%);
+    --folio-ambient-layer:
+      radial-gradient(ellipse at 6% 8%, color-mix(in srgb, var(--folio-ambient-a) var(--folio-ambient-opacity), transparent), transparent 62%),
+      radial-gradient(ellipse at 96% 92%, color-mix(in srgb, var(--folio-ambient-b) var(--folio-ambient-opacity), transparent), transparent 64%);
+    --folio-grid-quiet: color-mix(in srgb, var(--atelier-ui-ink) 6%, transparent);
+    --folio-grid-snap-strength: 8%;
+    --folio-dot-quiet: color-mix(in srgb, var(--atelier-ui-ink) 17%, transparent);
+    --folio-dot-snap-strength: 24%;
+  }
+  body.theme-dark.atelier-surface-liquid {
+    --folio-ambient-a: #345b70;
+    --folio-ambient-b: #665342;
+    --folio-ambient-c: #39675b;
+    --folio-grid-quiet: color-mix(in srgb, var(--atelier-ui-ink) 5%, transparent);
+    --folio-grid-snap-strength: 9%;
+    --folio-dot-quiet: color-mix(in srgb, var(--atelier-ui-ink) 15%, transparent);
+    --folio-dot-snap-strength: 22%;
+  }
+  body.atelier-surface-liquid.atelier-glass-canvas-mist {
+    --folio-ambient-a: #9fc6e0;
+    --folio-ambient-b: #b5d5ce;
+  }
+  body.theme-dark.atelier-surface-liquid.atelier-glass-canvas-mist {
+    --folio-ambient-a: #315e79;
+    --folio-ambient-b: #365f59;
+  }
+  body.atelier-surface-liquid.atelier-glass-canvas-sand {
+    --folio-ambient-a: #d5bfa5;
+    --folio-ambient-b: #e3c2ad;
+  }
+  body.theme-dark.atelier-surface-liquid.atelier-glass-canvas-sand {
+    --folio-ambient-a: #66533f;
+    --folio-ambient-b: #705247;
+  }
+  body.atelier-surface-liquid.atelier-glass-ambient-prism {
+    --folio-ambient-layer:
+      radial-gradient(ellipse at 4% 4%, color-mix(in srgb, var(--folio-ambient-a) var(--folio-ambient-opacity), transparent), transparent 60%),
+      radial-gradient(ellipse at 98% 8%, color-mix(in srgb, var(--folio-ambient-c) var(--folio-ambient-opacity), transparent), transparent 58%),
+      radial-gradient(ellipse at 72% 100%, color-mix(in srgb, var(--folio-ambient-b) var(--folio-ambient-opacity), transparent), transparent 66%);
+  }
+
+  /* Only ordinary backgrounds opt in; paper grain/image controls own their
+   * layers. Inline background size/position on the stage remain untouched. */
+  body.atelier-surface-liquid:not(.atelier-glass-ambient-off):not(.atelier-glass-canvas-original) .ts-root:is([data-background=plain],[data-background=dots],[data-background=grid]) :is(.ts-main:has(> .ts-stage),.ts-brain-shell:has(> .ts-brain-stage)):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background-color: var(--folio-glass-canvas);
+    background-image: var(--folio-ambient-layer);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  body.atelier-surface-liquid:not(.atelier-glass-ambient-off):not(.atelier-glass-canvas-original) .ts-root:is([data-background=plain],[data-background=dots],[data-background=grid]) :is(.ts-main > .ts-stage,.ts-brain-shell > .ts-brain-stage):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background-color: transparent;
+  }
+  body.atelier-surface-liquid:not(.atelier-glass-canvas-original):not(.atelier-glass-grid-original) .ts-root:is([data-background=grid],[data-background=dots]) :is(.ts-main > .ts-stage,.ts-brain-stage):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    --ts-grid-ink: var(--folio-grid-quiet);
+    --ts-dot-ink: var(--folio-dot-quiet);
+  }
+  body.atelier-surface-liquid:not(.atelier-glass-canvas-original):not(.atelier-glass-grid-original) .ts-root[data-snap=true]:is([data-background=grid],[data-background=dots]) :is(.ts-main > .ts-stage,.ts-brain-stage):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    --ts-grid-ink: color-mix(in srgb, var(--ts-accent) var(--folio-grid-snap-strength), transparent);
+    --ts-dot-ink: color-mix(in srgb, var(--ts-accent) var(--folio-dot-snap-strength), transparent);
+  }
+  /* One quiet layer per workspace. Factors multiply the user's master
+   * intensity locally: whiteboards keep 1; reading 0.32; navigation 0.2;
+   * organizing workspaces 0.6. Never paint editors or document/media bodies.
+   * Redeclare the layer here: inherited custom properties have already resolved
+   * their var() references on body and cannot react to a child's factor alone. */
+  body.atelier-surface-liquid:not(.atelier-glass-ambient-off):not(.atelier-glass-canvas-original) :is(.ts-space-hub,.ts-writing,.ts-reading-desk,.ts-reference-reading,.ts-media-workspace,.ts-online-workspace,.ts-materials-panel,.ts-local-relations,.ts-handwriting,.ts-sidebar,.ts-journal,.ts-database-modal,.ts-collection-content,.ts-layout-planner,.ts-mindmap-studio,.ts-board-search,.ts-section-catalog,.ts-saved-views,.ts-native-bridge,.workspace-leaf-content:is([data-type="file-explorer"],[data-type="search"],[data-type="outline"],[data-type="bookmarks"],[data-type="backlink"])):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    --folio-ambient-workspace-opacity: calc(clamp(0, var(--atelier-glass-ambient-strength, 35), 100) * var(--folio-ambient-workspace-factor) * 1%);
+    --folio-ambient-workspace-layer:
+      radial-gradient(ellipse at 6% 8%, color-mix(in srgb, var(--folio-ambient-a) var(--folio-ambient-workspace-opacity), transparent), transparent 62%),
+      radial-gradient(ellipse at 96% 92%, color-mix(in srgb, var(--folio-ambient-b) var(--folio-ambient-workspace-opacity), transparent), transparent 64%);
+    background-image: var(--folio-ambient-workspace-layer) !important;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  body.atelier-surface-liquid:not(.atelier-glass-ambient-off):not(.atelier-glass-canvas-original) :is(.ts-writing,.ts-reading-desk,.ts-reference-reading,.ts-journal):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    --folio-ambient-workspace-factor: .32;
+  }
+  body.atelier-surface-liquid:not(.atelier-glass-ambient-off):not(.atelier-glass-canvas-original) :is(.ts-sidebar,.ts-board-search,.ts-section-catalog,.ts-saved-views,.ts-native-bridge,.workspace-leaf-content:is([data-type="file-explorer"],[data-type="search"],[data-type="outline"],[data-type="bookmarks"],[data-type="backlink"])):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    --folio-ambient-workspace-factor: .2;
+  }
+  body.atelier-surface-liquid:not(.atelier-glass-ambient-off):not(.atelier-glass-canvas-original) :is(.ts-media-workspace,.ts-online-workspace,.ts-handwriting):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    --folio-ambient-workspace-factor: .45;
+  }
+  body.atelier-surface-liquid:not(.atelier-glass-ambient-off):not(.atelier-glass-canvas-original).atelier-glass-ambient-prism :is(.ts-space-hub,.ts-writing,.ts-reading-desk,.ts-reference-reading,.ts-media-workspace,.ts-online-workspace,.ts-materials-panel,.ts-local-relations,.ts-handwriting,.ts-sidebar,.ts-journal,.ts-database-modal,.ts-collection-content,.ts-layout-planner,.ts-mindmap-studio,.ts-board-search,.ts-section-catalog,.ts-saved-views,.ts-native-bridge,.workspace-leaf-content:is([data-type="file-explorer"],[data-type="search"],[data-type="outline"],[data-type="bookmarks"],[data-type="backlink"])):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    --folio-ambient-workspace-layer:
+      radial-gradient(ellipse at 4% 4%, color-mix(in srgb, var(--folio-ambient-a) var(--folio-ambient-workspace-opacity), transparent), transparent 60%),
+      radial-gradient(ellipse at 98% 8%, color-mix(in srgb, var(--folio-ambient-c) var(--folio-ambient-workspace-opacity), transparent), transparent 58%),
+      radial-gradient(ellipse at 72% 100%, color-mix(in srgb, var(--folio-ambient-b) var(--folio-ambient-workspace-opacity), transparent), transparent 66%);
+  }
+  /* Reference readers and materials can be embedded inside another workspace.
+   * Let the outer viewport carry the ambiance rather than stacking gradients. */
+  body.atelier-surface-liquid:not(.atelier-glass-ambient-off):not(.atelier-glass-canvas-original) :is(.ts-space-hub,.ts-writing,.ts-reading-desk,.ts-reference-reading,.ts-media-workspace,.ts-online-workspace,.ts-materials-panel,.ts-local-relations,.ts-handwriting,.ts-sidebar,.ts-journal,.ts-database-modal,.ts-collection-content,.ts-layout-planner,.ts-mindmap-studio,.ts-board-search,.ts-section-catalog,.ts-saved-views,.ts-native-bridge,.workspace-leaf-content:is([data-type="file-explorer"],[data-type="search"],[data-type="outline"],[data-type="bookmarks"],[data-type="backlink"])) :is(.ts-space-hub,.ts-writing,.ts-reading-desk,.ts-reference-reading,.ts-media-workspace,.ts-online-workspace,.ts-materials-panel,.ts-local-relations,.ts-handwriting,.ts-sidebar,.ts-journal,.ts-database-modal,.ts-collection-content,.ts-layout-planner,.ts-mindmap-studio,.ts-board-search,.ts-section-catalog,.ts-saved-views,.ts-native-bridge,.workspace-leaf-content:is([data-type="file-explorer"],[data-type="search"],[data-type="outline"],[data-type="bookmarks"],[data-type="backlink"])):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+    background-image: none !important;
+  }
+  /* A user or system solid preference removes ambient decoration as well. */
+  body.atelier-surface-liquid.atelier-glass-solid { --folio-ambient-layer: none; }
+  body.atelier-surface-liquid.atelier-glass-solid :is(.ts-space-hub,.ts-writing,.ts-reading-desk,.ts-reference-reading,.ts-media-workspace,.ts-online-workspace,.ts-materials-panel,.ts-local-relations,.ts-handwriting,.ts-sidebar,.ts-journal,.ts-database-modal,.ts-collection-content,.ts-layout-planner,.ts-mindmap-studio,.ts-board-search,.ts-section-catalog,.ts-saved-views,.ts-native-bridge,.workspace-leaf-content:is([data-type="file-explorer"],[data-type="search"],[data-type="outline"],[data-type="bookmarks"],[data-type="backlink"])):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) { --folio-ambient-workspace-layer: none !important; }
+  html:has(> head > style[data-thoughtspace-tokens][data-interface-style=glass][data-glass-effects=false]) body.atelier-surface-liquid { --folio-ambient-layer: none; }
+  html:has(> head > style[data-thoughtspace-tokens][data-interface-style=glass][data-glass-effects=false]) body.atelier-surface-liquid :is(.ts-space-hub,.ts-writing,.ts-reading-desk,.ts-reference-reading,.ts-media-workspace,.ts-online-workspace,.ts-materials-panel,.ts-local-relations,.ts-handwriting,.ts-sidebar,.ts-journal,.ts-database-modal,.ts-collection-content,.ts-layout-planner,.ts-mindmap-studio,.ts-board-search,.ts-section-catalog,.ts-saved-views,.ts-native-bridge,.workspace-leaf-content:is([data-type="file-explorer"],[data-type="search"],[data-type="outline"],[data-type="bookmarks"],[data-type="backlink"])):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) { --folio-ambient-workspace-layer: none !important; }
+  @media (prefers-reduced-transparency: reduce), (prefers-contrast: more), (forced-colors: active) {
+    body:is(.theme-light,.theme-dark).atelier-surface-liquid { --folio-ambient-layer: none; }
+    body:is(.theme-light,.theme-dark).atelier-surface-liquid :is(.ts-space-hub,.ts-writing,.ts-reading-desk,.ts-reference-reading,.ts-media-workspace,.ts-online-workspace,.ts-materials-panel,.ts-local-relations,.ts-handwriting,.ts-sidebar,.ts-journal,.ts-database-modal,.ts-collection-content,.ts-layout-planner,.ts-mindmap-studio,.ts-board-search,.ts-section-catalog,.ts-saved-views,.ts-native-bridge,.workspace-leaf-content:is([data-type="file-explorer"],[data-type="search"],[data-type="outline"],[data-type="bookmarks"],[data-type="backlink"])):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) { --folio-ambient-workspace-layer: none !important; }
+  }
+}

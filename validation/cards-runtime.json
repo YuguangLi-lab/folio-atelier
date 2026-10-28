@@ -1,0 +1,415 @@
+{
+  "pass": true,
+  "scope": "Owned source-derived cards/chrome, actual 1.3.38-folio.10 InterfaceStyleDocuments and optical runtime, not native Obsidian",
+  "themeSHA256": "35f4de409ebecd2b0fbc04f55c9f945e329e2cf2266fc9caa9d61dee0d448c85",
+  "cases": [
+    {
+      "color": "light",
+      "order": "theme-last",
+      "checks": {
+        "cardFrost": true,
+        "cardTranslucent": true,
+        "cardGeometry": true,
+        "cardReadability": true,
+        "selection": true,
+        "authorIntent": true,
+        "otherModes": true,
+        "backgrounds": true,
+        "opticsRetained": true,
+        "solid": true,
+        "shieldHidden": true,
+        "pluginOff": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrast": true,
+        "forced-colors": true,
+        "reducedMotion": true,
+        "idleBudget": true,
+        "cleanup": true
+      },
+      "pass": true,
+      "contrast": [
+        {
+          "text": "从问题出发",
+          "min": 10.523088511590771,
+          "pass": true
+        },
+        {
+          "text": "把观察整理成问题，沿着证据建立联系。",
+          "min": 10.523088511590771,
+          "pass": true
+        },
+        {
+          "text": "01 / 研究与阅读",
+          "min": 4.800162263858083,
+          "pass": true
+        }
+      ],
+      "exceptions": [
+        {
+          "name": "fill",
+          "pass": true
+        },
+        {
+          "name": "border",
+          "pass": true
+        },
+        {
+          "name": "transparent",
+          "pass": true
+        },
+        {
+          "name": "folded",
+          "pass": true
+        },
+        {
+          "name": "compact",
+          "pass": true
+        },
+        {
+          "name": "editing",
+          "pass": true
+        },
+        {
+          "name": "media",
+          "pass": true
+        },
+        {
+          "name": "paper",
+          "pass": true
+        }
+      ],
+      "modeComparisons": [
+        {
+          "mode": "classic",
+          "pass": true
+        },
+        {
+          "mode": "apple",
+          "pass": true
+        }
+      ],
+      "backgrounds": [
+        {
+          "bg": "paper",
+          "pass": true
+        },
+        {
+          "bg": "image",
+          "pass": true
+        }
+      ],
+      "optics": {
+        "attr": "true",
+        "filter": "url(\"#ts-glass-lens-1\")",
+        "shield": true,
+        "concurrency": 12
+      }
+    },
+    {
+      "color": "light",
+      "order": "runtime-last",
+      "checks": {
+        "cardFrost": true,
+        "cardTranslucent": true,
+        "cardGeometry": true,
+        "cardReadability": true,
+        "selection": true,
+        "authorIntent": true,
+        "otherModes": true,
+        "backgrounds": true,
+        "opticsRetained": true,
+        "solid": true,
+        "shieldHidden": true,
+        "pluginOff": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrast": true,
+        "forced-colors": true,
+        "reducedMotion": true,
+        "idleBudget": true,
+        "cleanup": true
+      },
+      "pass": true,
+      "contrast": [
+        {
+          "text": "从问题出发",
+          "min": 10.523088511590771,
+          "pass": true
+        },
+        {
+          "text": "把观察整理成问题，沿着证据建立联系。",
+          "min": 10.523088511590771,
+          "pass": true
+        },
+        {
+          "text": "01 / 研究与阅读",
+          "min": 4.800162263858083,
+          "pass": true
+        }
+      ],
+      "exceptions": [
+        {
+          "name": "fill",
+          "pass": true
+        },
+        {
+          "name": "border",
+          "pass": true
+        },
+        {
+          "name": "transparent",
+          "pass": true
+        },
+        {
+          "name": "folded",
+          "pass": true
+        },
+        {
+          "name": "compact",
+          "pass": true
+        },
+        {
+          "name": "editing",
+          "pass": true
+        },
+        {
+          "name": "media",
+          "pass": true
+        },
+        {
+          "name": "paper",
+          "pass": true
+        }
+      ],
+      "modeComparisons": [
+        {
+          "mode": "classic",
+          "pass": true
+        },
+        {
+          "mode": "apple",
+          "pass": true
+        }
+      ],
+      "backgrounds": [
+        {
+          "bg": "paper",
+          "pass": true
+        },
+        {
+          "bg": "image",
+          "pass": true
+        }
+      ],
+      "optics": {
+        "attr": "true",
+        "filter": "url(\"#ts-glass-lens-1\")",
+        "shield": true,
+        "concurrency": 12
+      }
+    },
+    {
+      "color": "dark",
+      "order": "theme-last",
+      "checks": {
+        "cardFrost": true,
+        "cardTranslucent": true,
+        "cardGeometry": true,
+        "cardReadability": true,
+        "selection": true,
+        "authorIntent": true,
+        "otherModes": true,
+        "backgrounds": true,
+        "opticsRetained": true,
+        "solid": true,
+        "shieldHidden": true,
+        "pluginOff": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrast": true,
+        "forced-colors": true,
+        "reducedMotion": true,
+        "idleBudget": true,
+        "cleanup": true
+      },
+      "pass": true,
+      "contrast": [
+        {
+          "text": "从问题出发",
+          "min": 9.346309713440675,
+          "pass": true
+        },
+        {
+          "text": "把观察整理成问题，沿着证据建立联系。",
+          "min": 9.346309713440675,
+          "pass": true
+        },
+        {
+          "text": "01 / 研究与阅读",
+          "min": 6.09904129370082,
+          "pass": true
+        }
+      ],
+      "exceptions": [
+        {
+          "name": "fill",
+          "pass": true
+        },
+        {
+          "name": "border",
+          "pass": true
+        },
+        {
+          "name": "transparent",
+          "pass": true
+        },
+        {
+          "name": "folded",
+          "pass": true
+        },
+        {
+          "name": "compact",
+          "pass": true
+        },
+        {
+          "name": "editing",
+          "pass": true
+        },
+        {
+          "name": "media",
+          "pass": true
+        },
+        {
+          "name": "paper",
+          "pass": true
+        }
+      ],
+      "modeComparisons": [
+        {
+          "mode": "classic",
+          "pass": true
+        },
+        {
+          "mode": "apple",
+          "pass": true
+        }
+      ],
+      "backgrounds": [
+        {
+          "bg": "paper",
+          "pass": true
+        },
+        {
+          "bg": "image",
+          "pass": true
+        }
+      ],
+      "optics": {
+        "attr": "true",
+        "filter": "url(\"#ts-glass-lens-1\")",
+        "shield": true,
+        "concurrency": 12
+      }
+    },
+    {
+      "color": "dark",
+      "order": "runtime-last",
+      "checks": {
+        "cardFrost": true,
+        "cardTranslucent": true,
+        "cardGeometry": true,
+        "cardReadability": true,
+        "selection": true,
+        "authorIntent": true,
+        "otherModes": true,
+        "backgrounds": true,
+        "opticsRetained": true,
+        "solid": true,
+        "shieldHidden": true,
+        "pluginOff": true,
+        "prefers-reduced-transparency": true,
+        "prefers-contrast": true,
+        "forced-colors": true,
+        "reducedMotion": true,
+        "idleBudget": true,
+        "cleanup": true
+      },
+      "pass": true,
+      "contrast": [
+        {
+          "text": "从问题出发",
+          "min": 9.346309713440675,
+          "pass": true
+        },
+        {
+          "text": "把观察整理成问题，沿着证据建立联系。",
+          "min": 9.346309713440675,
+          "pass": true
+        },
+        {
+          "text": "01 / 研究与阅读",
+          "min": 6.09904129370082,
+          "pass": true
+        }
+      ],
+      "exceptions": [
+        {
+          "name": "fill",
+          "pass": true
+        },
+        {
+          "name": "border",
+          "pass": true
+        },
+        {
+          "name": "transparent",
+          "pass": true
+        },
+        {
+          "name": "folded",
+          "pass": true
+        },
+        {
+          "name": "compact",
+          "pass": true
+        },
+        {
+          "name": "editing",
+          "pass": true
+        },
+        {
+          "name": "media",
+          "pass": true
+        },
+        {
+          "name": "paper",
+          "pass": true
+        }
+      ],
+      "modeComparisons": [
+        {
+          "mode": "classic",
+          "pass": true
+        },
+        {
+          "mode": "apple",
+          "pass": true
+        }
+      ],
+      "backgrounds": [
+        {
+          "bg": "paper",
+          "pass": true
+        },
+        {
+          "bg": "image",
+          "pass": true
+        }
+      ],
+      "optics": {
+        "attr": "true",
+        "filter": "url(\"#ts-glass-lens-1\")",
+        "shield": true,
+        "concurrency": 12
+      }
+    }
+  ]
+}
