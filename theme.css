@@ -1,4 +1,4 @@
-/* Folio Atelier 3.32.0 · 纸页工坊
+/* Folio Atelier 3.42.0 · 纸页工坊
  * Original CSS. Design references and scope are documented in README.md.
  * No external fonts or network requests. Stable project colors use the optional ThoughtSpace bridge.
  */
@@ -404,6 +404,132 @@ settings:
     type: class-toggle
     default: false
     addCommand: true
+  - id: atelier-group-thoughtspace-colors
+    title: ThoughtSpace 界面配色
+    type: heading
+    level: 1
+    collapsed: false
+  - id: atelier-ts-color-strength
+    title: 分区颜色浓度
+    description: 只调节下方已选颜色的浓淡。每项左侧为浅色、右侧为深色；点击该项的重置按钮可恢复原配色。
+    type: variable-number-slider
+    default: 35
+    min: 15
+    max: 45
+    step: 5
+  - id: atelier-ts-color-chrome
+    title: 工具与导航
+    type: heading
+    level: 2
+    collapsed: false
+  - id: atelier-ts-toolbar-color
+    title: 插件工具栏
+    description: 白板、脑图、阅读、写作等插件工具栏的底色，沿用当前玻璃透明度和模糊设置。
+    type: variable-themed-color
+    format: rgb-split
+    default-light: '#92afca'
+    default-dark: '#597c9e'
+  - id: atelier-ts-popover-color
+    title: 菜单与浮层
+    description: 插件的操作菜单、搜索浮层和工具弹窗。特殊折射面板沿用插件材质。
+    type: variable-themed-color
+    format: rgb-split
+    default-light: '#aeb2d9'
+    default-dark: '#7775aa'
+  - id: atelier-ts-selection-color
+    title: 选中项底色
+    description: 导航、页签和工具按钮的选中底色，保留警告、禁用和主操作按钮的状态色。
+    type: variable-themed-color
+    format: hex
+    default-light: '#81bba9'
+    default-dark: '#4e9a88'
+  - id: atelier-ts-navigation-color
+    title: 导航侧栏
+    description: ThoughtSpace 的文件夹、白板和侧栏导航。Obsidian 原生文件树使用自己的主题设置。
+    type: variable-themed-color
+    format: hex
+    default-light: '#a9bfca'
+    default-dark: '#577e8d'
+  - id: atelier-ts-hub-color
+    title: 空间总览与检索
+    description: 空间总览、白板搜索、分区目录、保存视图和布局规划。
+    type: variable-themed-color
+    format: hex
+    default-light: '#9cafcf'
+    default-dark: '#5b74a8'
+  - id: atelier-ts-color-create
+    title: 阅读与创作
+    type: heading
+    level: 2
+    collapsed: false
+  - id: atelier-ts-reading-color
+    title: 阅读台与引用
+    description: 阅读列表、引用窗口和预览外框，保留原文纸面。
+    type: variable-themed-color
+    format: hex
+    default-light: '#d8bd99'
+    default-dark: '#8f7452'
+  - id: atelier-ts-writing-color
+    title: 写作台
+    description: 写作目录、资料栏和状态区，保留草稿编辑器的纸面。
+    type: variable-themed-color
+    format: hex
+    default-light: '#a5b8df'
+    default-dark: '#6179af'
+  - id: atelier-ts-materials-color
+    title: 素材库与摘录
+    description: 素材面板、来源列表和摘录区的外壳。
+    type: variable-themed-color
+    format: hex
+    default-light: '#98c9b8'
+    default-dark: '#509880'
+  - id: atelier-ts-media-color
+    title: 视频与媒体工作台
+    description: 本地和在线媒体工作台的记录、草稿周边面板，保留播放器画面和控件。
+    type: variable-themed-color
+    format: hex
+    default-light: '#a1bbd0'
+    default-dark: '#577e9f'
+  - id: atelier-ts-handwriting-color
+    title: 手写工作台
+    description: 手写工作台外框和导出窗口，保留手写纸张和墨色。
+    type: variable-themed-color
+    format: hex
+    default-light: '#d5ae99'
+    default-dark: '#976c56'
+  - id: atelier-ts-color-organize
+    title: 整理与设置
+    type: heading
+    level: 2
+    collapsed: false
+  - id: atelier-ts-relations-color
+    title: 关系图
+    description: 关系图面板底色与中心信息区，保留节点、连线和按钮位置。
+    type: variable-themed-color
+    format: hex
+    default-light: '#b8aad4'
+    default-dark: '#79699f'
+  - id: atelier-ts-collection-color
+    title: 集合与卡片资料库
+    description: 集合导航、复习面板、数据库筛选和结果区。
+    type: variable-themed-color
+    format: hex
+    default-light: '#a4bca1'
+    default-dark: '#62835e'
+  - id: atelier-ts-mindmap-color
+    title: 脑图与思维导图
+    description: 脑图工具区和思维导图工作台，保留节点与分支的颜色。
+    type: variable-themed-color
+    format: hex
+    default-light: '#a9b2d6'
+    default-dark: '#6a75a7'
+  - id: atelier-ts-settings-color
+    title: 插件设置与偏好
+    description: ThoughtSpace 设置导航、内容面板及偏好窗口。
+    type: variable-themed-color
+    format: hex
+    default-light: '#bcc1ce'
+    default-dark: '#707d98'
   - id: atelier-group-navigation
     title: 目录与工具栏
     type: heading
@@ -3793,7 +3919,8 @@ body.atelier-plugin-polish .ts-database-modal .ts-db-top > .ts-button:not(:where
   max-inline-size: 100%;
   white-space: normal;
 }
-body.atelier-plugin-polish .ts-database-modal .modal-content.ts-database:not(:where(.ts-calendar-plugin, .ts-calendar-plugin *)) {
+/* The 1.3.52 card library has a fixed header and a dedicated results scroller. */
+body.atelier-plugin-polish .ts-database-modal:not(:where(.ts-card-library-modal)) .modal-content.ts-database:not(:where(.ts-calendar-plugin, .ts-calendar-plugin *)) {
   overflow: auto;
 }
 body.atelier-plugin-polish .ts-database-modal :is(.ts-db-tabs, .ts-db-custom-filters, .ts-db-field-definition, .ts-db-custom-property):not(:where(.ts-calendar-plugin, .ts-calendar-plugin *)) {
@@ -4961,6 +5088,7 @@ body.atelier-plugin-polish .ts-local-relations-lines path[data-kind]:not(:where(
     .ts-task-filters,
     .ts-db-filters,
     .ts-db-custom-filters,
+    :where(.ts-card-library) .ts-library-search-row,
     .ts-native-tools,
     .ts-native-footer,
     .ts-settings-header,
@@ -4973,6 +5101,7 @@ body.atelier-plugin-polish .ts-local-relations-lines path[data-kind]:not(:where(
     .ts-view-footer,
     .ts-editor-search-footer,
     .ts-layout-preview-header,
+    :where(.ts-layout-planner) .ts-layout-navigation,
     .ts-layout-footer,
     .ts-brain-position-create,
     .ts-brain-position-footer,
@@ -5082,6 +5211,7 @@ body.atelier-plugin-polish .ts-local-relations-lines path[data-kind]:not(:where(
     .ts-task-filters,
     .ts-db-filters,
     .ts-db-custom-filters,
+    :where(.ts-card-library) .ts-library-search-row,
     .ts-native-tools,
     .ts-native-footer,
     .ts-settings-header,
@@ -5094,6 +5224,7 @@ body.atelier-plugin-polish .ts-local-relations-lines path[data-kind]:not(:where(
     .ts-view-footer,
     .ts-editor-search-footer,
     .ts-layout-preview-header,
+    :where(.ts-layout-planner) .ts-layout-navigation,
     .ts-layout-footer,
     .ts-brain-position-create,
     .ts-brain-position-footer,
@@ -5192,6 +5323,7 @@ body.atelier-plugin-polish .ts-local-relations-lines path[data-kind]:not(:where(
     .ts-task-filters,
     .ts-db-filters,
     .ts-db-custom-filters,
+    :where(.ts-card-library) .ts-library-search-row,
     .ts-native-tools,
     .ts-native-footer,
     .ts-settings-header,
@@ -5204,6 +5336,7 @@ body.atelier-plugin-polish .ts-local-relations-lines path[data-kind]:not(:where(
     .ts-view-footer,
     .ts-editor-search-footer,
     .ts-layout-preview-header,
+    :where(.ts-layout-planner) .ts-layout-navigation,
     .ts-layout-footer,
     .ts-brain-position-create,
     .ts-brain-position-footer,
@@ -5310,6 +5443,7 @@ body.atelier-plugin-polish .ts-local-relations-lines path[data-kind]:not(:where(
     .ts-task-filters,
     .ts-db-filters,
     .ts-db-custom-filters,
+    :where(.ts-card-library) .ts-library-search-row,
     .ts-native-tools,
     .ts-native-footer,
     .ts-settings-header,
@@ -5322,6 +5456,7 @@ body.atelier-plugin-polish .ts-local-relations-lines path[data-kind]:not(:where(
     .ts-view-footer,
     .ts-editor-search-footer,
     .ts-layout-preview-header,
+    :where(.ts-layout-planner) .ts-layout-navigation,
     .ts-layout-footer,
     .ts-brain-position-create,
     .ts-brain-position-footer,
@@ -5486,6 +5621,7 @@ body.atelier-plugin-polish .ts-local-relations-lines path[data-kind]:not(:where(
    * either injection order. An active optical surface stays plugin-owned. */
   body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-surface-liquid.atelier-surface-liquid :is(
     .ts-ui-menu,
+    :where(.ts-card-library) .ts-library-more-menu[popover],
     .ts-root .ts-tools-palette,
     .ts-root .ts-rail-popover,
     .ts-root .ts-footer > .ts-canvas-settings-panel,
@@ -5529,6 +5665,7 @@ body.atelier-plugin-polish .ts-local-relations-lines path[data-kind]:not(:where(
   }
   body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-surface-liquid.atelier-surface-liquid :is(
     .ts-ui-menu,
+    :where(.ts-card-library) .ts-library-more-menu[popover],
     .ts-root .ts-tools-palette,
     .ts-root .ts-rail-popover,
     .ts-root .ts-canvas-settings-panel,
@@ -5537,7 +5674,7 @@ body.atelier-plugin-polish .ts-local-relations-lines path[data-kind]:not(:where(
     .ts-local-relations > .ts-local-relations-picker,
     .ts-local-relations > .ts-local-relations-filter-panel,
     .ts-local-relations > .ts-local-relations-more-panel
-  ) :is(button,input,select,[role=menuitem]):focus-visible:not(:is(:disabled,[aria-disabled=true],.is-disabled)):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+  ) :is(button,input,select,[role=menuitem],:where(.ts-tools-palette .ts-tool-cluster-title)):focus-visible:not(:is(:disabled,[aria-disabled=true],.is-disabled)):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
     outline: 2px solid var(--atelier-ui-ink);
     outline-offset: -3px;
   }
@@ -5798,6 +5935,7 @@ body.atelier-plugin-polish .ts-local-relations-lines path[data-kind]:not(:where(
     .ts-materials-reading-switch,
     .ts-db-filters,
     .ts-db-custom-filters,
+    :where(.ts-card-library) .ts-library-search-row,
     .ts-native-tools,
     .ts-native-footer,
     .ts-settings-header,
@@ -5810,6 +5948,7 @@ body.atelier-plugin-polish .ts-local-relations-lines path[data-kind]:not(:where(
     .ts-view-footer,
     .ts-editor-search-footer,
     .ts-layout-preview-header,
+    :where(.ts-layout-planner) .ts-layout-navigation,
     .ts-layout-footer,
     .ts-brain-position-create,
     .ts-brain-position-footer,
@@ -5905,6 +6044,7 @@ body.atelier-plugin-polish .ts-local-relations-lines path[data-kind]:not(:where(
     .ts-materials-reading-switch,
     .ts-db-filters,
     .ts-db-custom-filters,
+    :where(.ts-card-library) .ts-library-search-row,
     .ts-native-tools,
     .ts-native-footer,
     .ts-settings-header,
@@ -5917,6 +6057,7 @@ body.atelier-plugin-polish .ts-local-relations-lines path[data-kind]:not(:where(
     .ts-view-footer,
     .ts-editor-search-footer,
     .ts-layout-preview-header,
+    :where(.ts-layout-planner) .ts-layout-navigation,
     .ts-layout-footer,
     .ts-brain-position-create,
     .ts-brain-position-footer,
@@ -6011,6 +6152,7 @@ body.atelier-plugin-polish .ts-local-relations-lines path[data-kind]:not(:where(
     .ts-materials-reading-switch,
     .ts-db-filters,
     .ts-db-custom-filters,
+    :where(.ts-card-library) .ts-library-search-row,
     .ts-native-tools,
     .ts-native-footer,
     .ts-settings-header,
@@ -6023,6 +6165,7 @@ body.atelier-plugin-polish .ts-local-relations-lines path[data-kind]:not(:where(
     .ts-view-footer,
     .ts-editor-search-footer,
     .ts-layout-preview-header,
+    :where(.ts-layout-planner) .ts-layout-navigation,
     .ts-layout-footer,
     .ts-brain-position-create,
     .ts-brain-position-footer,
@@ -6117,6 +6260,7 @@ body.atelier-plugin-polish .ts-local-relations-lines path[data-kind]:not(:where(
     .ts-materials-reading-switch,
     .ts-db-filters,
     .ts-db-custom-filters,
+    :where(.ts-card-library) .ts-library-search-row,
     .ts-native-tools,
     .ts-native-footer,
     .ts-settings-header,
@@ -6129,6 +6273,7 @@ body.atelier-plugin-polish .ts-local-relations-lines path[data-kind]:not(:where(
     .ts-view-footer,
     .ts-editor-search-footer,
     .ts-layout-preview-header,
+    :where(.ts-layout-planner) .ts-layout-navigation,
     .ts-layout-footer,
     .ts-brain-position-create,
     .ts-brain-position-footer,
@@ -6188,6 +6333,511 @@ body.atelier-plugin-polish .ts-local-relations-lines path[data-kind]:not(:where(
   html:has(> head > style[data-thoughtspace-tokens][data-interface-style=glass][data-glass-effects=false]) body.atelier-surface-liquid { --folio-control-duration: 0s; --folio-control-properties: none; }
   @media (prefers-reduced-motion: reduce), (prefers-reduced-transparency: reduce), (prefers-contrast: more), (forced-colors: active) {
     body.atelier-surface-liquid { --folio-control-duration: 0s; --folio-control-properties: none; }
+  }
+}
+
+
+/* Folio Atelier 3.41 · ThoughtSpace board command surfaces, 1.3.50–1.3.52.
+ * Local chrome only. Never remap --ts-e-* on the board root or preview scene:
+ * authored cards also consume those tokens. Existing glass owns compositing.
+ */
+@media screen {
+  body.atelier-plugin-polish .ts-root .ts-rail-popover {
+    --ts-e-ink: var(--atelier-ui-ink);
+    --ts-e-muted: var(--atelier-ui-muted);
+    --ts-e-line: var(--atelier-ui-line);
+    --ts-e-control-line: var(--atelier-ui-line-strong);
+    --ts-e-paper: var(--atelier-ui-panel);
+    --ts-e-sheet: var(--atelier-ui-raised);
+    --ts-e-focus: var(--atelier-ui-ink);
+    --ts-board-active: var(--atelier-soft);
+    --ts-palette-align: 14px;
+  }
+  body.atelier-plugin-polish .ts-root .ts-rail-popover .ts-palette-title strong {
+    font-family: var(--font-interface);
+    font-size: 17px;
+    font-weight: 650;
+    line-height: 1.5;
+    letter-spacing: 0;
+  }
+  body.atelier-plugin-polish .ts-root .ts-rail-popover .ts-rail-search-field {
+    border-radius: var(--atelier-ui-radius-sm);
+  }
+  body.atelier-plugin-polish .ts-root .ts-rail-popover .ts-rail-search-field:focus-within {
+    outline: 2px solid var(--atelier-ui-ink);
+    outline-offset: -1px;
+    border-color: transparent;
+  }
+  /* Upstream's later card-context rule can force the formatbar back to flex
+   * while a tool palette is open. Restore its intended mutually exclusive UI. */
+  body.atelier-plugin-polish .ts-root .ts-main:has(> .ts-rail-popover:not([hidden])) > .ts-floating-formatbar {
+    display: none !important;
+  }
+  /* The field owns the focus ring. The generic glass input ring otherwise
+   * adds a second rectangle inside it. Keep the clear button's own ring. */
+  body.atelier-plugin-polish .ts-root .ts-rail-popover .ts-rail-search-field > input.ts-rail-search-input:is(:focus,:focus-visible),
+  body.atelier-plugin-polish .ts-ui-modal.ts-board-search .ts-board-search-bar > input:is(:focus,:focus-visible) {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  body.atelier-plugin-polish .ts-ui-modal.ts-board-search .ts-board-search-bar:focus-within {
+    outline: 2px solid var(--atelier-ui-ink);
+    outline-offset: -1px;
+  }
+  body.atelier-plugin-polish .ts-root .ts-tools-palette .ts-palette-sections {
+    background-color: color-mix(in srgb, var(--atelier-ui-panel) 70%, transparent);
+  }
+  body.atelier-plugin-polish .ts-root .ts-tools-palette .ts-tool-cluster > summary {
+    color: var(--atelier-ui-muted);
+    font-weight: 600;
+    border-radius: var(--atelier-ui-radius-sm);
+  }
+  body.atelier-plugin-polish .ts-root .ts-tools-palette .ts-tool-cluster > summary:is(:hover,:focus-visible) {
+    background-color: var(--atelier-ui-subtle);
+    color: var(--atelier-ui-ink);
+  }
+  body.atelier-plugin-polish .ts-root .ts-tools-palette .ts-palette-sections .ts-button[aria-pressed=true]:not(:disabled):not([aria-disabled=true]) {
+    box-shadow: inset 2px 0 var(--atelier-accent) !important;
+  }
+  body.atelier-plugin-polish .ts-root .ts-rail-popover .ts-rail-empty {
+    border: 1px dashed var(--atelier-ui-line-strong);
+    border-radius: var(--atelier-ui-radius-sm);
+    background-color: var(--atelier-ui-panel);
+  }
+  /* The insert tiles and recent commands share their parent material.
+   * No per-button blur, motion or extra pointer-intercepting decoration. */
+  body.atelier-plugin-polish .ts-root .ts-main > .ts-tools-palette .ts-rail-recent-button {
+    border-color: var(--atelier-ui-line-strong) !important;
+  }
+  body.atelier-plugin-polish .ts-root .ts-main > .ts-floating-formatbar {
+    --ts-format-line: var(--atelier-ui-line);
+    --ts-format-wash: color-mix(in srgb, var(--atelier-ui-panel) 65%, transparent);
+    --ts-format-active: var(--atelier-soft);
+  }
+  body.atelier-plugin-polish .ts-root .ts-floating-formatbar .ts-format-context .ts-format-context-count {
+    color: var(--atelier-ui-ink);
+    background-color: var(--atelier-ui-subtle);
+    border-radius: 4px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Map controls locally; preview node fills and canvas grid stay upstream. */
+  body.atelier-plugin-polish .ts-ui-modal.ts-layout-planner :is(
+    .ts-layout-controls, .ts-layout-preview-header, .ts-layout-footer
+  ) {
+    --ts-layout-panel: var(--atelier-ui-raised);
+    --ts-layout-soft: var(--atelier-ui-subtle);
+    --ts-layout-line: var(--atelier-ui-line-strong);
+    --ts-layout-active: var(--atelier-soft);
+    --text-normal: var(--atelier-ui-ink);
+    --text-muted: var(--atelier-ui-muted);
+    color: var(--atelier-ui-ink);
+  }
+  body.atelier-plugin-polish .ts-ui-modal.ts-layout-planner .ts-layout-controls {
+    border-radius: 0;
+  }
+  body.atelier-plugin-polish .ts-ui-modal.ts-layout-planner .ts-layout-preview {
+    background-color: var(--atelier-ui-canvas);
+  }
+  body.atelier-plugin-polish .ts-ui-modal.ts-layout-planner .ts-layout-preview-header {
+    padding: 10px 12px;
+    border: 1px solid var(--atelier-ui-line);
+  }
+  body.atelier-plugin-polish .ts-ui-modal.ts-layout-planner .ts-layout-preview-title {
+    font-size: 17px;
+    font-weight: 650;
+  }
+  body.atelier-plugin-polish .ts-ui-modal.ts-layout-planner .ts-layout-stat strong {
+    color: var(--atelier-accent);
+  }
+  body.atelier-plugin-polish .ts-ui-modal.ts-board-search .ts-board-search-row {
+    border-radius: var(--atelier-ui-radius-sm);
+  }
+  body.atelier-plugin-polish .ts-ui-modal.ts-board-search .ts-board-search-row.is-active {
+    box-shadow: inset 2px 0 var(--atelier-accent);
+  }
+  body.atelier-plugin-polish .ts-ui-modal.ts-board-search .ts-board-search-heading strong {
+    color: var(--atelier-ui-ink);
+  }
+  body.atelier-plugin-polish .ts-ui-modal.ts-board-search .ts-board-search-heading small {
+    background-color: var(--atelier-ui-panel);
+    color: var(--atelier-ui-muted);
+    border-radius: 4px;
+  }
+  body.atelier-plugin-polish .ts-ui-modal.ts-board-search .ts-board-search-excerpt {
+    color: var(--atelier-ui-muted);
+    opacity: 1;
+  }
+  @media (prefers-contrast: more) {
+    body.atelier-plugin-polish .ts-ui-modal.ts-board-search .ts-board-search-excerpt {
+      color: var(--atelier-ui-ink);
+    }
+  }
+  @media (forced-colors: active) {
+    body.atelier-plugin-polish .ts-root .ts-rail-popover .ts-rail-search-field:focus-within,
+    body.atelier-plugin-polish .ts-ui-modal.ts-board-search .ts-board-search-bar:focus-within {
+      outline-color: Highlight;
+    }
+    body.atelier-plugin-polish .ts-root .ts-tools-palette .ts-palette-sections .ts-button[aria-pressed=true],
+    body.atelier-plugin-polish .ts-ui-modal.ts-board-search .ts-board-search-row.is-active {
+      outline: 2px solid Highlight;
+      outline-offset: -2px;
+    }
+  }
+}
+
+
+/* Folio Atelier · Paper and image settings for ThoughtSpace 1.3.50–1.3.53.
+ * Style controls, never sample chips, preview surfaces, images or canvas data.
+ * Touch targets, disabled/error states and modal scrolling remain plugin-owned.
+ */
+@media screen {
+  body.atelier-plugin-polish :is(
+    .ts-paper-settings .ts-paper-controls > h3,
+    .ts-background-settings .ts-background-controls h3
+  ) {
+    color: var(--atelier-ui-ink);
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+
+  /* Each button frames its original color sample. Do not change the chip's
+   * background or opacity: it represents the exact preset, not UI decoration. */
+  body.atelier-plugin-polish .ts-paper-settings .ts-paper-swatch {
+    border-color: var(--atelier-ui-line);
+    border-radius: var(--atelier-ui-radius-sm);
+    color: var(--atelier-ui-muted);
+  }
+  body.atelier-plugin-polish .ts-paper-settings .ts-paper-swatch:is(:hover,:focus-visible):not(:disabled):not([aria-disabled=true]) {
+    border-color: var(--atelier-ui-line-strong);
+    background-color: var(--atelier-ui-subtle);
+    color: var(--atelier-ui-ink);
+  }
+  body.atelier-plugin-polish .ts-paper-settings .ts-paper-swatch[aria-pressed=true]:not(:disabled):not([aria-disabled=true]) {
+    border-color: var(--atelier-accent);
+    background-color: var(--atelier-soft);
+    color: var(--atelier-ui-ink);
+    box-shadow: inset 0 -2px var(--atelier-accent);
+    font-weight: 600;
+  }
+  body.atelier-plugin-polish .ts-paper-settings .ts-paper-custom-row {
+    border-color: var(--atelier-ui-line);
+  }
+  body.atelier-plugin-polish .ts-paper-settings .ts-paper-custom-row > input[type=text]:not(:disabled) {
+    background-color: var(--atelier-ui-panel);
+    color: var(--atelier-ui-ink);
+    border-radius: var(--atelier-ui-radius-sm);
+    font-variant-numeric: tabular-nums;
+  }
+  body.atelier-plugin-polish .ts-paper-settings .ts-paper-custom-row > input[type=text]:not([aria-invalid=true]):not(:disabled) {
+    border-color: var(--atelier-ui-line-strong);
+  }
+  body.atelier-plugin-polish .ts-paper-settings .ts-paper-custom-label[aria-pressed=true]:not(:disabled):not([aria-disabled=true]) {
+    background-color: var(--atelier-soft);
+    color: var(--atelier-ui-ink);
+    border-radius: var(--atelier-ui-radius-sm);
+    box-shadow: inset 0 -2px var(--atelier-accent);
+  }
+
+  /* Numeric outputs have a stable width while the real sliders keep their
+   * native hit areas and input behavior, including the 44px touch layout. */
+  body.atelier-plugin-polish :is(
+    .ts-paper-settings .ts-paper-texture-control,
+    .ts-background-settings .ts-background-opacity-control
+  ) output {
+    min-inline-size: 3.5em;
+    padding: 2px 6px;
+    border: 1px solid var(--atelier-ui-line);
+    border-radius: 6px;
+    background-color: var(--atelier-ui-panel);
+    color: var(--atelier-ui-ink);
+    font-size: 12px;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.5;
+    text-align: center;
+  }
+  body.atelier-plugin-polish .ts-background-settings .ts-background-source {
+    padding: 10px 12px;
+    border: 1px solid var(--atelier-ui-line);
+    border-radius: var(--atelier-ui-radius-sm);
+    background-color: var(--atelier-ui-panel);
+  }
+  body.atelier-plugin-polish .ts-background-settings .ts-background-source-icon {
+    color: var(--atelier-accent);
+  }
+  body.atelier-plugin-polish .ts-background-settings .ts-background-source-name {
+    color: var(--atelier-ui-ink);
+  }
+
+  /* A single segmented field, not three separate glass layers. */
+  body.atelier-plugin-polish .ts-background-settings .ts-background-fit-options {
+    gap: 3px;
+    padding: 3px;
+    border: 1px solid var(--atelier-ui-line);
+    border-radius: var(--atelier-ui-radius-sm);
+    background-color: var(--atelier-ui-panel);
+  }
+  body.atelier-plugin-polish .ts-background-settings .ts-background-fit-options button {
+    border-radius: max(3px, calc(var(--atelier-ui-radius-sm) - 3px));
+  }
+  body.atelier-plugin-polish .ts-background-settings .ts-background-fit-options button:not(:disabled):not([aria-disabled=true]) {
+    color: var(--atelier-ui-muted);
+  }
+  body.atelier-plugin-polish .ts-background-settings .ts-background-fit-options button:is(:hover,:focus-visible):not(:disabled):not([aria-disabled=true]) {
+    background-color: var(--atelier-ui-subtle);
+    color: var(--atelier-ui-ink);
+  }
+  body.atelier-plugin-polish .ts-background-settings .ts-background-fit-options button[aria-pressed=true]:not(:disabled):not([aria-disabled=true]) {
+    background-color: var(--atelier-ui-raised);
+    color: var(--atelier-ui-ink);
+    box-shadow: inset 0 -2px var(--atelier-accent);
+    font-weight: 600;
+  }
+  body.atelier-plugin-polish .ts-root .ts-footer .ts-canvas-controls .ts-snap-toggle.is-active:not(:disabled) .ts-snap-state {
+    color: var(--atelier-accent);
+    font-weight: 600;
+  }
+  /* Shared modal input paint otherwise makes sliders look like text fields.
+   * Keep the full original input height as the pointer/touch target. */
+  body.atelier-plugin-polish :is(.ts-paper-settings,.ts-background-settings) input[type=range] {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+  body.atelier-plugin-polish :is(.ts-paper-settings,.ts-background-settings) input[type=range]:focus-visible {
+    box-shadow: none;
+    outline: 2px solid var(--atelier-accent);
+    outline-offset: 2px;
+  }
+  body.atelier-plugin-polish :is(.ts-paper-settings,.ts-background-settings) input[type=range]::-webkit-slider-runnable-track {
+    height: 6px;
+    border-radius: 6px;
+    background-color: var(--atelier-ui-line-strong);
+  }
+  @media (forced-colors: active) {
+    body.atelier-plugin-polish :is(.ts-paper-settings,.ts-background-settings) input[type=range]::-webkit-slider-runnable-track {
+      background-color: CanvasText;
+    }
+    body.atelier-plugin-polish :is(
+      .ts-paper-settings .ts-paper-swatch,
+      .ts-paper-settings .ts-paper-custom-label,
+      .ts-background-settings .ts-background-fit-options button
+    )[aria-pressed=true]:not(:disabled) {
+      outline: 2px solid Highlight;
+      outline-offset: -2px;
+    }
+  }
+}
+
+
+/* Optional ThoughtSpace surface tints. The Style Settings pickers emit a
+ * variable only for a saved choice, and each style query opens just that
+ * scope. Resetting a picker restores the original cascade. The named body
+ * container is a style container only; it does not contain the layout. */
+@layer folio-thoughtspace-colors {
+  @media screen and (forced-colors: none) and (prefers-contrast: no-preference) {
+    body:is(.theme-light,.theme-dark) {
+      container-name: folio-thoughtspace-colors;
+      --folio-ts-color-weight: calc(clamp(15, var(--atelier-ts-color-strength, 35), 45) * 1%);
+    }
+    body.theme-dark {
+      --folio-ts-color-weight: calc(clamp(15, var(--atelier-ts-color-strength, 35), 45) * .8%);
+    }
+
+    /* Use the base sheet's alpha for both colors. The user's transparency,
+     * pane-focus and interaction fallbacks keep the same effective opacity.
+     * Paint the independent shells; their nested controls share that surface. */
+    @supports (color: rgb(from white r g b / alpha)) {
+      @container folio-thoughtspace-colors style(--atelier-ts-toolbar-color-r) and style(--atelier-ts-toolbar-color-g) and style(--atelier-ts-toolbar-color-b) {
+        :where(
+          .ts-root .ts-topbar, .ts-root .ts-board-rail > .ts-rail-tools,
+          .ts-root .ts-view-dock, .ts-root .ts-floating-formatbar,
+          .ts-root .ts-commandbar, .ts-note-markdown-toolbar,
+          .ts-brain-topbar, .ts-brain-controls, .ts-brain-tools-header,
+          .ts-mm-controls, .ts-mm-tool-actions, .ts-mm-footer,
+          .ts-writing-header, .ts-writing-formatbar, .ts-writing-dock-head,
+          .ts-writing-panel-head, .ts-writing-panel-foot,
+          .ts-reading-commandbar, .ts-reading-tools, .ts-reading-aside-tabs,
+          .ts-reading-footer, .ts-reference-reading-footer, .ts-selection-note-footer,
+          .ts-materials-tabs, .ts-materials-filters, .ts-materials-source-actions,
+          .ts-materials-footer, .ts-materials-pane-switch, .ts-materials-reading-switch,
+          .ts-media-workspace__header, .ts-media-workspace__savebar,
+          .ts-media-workspace__timeline-tools, .ts-online-workspace__header,
+          .ts-handwriting-toolbar, .ts-handwriting-footer, .ts-handwriting-export-footer,
+          .ts-local-relations-toolbar, .ts-hub-tools, .ts-hub-footer,
+          .ts-collection-header, .ts-collection-feed-tools, .ts-collection-selection-tools,
+          .ts-db-overview-toolbar, .ts-db-filters, .ts-db-custom-filters,
+          .ts-card-library .ts-library-search-row,
+          .ts-layout-planner :is(.ts-layout-preview-header,.ts-layout-navigation,.ts-layout-footer),
+          .ts-settings-header, .ts-native-tools, .ts-native-footer,
+          .ts-board-search-filters, .ts-board-search-footer, .ts-catalog-toolbar,
+          .ts-task-filters, .ts-pdf-controls, .ts-pdf-selection-tools,
+          .workspace-leaf-content:is(
+            [data-type=thoughtspace-board], [data-type=thoughtspace-writing],
+            [data-type=thoughtspace-materials], [data-type=thoughtspace-collection],
+            [data-type=thoughtspace-local-relations], [data-type=thoughtspace-navigator],
+            [data-type=thoughtspace-media-player], [data-type=thoughtspace-online-player]
+          ) > .view-header
+        ):not(:where(
+          .ts-topbar *, .ts-rail-tools *, .ts-view-dock *, .ts-floating-formatbar *,
+          .ts-brain-topbar *, .ts-note-markdown-toolbar *, .ts-writing-header *,
+          .ts-writing-formatbar *, .ts-writing-dock-head *, .ts-reading-commandbar *,
+          .ts-reading-tools *, .ts-materials-tabs *, .ts-media-workspace__header *,
+          .ts-online-workspace__header *, .ts-handwriting-toolbar *,
+          .ts-local-relations-toolbar *, .ts-collection-header *,
+          .ts-db-overview-toolbar *, .ts-canvas-settings-panel *,
+          [data-ts-glass-optics=true], [data-ts-glass-optics=true] *,
+          .ts-calendar-plugin, .ts-calendar-plugin *
+        )) {
+          --folio-ts-toolbar-base: var(--folio-toolbar-fill, var(--atelier-ui-raised));
+          background-color: color-mix(in srgb, var(--folio-ts-toolbar-base),
+            rgb(from var(--folio-ts-toolbar-base) var(--atelier-ts-toolbar-color-r)
+              var(--atelier-ts-toolbar-color-g) var(--atelier-ts-toolbar-color-b) / alpha)
+            var(--folio-ts-color-weight)) !important;
+        }
+        body.atelier-surface-liquid.atelier-glass-pane-focus.is-focused .workspace-leaf:not(.mod-active) > .workspace-leaf-content > .view-header {
+          --folio-ts-toolbar-base: color-mix(in srgb, var(--folio-toolbar-fill) 65%, var(--atelier-ui-panel));
+        }
+      }
+
+      @container folio-thoughtspace-colors style(--atelier-ts-popover-color-r) and style(--atelier-ts-popover-color-g) and style(--atelier-ts-popover-color-b) {
+        :where(.ts-ui-menu, .ts-root .ts-tools-palette, .ts-root .ts-rail-popover,
+          .ts-root .ts-canvas-settings-panel, .ts-brain-search-results, .ts-source-popover,
+          .ts-local-relations-picker, .ts-local-relations-filter-panel, .ts-local-relations-more-panel,
+          .ts-card-library .ts-library-more-menu,
+          .ts-handwriting-popover, .ts-writing-reference-picker,
+          .ts-ui-modal:not(:is(.ts-space-hub, .ts-board-search, .ts-section-catalog,
+            .ts-saved-views, .ts-layout-planner, .ts-reading-desk, .ts-reference-reading,
+            .ts-preview-modal, .ts-selection-note, .ts-writing, .ts-materials-modal, .ts-materials-panel,
+            .ts-media-workspace, .ts-online-workspace, .ts-native-bridge, .ts-handwriting,
+            .ts-local-relations, .ts-collection-content, .ts-database-modal, .ts-mindmap-studio,
+            .ts-settings, .ts-workspace-settings-modal, .ts-settings-profile-modal,
+            .ts-handwriting-export-modal, .ts-handwriting-png-modal))
+        ):not(:where([data-ts-glass-optics=true], .ts-calendar-plugin, .ts-calendar-plugin *)) {
+          --folio-ts-popover-base: var(--folio-popover-fill, var(--atelier-ui-raised));
+          background-color: color-mix(in srgb, var(--folio-ts-popover-base),
+            rgb(from var(--folio-ts-popover-base) var(--atelier-ts-popover-color-r)
+              var(--atelier-ts-popover-color-g) var(--atelier-ts-popover-color-b) / alpha)
+            var(--folio-ts-color-weight)) !important;
+        }
+        :where(.ts-ui-modal, .ts-writing-reference-picker, .ts-card-library .ts-library-more-menu:not([popover])) {
+          --folio-ts-popover-base: var(--atelier-ui-raised);
+        }
+        :where(.ts-handwriting-popover) {
+          --folio-ts-popover-base: var(--folio-toolbar-fill, var(--atelier-ui-raised));
+        }
+      }
+    }
+
+    /* Workspace surfaces have no material or geometry overrides here.
+     * Each group names the actual chrome, not generic markdown or form DOM. */
+    @container folio-thoughtspace-colors style(--atelier-ts-navigation-color) {
+      :where(.ts-root.ts-dock .ts-sidebar, .ts-native-bridge, .ts-journal,
+        .ts-root.ts-dock .ts-task-summary):not(:where(.ts-calendar-plugin, .ts-calendar-plugin *)) {
+        background-color: color-mix(in srgb, var(--atelier-ui-panel), var(--atelier-ts-navigation-color) var(--folio-ts-color-weight)) !important;
+      }
+    }
+    @container folio-thoughtspace-colors style(--atelier-ts-hub-color) {
+      :where(.ts-space-hub, .ts-space-hub .ts-hub-nav, .ts-space-hub .ts-hub-detail,
+        .ts-board-search, .ts-section-catalog, .ts-saved-views, .ts-layout-planner,
+        .ts-layout-planner :is(.ts-layout-controls,.ts-layout-preview)
+      ):not(:where(.ts-calendar-plugin, .ts-calendar-plugin *)) {
+        background-color: color-mix(in srgb, var(--atelier-ui-panel), var(--atelier-ts-hub-color) var(--folio-ts-color-weight)) !important;
+      }
+    }
+    @container folio-thoughtspace-colors style(--atelier-ts-reading-color) {
+      :where(.ts-reading-desk, .ts-reading-desk .ts-reading-aside, .ts-reading-compact-panel,
+        .ts-reference-reading, .ts-selection-note, .ts-preview-modal > :is(.modal-title,.modal-header)
+      ):not(:where(.ts-calendar-plugin, .ts-calendar-plugin *)) {
+        background-color: color-mix(in srgb, var(--atelier-ui-panel), var(--atelier-ts-reading-color) var(--folio-ts-color-weight)) !important;
+      }
+    }
+    @container folio-thoughtspace-colors style(--atelier-ts-writing-color) {
+      :where(.ts-writing :is(.ts-writing-dock,.ts-writing-navigator,.ts-writing-status,.ts-writing-outline)
+      ):not(:where(.ts-calendar-plugin, .ts-calendar-plugin *)) {
+        background-color: color-mix(in srgb, var(--atelier-ui-panel), var(--atelier-ts-writing-color) var(--folio-ts-color-weight)) !important;
+      }
+    }
+    @container folio-thoughtspace-colors style(--atelier-ts-materials-color) {
+      :where(.ts-materials-panel, .ts-materials-modal,
+        :is(.ts-materials-panel,.ts-materials-modal) :is(.ts-materials-library,.ts-materials-detail)
+      ):not(:where(.ts-calendar-plugin, .ts-calendar-plugin *)) {
+        background-color: color-mix(in srgb, var(--atelier-ui-panel), var(--atelier-ts-materials-color) var(--folio-ts-color-weight)) !important;
+      }
+    }
+    @container folio-thoughtspace-colors style(--atelier-ts-media-color) {
+      :where(.ts-media-workspace, .ts-online-workspace,
+        .ts-media-workspace :is(.ts-media-workspace__records,.ts-media-workspace__composer),
+        .ts-online-workspace :is(.ts-online-workspace__records,.ts-online-workspace__composer)
+      ):not(:where(.ts-calendar-plugin, .ts-calendar-plugin *)) {
+        background-color: color-mix(in srgb, var(--atelier-ui-panel), var(--atelier-ts-media-color) var(--folio-ts-color-weight)) !important;
+      }
+    }
+    @container folio-thoughtspace-colors style(--atelier-ts-handwriting-color) {
+      :where(.ts-handwriting, .ts-handwriting-export-modal, .ts-handwriting-png-modal
+      ):not(:where(.ts-calendar-plugin, .ts-calendar-plugin *)) {
+        background-color: color-mix(in srgb, var(--atelier-ui-panel), var(--atelier-ts-handwriting-color) var(--folio-ts-color-weight)) !important;
+      }
+    }
+    @container folio-thoughtspace-colors style(--atelier-ts-relations-color) {
+      :where(.ts-local-relations, .ts-local-relations .ts-local-relations-center
+      ):not(:where(.ts-calendar-plugin, .ts-calendar-plugin *)) {
+        background-color: color-mix(in srgb, var(--atelier-ui-panel), var(--atelier-ts-relations-color) var(--folio-ts-color-weight)) !important;
+      }
+    }
+    @container folio-thoughtspace-colors style(--atelier-ts-collection-color) {
+      /* Use solid paint for the frozen title column in the new card library. */
+      :where(.ts-collection-content, .ts-collection-content :is(.ts-collection-nav,.ts-collection-review-panel),
+        .ts-database-modal, .ts-database-modal :is(.ts-db-results,.ts-db-options),
+        .ts-card-library-modal .ts-card-library :is(.ts-db-table,.ts-db-kanban),
+        .ts-card-library-modal .ts-db-table :is(th:first-child,.ts-library-title-cell)
+      ):not(:where(.ts-calendar-plugin, .ts-calendar-plugin *)) {
+        background-color: color-mix(in srgb, var(--atelier-ui-panel), var(--atelier-ts-collection-color) var(--folio-ts-color-weight)) !important;
+      }
+    }
+    @container folio-thoughtspace-colors style(--atelier-ts-mindmap-color) {
+      :where(.ts-brain-shell .ts-brain-tools, .ts-mindmap-studio, .ts-mindmap-studio .ts-mm-tool-sheet
+      ):not(:where(.ts-calendar-plugin, .ts-calendar-plugin *)) {
+        background-color: color-mix(in srgb, var(--atelier-ui-panel), var(--atelier-ts-mindmap-color) var(--folio-ts-color-weight)) !important;
+      }
+    }
+    @container folio-thoughtspace-colors style(--atelier-ts-settings-color) {
+      :where(.ts-settings, .ts-settings :is(.ts-settings-nav,.ts-settings-panel),
+        .ts-workspace-settings-modal, .ts-settings-profile-modal
+      ):not(:where(.ts-calendar-plugin, .ts-calendar-plugin *)) {
+        background-color: color-mix(in srgb, var(--atelier-ui-panel), var(--atelier-ts-settings-color) var(--folio-ts-color-weight)) !important;
+      }
+    }
+
+    /* These are selections, not actions. Only known active tabs, filters and
+     * modes get the optional tint; native and semantic buttons stay untouched. */
+    @container folio-thoughtspace-colors style(--atelier-ts-selection-color) {
+      :where(.ts-root.ts-dock .ts-tabs > .ts-button:is(.is-active,[aria-selected=true]),
+        .ts-board-rail .ts-button:is(.is-active,[aria-pressed=true]),
+        .ts-view-dock .ts-button:is(.is-active,[aria-pressed=true]),
+        .ts-format-mode-button:is(.is-active,[aria-pressed=true]),
+        .ts-reading-aside-tabs button[aria-pressed=true],
+        .ts-materials-tabs button[aria-selected=true],
+        .ts-materials-reading-switch button[aria-pressed=true],
+        .ts-writing-switch .ts-writing-button.is-active,
+        .ts-writing .ts-writing-outline .ts-writing-entry.is-selected,
+        .ts-writing-reference-tab.is-active, .ts-settings-nav button.is-active,
+        .ts-hub-result.is-focused, .ts-board-search-row.is-active,
+        .ts-db-tabs .is-active, .ts-local-relations-controls button[aria-pressed=true],
+        .ts-card-library :is(.ts-library-filter-chip,.ts-library-select[aria-pressed=true]),
+        .ts-tools-palette .ts-palette-sections button[aria-pressed=true],
+        .ts-paper-settings :is(.ts-paper-swatch,.ts-paper-custom-label)[aria-pressed=true],
+        .ts-background-settings .ts-background-fit-options button[aria-pressed=true],
+        .ts-layout-planner :is(.ts-layout-comparison,.ts-layout-modes,.ts-layout-presets,
+          .ts-layout-alignments,.ts-layout-distribution,.ts-layout-preview-actions) button[aria-pressed=true]
+      ):not(:where(.ts-primary,.mod-cta,.is-warning,.mod-warning,.is-danger,.ts-danger,
+        .mod-destructive,:disabled,[aria-disabled=true],.is-disabled,
+        .ts-calendar-plugin, .ts-calendar-plugin *)) {
+        background-color: color-mix(in srgb, var(--atelier-ui-raised), var(--atelier-ts-selection-color) var(--folio-ts-color-weight)) !important;
+      }
+    }
   }
 }
 

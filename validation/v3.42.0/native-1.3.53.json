@@ -1,0 +1,1253 @@
+{
+  "pass": true,
+  "themeVersion": "3.42.0",
+  "themeSHA256": "c3631110207d63c44e4ca77bb57c03a83ab8e0812e025dea4dad33cdcfc8ac45",
+  "baselineSHA256": "30f273eb57ec952209115cedea095955d6b06d6860fd2eb5e5e335900c8d0da9",
+  "thoughtspaceVersion": "1.3.53",
+  "runtime": "obsidian-1.15.0.asar",
+  "styleSettingsVersion": "1.0.9",
+  "runtimeFiles": {
+    "main.js": "15c5c6223c3f1b96572facfea4e6e753ce212da0e31018012e7a1c2171379a36",
+    "manifest.json": "7cc235cfc91c4258047d68951c10e4624a83b59c9f2da8837d0bf4dd4f3da7cd",
+    "styles.css": "4961a9c92150e1c316f9e98f5fea1625abb38f013185334a67b38452aa3bd032"
+  },
+  "source": "https://github.com/YuguangLi-lab/obsidian-thoughtspace/releases/tag/1.3.53",
+  "checks": [
+    {
+      "name": "official plugin loaded",
+      "pass": true,
+      "actual": "1.3.53",
+      "expected": "1.3.53"
+    },
+    {
+      "name": "active CSS matches candidate",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "fourteen Style Settings pickers registered",
+      "pass": true,
+      "actual": 14,
+      "expected": 14
+    },
+    {
+      "name": "baseline library keeps result scroll (light)",
+      "pass": true,
+      "actual": "hidden",
+      "expected": "hidden"
+    },
+    {
+      "name": "library scroll belongs to results (light)",
+      "pass": true,
+      "actual": [
+        "hidden",
+        "auto"
+      ],
+      "expected": [
+        "hidden",
+        "auto"
+      ]
+    },
+    {
+      "name": "card library search toolbar tint and material (light)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "card library search results narrow (light)",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "active filter tint (light)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "filter can be removed (light)",
+      "pass": true,
+      "actual": "",
+      "expected": ""
+    },
+    {
+      "name": "card action popup tint, opacity and placement (light)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "card action popup returns focus (light)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "fixed title column is colored and opaque (light)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "library switches to kanban (light)",
+      "pass": true,
+      "actual": "kanban",
+      "expected": "kanban"
+    },
+    {
+      "name": "authored card paint and size unchanged (light)",
+      "pass": true,
+      "actual": [
+        {
+          "background": "color(srgb 0.897412 0.913882 0.85851)",
+          "border": "rgb(216, 225, 221)",
+          "width": 249,
+          "height": 157.69998168945312
+        },
+        {
+          "background": "color(srgb 0.988235 0.988235 0.996078 / 0.929412)",
+          "border": "rgb(216, 225, 221)",
+          "width": 249,
+          "height": 157.69998168945312
+        },
+        {
+          "background": "color(srgb 0.988235 0.988235 0.996078 / 0.929412)",
+          "border": "rgb(216, 225, 221)",
+          "width": 249,
+          "height": 157.69998168945312
+        }
+      ],
+      "expected": [
+        {
+          "background": "color(srgb 0.897412 0.913882 0.85851)",
+          "border": "rgb(216, 225, 221)",
+          "width": 249,
+          "height": 157.69998168945312
+        },
+        {
+          "background": "color(srgb 0.988235 0.988235 0.996078 / 0.929412)",
+          "border": "rgb(216, 225, 221)",
+          "width": 249,
+          "height": 157.69998168945312
+        },
+        {
+          "background": "color(srgb 0.988235 0.988235 0.996078 / 0.929412)",
+          "border": "rgb(216, 225, 221)",
+          "width": 249,
+          "height": 157.69998168945312
+        }
+      ]
+    },
+    {
+      "name": "tools reclaim space from selection toolbar (light)",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "tool search has one visible focus ring (light)",
+      "pass": true,
+      "actual": {
+        "outer": "solid",
+        "inner": "none",
+        "shadow": "none"
+      },
+      "expected": {
+        "outer": "solid",
+        "inner": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "name": "tool palette contains no horizontal overflow or nested blur (light)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "board tool palette tint (light)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "search reveals folded tool group (light)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "clearing search restores folding (light)",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "empty tool search is readable and announced (light)",
+      "pass": true,
+      "actual": "polite",
+      "expected": "polite"
+    },
+    {
+      "name": "selection toolbar returns after closing tools (light)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "blank board click clears selection (light)",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "canvas snap toggle still changes state (light)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "canvas snap toggle restores state (light)",
+      "pass": true,
+      "actual": "false",
+      "expected": "false"
+    },
+    {
+      "name": "canvas settings returns keyboard focus (light)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "paper preset has a single selected state (light)",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "paper preset honors selection color (light)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "invalid paper color blocks apply (light)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "valid paper color updates original preview (light)",
+      "pass": true,
+      "actual": "#e5ead4",
+      "expected": "#e5ead4"
+    },
+    {
+      "name": "texture output follows keyboard value (light)",
+      "pass": true,
+      "actual": "1%",
+      "expected": "1%"
+    },
+    {
+      "name": "slider keeps a transparent hit target (light)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "slider responds to real pointer input (light)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "paper swatches and preview retain exact paint (light)",
+      "pass": true,
+      "actual": [
+        [
+          "rgb(248, 245, 239)",
+          "none",
+          "",
+          ""
+        ],
+        [
+          "rgb(255, 255, 255)",
+          "none",
+          "",
+          ""
+        ],
+        [
+          "rgb(247, 242, 231)",
+          "none",
+          "",
+          ""
+        ],
+        [
+          "rgb(214, 186, 143)",
+          "none",
+          "",
+          ""
+        ],
+        [
+          "rgb(222, 219, 209)",
+          "none",
+          "",
+          ""
+        ],
+        [
+          "rgb(229, 234, 212)",
+          "none",
+          "#e5ead4",
+          "0.66"
+        ]
+      ],
+      "expected": [
+        [
+          "rgb(248, 245, 239)",
+          "none",
+          "",
+          ""
+        ],
+        [
+          "rgb(255, 255, 255)",
+          "none",
+          "",
+          ""
+        ],
+        [
+          "rgb(247, 242, 231)",
+          "none",
+          "",
+          ""
+        ],
+        [
+          "rgb(214, 186, 143)",
+          "none",
+          "",
+          ""
+        ],
+        [
+          "rgb(222, 219, 209)",
+          "none",
+          "",
+          ""
+        ],
+        [
+          "rgb(229, 234, 212)",
+          "none",
+          "#e5ead4",
+          "0.66"
+        ]
+      ]
+    },
+    {
+      "name": "cancel paper does not save background (light)",
+      "pass": true,
+      "actual": "null",
+      "expected": "null"
+    },
+    {
+      "name": "remove image is disabled with no image (light)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "image fit selection contain (light)",
+      "pass": true,
+      "actual": "true",
+      "expected": "true"
+    },
+    {
+      "name": "image fit selection tile (light)",
+      "pass": true,
+      "actual": "true",
+      "expected": "true"
+    },
+    {
+      "name": "image fit selection cover (light)",
+      "pass": true,
+      "actual": "true",
+      "expected": "true"
+    },
+    {
+      "name": "image fit honors selection color (light)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "image opacity output follows keyboard value (light)",
+      "pass": true,
+      "actual": "1%",
+      "expected": "1%"
+    },
+    {
+      "name": "image preview keeps native image fit and opacity (light)",
+      "pass": true,
+      "actual": [
+        "url(\"blob:app://obsidian.md/a84b6801-4fa3-4463-bcfb-ec7010ce7583\")",
+        "cover",
+        "no-repeat",
+        "1"
+      ],
+      "expected": [
+        "url(\"blob:app://obsidian.md/a84b6801-4fa3-4463-bcfb-ec7010ce7583\")",
+        "cover",
+        "no-repeat",
+        "1"
+      ]
+    },
+    {
+      "name": "remove clears preview and disables itself (light)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "cancel image does not save background (light)",
+      "pass": true,
+      "actual": "null",
+      "expected": "null"
+    },
+    {
+      "name": "board search has one visible focus ring (light)",
+      "pass": true,
+      "actual": {
+        "outer": "solid",
+        "inner": "none",
+        "shadow": "none"
+      },
+      "expected": {
+        "outer": "solid",
+        "inner": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "name": "board search still filters by title (light)",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "board search keyboard chooses a visible result (light)",
+      "pass": true,
+      "actual": "true",
+      "expected": "true"
+    },
+    {
+      "name": "layout comparison switches to original (light)",
+      "pass": true,
+      "actual": "true",
+      "expected": "true"
+    },
+    {
+      "name": "layout controls have a flush panel seam (light)",
+      "pass": true,
+      "actual": "0px",
+      "expected": "0px"
+    },
+    {
+      "name": "layout preview preserves authored paint (light)",
+      "pass": true,
+      "actual": [
+        [
+          "rgba(0, 0, 0, 0)",
+          "rgb(0, 0, 0)",
+          "none"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "none",
+          "rgb(103, 103, 95)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "rgb(207, 185, 99)",
+          "rgb(207, 185, 99)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "rgb(157, 169, 185)",
+          "rgb(157, 169, 185)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "rgb(157, 169, 185)",
+          "rgb(157, 169, 185)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "none",
+          "rgb(29, 29, 31)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "none",
+          "rgb(29, 29, 31)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "none",
+          "rgb(29, 29, 31)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "none",
+          "rgb(29, 29, 31)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "none",
+          "rgb(29, 29, 31)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "none",
+          "rgb(29, 29, 31)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "none",
+          "rgb(29, 29, 31)"
+        ]
+      ],
+      "expected": [
+        [
+          "rgba(0, 0, 0, 0)",
+          "rgb(0, 0, 0)",
+          "none"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "none",
+          "rgb(103, 103, 95)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "rgb(207, 185, 99)",
+          "rgb(207, 185, 99)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "rgb(157, 169, 185)",
+          "rgb(157, 169, 185)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "rgb(157, 169, 185)",
+          "rgb(157, 169, 185)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "none",
+          "rgb(29, 29, 31)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "none",
+          "rgb(29, 29, 31)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "none",
+          "rgb(29, 29, 31)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "none",
+          "rgb(29, 29, 31)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "none",
+          "rgb(29, 29, 31)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "none",
+          "rgb(29, 29, 31)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "none",
+          "rgb(29, 29, 31)"
+        ]
+      ]
+    },
+    {
+      "name": "layout panel, toolbar and compare tint independently (light)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "layout options retain comparison mode (light)",
+      "pass": true,
+      "actual": "true",
+      "expected": "true"
+    },
+    {
+      "name": "writing outline tints while manuscript surface retains paint (light)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "selected writing row gets independent tint (light)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "writing outline menu follows popup tint (light)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "outline menu returns focus (light)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "reset restores original outline paint (light)",
+      "pass": true,
+      "actual": "rgba(0, 0, 0, 0)",
+      "expected": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "name": "baseline library keeps result scroll (dark)",
+      "pass": true,
+      "actual": "hidden",
+      "expected": "hidden"
+    },
+    {
+      "name": "library scroll belongs to results (dark)",
+      "pass": true,
+      "actual": [
+        "hidden",
+        "auto"
+      ],
+      "expected": [
+        "hidden",
+        "auto"
+      ]
+    },
+    {
+      "name": "card library search toolbar tint and material (dark)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "card library search results narrow (dark)",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "active filter tint (dark)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "filter can be removed (dark)",
+      "pass": true,
+      "actual": "",
+      "expected": ""
+    },
+    {
+      "name": "card action popup tint, opacity and placement (dark)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "card action popup returns focus (dark)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "fixed title column is colored and opaque (dark)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "narrow table scrolls horizontally (dark)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "library switches to kanban (dark)",
+      "pass": true,
+      "actual": "kanban",
+      "expected": "kanban"
+    },
+    {
+      "name": "authored card paint and size unchanged (dark)",
+      "pass": true,
+      "actual": [
+        {
+          "background": "color(srgb 0.197333 0.237961 0.153882)",
+          "border": "rgb(59, 73, 66)",
+          "width": 249,
+          "height": 157.69998168945312
+        },
+        {
+          "background": "color(srgb 0.137255 0.145098 0.160784 / 0.94902)",
+          "border": "rgb(59, 73, 66)",
+          "width": 249,
+          "height": 157.69998168945312
+        },
+        {
+          "background": "color(srgb 0.137255 0.145098 0.160784 / 0.94902)",
+          "border": "rgb(59, 73, 66)",
+          "width": 249,
+          "height": 157.69998168945312
+        }
+      ],
+      "expected": [
+        {
+          "background": "color(srgb 0.197333 0.237961 0.153882)",
+          "border": "rgb(59, 73, 66)",
+          "width": 249,
+          "height": 157.69998168945312
+        },
+        {
+          "background": "color(srgb 0.137255 0.145098 0.160784 / 0.94902)",
+          "border": "rgb(59, 73, 66)",
+          "width": 249,
+          "height": 157.69998168945312
+        },
+        {
+          "background": "color(srgb 0.137255 0.145098 0.160784 / 0.94902)",
+          "border": "rgb(59, 73, 66)",
+          "width": 249,
+          "height": 157.69998168945312
+        }
+      ]
+    },
+    {
+      "name": "tools reclaim space from selection toolbar (dark)",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "tool search has one visible focus ring (dark)",
+      "pass": true,
+      "actual": {
+        "outer": "solid",
+        "inner": "none",
+        "shadow": "none"
+      },
+      "expected": {
+        "outer": "solid",
+        "inner": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "name": "tool palette contains no horizontal overflow or nested blur (dark)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "board tool palette tint (dark)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "search reveals folded tool group (dark)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "clearing search restores folding (dark)",
+      "pass": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "empty tool search is readable and announced (dark)",
+      "pass": true,
+      "actual": "polite",
+      "expected": "polite"
+    },
+    {
+      "name": "selection toolbar returns after closing tools (dark)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "blank board click clears selection (dark)",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "canvas snap toggle still changes state (dark)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "canvas snap toggle restores state (dark)",
+      "pass": true,
+      "actual": "false",
+      "expected": "false"
+    },
+    {
+      "name": "canvas settings returns keyboard focus (dark)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "paper preset has a single selected state (dark)",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "paper preset honors selection color (dark)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "invalid paper color blocks apply (dark)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "valid paper color updates original preview (dark)",
+      "pass": true,
+      "actual": "#e5ead4",
+      "expected": "#e5ead4"
+    },
+    {
+      "name": "texture output follows keyboard value (dark)",
+      "pass": true,
+      "actual": "1%",
+      "expected": "1%"
+    },
+    {
+      "name": "slider keeps a transparent hit target (dark)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "slider responds to real pointer input (dark)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "paper swatches and preview retain exact paint (dark)",
+      "pass": true,
+      "actual": [
+        [
+          "rgb(248, 245, 239)",
+          "none",
+          "",
+          ""
+        ],
+        [
+          "rgb(255, 255, 255)",
+          "none",
+          "",
+          ""
+        ],
+        [
+          "rgb(247, 242, 231)",
+          "none",
+          "",
+          ""
+        ],
+        [
+          "rgb(214, 186, 143)",
+          "none",
+          "",
+          ""
+        ],
+        [
+          "rgb(222, 219, 209)",
+          "none",
+          "",
+          ""
+        ],
+        [
+          "color(srgb 0.219451 0.229176 0.212078)",
+          "none",
+          "#e5ead4",
+          "0.66"
+        ]
+      ],
+      "expected": [
+        [
+          "rgb(248, 245, 239)",
+          "none",
+          "",
+          ""
+        ],
+        [
+          "rgb(255, 255, 255)",
+          "none",
+          "",
+          ""
+        ],
+        [
+          "rgb(247, 242, 231)",
+          "none",
+          "",
+          ""
+        ],
+        [
+          "rgb(214, 186, 143)",
+          "none",
+          "",
+          ""
+        ],
+        [
+          "rgb(222, 219, 209)",
+          "none",
+          "",
+          ""
+        ],
+        [
+          "color(srgb 0.219451 0.229176 0.212078)",
+          "none",
+          "#e5ead4",
+          "0.66"
+        ]
+      ]
+    },
+    {
+      "name": "cancel paper does not save background (dark)",
+      "pass": true,
+      "actual": "null",
+      "expected": "null"
+    },
+    {
+      "name": "remove image is disabled with no image (dark)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "image fit selection contain (dark)",
+      "pass": true,
+      "actual": "true",
+      "expected": "true"
+    },
+    {
+      "name": "image fit selection tile (dark)",
+      "pass": true,
+      "actual": "true",
+      "expected": "true"
+    },
+    {
+      "name": "image fit selection cover (dark)",
+      "pass": true,
+      "actual": "true",
+      "expected": "true"
+    },
+    {
+      "name": "image fit honors selection color (dark)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "image opacity output follows keyboard value (dark)",
+      "pass": true,
+      "actual": "1%",
+      "expected": "1%"
+    },
+    {
+      "name": "image preview keeps native image fit and opacity (dark)",
+      "pass": true,
+      "actual": [
+        "url(\"blob:app://obsidian.md/fbfcaaaf-1993-4987-94ac-3d6d26ad5160\")",
+        "cover",
+        "no-repeat",
+        "1"
+      ],
+      "expected": [
+        "url(\"blob:app://obsidian.md/fbfcaaaf-1993-4987-94ac-3d6d26ad5160\")",
+        "cover",
+        "no-repeat",
+        "1"
+      ]
+    },
+    {
+      "name": "remove clears preview and disables itself (dark)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "cancel image does not save background (dark)",
+      "pass": true,
+      "actual": "null",
+      "expected": "null"
+    },
+    {
+      "name": "board search has one visible focus ring (dark)",
+      "pass": true,
+      "actual": {
+        "outer": "solid",
+        "inner": "none",
+        "shadow": "none"
+      },
+      "expected": {
+        "outer": "solid",
+        "inner": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "name": "board search still filters by title (dark)",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "board search keyboard chooses a visible result (dark)",
+      "pass": true,
+      "actual": "true",
+      "expected": "true"
+    },
+    {
+      "name": "layout comparison switches to original (dark)",
+      "pass": true,
+      "actual": "true",
+      "expected": "true"
+    },
+    {
+      "name": "layout controls have a flush panel seam (dark)",
+      "pass": true,
+      "actual": "0px",
+      "expected": "0px"
+    },
+    {
+      "name": "layout preview preserves authored paint (dark)",
+      "pass": true,
+      "actual": [
+        [
+          "rgba(0, 0, 0, 0)",
+          "rgb(0, 0, 0)",
+          "none"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "none",
+          "rgb(154, 155, 163)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "rgb(207, 185, 99)",
+          "rgb(207, 185, 99)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "rgb(157, 169, 185)",
+          "rgb(157, 169, 185)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "rgb(157, 169, 185)",
+          "rgb(157, 169, 185)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "none",
+          "rgb(245, 245, 247)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "none",
+          "rgb(245, 245, 247)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "none",
+          "rgb(245, 245, 247)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "none",
+          "rgb(245, 245, 247)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "none",
+          "rgb(245, 245, 247)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "none",
+          "rgb(245, 245, 247)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "none",
+          "rgb(245, 245, 247)"
+        ]
+      ],
+      "expected": [
+        [
+          "rgba(0, 0, 0, 0)",
+          "rgb(0, 0, 0)",
+          "none"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "none",
+          "rgb(154, 155, 163)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "rgb(207, 185, 99)",
+          "rgb(207, 185, 99)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "rgb(157, 169, 185)",
+          "rgb(157, 169, 185)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "rgb(157, 169, 185)",
+          "rgb(157, 169, 185)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "none",
+          "rgb(245, 245, 247)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "none",
+          "rgb(245, 245, 247)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "none",
+          "rgb(245, 245, 247)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "none",
+          "rgb(245, 245, 247)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "none",
+          "rgb(245, 245, 247)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "none",
+          "rgb(245, 245, 247)"
+        ],
+        [
+          "rgba(0, 0, 0, 0)",
+          "none",
+          "rgb(245, 245, 247)"
+        ]
+      ]
+    },
+    {
+      "name": "layout panel, toolbar and compare tint independently (dark)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "layout options retain comparison mode (dark)",
+      "pass": true,
+      "actual": "true",
+      "expected": "true"
+    },
+    {
+      "name": "writing outline tints while manuscript surface retains paint (dark)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "selected writing row gets independent tint (dark)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "writing outline menu follows popup tint (dark)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "outline menu returns focus (dark)",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "reset restores original outline paint (dark)",
+      "pass": true,
+      "actual": "rgba(0, 0, 0, 0)",
+      "expected": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "name": "no uncaught renderer errors",
+      "pass": true,
+      "actual": [],
+      "expected": []
+    }
+  ],
+  "cases": [
+    {
+      "scheme": "light",
+      "width": 1210,
+      "oldLibraryOverflow": "hidden",
+      "textureStyle": {
+        "height": "34px",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "appearance": "none",
+        "border": "0px none rgb(41, 54, 49)"
+      }
+    },
+    {
+      "scheme": "dark",
+      "width": 590,
+      "oldLibraryOverflow": "hidden",
+      "textureStyle": {
+        "height": "44px",
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "appearance": "none",
+        "border": "0px none rgb(226, 234, 229)"
+      }
+    }
+  ],
+  "errors": [],
+  "scope": "Official plugin and Folio Atelier in an isolated Obsidian profile with synthetic notes. Native card library, board tools, layout preview and writing interactions."
+}

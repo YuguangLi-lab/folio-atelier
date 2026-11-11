@@ -10,6 +10,7 @@
    * either injection order. An active optical surface stays plugin-owned. */
   body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-surface-liquid.atelier-surface-liquid :is(
     .ts-ui-menu,
+    :where(.ts-card-library) .ts-library-more-menu[popover],
     .ts-root .ts-tools-palette,
     .ts-root .ts-rail-popover,
     .ts-root .ts-footer > .ts-canvas-settings-panel,
@@ -53,6 +54,7 @@
   }
   body:is(.theme-light,.theme-dark).atelier-surface-liquid.atelier-surface-liquid.atelier-surface-liquid :is(
     .ts-ui-menu,
+    :where(.ts-card-library) .ts-library-more-menu[popover],
     .ts-root .ts-tools-palette,
     .ts-root .ts-rail-popover,
     .ts-root .ts-canvas-settings-panel,
@@ -61,7 +63,7 @@
     .ts-local-relations > .ts-local-relations-picker,
     .ts-local-relations > .ts-local-relations-filter-panel,
     .ts-local-relations > .ts-local-relations-more-panel
-  ) :is(button,input,select,[role=menuitem]):focus-visible:not(:is(:disabled,[aria-disabled=true],.is-disabled)):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
+  ) :is(button,input,select,[role=menuitem],:where(.ts-tools-palette .ts-tool-cluster-title)):focus-visible:not(:is(:disabled,[aria-disabled=true],.is-disabled)):not(:where(.ts-calendar-plugin,.ts-calendar-plugin *)) {
     outline: 2px solid var(--atelier-ui-ink);
     outline-offset: -3px;
   }

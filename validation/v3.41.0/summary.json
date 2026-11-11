@@ -1,0 +1,30 @@
+{
+  "version": "3.41.0",
+  "pass": true,
+  "themeSHA256": "30f273eb57ec952209115cedea095955d6b06d6860fd2eb5e5e335900c8d0da9",
+  "testedThoughtSpaceVersions": [
+    "1.3.52",
+    "1.3.50"
+  ],
+  "native": {
+    "thoughtspaceVersion": "1.3.52",
+    "obsidianRuntime": "obsidian-1.15.0.asar",
+    "checks": 71,
+    "testVault": "isolated synthetic vault",
+    "sizes": [
+      1210,
+      590
+    ]
+  },
+  "offlineChecks": 308,
+  "installedTheme": true,
+  "pluginVersionInInstallVault": "1.3.50",
+  "loadedInInstallVault": false,
+  "newBlurOrAnimation": false,
+  "frameRateBenchmark": false,
+  "reports": {
+    "native-1.3.52": "validation/v3.41.0/native-1.3.52.json",
+    "colors-1.3.52": "validation/v3.41.0/colors-1.3.52.json",
+    "colors-1.3.50": "validation/v3.41.0/colors-1.3.50.json"
+  }
+}

@@ -1,0 +1,148 @@
+/* Folio Atelier 3.41 · ThoughtSpace board command surfaces, 1.3.50–1.3.52.
+ * Local chrome only. Never remap --ts-e-* on the board root or preview scene:
+ * authored cards also consume those tokens. Existing glass owns compositing.
+ */
+@media screen {
+  body.atelier-plugin-polish .ts-root .ts-rail-popover {
+    --ts-e-ink: var(--atelier-ui-ink);
+    --ts-e-muted: var(--atelier-ui-muted);
+    --ts-e-line: var(--atelier-ui-line);
+    --ts-e-control-line: var(--atelier-ui-line-strong);
+    --ts-e-paper: var(--atelier-ui-panel);
+    --ts-e-sheet: var(--atelier-ui-raised);
+    --ts-e-focus: var(--atelier-ui-ink);
+    --ts-board-active: var(--atelier-soft);
+    --ts-palette-align: 14px;
+  }
+  body.atelier-plugin-polish .ts-root .ts-rail-popover .ts-palette-title strong {
+    font-family: var(--font-interface);
+    font-size: 17px;
+    font-weight: 650;
+    line-height: 1.5;
+    letter-spacing: 0;
+  }
+  body.atelier-plugin-polish .ts-root .ts-rail-popover .ts-rail-search-field {
+    border-radius: var(--atelier-ui-radius-sm);
+  }
+  body.atelier-plugin-polish .ts-root .ts-rail-popover .ts-rail-search-field:focus-within {
+    outline: 2px solid var(--atelier-ui-ink);
+    outline-offset: -1px;
+    border-color: transparent;
+  }
+  /* Upstream's later card-context rule can force the formatbar back to flex
+   * while a tool palette is open. Restore its intended mutually exclusive UI. */
+  body.atelier-plugin-polish .ts-root .ts-main:has(> .ts-rail-popover:not([hidden])) > .ts-floating-formatbar {
+    display: none !important;
+  }
+  /* The field owns the focus ring. The generic glass input ring otherwise
+   * adds a second rectangle inside it. Keep the clear button's own ring. */
+  body.atelier-plugin-polish .ts-root .ts-rail-popover .ts-rail-search-field > input.ts-rail-search-input:is(:focus,:focus-visible),
+  body.atelier-plugin-polish .ts-ui-modal.ts-board-search .ts-board-search-bar > input:is(:focus,:focus-visible) {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  body.atelier-plugin-polish .ts-ui-modal.ts-board-search .ts-board-search-bar:focus-within {
+    outline: 2px solid var(--atelier-ui-ink);
+    outline-offset: -1px;
+  }
+  body.atelier-plugin-polish .ts-root .ts-tools-palette .ts-palette-sections {
+    background-color: color-mix(in srgb, var(--atelier-ui-panel) 70%, transparent);
+  }
+  body.atelier-plugin-polish .ts-root .ts-tools-palette .ts-tool-cluster > summary {
+    color: var(--atelier-ui-muted);
+    font-weight: 600;
+    border-radius: var(--atelier-ui-radius-sm);
+  }
+  body.atelier-plugin-polish .ts-root .ts-tools-palette .ts-tool-cluster > summary:is(:hover,:focus-visible) {
+    background-color: var(--atelier-ui-subtle);
+    color: var(--atelier-ui-ink);
+  }
+  body.atelier-plugin-polish .ts-root .ts-tools-palette .ts-palette-sections .ts-button[aria-pressed=true]:not(:disabled):not([aria-disabled=true]) {
+    box-shadow: inset 2px 0 var(--atelier-accent) !important;
+  }
+  body.atelier-plugin-polish .ts-root .ts-rail-popover .ts-rail-empty {
+    border: 1px dashed var(--atelier-ui-line-strong);
+    border-radius: var(--atelier-ui-radius-sm);
+    background-color: var(--atelier-ui-panel);
+  }
+  /* The insert tiles and recent commands share their parent material.
+   * No per-button blur, motion or extra pointer-intercepting decoration. */
+  body.atelier-plugin-polish .ts-root .ts-main > .ts-tools-palette .ts-rail-recent-button {
+    border-color: var(--atelier-ui-line-strong) !important;
+  }
+  body.atelier-plugin-polish .ts-root .ts-main > .ts-floating-formatbar {
+    --ts-format-line: var(--atelier-ui-line);
+    --ts-format-wash: color-mix(in srgb, var(--atelier-ui-panel) 65%, transparent);
+    --ts-format-active: var(--atelier-soft);
+  }
+  body.atelier-plugin-polish .ts-root .ts-floating-formatbar .ts-format-context .ts-format-context-count {
+    color: var(--atelier-ui-ink);
+    background-color: var(--atelier-ui-subtle);
+    border-radius: 4px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Map controls locally; preview node fills and canvas grid stay upstream. */
+  body.atelier-plugin-polish .ts-ui-modal.ts-layout-planner :is(
+    .ts-layout-controls, .ts-layout-preview-header, .ts-layout-footer
+  ) {
+    --ts-layout-panel: var(--atelier-ui-raised);
+    --ts-layout-soft: var(--atelier-ui-subtle);
+    --ts-layout-line: var(--atelier-ui-line-strong);
+    --ts-layout-active: var(--atelier-soft);
+    --text-normal: var(--atelier-ui-ink);
+    --text-muted: var(--atelier-ui-muted);
+    color: var(--atelier-ui-ink);
+  }
+  body.atelier-plugin-polish .ts-ui-modal.ts-layout-planner .ts-layout-controls {
+    border-radius: 0;
+  }
+  body.atelier-plugin-polish .ts-ui-modal.ts-layout-planner .ts-layout-preview {
+    background-color: var(--atelier-ui-canvas);
+  }
+  body.atelier-plugin-polish .ts-ui-modal.ts-layout-planner .ts-layout-preview-header {
+    padding: 10px 12px;
+    border: 1px solid var(--atelier-ui-line);
+  }
+  body.atelier-plugin-polish .ts-ui-modal.ts-layout-planner .ts-layout-preview-title {
+    font-size: 17px;
+    font-weight: 650;
+  }
+  body.atelier-plugin-polish .ts-ui-modal.ts-layout-planner .ts-layout-stat strong {
+    color: var(--atelier-accent);
+  }
+  body.atelier-plugin-polish .ts-ui-modal.ts-board-search .ts-board-search-row {
+    border-radius: var(--atelier-ui-radius-sm);
+  }
+  body.atelier-plugin-polish .ts-ui-modal.ts-board-search .ts-board-search-row.is-active {
+    box-shadow: inset 2px 0 var(--atelier-accent);
+  }
+  body.atelier-plugin-polish .ts-ui-modal.ts-board-search .ts-board-search-heading strong {
+    color: var(--atelier-ui-ink);
+  }
+  body.atelier-plugin-polish .ts-ui-modal.ts-board-search .ts-board-search-heading small {
+    background-color: var(--atelier-ui-panel);
+    color: var(--atelier-ui-muted);
+    border-radius: 4px;
+  }
+  body.atelier-plugin-polish .ts-ui-modal.ts-board-search .ts-board-search-excerpt {
+    color: var(--atelier-ui-muted);
+    opacity: 1;
+  }
+  @media (prefers-contrast: more) {
+    body.atelier-plugin-polish .ts-ui-modal.ts-board-search .ts-board-search-excerpt {
+      color: var(--atelier-ui-ink);
+    }
+  }
+  @media (forced-colors: active) {
+    body.atelier-plugin-polish .ts-root .ts-rail-popover .ts-rail-search-field:focus-within,
+    body.atelier-plugin-polish .ts-ui-modal.ts-board-search .ts-board-search-bar:focus-within {
+      outline-color: Highlight;
+    }
+    body.atelier-plugin-polish .ts-root .ts-tools-palette .ts-palette-sections .ts-button[aria-pressed=true],
+    body.atelier-plugin-polish .ts-ui-modal.ts-board-search .ts-board-search-row.is-active {
+      outline: 2px solid Highlight;
+      outline-offset: -2px;
+    }
+  }
+}

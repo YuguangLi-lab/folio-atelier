@@ -1,4 +1,4 @@
-/* Folio Atelier 3.32.0 · 纸页工坊
+/* Folio Atelier 3.42.0 · 纸页工坊
  * Original CSS. Design references and scope are documented in README.md.
  * No external fonts or network requests. Stable project colors use the optional ThoughtSpace bridge.
  */
@@ -404,6 +404,132 @@ settings:
     type: class-toggle
     default: false
     addCommand: true
+  - id: atelier-group-thoughtspace-colors
+    title: ThoughtSpace 界面配色
+    type: heading
+    level: 1
+    collapsed: false
+  - id: atelier-ts-color-strength
+    title: 分区颜色浓度
+    description: 只调节下方已选颜色的浓淡。每项左侧为浅色、右侧为深色；点击该项的重置按钮可恢复原配色。
+    type: variable-number-slider
+    default: 35
+    min: 15
+    max: 45
+    step: 5
+  - id: atelier-ts-color-chrome
+    title: 工具与导航
+    type: heading
+    level: 2
+    collapsed: false
+  - id: atelier-ts-toolbar-color
+    title: 插件工具栏
+    description: 白板、脑图、阅读、写作等插件工具栏的底色，沿用当前玻璃透明度和模糊设置。
+    type: variable-themed-color
+    format: rgb-split
+    default-light: '#92afca'
+    default-dark: '#597c9e'
+  - id: atelier-ts-popover-color
+    title: 菜单与浮层
+    description: 插件的操作菜单、搜索浮层和工具弹窗。特殊折射面板沿用插件材质。
+    type: variable-themed-color
+    format: rgb-split
+    default-light: '#aeb2d9'
+    default-dark: '#7775aa'
+  - id: atelier-ts-selection-color
+    title: 选中项底色
+    description: 导航、页签和工具按钮的选中底色，保留警告、禁用和主操作按钮的状态色。
+    type: variable-themed-color
+    format: hex
+    default-light: '#81bba9'
+    default-dark: '#4e9a88'
+  - id: atelier-ts-navigation-color
+    title: 导航侧栏
+    description: ThoughtSpace 的文件夹、白板和侧栏导航。Obsidian 原生文件树使用自己的主题设置。
+    type: variable-themed-color
+    format: hex
+    default-light: '#a9bfca'
+    default-dark: '#577e8d'
+  - id: atelier-ts-hub-color
+    title: 空间总览与检索
+    description: 空间总览、白板搜索、分区目录、保存视图和布局规划。
+    type: variable-themed-color
+    format: hex
+    default-light: '#9cafcf'
+    default-dark: '#5b74a8'
+  - id: atelier-ts-color-create
+    title: 阅读与创作
+    type: heading
+    level: 2
+    collapsed: false
+  - id: atelier-ts-reading-color
+    title: 阅读台与引用
+    description: 阅读列表、引用窗口和预览外框，保留原文纸面。
+    type: variable-themed-color
+    format: hex
+    default-light: '#d8bd99'
+    default-dark: '#8f7452'
+  - id: atelier-ts-writing-color
+    title: 写作台
+    description: 写作目录、资料栏和状态区，保留草稿编辑器的纸面。
+    type: variable-themed-color
+    format: hex
+    default-light: '#a5b8df'
+    default-dark: '#6179af'
+  - id: atelier-ts-materials-color
+    title: 素材库与摘录
+    description: 素材面板、来源列表和摘录区的外壳。
+    type: variable-themed-color
+    format: hex
+    default-light: '#98c9b8'
+    default-dark: '#509880'
+  - id: atelier-ts-media-color
+    title: 视频与媒体工作台
+    description: 本地和在线媒体工作台的记录、草稿周边面板，保留播放器画面和控件。
+    type: variable-themed-color
+    format: hex
+    default-light: '#a1bbd0'
+    default-dark: '#577e9f'
+  - id: atelier-ts-handwriting-color
+    title: 手写工作台
+    description: 手写工作台外框和导出窗口，保留手写纸张和墨色。
+    type: variable-themed-color
+    format: hex
+    default-light: '#d5ae99'
+    default-dark: '#976c56'
+  - id: atelier-ts-color-organize
+    title: 整理与设置
+    type: heading
+    level: 2
+    collapsed: false
+  - id: atelier-ts-relations-color
+    title: 关系图
+    description: 关系图面板底色与中心信息区，保留节点、连线和按钮位置。
+    type: variable-themed-color
+    format: hex
+    default-light: '#b8aad4'
+    default-dark: '#79699f'
+  - id: atelier-ts-collection-color
+    title: 集合与卡片资料库
+    description: 集合导航、复习面板、数据库筛选和结果区。
+    type: variable-themed-color
+    format: hex
+    default-light: '#a4bca1'
+    default-dark: '#62835e'
+  - id: atelier-ts-mindmap-color
+    title: 脑图与思维导图
+    description: 脑图工具区和思维导图工作台，保留节点与分支的颜色。
+    type: variable-themed-color
+    format: hex
+    default-light: '#a9b2d6'
+    default-dark: '#6a75a7'
+  - id: atelier-ts-settings-color
+    title: 插件设置与偏好
+    description: ThoughtSpace 设置导航、内容面板及偏好窗口。
+    type: variable-themed-color
+    format: hex
+    default-light: '#bcc1ce'
+    default-dark: '#707d98'
   - id: atelier-group-navigation
     title: 目录与工具栏
     type: heading
@@ -2397,3 +2523,9 @@ body.atelier-grid-reading-on:not(.atelier-grid-off) .workspace-leaf-content[data
 /* @folio-source atelier-glass-depth.css */
 
 /* @folio-source atelier-glass-controls.css */
+
+/* @folio-source atelier-board-finish.css */
+
+/* @folio-source atelier-board-settings.css */
+
+/* @folio-source atelier-thoughtspace-colors.css */

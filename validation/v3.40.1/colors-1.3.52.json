@@ -1,0 +1,1449 @@
+{
+  "pass": true,
+  "version": "3.40.1",
+  "pluginVersion": "1.3.52",
+  "themeSHA256": "510ca46da1e4e7d37a6a19865c0dab16ba96611aa99f236d80c575a1d508fe6e",
+  "baselineSHA256": "dcaa2e0176995dc19bb11e78d717e7ec8033a23b89dc0b307c72ac6ea36f5383",
+  "pluginCSSSHA256": "2d171be462f8d34f4bbe9dbb93635b9633ab1152bafb840fc30e9a3c5641adfc",
+  "pickers": [
+    "toolbar",
+    "popover",
+    "selection",
+    "navigation",
+    "hub",
+    "reading",
+    "writing",
+    "materials",
+    "media",
+    "handwriting",
+    "relations",
+    "collection",
+    "mindmap",
+    "settings"
+  ],
+  "scope": "Source-derived DOM, actual plugin and theme CSS; no runtime or frame-rate claim",
+  "cases": [
+    {
+      "scheme": "light",
+      "mode": "classic",
+      "width": 1180,
+      "pluginLast": true,
+      "checks": {
+        "defaultsUnchanged": true,
+        "isolated:toolbar": true,
+        "isolated:popover": true,
+        "isolated:selection": true,
+        "isolated:navigation": true,
+        "isolated:hub": true,
+        "isolated:reading": true,
+        "isolated:writing": true,
+        "isolated:materials": true,
+        "isolated:media": true,
+        "isolated:handwriting": true,
+        "isolated:relations": true,
+        "isolated:collection": true,
+        "isolated:mindmap": true,
+        "isolated:settings": true,
+        "combined": true,
+        "strengthChangesTint": true,
+        "singleReset": true,
+        "resetUnchanged": true,
+        "inactiveSchemeUnchanged": true,
+        "forced-colors-preserved": true,
+        "prefers-contrast-preserved": true,
+        "printPreserved": true,
+        "noPageErrors": true
+      },
+      "errors": [],
+      "isolated": {
+        "toolbar": {
+          "changed": [
+            "board-title",
+            "dock",
+            "format",
+            "media-header",
+            "rail",
+            "reading-tools",
+            "writing-header"
+          ],
+          "expect": [
+            "board-title",
+            "dock",
+            "format",
+            "media-header",
+            "rail",
+            "reading-tools",
+            "writing-header"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "popover": {
+          "changed": [
+            "generic-dialog",
+            "menu",
+            "popover"
+          ],
+          "expect": [
+            "generic-dialog",
+            "menu",
+            "popover"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "selection": {
+          "changed": [
+            "material-tab",
+            "nav-tab",
+            "reading-tab",
+            "settings-tab"
+          ],
+          "expect": [
+            "material-tab",
+            "nav-tab",
+            "reading-tab",
+            "settings-tab"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "navigation": {
+          "changed": [
+            "native-bridge",
+            "navigation"
+          ],
+          "expect": [
+            "native-bridge",
+            "navigation"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "hub": {
+          "changed": [
+            "hub",
+            "hub-nav",
+            "search"
+          ],
+          "expect": [
+            "hub",
+            "hub-nav",
+            "search"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "reading": {
+          "changed": [
+            "reading",
+            "reading-aside",
+            "reference"
+          ],
+          "expect": [
+            "reading",
+            "reading-aside",
+            "reference"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "writing": {
+          "changed": [
+            "writing-dock",
+            "writing-nav"
+          ],
+          "expect": [
+            "writing-dock",
+            "writing-nav"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "materials": {
+          "changed": [
+            "material-detail",
+            "material-library",
+            "materials"
+          ],
+          "expect": [
+            "material-detail",
+            "material-library",
+            "materials"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "media": {
+          "changed": [
+            "media",
+            "media-records",
+            "online",
+            "online-records"
+          ],
+          "expect": [
+            "media",
+            "media-records",
+            "online",
+            "online-records"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "handwriting": {
+          "changed": [
+            "handwriting",
+            "handwriting-export"
+          ],
+          "expect": [
+            "handwriting",
+            "handwriting-export"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "relations": {
+          "changed": [
+            "relation-center",
+            "relations"
+          ],
+          "expect": [
+            "relation-center",
+            "relations"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "collection": {
+          "changed": [
+            "collection",
+            "collection-nav",
+            "database",
+            "database-results"
+          ],
+          "expect": [
+            "collection",
+            "collection-nav",
+            "database",
+            "database-results"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "mindmap": {
+          "changed": [
+            "brain-tools",
+            "mindmap",
+            "mindmap-tools"
+          ],
+          "expect": [
+            "brain-tools",
+            "mindmap",
+            "mindmap-tools"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "settings": {
+          "changed": [
+            "preferences",
+            "settings",
+            "settings-nav",
+            "settings-panel"
+          ],
+          "expect": [
+            "preferences",
+            "settings",
+            "settings-nav",
+            "settings-panel"
+          ],
+          "otherPaintAndGeometrySame": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "scheme": "dark",
+      "mode": "classic",
+      "width": 360,
+      "pluginLast": false,
+      "checks": {
+        "defaultsUnchanged": true,
+        "isolated:toolbar": true,
+        "isolated:popover": true,
+        "isolated:selection": true,
+        "isolated:navigation": true,
+        "isolated:hub": true,
+        "isolated:reading": true,
+        "isolated:writing": true,
+        "isolated:materials": true,
+        "isolated:media": true,
+        "isolated:handwriting": true,
+        "isolated:relations": true,
+        "isolated:collection": true,
+        "isolated:mindmap": true,
+        "isolated:settings": true,
+        "combined": true,
+        "strengthChangesTint": true,
+        "singleReset": true,
+        "resetUnchanged": true,
+        "inactiveSchemeUnchanged": true,
+        "forced-colors-preserved": true,
+        "prefers-contrast-preserved": true,
+        "printPreserved": true,
+        "noPageErrors": true
+      },
+      "errors": [],
+      "isolated": {
+        "toolbar": {
+          "changed": [
+            "board-title",
+            "dock",
+            "format",
+            "media-header",
+            "rail",
+            "reading-tools",
+            "writing-header"
+          ],
+          "expect": [
+            "board-title",
+            "dock",
+            "format",
+            "media-header",
+            "rail",
+            "reading-tools",
+            "writing-header"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "popover": {
+          "changed": [
+            "generic-dialog",
+            "menu",
+            "popover"
+          ],
+          "expect": [
+            "generic-dialog",
+            "menu",
+            "popover"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "selection": {
+          "changed": [
+            "material-tab",
+            "nav-tab",
+            "reading-tab",
+            "settings-tab"
+          ],
+          "expect": [
+            "material-tab",
+            "nav-tab",
+            "reading-tab",
+            "settings-tab"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "navigation": {
+          "changed": [
+            "native-bridge",
+            "navigation"
+          ],
+          "expect": [
+            "native-bridge",
+            "navigation"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "hub": {
+          "changed": [
+            "hub",
+            "hub-nav",
+            "search"
+          ],
+          "expect": [
+            "hub",
+            "hub-nav",
+            "search"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "reading": {
+          "changed": [
+            "reading",
+            "reading-aside",
+            "reference"
+          ],
+          "expect": [
+            "reading",
+            "reading-aside",
+            "reference"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "writing": {
+          "changed": [
+            "writing-dock",
+            "writing-nav"
+          ],
+          "expect": [
+            "writing-dock",
+            "writing-nav"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "materials": {
+          "changed": [
+            "material-detail",
+            "material-library",
+            "materials"
+          ],
+          "expect": [
+            "material-detail",
+            "material-library",
+            "materials"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "media": {
+          "changed": [
+            "media",
+            "media-records",
+            "online",
+            "online-records"
+          ],
+          "expect": [
+            "media",
+            "media-records",
+            "online",
+            "online-records"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "handwriting": {
+          "changed": [
+            "handwriting",
+            "handwriting-export"
+          ],
+          "expect": [
+            "handwriting",
+            "handwriting-export"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "relations": {
+          "changed": [
+            "relation-center",
+            "relations"
+          ],
+          "expect": [
+            "relation-center",
+            "relations"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "collection": {
+          "changed": [
+            "collection",
+            "collection-nav",
+            "database",
+            "database-results"
+          ],
+          "expect": [
+            "collection",
+            "collection-nav",
+            "database",
+            "database-results"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "mindmap": {
+          "changed": [
+            "brain-tools",
+            "mindmap",
+            "mindmap-tools"
+          ],
+          "expect": [
+            "brain-tools",
+            "mindmap",
+            "mindmap-tools"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "settings": {
+          "changed": [
+            "preferences",
+            "settings",
+            "settings-nav",
+            "settings-panel"
+          ],
+          "expect": [
+            "preferences",
+            "settings",
+            "settings-nav",
+            "settings-panel"
+          ],
+          "otherPaintAndGeometrySame": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "scheme": "light",
+      "mode": "apple",
+      "width": 360,
+      "pluginLast": false,
+      "checks": {
+        "defaultsUnchanged": true,
+        "isolated:toolbar": true,
+        "isolated:popover": true,
+        "isolated:selection": true,
+        "isolated:navigation": true,
+        "isolated:hub": true,
+        "isolated:reading": true,
+        "isolated:writing": true,
+        "isolated:materials": true,
+        "isolated:media": true,
+        "isolated:handwriting": true,
+        "isolated:relations": true,
+        "isolated:collection": true,
+        "isolated:mindmap": true,
+        "isolated:settings": true,
+        "combined": true,
+        "strengthChangesTint": true,
+        "singleReset": true,
+        "resetUnchanged": true,
+        "inactiveSchemeUnchanged": true,
+        "forced-colors-preserved": true,
+        "prefers-contrast-preserved": true,
+        "printPreserved": true,
+        "noPageErrors": true
+      },
+      "errors": [],
+      "isolated": {
+        "toolbar": {
+          "changed": [
+            "board-title",
+            "dock",
+            "format",
+            "media-header",
+            "rail",
+            "reading-tools",
+            "writing-header"
+          ],
+          "expect": [
+            "board-title",
+            "dock",
+            "format",
+            "media-header",
+            "rail",
+            "reading-tools",
+            "writing-header"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "popover": {
+          "changed": [
+            "generic-dialog",
+            "menu",
+            "popover"
+          ],
+          "expect": [
+            "generic-dialog",
+            "menu",
+            "popover"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "selection": {
+          "changed": [
+            "material-tab",
+            "nav-tab",
+            "reading-tab",
+            "settings-tab"
+          ],
+          "expect": [
+            "material-tab",
+            "nav-tab",
+            "reading-tab",
+            "settings-tab"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "navigation": {
+          "changed": [
+            "native-bridge",
+            "navigation"
+          ],
+          "expect": [
+            "native-bridge",
+            "navigation"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "hub": {
+          "changed": [
+            "hub",
+            "hub-nav",
+            "search"
+          ],
+          "expect": [
+            "hub",
+            "hub-nav",
+            "search"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "reading": {
+          "changed": [
+            "reading",
+            "reading-aside",
+            "reference"
+          ],
+          "expect": [
+            "reading",
+            "reading-aside",
+            "reference"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "writing": {
+          "changed": [
+            "writing-dock",
+            "writing-nav"
+          ],
+          "expect": [
+            "writing-dock",
+            "writing-nav"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "materials": {
+          "changed": [
+            "material-detail",
+            "material-library",
+            "materials"
+          ],
+          "expect": [
+            "material-detail",
+            "material-library",
+            "materials"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "media": {
+          "changed": [
+            "media",
+            "media-records",
+            "online",
+            "online-records"
+          ],
+          "expect": [
+            "media",
+            "media-records",
+            "online",
+            "online-records"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "handwriting": {
+          "changed": [
+            "handwriting",
+            "handwriting-export"
+          ],
+          "expect": [
+            "handwriting",
+            "handwriting-export"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "relations": {
+          "changed": [
+            "relation-center",
+            "relations"
+          ],
+          "expect": [
+            "relation-center",
+            "relations"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "collection": {
+          "changed": [
+            "collection",
+            "collection-nav",
+            "database",
+            "database-results"
+          ],
+          "expect": [
+            "collection",
+            "collection-nav",
+            "database",
+            "database-results"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "mindmap": {
+          "changed": [
+            "brain-tools",
+            "mindmap",
+            "mindmap-tools"
+          ],
+          "expect": [
+            "brain-tools",
+            "mindmap",
+            "mindmap-tools"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "settings": {
+          "changed": [
+            "preferences",
+            "settings",
+            "settings-nav",
+            "settings-panel"
+          ],
+          "expect": [
+            "preferences",
+            "settings",
+            "settings-nav",
+            "settings-panel"
+          ],
+          "otherPaintAndGeometrySame": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "scheme": "dark",
+      "mode": "apple",
+      "width": 1180,
+      "pluginLast": true,
+      "checks": {
+        "defaultsUnchanged": true,
+        "isolated:toolbar": true,
+        "isolated:popover": true,
+        "isolated:selection": true,
+        "isolated:navigation": true,
+        "isolated:hub": true,
+        "isolated:reading": true,
+        "isolated:writing": true,
+        "isolated:materials": true,
+        "isolated:media": true,
+        "isolated:handwriting": true,
+        "isolated:relations": true,
+        "isolated:collection": true,
+        "isolated:mindmap": true,
+        "isolated:settings": true,
+        "combined": true,
+        "strengthChangesTint": true,
+        "singleReset": true,
+        "resetUnchanged": true,
+        "inactiveSchemeUnchanged": true,
+        "forced-colors-preserved": true,
+        "prefers-contrast-preserved": true,
+        "printPreserved": true,
+        "noPageErrors": true
+      },
+      "errors": [],
+      "isolated": {
+        "toolbar": {
+          "changed": [
+            "board-title",
+            "dock",
+            "format",
+            "media-header",
+            "rail",
+            "reading-tools",
+            "writing-header"
+          ],
+          "expect": [
+            "board-title",
+            "dock",
+            "format",
+            "media-header",
+            "rail",
+            "reading-tools",
+            "writing-header"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "popover": {
+          "changed": [
+            "generic-dialog",
+            "menu",
+            "popover"
+          ],
+          "expect": [
+            "generic-dialog",
+            "menu",
+            "popover"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "selection": {
+          "changed": [
+            "material-tab",
+            "nav-tab",
+            "reading-tab",
+            "settings-tab"
+          ],
+          "expect": [
+            "material-tab",
+            "nav-tab",
+            "reading-tab",
+            "settings-tab"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "navigation": {
+          "changed": [
+            "native-bridge",
+            "navigation"
+          ],
+          "expect": [
+            "native-bridge",
+            "navigation"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "hub": {
+          "changed": [
+            "hub",
+            "hub-nav",
+            "search"
+          ],
+          "expect": [
+            "hub",
+            "hub-nav",
+            "search"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "reading": {
+          "changed": [
+            "reading",
+            "reading-aside",
+            "reference"
+          ],
+          "expect": [
+            "reading",
+            "reading-aside",
+            "reference"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "writing": {
+          "changed": [
+            "writing-dock",
+            "writing-nav"
+          ],
+          "expect": [
+            "writing-dock",
+            "writing-nav"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "materials": {
+          "changed": [
+            "material-detail",
+            "material-library",
+            "materials"
+          ],
+          "expect": [
+            "material-detail",
+            "material-library",
+            "materials"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "media": {
+          "changed": [
+            "media",
+            "media-records",
+            "online",
+            "online-records"
+          ],
+          "expect": [
+            "media",
+            "media-records",
+            "online",
+            "online-records"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "handwriting": {
+          "changed": [
+            "handwriting",
+            "handwriting-export"
+          ],
+          "expect": [
+            "handwriting",
+            "handwriting-export"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "relations": {
+          "changed": [
+            "relation-center",
+            "relations"
+          ],
+          "expect": [
+            "relation-center",
+            "relations"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "collection": {
+          "changed": [
+            "collection",
+            "collection-nav",
+            "database",
+            "database-results"
+          ],
+          "expect": [
+            "collection",
+            "collection-nav",
+            "database",
+            "database-results"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "mindmap": {
+          "changed": [
+            "brain-tools",
+            "mindmap",
+            "mindmap-tools"
+          ],
+          "expect": [
+            "brain-tools",
+            "mindmap",
+            "mindmap-tools"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "settings": {
+          "changed": [
+            "preferences",
+            "settings",
+            "settings-nav",
+            "settings-panel"
+          ],
+          "expect": [
+            "preferences",
+            "settings",
+            "settings-nav",
+            "settings-panel"
+          ],
+          "otherPaintAndGeometrySame": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "scheme": "light",
+      "mode": "liquid",
+      "width": 1180,
+      "pluginLast": true,
+      "checks": {
+        "defaultsUnchanged": true,
+        "isolated:toolbar": true,
+        "isolated:popover": true,
+        "isolated:selection": true,
+        "isolated:navigation": true,
+        "isolated:hub": true,
+        "isolated:reading": true,
+        "isolated:writing": true,
+        "isolated:materials": true,
+        "isolated:media": true,
+        "isolated:handwriting": true,
+        "isolated:relations": true,
+        "isolated:collection": true,
+        "isolated:mindmap": true,
+        "isolated:settings": true,
+        "combined": true,
+        "strengthChangesTint": true,
+        "singleReset": true,
+        "resetUnchanged": true,
+        "inactiveSchemeUnchanged": true,
+        "glassAlpha": true,
+        "fallback:atelier-glass-solid": true,
+        "fallback:interaction": true,
+        "forced-colors-preserved": true,
+        "prefers-contrast-preserved": true,
+        "printPreserved": true,
+        "noPageErrors": true
+      },
+      "errors": [],
+      "isolated": {
+        "toolbar": {
+          "changed": [
+            "board-title",
+            "dock",
+            "format",
+            "media-header",
+            "rail",
+            "reading-tools",
+            "writing-header"
+          ],
+          "expect": [
+            "board-title",
+            "dock",
+            "format",
+            "media-header",
+            "rail",
+            "reading-tools",
+            "writing-header"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "popover": {
+          "changed": [
+            "generic-dialog",
+            "menu",
+            "popover"
+          ],
+          "expect": [
+            "generic-dialog",
+            "menu",
+            "popover"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "selection": {
+          "changed": [
+            "material-tab",
+            "nav-tab",
+            "reading-tab",
+            "settings-tab"
+          ],
+          "expect": [
+            "material-tab",
+            "nav-tab",
+            "reading-tab",
+            "settings-tab"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "navigation": {
+          "changed": [
+            "native-bridge",
+            "navigation"
+          ],
+          "expect": [
+            "native-bridge",
+            "navigation"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "hub": {
+          "changed": [
+            "hub",
+            "hub-nav",
+            "search"
+          ],
+          "expect": [
+            "hub",
+            "hub-nav",
+            "search"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "reading": {
+          "changed": [
+            "reading",
+            "reading-aside",
+            "reference"
+          ],
+          "expect": [
+            "reading",
+            "reading-aside",
+            "reference"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "writing": {
+          "changed": [
+            "writing-dock",
+            "writing-nav"
+          ],
+          "expect": [
+            "writing-dock",
+            "writing-nav"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "materials": {
+          "changed": [
+            "material-detail",
+            "material-library",
+            "materials"
+          ],
+          "expect": [
+            "material-detail",
+            "material-library",
+            "materials"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "media": {
+          "changed": [
+            "media",
+            "media-records",
+            "online",
+            "online-records"
+          ],
+          "expect": [
+            "media",
+            "media-records",
+            "online",
+            "online-records"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "handwriting": {
+          "changed": [
+            "handwriting",
+            "handwriting-export"
+          ],
+          "expect": [
+            "handwriting",
+            "handwriting-export"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "relations": {
+          "changed": [
+            "relation-center",
+            "relations"
+          ],
+          "expect": [
+            "relation-center",
+            "relations"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "collection": {
+          "changed": [
+            "collection",
+            "collection-nav",
+            "database",
+            "database-results"
+          ],
+          "expect": [
+            "collection",
+            "collection-nav",
+            "database",
+            "database-results"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "mindmap": {
+          "changed": [
+            "brain-tools",
+            "mindmap",
+            "mindmap-tools"
+          ],
+          "expect": [
+            "brain-tools",
+            "mindmap",
+            "mindmap-tools"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "settings": {
+          "changed": [
+            "preferences",
+            "settings",
+            "settings-nav",
+            "settings-panel"
+          ],
+          "expect": [
+            "preferences",
+            "settings",
+            "settings-nav",
+            "settings-panel"
+          ],
+          "otherPaintAndGeometrySame": true
+        }
+      },
+      "glassAlpha": {
+        "board-title": [
+          0.82,
+          0.82
+        ],
+        "rail": [
+          0.82,
+          0.82
+        ],
+        "format": [
+          0.82,
+          0.82
+        ],
+        "dock": [
+          0.82,
+          0.82
+        ],
+        "menu": [
+          0.865,
+          0.865
+        ],
+        "popover": [
+          0.865,
+          0.865
+        ],
+        "writing-header": [
+          0.82,
+          0.82
+        ]
+      },
+      "pass": true
+    },
+    {
+      "scheme": "dark",
+      "mode": "liquid",
+      "width": 1180,
+      "pluginLast": false,
+      "checks": {
+        "defaultsUnchanged": true,
+        "isolated:toolbar": true,
+        "isolated:popover": true,
+        "isolated:selection": true,
+        "isolated:navigation": true,
+        "isolated:hub": true,
+        "isolated:reading": true,
+        "isolated:writing": true,
+        "isolated:materials": true,
+        "isolated:media": true,
+        "isolated:handwriting": true,
+        "isolated:relations": true,
+        "isolated:collection": true,
+        "isolated:mindmap": true,
+        "isolated:settings": true,
+        "combined": true,
+        "strengthChangesTint": true,
+        "singleReset": true,
+        "resetUnchanged": true,
+        "inactiveSchemeUnchanged": true,
+        "glassAlpha": true,
+        "fallback:atelier-glass-solid": true,
+        "fallback:interaction": true,
+        "forced-colors-preserved": true,
+        "prefers-contrast-preserved": true,
+        "printPreserved": true,
+        "noPageErrors": true
+      },
+      "errors": [],
+      "isolated": {
+        "toolbar": {
+          "changed": [
+            "board-title",
+            "dock",
+            "format",
+            "media-header",
+            "rail",
+            "reading-tools",
+            "writing-header"
+          ],
+          "expect": [
+            "board-title",
+            "dock",
+            "format",
+            "media-header",
+            "rail",
+            "reading-tools",
+            "writing-header"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "popover": {
+          "changed": [
+            "generic-dialog",
+            "menu",
+            "popover"
+          ],
+          "expect": [
+            "generic-dialog",
+            "menu",
+            "popover"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "selection": {
+          "changed": [
+            "material-tab",
+            "nav-tab",
+            "reading-tab",
+            "settings-tab"
+          ],
+          "expect": [
+            "material-tab",
+            "nav-tab",
+            "reading-tab",
+            "settings-tab"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "navigation": {
+          "changed": [
+            "native-bridge",
+            "navigation"
+          ],
+          "expect": [
+            "native-bridge",
+            "navigation"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "hub": {
+          "changed": [
+            "hub",
+            "hub-nav",
+            "search"
+          ],
+          "expect": [
+            "hub",
+            "hub-nav",
+            "search"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "reading": {
+          "changed": [
+            "reading",
+            "reading-aside",
+            "reference"
+          ],
+          "expect": [
+            "reading",
+            "reading-aside",
+            "reference"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "writing": {
+          "changed": [
+            "writing-dock",
+            "writing-nav"
+          ],
+          "expect": [
+            "writing-dock",
+            "writing-nav"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "materials": {
+          "changed": [
+            "material-detail",
+            "material-library",
+            "materials"
+          ],
+          "expect": [
+            "material-detail",
+            "material-library",
+            "materials"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "media": {
+          "changed": [
+            "media",
+            "media-records",
+            "online",
+            "online-records"
+          ],
+          "expect": [
+            "media",
+            "media-records",
+            "online",
+            "online-records"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "handwriting": {
+          "changed": [
+            "handwriting",
+            "handwriting-export"
+          ],
+          "expect": [
+            "handwriting",
+            "handwriting-export"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "relations": {
+          "changed": [
+            "relation-center",
+            "relations"
+          ],
+          "expect": [
+            "relation-center",
+            "relations"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "collection": {
+          "changed": [
+            "collection",
+            "collection-nav",
+            "database",
+            "database-results"
+          ],
+          "expect": [
+            "collection",
+            "collection-nav",
+            "database",
+            "database-results"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "mindmap": {
+          "changed": [
+            "brain-tools",
+            "mindmap",
+            "mindmap-tools"
+          ],
+          "expect": [
+            "brain-tools",
+            "mindmap",
+            "mindmap-tools"
+          ],
+          "otherPaintAndGeometrySame": true
+        },
+        "settings": {
+          "changed": [
+            "preferences",
+            "settings",
+            "settings-nav",
+            "settings-panel"
+          ],
+          "expect": [
+            "preferences",
+            "settings",
+            "settings-nav",
+            "settings-panel"
+          ],
+          "otherPaintAndGeometrySame": true
+        }
+      },
+      "glassAlpha": {
+        "board-title": [
+          0.86,
+          0.86
+        ],
+        "rail": [
+          0.86,
+          0.86
+        ],
+        "format": [
+          0.86,
+          0.86
+        ],
+        "dock": [
+          0.86,
+          0.86
+        ],
+        "menu": [
+          0.895,
+          0.895
+        ],
+        "popover": [
+          0.895,
+          0.895
+        ],
+        "writing-header": [
+          0.86,
+          0.86
+        ]
+      },
+      "pass": true
+    }
+  ]
+}

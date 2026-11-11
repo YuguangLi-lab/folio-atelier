@@ -1,0 +1,11 @@
+{
+  "version": "1.3.52",
+  "release": "https://github.com/YuguangLi-lab/obsidian-thoughtspace/releases/tag/1.3.52",
+  "publishedAt": "2026-11-11T14:14:25Z",
+  "commit": "9ce055e28c8550e41ecd1d01c5f04acff55c289e",
+  "sha256": {
+    "main.js": "73f1ee8aa31c179aa872c7c1ea00b409d59fb161060e421b25ae0131570e38c2",
+    "manifest.json": "bdea2999a8a816a2d1c60dafb7b7e6e57b1355f37fa2c79a0a79fa70ed4dde3c",
+    "styles.css": "2d171be462f8d34f4bbe9dbb93635b9633ab1152bafb840fc30e9a3c5641adfc"
+  }
+}

@@ -409,7 +409,8 @@ body.atelier-plugin-polish .ts-database-modal .ts-db-top > .ts-button:not(:where
   max-inline-size: 100%;
   white-space: normal;
 }
-body.atelier-plugin-polish .ts-database-modal .modal-content.ts-database:not(:where(.ts-calendar-plugin, .ts-calendar-plugin *)) {
+/* The 1.3.52 card library has a fixed header and a dedicated results scroller. */
+body.atelier-plugin-polish .ts-database-modal:not(:where(.ts-card-library-modal)) .modal-content.ts-database:not(:where(.ts-calendar-plugin, .ts-calendar-plugin *)) {
   overflow: auto;
 }
 body.atelier-plugin-polish .ts-database-modal :is(.ts-db-tabs, .ts-db-custom-filters, .ts-db-field-definition, .ts-db-custom-property):not(:where(.ts-calendar-plugin, .ts-calendar-plugin *)) {

@@ -1,0 +1,143 @@
+/* Folio Atelier · Paper and image settings for ThoughtSpace 1.3.50–1.3.53.
+ * Style controls, never sample chips, preview surfaces, images or canvas data.
+ * Touch targets, disabled/error states and modal scrolling remain plugin-owned.
+ */
+@media screen {
+  body.atelier-plugin-polish :is(
+    .ts-paper-settings .ts-paper-controls > h3,
+    .ts-background-settings .ts-background-controls h3
+  ) {
+    color: var(--atelier-ui-ink);
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+
+  /* Each button frames its original color sample. Do not change the chip's
+   * background or opacity: it represents the exact preset, not UI decoration. */
+  body.atelier-plugin-polish .ts-paper-settings .ts-paper-swatch {
+    border-color: var(--atelier-ui-line);
+    border-radius: var(--atelier-ui-radius-sm);
+    color: var(--atelier-ui-muted);
+  }
+  body.atelier-plugin-polish .ts-paper-settings .ts-paper-swatch:is(:hover,:focus-visible):not(:disabled):not([aria-disabled=true]) {
+    border-color: var(--atelier-ui-line-strong);
+    background-color: var(--atelier-ui-subtle);
+    color: var(--atelier-ui-ink);
+  }
+  body.atelier-plugin-polish .ts-paper-settings .ts-paper-swatch[aria-pressed=true]:not(:disabled):not([aria-disabled=true]) {
+    border-color: var(--atelier-accent);
+    background-color: var(--atelier-soft);
+    color: var(--atelier-ui-ink);
+    box-shadow: inset 0 -2px var(--atelier-accent);
+    font-weight: 600;
+  }
+  body.atelier-plugin-polish .ts-paper-settings .ts-paper-custom-row {
+    border-color: var(--atelier-ui-line);
+  }
+  body.atelier-plugin-polish .ts-paper-settings .ts-paper-custom-row > input[type=text]:not(:disabled) {
+    background-color: var(--atelier-ui-panel);
+    color: var(--atelier-ui-ink);
+    border-radius: var(--atelier-ui-radius-sm);
+    font-variant-numeric: tabular-nums;
+  }
+  body.atelier-plugin-polish .ts-paper-settings .ts-paper-custom-row > input[type=text]:not([aria-invalid=true]):not(:disabled) {
+    border-color: var(--atelier-ui-line-strong);
+  }
+  body.atelier-plugin-polish .ts-paper-settings .ts-paper-custom-label[aria-pressed=true]:not(:disabled):not([aria-disabled=true]) {
+    background-color: var(--atelier-soft);
+    color: var(--atelier-ui-ink);
+    border-radius: var(--atelier-ui-radius-sm);
+    box-shadow: inset 0 -2px var(--atelier-accent);
+  }
+
+  /* Numeric outputs have a stable width while the real sliders keep their
+   * native hit areas and input behavior, including the 44px touch layout. */
+  body.atelier-plugin-polish :is(
+    .ts-paper-settings .ts-paper-texture-control,
+    .ts-background-settings .ts-background-opacity-control
+  ) output {
+    min-inline-size: 3.5em;
+    padding: 2px 6px;
+    border: 1px solid var(--atelier-ui-line);
+    border-radius: 6px;
+    background-color: var(--atelier-ui-panel);
+    color: var(--atelier-ui-ink);
+    font-size: 12px;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.5;
+    text-align: center;
+  }
+  body.atelier-plugin-polish .ts-background-settings .ts-background-source {
+    padding: 10px 12px;
+    border: 1px solid var(--atelier-ui-line);
+    border-radius: var(--atelier-ui-radius-sm);
+    background-color: var(--atelier-ui-panel);
+  }
+  body.atelier-plugin-polish .ts-background-settings .ts-background-source-icon {
+    color: var(--atelier-accent);
+  }
+  body.atelier-plugin-polish .ts-background-settings .ts-background-source-name {
+    color: var(--atelier-ui-ink);
+  }
+
+  /* A single segmented field, not three separate glass layers. */
+  body.atelier-plugin-polish .ts-background-settings .ts-background-fit-options {
+    gap: 3px;
+    padding: 3px;
+    border: 1px solid var(--atelier-ui-line);
+    border-radius: var(--atelier-ui-radius-sm);
+    background-color: var(--atelier-ui-panel);
+  }
+  body.atelier-plugin-polish .ts-background-settings .ts-background-fit-options button {
+    border-radius: max(3px, calc(var(--atelier-ui-radius-sm) - 3px));
+  }
+  body.atelier-plugin-polish .ts-background-settings .ts-background-fit-options button:not(:disabled):not([aria-disabled=true]) {
+    color: var(--atelier-ui-muted);
+  }
+  body.atelier-plugin-polish .ts-background-settings .ts-background-fit-options button:is(:hover,:focus-visible):not(:disabled):not([aria-disabled=true]) {
+    background-color: var(--atelier-ui-subtle);
+    color: var(--atelier-ui-ink);
+  }
+  body.atelier-plugin-polish .ts-background-settings .ts-background-fit-options button[aria-pressed=true]:not(:disabled):not([aria-disabled=true]) {
+    background-color: var(--atelier-ui-raised);
+    color: var(--atelier-ui-ink);
+    box-shadow: inset 0 -2px var(--atelier-accent);
+    font-weight: 600;
+  }
+  body.atelier-plugin-polish .ts-root .ts-footer .ts-canvas-controls .ts-snap-toggle.is-active:not(:disabled) .ts-snap-state {
+    color: var(--atelier-accent);
+    font-weight: 600;
+  }
+  /* Shared modal input paint otherwise makes sliders look like text fields.
+   * Keep the full original input height as the pointer/touch target. */
+  body.atelier-plugin-polish :is(.ts-paper-settings,.ts-background-settings) input[type=range] {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+  body.atelier-plugin-polish :is(.ts-paper-settings,.ts-background-settings) input[type=range]:focus-visible {
+    box-shadow: none;
+    outline: 2px solid var(--atelier-accent);
+    outline-offset: 2px;
+  }
+  body.atelier-plugin-polish :is(.ts-paper-settings,.ts-background-settings) input[type=range]::-webkit-slider-runnable-track {
+    height: 6px;
+    border-radius: 6px;
+    background-color: var(--atelier-ui-line-strong);
+  }
+  @media (forced-colors: active) {
+    body.atelier-plugin-polish :is(.ts-paper-settings,.ts-background-settings) input[type=range]::-webkit-slider-runnable-track {
+      background-color: CanvasText;
+    }
+    body.atelier-plugin-polish :is(
+      .ts-paper-settings .ts-paper-swatch,
+      .ts-paper-settings .ts-paper-custom-label,
+      .ts-background-settings .ts-background-fit-options button
+    )[aria-pressed=true]:not(:disabled) {
+      outline: 2px solid Highlight;
+      outline-offset: -2px;
+    }
+  }
+}

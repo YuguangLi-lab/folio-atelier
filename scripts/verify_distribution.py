@@ -5,6 +5,11 @@ import json
 
 root = Path(__file__).resolve().parents[1]
 checks = json.loads((root / 'SHA256SUMS.json').read_text())
+required = {'theme.css', 'manifest.json', 'versions.json',
+            'scripts/build.py', 'scripts/install.py', 'scripts/verify_distribution.py',
+            'presets/folio-reading.css', 'presets/folio-research.css',
+            'presets/folio-writing.css'}
+assert required.issubset(checks), f'Missing distribution assets: {sorted(required - checks.keys())}'
 for name, expected in checks.items():
     file = (root / name).resolve()
     assert file.is_relative_to(root), name
